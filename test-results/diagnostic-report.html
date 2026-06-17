@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Relatorio de Diagnostico 4S</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; color: #1f2933; }
+    table { border-collapse: collapse; width: 100%; font-size: 12px; }
+    th, td { border: 1px solid #cbd2d9; padding: 8px; vertical-align: top; }
+    th { background: #eef2f7; text-align: left; }
+    td { word-break: break-word; }
+  </style>
+</head>
+<body>
+  <h1>Relatorio de Diagnostico 4S</h1>
+  <p>Gerado em: 2026-06-17T19:24:22.410Z</p>
+  <p>Casos Playwright: 6. Falhas: 2. Aprovados: 4.</p>
+  <p>Problemas registrados: 2.</p>
+  <table>
+    <thead>
+      <tr><th>ID</th><th>Severidade</th><th>Caso</th><th>Caminho</th><th>Perfil</th><th>Massa</th><th>Passos</th><th>Esperado</th><th>Obtido</th><th>Impacto</th><th>Evidencia</th><th>Recomendacao</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>CT012-REQUISICAO-SALDO</td><td>critica</td><td>CT012-CT019 - integrated procurement, payment, dashboard and audit flow</td><td>https://4s.ruatrez.com/requisicoes</td><td>administrador</td><td>AUTO-4S-20260617192238</td><td>Executar o caso automatizado &quot;CT012-CT019 - integrated procurement, payment, dashboard and audit flow&quot; e observar a etapa que falhou.</td><td>Requisicao dentro do saldo segue para aprovacao; acima do saldo fica bloqueada ou sinalizada.</td><td>Could not find clickable control: Enviar para aprovação | Enviar | Solicitar aprovação</td><td>Permitir compra acima do saldo rompe controle financeiro da obra.</td><td>/home/colatto/repo/R3/4s/test-results/CT012-REQUISICAO-SALDO.png</td><td>Validar saldo no backend antes de avancar status e bloquear cotacao de requisicoes excedentes.</td><td>reprovado</td></tr>
+<tr><td>CT004-CLIENTE-CONTRATO</td><td>alta</td><td>CT004-CT008 - initial registrations and budget item persist across modules</td><td>https://4s.ruatrez.com/clientes/</td><td>administrador</td><td>AUTO-4S-20260617192118</td><td>Executar o caso automatizado &quot;CT004-CT008 - initial registrations and budget item persist across modules&quot; e observar a etapa que falhou.</td><td>Cliente e contrato devem ser criados, vinculados e persistidos.</td><td>[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+Locator: getByText(/AUTO-4S-20260617192118 Cliente/i).first()
+Expected: visible
+Timeout: 10000ms
+Error: element(s) not found
+
+Call log:
+[2m  - Expect &quot;toBeVisible&quot; with timeout 10000ms[22m
+[2m  - waiting for getByText(/AUTO-4S-20260617192118 Cliente/i).first()[22m
+</td><td>Sem contrato/cliente nao e possivel iniciar a cadeia financeira da obra.</td><td>/home/colatto/repo/R3/4s/test-results/CT004-CLIENTE-CONTRATO.png</td><td>Corrigir persistencia e relacionamento entre cliente e contrato.</td><td>reprovado</td></tr>
+    </tbody>
+  </table>
+</body>
+</html>

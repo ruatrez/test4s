@@ -12,329 +12,364 @@
 # Error details
 
 ```
-Error: expect(locator).toBeVisible() failed
-
-Locator: getByText(/AUTO-4S-20260617153905 Requisicao/i).first()
-Expected: visible
-Timeout: 10000ms
-Error: element(s) not found
-
-Call log:
-  - Expect "toBeVisible" with timeout 10000ms
-  - waiting for getByText(/AUTO-4S-20260617153905 Requisicao/i).first()
-
+Error: Could not find clickable control: Enviar para aprovação | Enviar | Solicitar aprovação
 ```
 
+# Page snapshot
+
 ```yaml
-- complementary:
-  - img "4S Engenharia"
-  - text: Núcleo Financeiro
-  - navigation:
-    - button "◈ Dashboard"
-    - button "⊞ Cadastros"
-    - button "⊙ Configurações ▶"
-    - button "◑ Orçamento ▶"
-    - button "◐ Suprimentos ▶"
-    - button "Requisições"
-    - button "Cotações"
-    - button "Ordens de Compra"
-    - button "◧ Financeiro ▶"
-    - button "◫ Workflow ▶"
-  - text: H
-  - paragraph: Hello
-  - paragraph: ADMINISTRADOR
-  - button "⏻"
-- main:
-  - button "⚠ 5 aprovações pendentes"
-  - text: ADMINISTRADOR
-  - heading "Requisicoes" [level=1]
-  - paragraph: 5 requisicoes
-  - button "+ Nova Requisicao"
-  - textbox "Buscar..."
-  - combobox:
-    - option "Todas as obras" [selected]
-    - option "HML 1781630773579 Obra"
-    - option "HML 1781630633295 Obra"
-    - option "HML 1781630595874 Obra"
-    - option "HML 1781630556505 Obra"
-    - option "HML 1781630434235 Obra"
-    - option "HML 1781630370967 Obra"
-    - option "HML 1781630328305 Obra"
-    - option "HML 1781630075298 Obra"
-    - option "HML 1781630029631 Obra"
-    - option "HML 1781629990378 Obra"
-    - option "VIA MOBILIDADE - TROCA DE PISOS"
-    - option "4S-OBR-053-CAP-VMO"
-  - table:
-    - rowgroup:
-      - row "Numero Obra Centro Custo Itens Valor Est. Status Acoes":
-        - columnheader "Numero"
-        - columnheader "Obra"
-        - columnheader "Centro Custo"
-        - columnheader "Itens"
-        - columnheader "Valor Est."
-        - columnheader "Status"
-        - columnheader "Acoes"
-    - rowgroup:
-      - row "4S-985811-2026 HML 1781630773579 Obra HML 1781630773579 Centro 1 item(ns) HML 1781630773579 Item Orcado R$ 2.000,00 APROVADA Editar Excluir":
-        - cell "4S-985811-2026"
-        - cell "HML 1781630773579 Obra"
-        - cell "HML 1781630773579 Centro"
-        - cell "1 item(ns) HML 1781630773579 Item Orcado"
-        - cell "R$ 2.000,00"
-        - cell "APROVADA"
-        - cell "Editar Excluir":
-          - button "Editar"
-          - button "Excluir"
-      - row "4S-260167-2026 HML 1781630633295 Obra HML 1781630633295 Centro 1 item(ns) HML 1781630633295 Item Orcado R$ 2.000,00 RASCUNHO Editar Enviar aprovacao Excluir":
-        - cell "4S-260167-2026"
-        - cell "HML 1781630633295 Obra"
-        - cell "HML 1781630633295 Centro"
-        - cell "1 item(ns) HML 1781630633295 Item Orcado"
-        - cell "R$ 2.000,00"
-        - cell "RASCUNHO"
-        - cell "Editar Enviar aprovacao Excluir":
-          - button "Editar"
-          - button "Enviar aprovacao"
-          - button "Excluir"
-      - row "4S-911856-2026 HML 1781630595874 Obra HML 1781630595874 Centro 1 item(ns) HML 1781630595874 Item Orcado R$ 2.000,00 RASCUNHO Editar Enviar aprovacao Excluir":
-        - cell "4S-911856-2026"
-        - cell "HML 1781630595874 Obra"
-        - cell "HML 1781630595874 Centro"
-        - cell "1 item(ns) HML 1781630595874 Item Orcado"
-        - cell "R$ 2.000,00"
-        - cell "RASCUNHO"
-        - cell "Editar Enviar aprovacao Excluir":
-          - button "Editar"
-          - button "Enviar aprovacao"
-          - button "Excluir"
-      - row "4S-930525-2026 HML 1781630328305 Obra HML 1781630370967 Centro 1 item(ns) HML 1781630370967 Item Orcado R$ 2.000,00 RASCUNHO Editar Enviar aprovacao Excluir":
-        - cell "4S-930525-2026"
-        - cell "HML 1781630328305 Obra"
-        - cell "HML 1781630370967 Centro"
-        - cell "1 item(ns) HML 1781630370967 Item Orcado"
-        - cell "R$ 2.000,00"
-        - cell "RASCUNHO"
-        - cell "Editar Enviar aprovacao Excluir":
-          - button "Editar"
-          - button "Enviar aprovacao"
-          - button "Excluir"
-      - row "4S-531539-2026 HML 1781630773579 Obra HML 1781630773579 Centro 1 item(ns) HML 1781630773579 Item Orcado R$ 12.000,00 RASCUNHOBLOQUEADA Editar Enviar aprovacao Excluir":
-        - cell "4S-531539-2026"
-        - cell "HML 1781630773579 Obra"
-        - cell "HML 1781630773579 Centro"
-        - cell "1 item(ns) HML 1781630773579 Item Orcado"
-        - cell "R$ 12.000,00"
-        - cell "RASCUNHOBLOQUEADA"
-        - cell "Editar Enviar aprovacao Excluir":
-          - button "Editar"
-          - button "Enviar aprovacao"
-          - button "Excluir"
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - img "4S Engenharia" [ref=e7] [cursor=pointer]
+      - generic [ref=e8]: Núcleo Financeiro
+    - navigation [ref=e9]:
+      - button "◈ Dashboard" [ref=e10] [cursor=pointer]:
+        - generic [ref=e11]: ◈
+        - generic [ref=e12]: Dashboard
+      - button "⊞ Cadastros" [ref=e13] [cursor=pointer]:
+        - generic [ref=e14]: ⊞
+        - generic [ref=e15]: Cadastros
+      - button "⊙ Configurações ▶" [ref=e17] [cursor=pointer]:
+        - generic [ref=e18]: ⊙
+        - generic [ref=e19]: Configurações
+        - generic [ref=e20]: ▶
+      - button "◑ Orçamento ▶" [ref=e22] [cursor=pointer]:
+        - generic [ref=e23]: ◑
+        - generic [ref=e24]: Orçamento
+        - generic [ref=e25]: ▶
+      - generic [ref=e26]:
+        - button "◐ Suprimentos ▶" [ref=e27] [cursor=pointer]:
+          - generic [ref=e28]: ◐
+          - generic [ref=e29]: Suprimentos
+          - generic [ref=e30]: ▶
+        - button "Requisições" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]: Requisições
+        - button "Cotações" [ref=e33] [cursor=pointer]:
+          - generic [ref=e34]: Cotações
+        - button "Ordens de Compra" [ref=e35] [cursor=pointer]:
+          - generic [ref=e36]: Ordens de Compra
+      - button "◧ Financeiro ▶" [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]: ◧
+        - generic [ref=e40]: Financeiro
+        - generic [ref=e41]: ▶
+      - button "◫ Workflow ▶" [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]: ◫
+        - generic [ref=e45]: Workflow
+        - generic [ref=e46]: ▶
+    - generic [ref=e47]:
+      - generic [ref=e49]: H
+      - generic [ref=e50]:
+        - paragraph [ref=e51]: Hello
+        - paragraph [ref=e52]: ADMINISTRADOR
+      - button "⏻" [ref=e53] [cursor=pointer]
+  - main [ref=e54]:
+    - generic [ref=e56]: ADMINISTRADOR
+    - generic [ref=e58]:
+      - generic [ref=e59]: Requisicao salva, mas bloqueada por saldo orcamentario.
+      - generic [ref=e60]:
+        - generic [ref=e61]:
+          - heading "Requisicoes" [level=1] [ref=e62]
+          - paragraph [ref=e63]: 11 requisicoes
+        - button "+ Nova Requisicao" [ref=e64] [cursor=pointer]
+      - generic [ref=e65]:
+        - textbox "Buscar..." [ref=e66]
+        - combobox [ref=e67]:
+          - option "Todas as obras" [selected]
+          - option "PW CT009 20260617184225 Obra"
+          - option "PW CT012 20260617184225 Obra"
+          - option "PW CT012 20260617184145 Obra"
+          - option "PW CT009 20260617183934 Obra"
+          - option "PW CT012 20260617183903 Obra"
+          - option "PW CT009 20260617183009 Obra"
+          - option "PW CT012 20260617182923 Obra"
+          - option "R3"
+          - option "VIA MOBILIDADE - TROCA DE PISOS"
+          - option "4S-OBR-053-CAP-VMO"
+      - table [ref=e68]:
+        - rowgroup [ref=e69]:
+          - row "Numero Obra Centro Custo Itens Valor Est. Status Acoes" [ref=e70]:
+            - columnheader "Numero" [ref=e71]
+            - columnheader "Obra" [ref=e72]
+            - columnheader "Centro Custo" [ref=e73]
+            - columnheader "Itens" [ref=e74]
+            - columnheader "Valor Est." [ref=e75]
+            - columnheader "Status" [ref=e76]
+            - columnheader "Acoes" [ref=e77]
+        - rowgroup [ref=e78]:
+          - row "4S-165544-2026 PW CT009 20260617184225 Obra PW CT009 20260617184225 Centro 0 item(ns) R$ 12.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e79]:
+            - cell "4S-165544-2026" [ref=e80]
+            - cell "PW CT009 20260617184225 Obra" [ref=e81]
+            - cell "PW CT009 20260617184225 Centro" [ref=e82]
+            - cell "0 item(ns)" [ref=e83]: 0 item(ns)
+            - cell "R$ 12.000,00" [ref=e84]
+            - cell "RASCUNHOBLOQUEADA" [ref=e85]
+            - cell "Editar Excluir" [ref=e86]:
+              - button "Editar" [ref=e87] [cursor=pointer]
+              - button "Excluir" [ref=e88] [cursor=pointer]
+          - row "4S-435113-2026 PW CT009 20260617184225 Obra PW CT009 20260617184225 Centro 0 item(ns) R$ 12.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e89]:
+            - cell "4S-435113-2026" [ref=e90]
+            - cell "PW CT009 20260617184225 Obra" [ref=e91]
+            - cell "PW CT009 20260617184225 Centro" [ref=e92]
+            - cell "0 item(ns)" [ref=e93]: 0 item(ns)
+            - cell "R$ 12.000,00" [ref=e94]
+            - cell "RASCUNHOBLOQUEADA" [ref=e95]
+            - cell "Editar Excluir" [ref=e96]:
+              - button "Editar" [ref=e97] [cursor=pointer]
+              - button "Excluir" [ref=e98] [cursor=pointer]
+          - row "4S-393562-2026 R3 1 1 item(ns) 1 R$ 3.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e99]:
+            - cell "4S-393562-2026" [ref=e100]
+            - cell "R3" [ref=e101]
+            - cell "1" [ref=e102]
+            - cell "1 item(ns) 1" [ref=e103]:
+              - text: 1 item(ns)
+              - generic [ref=e104]: "1"
+            - cell "R$ 3.000,00" [ref=e105]
+            - cell "RASCUNHOBLOQUEADA" [ref=e106]
+            - cell "Editar Excluir" [ref=e107]:
+              - button "Editar" [ref=e108] [cursor=pointer]
+              - button "Excluir" [ref=e109] [cursor=pointer]
+          - row "4S-711572-2026 PW CT012 20260617184225 Obra PW CT012 20260617184225 Centro 1 item(ns) PW CT012 20260617184225 Item R$ 200,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e110]:
+            - cell "4S-711572-2026" [ref=e111]
+            - cell "PW CT012 20260617184225 Obra" [ref=e112]
+            - cell "PW CT012 20260617184225 Centro" [ref=e113]
+            - cell "1 item(ns) PW CT012 20260617184225 Item" [ref=e114]:
+              - text: 1 item(ns)
+              - generic [ref=e115]: PW CT012 20260617184225 Item
+            - cell "R$ 200,00" [ref=e116]
+            - cell "RASCUNHOBLOQUEADA" [ref=e117]
+            - cell "Editar Excluir" [ref=e118]:
+              - button "Editar" [ref=e119] [cursor=pointer]
+              - button "Excluir" [ref=e120] [cursor=pointer]
+          - row "4S-645894-2026 PW CT012 20260617184145 Obra PW CT012 20260617184145 Centro 1 item(ns) PW CT012 20260617184145 Item R$ 200,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e121]:
+            - cell "4S-645894-2026" [ref=e122]
+            - cell "PW CT012 20260617184145 Obra" [ref=e123]
+            - cell "PW CT012 20260617184145 Centro" [ref=e124]
+            - cell "1 item(ns) PW CT012 20260617184145 Item" [ref=e125]:
+              - text: 1 item(ns)
+              - generic [ref=e126]: PW CT012 20260617184145 Item
+            - cell "R$ 200,00" [ref=e127]
+            - cell "RASCUNHOBLOQUEADA" [ref=e128]
+            - cell "Editar Excluir" [ref=e129]:
+              - button "Editar" [ref=e130] [cursor=pointer]
+              - button "Excluir" [ref=e131] [cursor=pointer]
+          - row "4S-469309-2026 PW CT012 20260617183903 Obra PW CT012 20260617183903 Centro 1 item(ns) PW CT012 20260617183903 Item R$ 200,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e132]:
+            - cell "4S-469309-2026" [ref=e133]
+            - cell "PW CT012 20260617183903 Obra" [ref=e134]
+            - cell "PW CT012 20260617183903 Centro" [ref=e135]
+            - cell "1 item(ns) PW CT012 20260617183903 Item" [ref=e136]:
+              - text: 1 item(ns)
+              - generic [ref=e137]: PW CT012 20260617183903 Item
+            - cell "R$ 200,00" [ref=e138]
+            - cell "RASCUNHOBLOQUEADA" [ref=e139]
+            - cell "Editar Excluir" [ref=e140]:
+              - button "Editar" [ref=e141] [cursor=pointer]
+              - button "Excluir" [ref=e142] [cursor=pointer]
+          - row "4S-930525-2026 - - 1 item(ns) HML 1781630370967 Item Orcado R$ 2.000,00 REJEITADA Editar Excluir" [ref=e143]:
+            - cell "4S-930525-2026" [ref=e144]
+            - cell "-" [ref=e145]
+            - cell "-" [ref=e146]
+            - cell "1 item(ns) HML 1781630370967 Item Orcado" [ref=e147]:
+              - text: 1 item(ns)
+              - generic [ref=e148]: HML 1781630370967 Item Orcado
+            - cell "R$ 2.000,00" [ref=e149]
+            - cell "REJEITADA" [ref=e150]
+            - cell "Editar Excluir" [ref=e151]:
+              - button "Editar" [ref=e152] [cursor=pointer]
+              - button "Excluir" [ref=e153] [cursor=pointer]
+          - row "4S-260167-2026 - - 1 item(ns) HML 1781630633295 Item Orcado R$ 2.000,00 REJEITADA Editar Excluir" [ref=e154]:
+            - cell "4S-260167-2026" [ref=e155]
+            - cell "-" [ref=e156]
+            - cell "-" [ref=e157]
+            - cell "1 item(ns) HML 1781630633295 Item Orcado" [ref=e158]:
+              - text: 1 item(ns)
+              - generic [ref=e159]: HML 1781630633295 Item Orcado
+            - cell "R$ 2.000,00" [ref=e160]
+            - cell "REJEITADA" [ref=e161]
+            - cell "Editar Excluir" [ref=e162]:
+              - button "Editar" [ref=e163] [cursor=pointer]
+              - button "Excluir" [ref=e164] [cursor=pointer]
+          - row "4S-911856-2026 - - 1 item(ns) HML 1781630595874 Item Orcado R$ 2.000,00 REJEITADA Editar Excluir" [ref=e165]:
+            - cell "4S-911856-2026" [ref=e166]
+            - cell "-" [ref=e167]
+            - cell "-" [ref=e168]
+            - cell "1 item(ns) HML 1781630595874 Item Orcado" [ref=e169]:
+              - text: 1 item(ns)
+              - generic [ref=e170]: HML 1781630595874 Item Orcado
+            - cell "R$ 2.000,00" [ref=e171]
+            - cell "REJEITADA" [ref=e172]
+            - cell "Editar Excluir" [ref=e173]:
+              - button "Editar" [ref=e174] [cursor=pointer]
+              - button "Excluir" [ref=e175] [cursor=pointer]
+          - row "4S-985811-2026 - - 1 item(ns) HML 1781630773579 Item Orcado R$ 2.000,00 APROVADA Editar Excluir" [ref=e176]:
+            - cell "4S-985811-2026" [ref=e177]
+            - cell "-" [ref=e178]
+            - cell "-" [ref=e179]
+            - cell "1 item(ns) HML 1781630773579 Item Orcado" [ref=e180]:
+              - text: 1 item(ns)
+              - generic [ref=e181]: HML 1781630773579 Item Orcado
+            - cell "R$ 2.000,00" [ref=e182]
+            - cell "APROVADA" [ref=e183]
+            - cell "Editar Excluir" [ref=e184]:
+              - button "Editar" [ref=e185] [cursor=pointer]
+              - button "Excluir" [ref=e186] [cursor=pointer]
+          - row "4S-432322-2026 PW CT009 20260617184225 Obra PW CT009 20260617184225 Centro 1 item(ns) PW CT009 20260617184225 Item R$ 12.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e187]:
+            - cell "4S-432322-2026" [ref=e188]
+            - cell "PW CT009 20260617184225 Obra" [ref=e189]
+            - cell "PW CT009 20260617184225 Centro" [ref=e190]
+            - cell "1 item(ns) PW CT009 20260617184225 Item" [ref=e191]:
+              - text: 1 item(ns)
+              - generic [ref=e192]: PW CT009 20260617184225 Item
+            - cell "R$ 12.000,00" [ref=e193]
+            - cell "RASCUNHOBLOQUEADA" [ref=e194]
+            - cell "Editar Excluir" [ref=e195]:
+              - button "Editar" [ref=e196] [cursor=pointer]
+              - button "Excluir" [ref=e197] [cursor=pointer]
 ```
 
 # Test source
 
 ```ts
-  25  |     expected: 'Cliente e contrato devem ser criados, vinculados e persistidos.',
-  26  |     impact: 'Sem contrato/cliente nao e possivel iniciar a cadeia financeira da obra.',
-  27  |     recommendation: 'Corrigir persistencia e relacionamento entre cliente e contrato.'
-  28  |   }, async () => {
-  29  |     await tryCreateSimpleRecord(page, ['Configurações', 'Clientes e Contratos'], data.client, [
-  30  |       { labels: ['Razão Social'], value: `${data.client} SA` },
-  31  |       { labels: ['Nome Fantasia'], value: data.client },
-  32  |       { labels: ['CNPJ/CPF'], value: data.runDocument || String(Date.now()).slice(-11) },
-  33  |       { labels: ['E-mail', 'email'], value: 'cliente.auto@example.test' },
-  34  |       { labels: ['Contato Principal'], value: 'QA Automatizado' },
-  35  |       { type: 'select', labels: ['Status'], value: 'Ativo' }
-  36  |     ]);
-  37  |     await assertPersistedAfterRefresh(page, data.client);
-  38  |   });
-  39  | 
-  40  |   await stepWithDiagnostic(page, {
-  41  |     id: 'CT005-OBRA-CENTRO',
-  42  |     severity: 'alta',
-  43  |     expected: 'Unidade, obra e centro de custo devem ficar disponiveis para os modulos seguintes.',
-  44  |     impact: 'Falha nesse cadastro impede orcamento, requisicao e financeiro.',
-  45  |     recommendation: 'Revisar obrigatoriedade, vinculos e persistencia de obras/centros.'
-  46  |   }, async () => {
-  47  |     await tryCreateSimpleRecord(page, ['Configurações', 'Obras e Centros'], data.work, [
-  48  |       { labels: ['unidade'], value: data.unit },
-  49  |       { labels: ['obra'], value: data.work },
-  50  |       { labels: ['centro', 'centro de custo'], value: data.costCenter }
-  51  |     ]);
-  52  |     await assertPersistedAfterRefresh(page, data.work);
-  53  |   });
-  54  | 
-  55  |   await stepWithDiagnostic(page, {
-  56  |     id: 'CT006-FORNECEDORES',
-  57  |     severity: 'media',
-  58  |     expected: 'Tres fornecedores ativos devem poder ser usados em cotacoes.',
-  59  |     impact: 'Sem fornecedores suficientes o comparativo de cotacao fica incompleto.',
-  60  |     recommendation: 'Garantir cadastro e selecao de fornecedores ativos em cotacoes.'
-  61  |   }, async () => {
-  62  |     for (const supplier of data.suppliers) {
-  63  |       await tryCreateSimpleRecord(page, ['Configurações', 'Fornecedores'], supplier, [
-  64  |         { labels: ['nome', 'fornecedor', 'razao', 'razão'], value: supplier },
-  65  |         { labels: ['email'], value: `${supplier.toLowerCase().replace(/[^a-z0-9]/g, '.')}@example.test` }
-  66  |       ]);
-  67  |     }
-  68  |   });
-  69  | 
-  70  |   await stepWithDiagnostic(page, {
-  71  |     id: 'CT007-CATEGORIAS',
-  72  |     severity: 'media',
-  73  |     expected: 'Categorias orcamentarias devem ficar disponiveis para itens e movimentos.',
-  74  |     impact: 'Classificacao financeira incorreta prejudica dashboard e saldo por categoria.',
-  75  |     recommendation: 'Corrigir cadastro, listagem e uso das categorias nos selects de movimento.'
-  76  |   }, async () => {
-  77  |     for (const category of data.categories) {
-  78  |       await tryCreateSimpleRecord(page, ['Configurações', 'Categorias'], category, [
-  79  |         { labels: ['nome', 'categoria', 'descricao', 'descrição'], value: category }
-  80  |       ]);
-  81  |     }
-  82  |   });
-  83  | 
-  84  |   await stepWithDiagnostic(page, {
-  85  |     id: 'CT008-ORCAMENTO-BASE',
-  86  |     severity: 'critica',
-  87  |     expected: 'Item orcado deve calcular valor previsto e iniciar saldo disponivel.',
-  88  |     impact: 'Erro no orcamento base compromete todo o controle de saldo, OC e pagamento.',
-  89  |     recommendation: 'Corrigir calculo quantidade x valor unitario, persistencia e exposicao do item para requisicoes.'
-  90  |   }, async () => {
-  91  |     await gotoMenu(page, ['Orçamento', 'Itens Orçados']);
-  92  |     await clickAny(page, ['Novo', 'Adicionar', 'Cadastrar', 'Criar']);
-  93  |     await fillField(page, ['descricao', 'descrição', 'item', 'nome'], data.budgetItem);
-  94  |     await fillField(page, ['obra'], data.work);
-  95  |     await fillField(page, ['centro', 'centro de custo'], data.costCenter);
-  96  |     await fillField(page, ['categoria'], data.categories[1]);
-  97  |     await fillField(page, ['unidade de medida', 'unidade'], 'un');
-  98  |     await fillField(page, ['quantidade'], data.money.budgetQuantity);
-  99  |     await fillField(page, ['valor unitario', 'valor unitário', 'valor'], data.money.budgetUnitValue);
-  100 |     await submitForm(page);
-  101 |     await expect(byText(page, data.budgetItem)).toBeVisible();
-  102 |     await assertPersistedAfterRefresh(page, data.budgetItem);
-  103 |     await expect(page.locator('body')).toHaveText(/saldo|comprometido|pago|previsto|orçado|orcado/i);
-  104 |   });
-  105 | });
-  106 | 
-  107 | test('CT012-CT019 - integrated procurement, payment, dashboard and audit flow', async ({ page }) => {
-  108 |   await stepWithDiagnostic(page, {
-  109 |     id: 'CT012-REQUISICAO-SALDO',
-  110 |     severity: 'critica',
-  111 |     expected: 'Requisicao dentro do saldo segue para aprovacao; acima do saldo fica bloqueada ou sinalizada.',
-  112 |     impact: 'Permitir compra acima do saldo rompe controle financeiro da obra.',
-  113 |     recommendation: 'Validar saldo no backend antes de avancar status e bloquear cotacao de requisicoes excedentes.'
-  114 |   }, async () => {
-  115 |     await gotoMenu(page, ['Suprimentos', 'Requisições']);
-  116 |     await clickAny(page, ['Novo', 'Adicionar', 'Criar']);
-  117 |     await chooseFirstAvailableOption(page, ['Obra']);
-  118 |     await chooseFirstAvailableOption(page, ['Centro de custo']);
-  119 |     await fillField(page, ['Justificativa'], data.requisition);
-  120 |     await chooseFirstAvailableOption(page, ['Item orcado', 'Item orçado']);
-  121 |     await fillField(page, ['Qtd.'], data.money.requestQuantity);
-  122 |     await fillField(page, ['Vlr unit.'], data.money.requestEstimatedValue);
-  123 |     await submitForm(page);
-  124 |     await clickAny(page, ['Enviar para aprovação', 'Enviar', 'Solicitar aprovação']);
-> 125 |     await expect(byText(page, data.requisition)).toBeVisible();
-      |                                                  ^ Error: expect(locator).toBeVisible() failed
-  126 | 
-  127 |     await clickAny(page, ['Novo', 'Adicionar', 'Criar']);
-  128 |     await chooseFirstAvailableOption(page, ['Obra']);
-  129 |     await chooseFirstAvailableOption(page, ['Centro de custo']);
-  130 |     await fillField(page, ['Justificativa'], data.overBudgetRequisition);
-  131 |     await chooseFirstAvailableOption(page, ['Item orcado', 'Item orçado']);
-  132 |     await fillField(page, ['Qtd.'], 1);
-  133 |     await fillField(page, ['Vlr unit.'], data.money.overBudgetEstimatedValue);
-  134 |     await submitForm(page);
-  135 |     await expect(page.locator('body')).toHaveText(/saldo|orcamento|orçamento|bloquead|exced|limite|aprov/i);
-  136 |   });
-  137 | 
-  138 |   await stepWithDiagnostic(page, {
-  139 |     id: 'CT013-APROVACAO-REQUISICAO',
-  140 |     severity: 'alta',
-  141 |     expected: 'Aprovacao deve liberar requisicao para cotacao e registrar decisao.',
-  142 |     impact: 'Workflow quebrado permite avancos indevidos ou bloqueia compras validas.',
-  143 |     recommendation: 'Sincronizar status da aprovacao com a entidade de origem e registrar auditoria.'
-  144 |   }, async () => {
-  145 |     await gotoMenu(page, ['Workflow', 'Aprovações']);
-  146 |     await expect(byText(page, data.requisition)).toBeVisible();
-  147 |     await clickAny(page, ['Aprovar']);
-  148 |     await fillField(page, ['observacao', 'observação', 'justificativa'], 'Aprovacao automatizada de teste').catch(() => {});
-  149 |     await clickAny(page, ['Confirmar', 'Salvar', 'Aprovar']);
-  150 |     await gotoMenu(page, ['Suprimentos', 'Requisições']);
-  151 |     await expect(page.locator('body')).toHaveText(/aprovad|cotacao|cotação/i);
-  152 |   });
-  153 | 
-  154 |   await stepWithDiagnostic(page, {
-  155 |     id: 'CT014-COTACAO',
-  156 |     severity: 'alta',
-  157 |     expected: 'Cotacao deve comparar fornecedores, registrar vencedor e persistir.',
-  158 |     impact: 'Comparativo incorreto afeta decisao de compra e rastreabilidade.',
-  159 |     recommendation: 'Corrigir vinculo com requisicao, propostas por fornecedor e persistencia do vencedor.'
-  160 |   }, async () => {
-  161 |     await gotoMenu(page, ['Suprimentos', 'Cotações']);
-  162 |     await clickAny(page, ['Novo', 'Adicionar', 'Criar']);
-  163 |     await fillField(page, ['descricao', 'descrição'], data.quotation);
-  164 |     await fillField(page, ['requisicao', 'requisição'], data.requisition);
-  165 |     for (const supplier of data.suppliers) {
-  166 |       await fillField(page, ['fornecedor'], supplier).catch(() => {});
-  167 |       await clickAny(page, ['Adicionar fornecedor', 'Adicionar']).catch(() => {});
-  168 |     }
-  169 |     await fillField(page, ['valor'], data.money.supplierA).catch(() => {});
-  170 |     await submitForm(page);
-  171 |     await clickAny(page, ['Vencedor', 'Selecionar vencedor', 'Concluir']).catch(() => {});
-  172 |     await expect(byText(page, data.quotation)).toBeVisible();
-  173 |   });
-  174 | 
-  175 |   await stepWithDiagnostic(page, {
-  176 |     id: 'CT015-ORDEM-COMPRA',
-  177 |     severity: 'critica',
-  178 |     expected: 'OC deve nascer da cotacao, comprometer orcamento e gerar conta a pagar no ponto previsto.',
-  179 |     impact: 'Sem comprometimento do orcamento nao ha controle real de compras.',
-  180 |     recommendation: 'Corrigir geracao da OC, vinculos e atualizacao atomica do valor comprometido.'
-  181 |   }, async () => {
-  182 |     await gotoMenu(page, ['Suprimentos', 'Ordens de Compra']);
-  183 |     await clickAny(page, ['Novo', 'Gerar', 'Criar']);
-  184 |     await fillField(page, ['cotacao', 'cotação'], data.quotation);
-  185 |     await fillField(page, ['descricao', 'descrição'], data.purchaseOrder).catch(() => {});
-  186 |     await fillField(page, ['previsao', 'previsão', 'entrega'], '31/12/2026').catch(() => {});
-  187 |     await fillField(page, ['condicao', 'condição'], 'Pagamento teste').catch(() => {});
-  188 |     await submitForm(page);
-  189 |     await clickAny(page, ['Emitir', 'Concluir', 'Avançar', 'Avancar']).catch(() => {});
-  190 |     await expect(page.locator('body')).toHaveText(/comprometido|ordem|oc|conta/i);
-  191 |   });
-  192 | 
-  193 |   await stepWithDiagnostic(page, {
-  194 |     id: 'CT017-CT018-FINANCEIRO-PAGAMENTO',
-  195 |     severity: 'critica',
-  196 |     expected: 'Conta a pagar e pagamentos devem atualizar saldo, status, orcamento e custo real.',
-  197 |     impact: 'Erro em pagamento distorce custo real, dashboard e tomada de decisao.',
-  198 |     recommendation: 'Recalcular saldos no backend, bloquear pagamento excedente e propagar valores para orcamento/dashboard.'
-  199 |   }, async () => {
-  200 |     await gotoMenu(page, ['Financeiro', 'Contas a Pagar']);
-  201 |     await expect(page.locator('body')).toHaveText(/pendente|provisionado|previsto|pago|saldo|conta/i);
-  202 |     await gotoMenu(page, ['Financeiro', 'Pagamentos']);
-  203 |     await clickAny(page, ['Novo', 'Registrar', 'Adicionar']);
-  204 |     await fillField(page, ['conta'], data.purchaseOrder).catch(() => {});
-  205 |     await fillField(page, ['valor'], data.money.paymentPartial);
-  206 |     await fillField(page, ['data'], '17/06/2026').catch(() => {});
-  207 |     await submitForm(page);
-  208 |     await expect(page.locator('body')).toHaveText(/parcial|saldo|pago|pagamento/i);
-  209 | 
-  210 |     await clickAny(page, ['Novo', 'Registrar', 'Adicionar']);
-  211 |     await fillField(page, ['conta'], data.purchaseOrder).catch(() => {});
-  212 |     await fillField(page, ['valor'], data.money.overBudgetEstimatedValue);
-  213 |     await submitForm(page);
-  214 |     await expect(page.locator('body')).toHaveText(/saldo|exced|maior|limite|erro|bloque/i);
-  215 |   });
-  216 | 
-  217 |   await stepWithDiagnostic(page, {
-  218 |     id: 'CT019-DASHBOARD-AUDITORIA',
-  219 |     severity: 'alta',
-  220 |     expected: 'Dashboard e auditoria devem refletir compra, pagamentos, aprovacoes e custo real.',
-  221 |     impact: 'Indicadores inconsistentes prejudicam controle financeiro e rastreabilidade.',
-  222 |     recommendation: 'Corrigir agregacoes do dashboard e garantir eventos de auditoria para criacao, edicao, aprovacao e pagamento.'
-  223 |   }, async () => {
-  224 |     await gotoMenu(page, ['Dashboard']);
-  225 |     await expect(page.locator('body')).toHaveText(/orcado|orçado|comprometido|pago|saldo|custo/i);
+  1   | const { expect } = require('@playwright/test');
+  2   | 
+  3   | function byText(page, text) {
+  4   |   return page.getByText(new RegExp(escapeRegex(text), 'i')).first();
+  5   | }
+  6   | 
+  7   | function escapeRegex(text) {
+  8   |   return String(text).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  9   | }
+  10  | 
+  11  | function xpathLiteral(text) {
+  12  |   const value = String(text);
+  13  |   if (!value.includes("'")) return `'${value}'`;
+  14  |   if (!value.includes('"')) return `"${value}"`;
+  15  |   return `concat('${value.replace(/'/g, "',\"'\",'")}')`;
+  16  | }
+  17  | 
+  18  | async function firstVisible(locators) {
+  19  |   for (const locator of locators) {
+  20  |     if (await locator.count()) {
+  21  |       const first = locator.first();
+  22  |       if (await first.isVisible().catch(() => false)) return first;
+  23  |     }
+  24  |   }
+  25  |   return null;
+  26  | }
+  27  | 
+  28  | async function clickAny(page, names, options = {}) {
+  29  |   const locators = [];
+  30  |   for (const name of names) {
+  31  |     const pattern = new RegExp(name, 'i');
+  32  |     locators.push(page.getByRole('button', { name: pattern }));
+  33  |     locators.push(page.getByRole('link', { name: pattern }));
+  34  |     locators.push(page.locator('button, a, [role="button"]').filter({ hasText: pattern }));
+  35  |     locators.push(page.getByText(pattern));
+  36  |   }
+  37  |   if (names.some((name) => /novo|nova|adicionar|cadastrar|criar/i.test(name))) {
+  38  |     locators.push(page.locator('button, a, [role="button"]').filter({ hasText: /^\s*\+/ }));
+  39  |   }
+  40  |   const target = await firstVisible(locators);
+> 41  |   if (!target) throw new Error(`Could not find clickable control: ${names.join(' | ')}`);
+      |                      ^ Error: Could not find clickable control: Enviar para aprovação | Enviar | Solicitar aprovação
+  42  |   await target.click(options);
+  43  | }
+  44  | 
+  45  | async function gotoMenu(page, path) {
+  46  |   for (let index = 0; index < path.length; index += 1) {
+  47  |     const segment = path[index];
+  48  |     const nextSegment = path[index + 1];
+  49  |     if (segment === 'Dashboard' && await page.getByRole('heading', { name: /dashboard/i }).count()) {
+  50  |       continue;
+  51  |     }
+  52  |     if (nextSegment) {
+  53  |       const childVisible = await page.locator('button, a, [role="button"]')
+  54  |         .filter({ hasText: new RegExp(escapeRegex(nextSegment), 'i') })
+  55  |         .first()
+  56  |         .isVisible()
+  57  |         .catch(() => false);
+  58  |       if (childVisible) continue;
+  59  |     }
+  60  |     await clickAny(page, [segment]);
+  61  |     await page.waitForLoadState('networkidle').catch(() => {});
+  62  |   }
+  63  | }
+  64  | 
+  65  | async function fillField(page, labels, value) {
+  66  |   const candidates = [];
+  67  |   for (const label of labels) {
+  68  |     const patterns = [new RegExp(label, 'i')];
+  69  |     if (/^email$/i.test(label)) patterns.push(/e-?mail/i);
+  70  |     for (const pattern of patterns) {
+  71  |       candidates.push(page.getByLabel(pattern));
+  72  |       candidates.push(page.getByPlaceholder(pattern));
+  73  |     }
+  74  |     candidates.push(page.locator(`input[name*="${label}" i]`));
+  75  |     candidates.push(page.locator(`textarea[name*="${label}" i]`));
+  76  |     candidates.push(page.locator(`xpath=//*[starts-with(normalize-space(.), ${xpathLiteral(label)}) and (./input or ./textarea)]//*[self::input or self::textarea]`));
+  77  |   }
+  78  |   const target = await firstVisible(candidates);
+  79  |   if (!target) throw new Error(`Could not find field: ${labels.join(' | ')}`);
+  80  |   await target.fill(String(value));
+  81  | }
+  82  | 
+  83  | async function chooseOption(page, labels, value) {
+  84  |   const candidates = labels.flatMap((label) => [
+  85  |     page.getByLabel(new RegExp(label, 'i')),
+  86  |     page.locator(`select[name*="${label}" i]`),
+  87  |     page.locator(`xpath=//*[starts-with(normalize-space(.), ${xpathLiteral(label)}) and ./select]//select`)
+  88  |   ]);
+  89  |   const target = await firstVisible(candidates);
+  90  |   if (!target) throw new Error(`Could not find select/control: ${labels.join(' | ')}`);
+  91  | 
+  92  |   const tagName = await target.evaluate((element) => element.tagName.toLowerCase()).catch(() => '');
+  93  |   if (tagName === 'select') {
+  94  |     const option = await target.locator('option').filter({ hasText: new RegExp(escapeRegex(value), 'i') }).first();
+  95  |     if (await option.count()) {
+  96  |       await target.selectOption({ label: await option.innerText() });
+  97  |       return;
+  98  |     }
+  99  |   }
+  100 | 
+  101 |   await target.click();
+  102 |   await clickAny(page, [value]);
+  103 | }
+  104 | 
+  105 | async function chooseFirstAvailableOption(page, labels) {
+  106 |   const candidates = labels.flatMap((label) => [
+  107 |     page.getByLabel(new RegExp(label, 'i')),
+  108 |     page.locator(`xpath=//*[starts-with(normalize-space(.), ${xpathLiteral(label)}) and ./select]//select`)
+  109 |   ]);
+  110 |   const target = await firstVisible(candidates);
+  111 |   if (!target) throw new Error(`Could not find select/control: ${labels.join(' | ')}`);
+  112 |   const optionValue = await target.locator('option').evaluateAll((options) => {
+  113 |     const option = options.find((item) => item.value && !/selecione|todas/i.test(item.textContent || ''));
+  114 |     return option ? option.value : '';
+  115 |   });
+  116 |   if (!optionValue) throw new Error(`Could not find available option for: ${labels.join(' | ')}`);
+  117 |   await target.selectOption(optionValue);
+  118 | }
+  119 | 
+  120 | async function submitForm(page) {
+  121 |   const primarySubmit = await firstVisible([
+  122 |     page.getByRole('button', { name: /^(salvar|cadastrar|criar|confirmar|enviar)$/i }),
+  123 |     page.locator('button, [role="button"]').filter({ hasText: /salvar|confirmar|enviar|criar|cadastrar/i }).filter({ hasNotText: /cadastrar mais/i })
+  124 |   ]);
+  125 |   if (primarySubmit) {
+  126 |     await primarySubmit.click();
+  127 |   } else {
+  128 |     await clickAny(page, ['Salvar', 'Cadastrar', 'Criar', 'Confirmar', 'Enviar']);
+  129 |   }
+  130 |   await page.waitForLoadState('networkidle').catch(() => {});
+  131 |   await page.getByText(/salvando/i).waitFor({ state: 'hidden', timeout: 15_000 }).catch(() => {});
+  132 | }
+  133 | 
+  134 | async function expectPageReady(page, expectedTexts = []) {
+  135 |   await expect(page.locator('body')).toBeVisible();
+  136 |   await expect(page.locator('body')).not.toHaveText(/erro interno|internal server error|not found|undefined is not/i);
+  137 |   for (const text of expectedTexts) {
+  138 |     await expect(byText(page, text)).toBeVisible();
+  139 |   }
+  140 | }
+  141 | 
 ```

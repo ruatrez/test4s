@@ -62,7 +62,7 @@ test('CT002, CT009, CT010, CT020 - permissions, protected budget and workflow de
   }, async () => {
     await gotoMenu(page, ['Orçamento', 'Itens Orçados']);
     await clickAny(page, [data.budgetItem]).catch(() => {});
-    await clickAny(page, ['Excluir', 'Remover', 'Cancelar']);
+    await clickAny(page, ['Solicitar exclusão', 'Solicitar exclusao', 'Excluir', 'Remover', 'Cancelar']);
     await fillField(page, ['justificativa', 'observacao', 'observação'], 'Solicitacao automatizada de exclusao').catch(() => {});
     await clickAny(page, ['Confirmar', 'Solicitar', 'Enviar']);
     await expect(page.locator('body')).toHaveText(/aprov|pendente|solicit|administrador|permiss/i);

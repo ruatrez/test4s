@@ -118,8 +118,17 @@ async function chooseFirstAvailableOption(page, labels) {
 }
 
 async function submitForm(page) {
-  await clickAny(page, ['Salvar', 'Cadastrar', 'Criar', 'Confirmar', 'Enviar']);
+  const primarySubmit = await firstVisible([
+    page.getByRole('button', { name: /^(salvar|cadastrar|criar|confirmar|enviar)$/i }),
+    page.locator('button, [role="button"]').filter({ hasText: /salvar|confirmar|enviar|criar|cadastrar/i }).filter({ hasNotText: /cadastrar mais/i })
+  ]);
+  if (primarySubmit) {
+    await primarySubmit.click();
+  } else {
+    await clickAny(page, ['Salvar', 'Cadastrar', 'Criar', 'Confirmar', 'Enviar']);
+  }
   await page.waitForLoadState('networkidle').catch(() => {});
+  await page.getByText(/salvando/i).waitFor({ state: 'hidden', timeout: 15_000 }).catch(() => {});
 }
 
 async function expectPageReady(page, expectedTexts = []) {

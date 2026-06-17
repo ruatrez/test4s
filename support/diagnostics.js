@@ -18,6 +18,14 @@ function normalizeSeverity(severity) {
   return 'baixa';
 }
 
+function normalizeStatus(status) {
+  const value = String(status || '').toLowerCase();
+  if (['aprovado', 'reprovado', 'bloqueado', 'nao aplicavel', 'nao aplicável'].includes(value)) {
+    return value.replace('aplicável', 'aplicavel');
+  }
+  return 'reprovado';
+}
+
 async function captureDiagnostic(page, issue) {
   ensureDir();
   const safeId = issue.id.replace(/[^a-z0-9_-]/gi, '-');
@@ -36,10 +44,13 @@ async function captureDiagnostic(page, issue) {
     path: issue.path || page.url(),
     profile: issue.profile || 'administrador',
     testDataPrefix: data.prefix,
+    steps: issue.steps || `Executar o caso automatizado "${issue.caseId || test.info().title}" e observar a etapa que falhou.`,
     expected: issue.expected,
     actual: issue.actual,
     impact: issue.impact,
+    businessImpact: issue.businessImpact || issue.impact,
     recommendation: issue.recommendation,
+    status: normalizeStatus(issue.status),
     evidence: fs.existsSync(screenshotPath) ? screenshotPath : null,
     timestamp: new Date().toISOString()
   };
@@ -64,6 +75,17 @@ async function stepWithDiagnostic(page, meta, fn) {
 }
 
 async function attachConsoleAndNetworkDiagnostics(page) {
+  page.on('pageerror', async (error) => {
+    await captureDiagnostic(page, {
+      id: `PAGEERROR-${Date.now()}`,
+      severity: 'alta',
+      expected: 'A aplicacao nao deve emitir excecoes JavaScript nao tratadas.',
+      actual: error.message,
+      impact: 'Excecoes nao tratadas podem interromper renderizacao, fluxo de dados ou acoes do usuario.',
+      recommendation: 'Corrigir a excecao no frontend e cobrir a tela afetada com teste automatizado.'
+    });
+  });
+
   page.on('console', async (message) => {
     if (message.type() !== 'error') return;
     await captureDiagnostic(page, {
@@ -78,14 +100,15 @@ async function attachConsoleAndNetworkDiagnostics(page) {
 
   page.on('response', async (response) => {
     const status = response.status();
-    if (status < 500) return;
+    if (status < 400) return;
+    const severity = status >= 500 ? 'alta' : 'media';
     await captureDiagnostic(page, {
       id: `HTTP-${status}-${Date.now()}`,
-      severity: 'alta',
-      expected: 'Requisicoes da aplicacao devem responder sem erro 5xx.',
+      severity,
+      expected: 'Requisicoes da aplicacao devem responder sem erro 4xx/5xx inesperado.',
       actual: `${status} ${response.url()}`,
-      impact: 'Erro de backend pode bloquear carregamento de telas ou persistencia de dados.',
-      recommendation: 'Investigar logs do endpoint, corrigir falha e cobrir a rota com teste de integracao.'
+      impact: 'Erro HTTP pode bloquear carregamento de telas, persistencia de dados ou integracao entre modulos.',
+      recommendation: 'Investigar logs do endpoint, corrigir falha e cobrir a rota com teste de integracao ou contrato.'
     });
   });
 }

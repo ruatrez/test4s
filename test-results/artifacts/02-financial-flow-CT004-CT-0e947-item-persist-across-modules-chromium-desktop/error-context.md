@@ -14,14 +14,14 @@
 ```
 Error: expect(locator).toBeVisible() failed
 
-Locator: getByText(/AUTO-4S-20260617153828 Cliente/i).first()
+Locator: getByText(/AUTO-4S-20260617192118 Cliente/i).first()
 Expected: visible
 Timeout: 10000ms
 Error: element(s) not found
 
 Call log:
   - Expect "toBeVisible" with timeout 10000ms
-  - waiting for getByText(/AUTO-4S-20260617153828 Cliente/i).first()
+  - waiting for getByText(/AUTO-4S-20260617192118 Cliente/i).first()
 
 ```
 
@@ -40,15 +40,6 @@ Call log:
 # Test source
 
 ```ts
-  49  |     if (segment === 'Dashboard' && await page.getByRole('heading', { name: /dashboard/i }).count()) {
-  50  |       continue;
-  51  |     }
-  52  |     if (nextSegment) {
-  53  |       const childVisible = await page.locator('button, a, [role="button"]')
-  54  |         .filter({ hasText: new RegExp(escapeRegex(nextSegment), 'i') })
-  55  |         .first()
-  56  |         .isVisible()
-  57  |         .catch(() => false);
   58  |       if (childVisible) continue;
   59  |     }
   60  |     await clickAny(page, [segment]);
@@ -112,49 +103,58 @@ Call log:
   118 | }
   119 | 
   120 | async function submitForm(page) {
-  121 |   await clickAny(page, ['Salvar', 'Cadastrar', 'Criar', 'Confirmar', 'Enviar']);
-  122 |   await page.waitForLoadState('networkidle').catch(() => {});
-  123 | }
-  124 | 
-  125 | async function expectPageReady(page, expectedTexts = []) {
-  126 |   await expect(page.locator('body')).toBeVisible();
-  127 |   await expect(page.locator('body')).not.toHaveText(/erro interno|internal server error|not found|undefined is not/i);
-  128 |   for (const text of expectedTexts) {
-  129 |     await expect(byText(page, text)).toBeVisible();
-  130 |   }
-  131 | }
-  132 | 
-  133 | async function tryCreateSimpleRecord(page, path, recordName, fields = []) {
-  134 |   await gotoMenu(page, path);
-  135 |   await clickAny(page, ['Novo', 'Adicionar', 'Cadastrar', 'Criar']);
-  136 |   for (const field of fields) {
-  137 |     if (field.type === 'select') {
-  138 |       await chooseOption(page, field.labels, field.value);
-  139 |     } else {
-  140 |       await fillField(page, field.labels, field.value);
-  141 |     }
-  142 |   }
-  143 |   await submitForm(page);
-  144 |   await expect(byText(page, recordName)).toBeVisible();
-  145 | }
-  146 | 
-  147 | async function assertPersistedAfterRefresh(page, text) {
-  148 |   await page.reload({ waitUntil: 'networkidle' });
-> 149 |   await expect(byText(page, text)).toBeVisible();
+  121 |   const primarySubmit = await firstVisible([
+  122 |     page.getByRole('button', { name: /^(salvar|cadastrar|criar|confirmar|enviar)$/i }),
+  123 |     page.locator('button, [role="button"]').filter({ hasText: /salvar|confirmar|enviar|criar|cadastrar/i }).filter({ hasNotText: /cadastrar mais/i })
+  124 |   ]);
+  125 |   if (primarySubmit) {
+  126 |     await primarySubmit.click();
+  127 |   } else {
+  128 |     await clickAny(page, ['Salvar', 'Cadastrar', 'Criar', 'Confirmar', 'Enviar']);
+  129 |   }
+  130 |   await page.waitForLoadState('networkidle').catch(() => {});
+  131 |   await page.getByText(/salvando/i).waitFor({ state: 'hidden', timeout: 15_000 }).catch(() => {});
+  132 | }
+  133 | 
+  134 | async function expectPageReady(page, expectedTexts = []) {
+  135 |   await expect(page.locator('body')).toBeVisible();
+  136 |   await expect(page.locator('body')).not.toHaveText(/erro interno|internal server error|not found|undefined is not/i);
+  137 |   for (const text of expectedTexts) {
+  138 |     await expect(byText(page, text)).toBeVisible();
+  139 |   }
+  140 | }
+  141 | 
+  142 | async function tryCreateSimpleRecord(page, path, recordName, fields = []) {
+  143 |   await gotoMenu(page, path);
+  144 |   await clickAny(page, ['Novo', 'Adicionar', 'Cadastrar', 'Criar']);
+  145 |   for (const field of fields) {
+  146 |     if (field.type === 'select') {
+  147 |       await chooseOption(page, field.labels, field.value);
+  148 |     } else {
+  149 |       await fillField(page, field.labels, field.value);
+  150 |     }
+  151 |   }
+  152 |   await submitForm(page);
+  153 |   await expect(byText(page, recordName)).toBeVisible();
+  154 | }
+  155 | 
+  156 | async function assertPersistedAfterRefresh(page, text) {
+  157 |   await page.reload({ waitUntil: 'networkidle' });
+> 158 |   await expect(byText(page, text)).toBeVisible();
       |                                    ^ Error: expect(locator).toBeVisible() failed
-  150 | }
-  151 | 
-  152 | module.exports = {
-  153 |   byText,
-  154 |   clickAny,
-  155 |   gotoMenu,
-  156 |   fillField,
-  157 |   chooseOption,
-  158 |   chooseFirstAvailableOption,
-  159 |   submitForm,
-  160 |   expectPageReady,
-  161 |   tryCreateSimpleRecord,
-  162 |   assertPersistedAfterRefresh
-  163 | };
-  164 | 
+  159 | }
+  160 | 
+  161 | module.exports = {
+  162 |   byText,
+  163 |   clickAny,
+  164 |   gotoMenu,
+  165 |   fillField,
+  166 |   chooseOption,
+  167 |   chooseFirstAvailableOption,
+  168 |   submitForm,
+  169 |   expectPageReady,
+  170 |   tryCreateSimpleRecord,
+  171 |   assertPersistedAfterRefresh
+  172 | };
+  173 | 
 ```

@@ -93,7 +93,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 8495,
+                  "duration": 26186,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -101,18 +101,18 @@
                   "steps": [
                     {
                       "title": "CT001-LOGIN-ADMIN",
-                      "duration": 5645
+                      "duration": 17568
                     },
                     {
                       "title": "CT001-LOGOUT",
-                      "duration": 75
+                      "duration": 88
                     },
                     {
                       "title": "CT001-LOGIN-INVALIDO",
-                      "duration": 2451
+                      "duration": 8188
                     }
                   ],
-                  "startTime": "2026-06-17T15:38:28.865Z",
+                  "startTime": "2026-06-17T19:21:18.536Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -141,7 +141,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 7561,
+                  "duration": 17461,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -149,15 +149,15 @@
                   "steps": [
                     {
                       "title": "CT022-Dashboard",
-                      "duration": 10
+                      "duration": 12
                     },
                     {
                       "title": "CT022-Cadastros",
-                      "duration": 45
+                      "duration": 56
                     },
                     {
                       "title": "CT022-Configurações-Clientes-e-Contratos",
-                      "duration": 112
+                      "duration": 129
                     },
                     {
                       "title": "CT022-Configurações-Obras-e-Centros",
@@ -165,54 +165,54 @@
                     },
                     {
                       "title": "CT022-Configurações-Fornecedores",
-                      "duration": 80
+                      "duration": 75
                     },
                     {
                       "title": "CT022-Configurações-Categorias",
-                      "duration": 73
+                      "duration": 83
                     },
                     {
                       "title": "CT022-Configurações-Colaboradores",
-                      "duration": 60
+                      "duration": 75
                     },
                     {
                       "title": "CT022-Configurações-Usuários",
-                      "duration": 54
+                      "duration": 70
                     },
                     {
                       "title": "CT022-Orçamento-Itens-Orçados",
-                      "duration": 117
+                      "duration": 144
                     },
                     {
                       "title": "CT022-Suprimentos-Requisições",
-                      "duration": 114
+                      "duration": 119
                     },
                     {
                       "title": "CT022-Suprimentos-Cotações",
-                      "duration": 66
+                      "duration": 62
                     },
                     {
                       "title": "CT022-Suprimentos-Ordens-de-Compra",
-                      "duration": 65
+                      "duration": 60
                     },
                     {
                       "title": "CT022-Financeiro-Contas-a-Pagar",
-                      "duration": 123
+                      "duration": 118
                     },
                     {
                       "title": "CT022-Financeiro-Pagamentos",
-                      "duration": 64
+                      "duration": 52
                     },
                     {
                       "title": "CT022-Workflow-Aprovações",
-                      "duration": 64
+                      "duration": 107
                     },
                     {
                       "title": "CT022-Workflow-Auditoria",
-                      "duration": 157
+                      "duration": 143
                     }
                   ],
-                  "startTime": "2026-06-17T15:38:37.472Z",
+                  "startTime": "2026-06-17T19:21:44.829Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -249,25 +249,25 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "failed",
-                  "duration": 19847,
+                  "duration": 35594,
                   "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617153828 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617153828 Cliente/i).first()\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617153828 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617153828 Cliente/i).first()\u001b[22m\n\n    at assertPersistedAfterRefresh (/home/colatto/repo/R3/4s/support/ui.js:149:36)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:37:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:56:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:22:3",
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617192118 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617192118 Cliente/i).first()\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617192118 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617192118 Cliente/i).first()\u001b[22m\n\n    at assertPersistedAfterRefresh (/home/colatto/repo/R3/4s/support/ui.js:158:36)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:37:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:22:3",
                     "location": {
                       "file": "/home/colatto/repo/R3/4s/support/ui.js",
                       "column": 36,
-                      "line": 149
+                      "line": 158
                     },
-                    "snippet": "\u001b[90m   at \u001b[39m../support/ui.js:149\n\n  147 | async function assertPersistedAfterRefresh(page, text) {\n  148 |   await page.reload({ waitUntil: 'networkidle' });\n> 149 |   await expect(byText(page, text)).toBeVisible();\n      |                                    ^\n  150 | }\n  151 |\n  152 | module.exports = {"
+                    "snippet": "\u001b[90m   at \u001b[39m../support/ui.js:158\n\n  156 | async function assertPersistedAfterRefresh(page, text) {\n  157 |   await page.reload({ waitUntil: 'networkidle' });\n> 158 |   await expect(byText(page, text)).toBeVisible();\n      |                                    ^\n  159 | }\n  160 |\n  161 | module.exports = {"
                   },
                   "errors": [
                     {
                       "location": {
                         "file": "/home/colatto/repo/R3/4s/support/ui.js",
                         "column": 36,
-                        "line": 149
+                        "line": 158
                       },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617153828 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617153828 Cliente/i).first()\u001b[22m\n\n\n   at ../support/ui.js:149\n\n  147 | async function assertPersistedAfterRefresh(page, text) {\n  148 |   await page.reload({ waitUntil: 'networkidle' });\n> 149 |   await expect(byText(page, text)).toBeVisible();\n      |                                    ^\n  150 | }\n  151 |\n  152 | module.exports = {\n    at assertPersistedAfterRefresh (/home/colatto/repo/R3/4s/support/ui.js:149:36)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:37:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:56:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:22:3"
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617192118 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617192118 Cliente/i).first()\u001b[22m\n\n\n   at ../support/ui.js:158\n\n  156 | async function assertPersistedAfterRefresh(page, text) {\n  157 |   await page.reload({ waitUntil: 'networkidle' });\n> 158 |   await expect(byText(page, text)).toBeVisible();\n      |                                    ^\n  159 | }\n  160 |\n  161 | module.exports = {\n    at assertPersistedAfterRefresh (/home/colatto/repo/R3/4s/support/ui.js:158:36)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:37:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:22:3"
                     }
                   ],
                   "stdout": [],
@@ -276,36 +276,26 @@
                   "steps": [
                     {
                       "title": "CT004-CLIENTE-CONTRATO",
-                      "duration": 12960,
+                      "duration": 18345,
                       "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617153828 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617153828 Cliente/i).first()\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617153828 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617153828 Cliente/i).first()\u001b[22m\n\n    at assertPersistedAfterRefresh (/home/colatto/repo/R3/4s/support/ui.js:149:36)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:37:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:56:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:22:3",
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617192118 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617192118 Cliente/i).first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617192118 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617192118 Cliente/i).first()\u001b[22m\n\n    at assertPersistedAfterRefresh (/home/colatto/repo/R3/4s/support/ui.js:158:36)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:37:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:22:3",
                         "location": {
                           "file": "/home/colatto/repo/R3/4s/support/ui.js",
                           "column": 36,
-                          "line": 149
+                          "line": 158
                         },
-                        "snippet": "\u001b[90m   at \u001b[39m../support/ui.js:149\n\n  147 | async function assertPersistedAfterRefresh(page, text) {\n  148 |   await page.reload({ waitUntil: 'networkidle' });\n> 149 |   await expect(byText(page, text)).toBeVisible();\n      |                                    ^\n  150 | }\n  151 |\n  152 | module.exports = {"
+                        "snippet": "\u001b[90m   at \u001b[39m../support/ui.js:158\n\n  156 | async function assertPersistedAfterRefresh(page, text) {\n  157 |   await page.reload({ waitUntil: 'networkidle' });\n> 158 |   await expect(byText(page, text)).toBeVisible();\n      |                                    ^\n  159 | }\n  160 |\n  161 | module.exports = {"
                       }
                     }
                   ],
-                  "startTime": "2026-06-17T15:38:45.043Z",
+                  "startTime": "2026-06-17T19:22:02.306Z",
                   "annotations": [],
                   "attachments": [
                     {
-                      "name": "diagnostic-CONSOLE-1781710732180",
-                      "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDT05TT0xFLTE3ODE3MTA3MzIxODAiLAogICJzZXZlcml0eSI6ICJtZWRpYSIsCiAgImNhc2VJZCI6ICJDVDAwNC1DVDAwOCAtIGluaXRpYWwgcmVnaXN0cmF0aW9ucyBhbmQgYnVkZ2V0IGl0ZW0gcGVyc2lzdCBhY3Jvc3MgbW9kdWxlcyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9jbGllbnRlcy8iLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNjE3MTUzODI4IiwKICAiZXhwZWN0ZWQiOiAiQSB0ZWxhIG5hbyBkZXZlIGVtaXRpciBlcnJvcyBKYXZhU2NyaXB0IG5vIGNvbnNvbGUuIiwKICAiYWN0dWFsIjogIkZhbGhhIGFvIHNpbmNyb25pemFyIGxvZ3NfYXVkaXRvcmlhIG5vIEx1bWk6IEZldGNoRXJyb3I6IFtQT1NUXSBcImh0dHBzOi8vYXBpLmx1bWkubmV3L2xtL3A0NDI0NTAyOTQ0MzUwNDEyODAvbG9nc19hdWRpdG9yaWEvZG9jdW1lbnRzXCI6IDxubyByZXNwb25zZT4gRmFpbGVkIHRvIGZldGNoXG4gICAgYXQgYXN5bmMgJGZldGNoMiAoaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9hc3NldHMvcHJlcmVuZGVyLUQ1RlJxUFRaLmpzOjI5ODg1OjE1KSIsCiAgImltcGFjdCI6ICJFcnJvcyBkZSBjb25zb2xlIHBvZGVtIGluZGljYXIgZmFsaGFzIGRlIGludGVyZmFjZSwgZGFkb3MgbmFvIHJlbmRlcml6YWRvcyBvdSByZWdyZXNzYW8gdGVjbmljYS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJDb3JyaWdpciBhIGV4Y2VjYW8gbm8gZnJvbnRlbmQgZSBhZGljaW9uYXIgY29iZXJ0dXJhIGF1dG9tYXRpemFkYSBwYXJhIGEgdGVsYSBhZmV0YWRhLiIsCiAgImV2aWRlbmNlIjogIi9ob21lL2NvbGF0dG8vcmVwby9SMy80cy90ZXN0LXJlc3VsdHMvQ09OU09MRS0xNzgxNzEwNzMyMTgwLnBuZyIsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA2LTE3VDE1OjM4OjUyLjU2N1oiCn0="
-                    },
-                    {
-                      "name": "diagnostic-CONSOLE-1781710732181",
-                      "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDT05TT0xFLTE3ODE3MTA3MzIxODEiLAogICJzZXZlcml0eSI6ICJtZWRpYSIsCiAgImNhc2VJZCI6ICJDVDAwNC1DVDAwOCAtIGluaXRpYWwgcmVnaXN0cmF0aW9ucyBhbmQgYnVkZ2V0IGl0ZW0gcGVyc2lzdCBhY3Jvc3MgbW9kdWxlcyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9jbGllbnRlcy8iLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNjE3MTUzODI4IiwKICAiZXhwZWN0ZWQiOiAiQSB0ZWxhIG5hbyBkZXZlIGVtaXRpciBlcnJvcyBKYXZhU2NyaXB0IG5vIGNvbnNvbGUuIiwKICAiYWN0dWFsIjogIkZhbGhhIGFvIHNpbmNyb25pemFyIGNsaWVudGVzIG5vIEx1bWk6IEZldGNoRXJyb3I6IFtQT1NUXSBcImh0dHBzOi8vYXBpLmx1bWkubmV3L2xtL3A0NDI0NTAyOTQ0MzUwNDEyODAvY2xpZW50ZXMvZG9jdW1lbnRzXCI6IDxubyByZXNwb25zZT4gRmFpbGVkIHRvIGZldGNoXG4gICAgYXQgYXN5bmMgJGZldGNoMiAoaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9hc3NldHMvcHJlcmVuZGVyLUQ1RlJxUFRaLmpzOjI5ODg1OjE1KSIsCiAgImltcGFjdCI6ICJFcnJvcyBkZSBjb25zb2xlIHBvZGVtIGluZGljYXIgZmFsaGFzIGRlIGludGVyZmFjZSwgZGFkb3MgbmFvIHJlbmRlcml6YWRvcyBvdSByZWdyZXNzYW8gdGVjbmljYS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJDb3JyaWdpciBhIGV4Y2VjYW8gbm8gZnJvbnRlbmQgZSBhZGljaW9uYXIgY29iZXJ0dXJhIGF1dG9tYXRpemFkYSBwYXJhIGEgdGVsYSBhZmV0YWRhLiIsCiAgImV2aWRlbmNlIjogIi9ob21lL2NvbGF0dG8vcmVwby9SMy80cy90ZXN0LXJlc3VsdHMvQ09OU09MRS0xNzgxNzEwNzMyMTgxLnBuZyIsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA2LTE3VDE1OjM4OjUyLjc4MFoiCn0="
-                    },
-                    {
                       "name": "diagnostic-CT004-CLIENTE-CONTRATO",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAwNC1DTElFTlRFLUNPTlRSQVRPIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAwNC1DVDAwOCAtIGluaXRpYWwgcmVnaXN0cmF0aW9ucyBhbmQgYnVkZ2V0IGl0ZW0gcGVyc2lzdCBhY3Jvc3MgbW9kdWxlcyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9jbGllbnRlcy8iLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNjE3MTUzODI4IiwKICAiZXhwZWN0ZWQiOiAiQ2xpZW50ZSBlIGNvbnRyYXRvIGRldmVtIHNlciBjcmlhZG9zLCB2aW5jdWxhZG9zIGUgcGVyc2lzdGlkb3MuIiwKICAiYWN0dWFsIjogIlx1MDAxYlsybWV4cGVjdChcdTAwMWJbMjJtXHUwMDFiWzMxbWxvY2F0b3JcdTAwMWJbMzltXHUwMDFiWzJtKS5cdTAwMWJbMjJtdG9CZVZpc2libGVcdTAwMWJbMm0oXHUwMDFiWzIybVx1MDAxYlsybSlcdTAwMWJbMjJtIGZhaWxlZFxuXG5Mb2NhdG9yOiBnZXRCeVRleHQoL0FVVE8tNFMtMjAyNjA2MTcxNTM4MjggQ2xpZW50ZS9pKS5maXJzdCgpXG5FeHBlY3RlZDogdmlzaWJsZVxuVGltZW91dDogMTAwMDBtc1xuRXJyb3I6IGVsZW1lbnQocykgbm90IGZvdW5kXG5cbkNhbGwgbG9nOlxuXHUwMDFiWzJtICAtIEV4cGVjdCBcInRvQmVWaXNpYmxlXCIgd2l0aCB0aW1lb3V0IDEwMDAwbXNcdTAwMWJbMjJtXG5cdTAwMWJbMm0gIC0gd2FpdGluZyBmb3IgZ2V0QnlUZXh0KC9BVVRPLTRTLTIwMjYwNjE3MTUzODI4IENsaWVudGUvaSkuZmlyc3QoKVx1MDAxYlsyMm1cbiIsCiAgImltcGFjdCI6ICJTZW0gY29udHJhdG8vY2xpZW50ZSBuYW8gZSBwb3NzaXZlbCBpbmljaWFyIGEgY2FkZWlhIGZpbmFuY2VpcmEgZGEgb2JyYS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJDb3JyaWdpciBwZXJzaXN0ZW5jaWEgZSByZWxhY2lvbmFtZW50byBlbnRyZSBjbGllbnRlIGUgY29udHJhdG8uIiwKICAiZXZpZGVuY2UiOiAiL2hvbWUvY29sYXR0by9yZXBvL1IzLzRzL3Rlc3QtcmVzdWx0cy9DVDAwNC1DTElFTlRFLUNPTlRSQVRPLnBuZyIsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA2LTE3VDE1OjM5OjA0LjU2MVoiCn0="
+                      "body": "ewogICJpZCI6ICJDVDAwNC1DTElFTlRFLUNPTlRSQVRPIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAwNC1DVDAwOCAtIGluaXRpYWwgcmVnaXN0cmF0aW9ucyBhbmQgYnVkZ2V0IGl0ZW0gcGVyc2lzdCBhY3Jvc3MgbW9kdWxlcyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9jbGllbnRlcy8iLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNjE3MTkyMTE4IiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDA0LUNUMDA4IC0gaW5pdGlhbCByZWdpc3RyYXRpb25zIGFuZCBidWRnZXQgaXRlbSBwZXJzaXN0IGFjcm9zcyBtb2R1bGVzXCIgZSBvYnNlcnZhciBhIGV0YXBhIHF1ZSBmYWxob3UuIiwKICAiZXhwZWN0ZWQiOiAiQ2xpZW50ZSBlIGNvbnRyYXRvIGRldmVtIHNlciBjcmlhZG9zLCB2aW5jdWxhZG9zIGUgcGVyc2lzdGlkb3MuIiwKICAiYWN0dWFsIjogIlx1MDAxYlsybWV4cGVjdChcdTAwMWJbMjJtXHUwMDFiWzMxbWxvY2F0b3JcdTAwMWJbMzltXHUwMDFiWzJtKS5cdTAwMWJbMjJtdG9CZVZpc2libGVcdTAwMWJbMm0oXHUwMDFiWzIybVx1MDAxYlsybSlcdTAwMWJbMjJtIGZhaWxlZFxuXG5Mb2NhdG9yOiBnZXRCeVRleHQoL0FVVE8tNFMtMjAyNjA2MTcxOTIxMTggQ2xpZW50ZS9pKS5maXJzdCgpXG5FeHBlY3RlZDogdmlzaWJsZVxuVGltZW91dDogMTAwMDBtc1xuRXJyb3I6IGVsZW1lbnQocykgbm90IGZvdW5kXG5cbkNhbGwgbG9nOlxuXHUwMDFiWzJtICAtIEV4cGVjdCBcInRvQmVWaXNpYmxlXCIgd2l0aCB0aW1lb3V0IDEwMDAwbXNcdTAwMWJbMjJtXG5cdTAwMWJbMm0gIC0gd2FpdGluZyBmb3IgZ2V0QnlUZXh0KC9BVVRPLTRTLTIwMjYwNjE3MTkyMTE4IENsaWVudGUvaSkuZmlyc3QoKVx1MDAxYlsyMm1cbiIsCiAgImltcGFjdCI6ICJTZW0gY29udHJhdG8vY2xpZW50ZSBuYW8gZSBwb3NzaXZlbCBpbmljaWFyIGEgY2FkZWlhIGZpbmFuY2VpcmEgZGEgb2JyYS4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJTZW0gY29udHJhdG8vY2xpZW50ZSBuYW8gZSBwb3NzaXZlbCBpbmljaWFyIGEgY2FkZWlhIGZpbmFuY2VpcmEgZGEgb2JyYS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJDb3JyaWdpciBwZXJzaXN0ZW5jaWEgZSByZWxhY2lvbmFtZW50byBlbnRyZSBjbGllbnRlIGUgY29udHJhdG8uIiwKICAic3RhdHVzIjogInJlcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogIi9ob21lL2NvbGF0dG8vcmVwby9SMy80cy90ZXN0LXJlc3VsdHMvQ1QwMDQtQ0xJRU5URS1DT05UUkFUTy5wbmciLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNi0xN1QxOToyMjozNy41NDBaIgp9"
                     },
                     {
                       "name": "screenshot",
@@ -326,7 +316,7 @@
                   "errorLocation": {
                     "file": "/home/colatto/repo/R3/4s/support/ui.js",
                     "column": 36,
-                    "line": 149
+                    "line": 158
                   }
                 }
               ],
@@ -354,25 +344,25 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "failed",
-                  "duration": 15771,
+                  "duration": 19150,
                   "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617153905 Requisicao/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617153905 Requisicao/i).first()\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617153905 Requisicao/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617153905 Requisicao/i).first()\u001b[22m\n\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:125:50\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:56:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:108:3",
+                    "message": "Error: Could not find clickable control: Enviar para aprovação | Enviar | Solicitar aprovação",
+                    "stack": "Error: Could not find clickable control: Enviar para aprovação | Enviar | Solicitar aprovação\n    at clickAny (/home/colatto/repo/R3/4s/support/ui.js:41:22)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:124:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:108:3",
                     "location": {
-                      "file": "/home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js",
-                      "column": 50,
-                      "line": 125
+                      "file": "/home/colatto/repo/R3/4s/support/ui.js",
+                      "column": 22,
+                      "line": 41
                     },
-                    "snippet": "  123 |     await submitForm(page);\n  124 |     await clickAny(page, ['Enviar para aprovação', 'Enviar', 'Solicitar aprovação']);\n> 125 |     await expect(byText(page, data.requisition)).toBeVisible();\n      |                                                  ^\n  126 |\n  127 |     await clickAny(page, ['Novo', 'Adicionar', 'Criar']);\n  128 |     await chooseFirstAvailableOption(page, ['Obra']);"
+                    "snippet": "\u001b[90m   at \u001b[39m../support/ui.js:41\n\n  39 |   }\n  40 |   const target = await firstVisible(locators);\n> 41 |   if (!target) throw new Error(`Could not find clickable control: ${names.join(' | ')}`);\n     |                      ^\n  42 |   await target.click(options);\n  43 | }\n  44 |"
                   },
                   "errors": [
                     {
                       "location": {
-                        "file": "/home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js",
-                        "column": 50,
-                        "line": 125
+                        "file": "/home/colatto/repo/R3/4s/support/ui.js",
+                        "column": 22,
+                        "line": 41
                       },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617153905 Requisicao/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617153905 Requisicao/i).first()\u001b[22m\n\n\n  123 |     await submitForm(page);\n  124 |     await clickAny(page, ['Enviar para aprovação', 'Enviar', 'Solicitar aprovação']);\n> 125 |     await expect(byText(page, data.requisition)).toBeVisible();\n      |                                                  ^\n  126 |\n  127 |     await clickAny(page, ['Novo', 'Adicionar', 'Criar']);\n  128 |     await chooseFirstAvailableOption(page, ['Obra']);\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:125:50\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:56:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:108:3"
+                      "message": "Error: Could not find clickable control: Enviar para aprovação | Enviar | Solicitar aprovação\n\n   at ../support/ui.js:41\n\n  39 |   }\n  40 |   const target = await firstVisible(locators);\n> 41 |   if (!target) throw new Error(`Could not find clickable control: ${names.join(' | ')}`);\n     |                      ^\n  42 |   await target.click(options);\n  43 | }\n  44 |\n    at clickAny (/home/colatto/repo/R3/4s/support/ui.js:41:22)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:124:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:108:3"
                     }
                   ],
                   "stdout": [],
@@ -381,36 +371,26 @@
                   "steps": [
                     {
                       "title": "CT012-REQUISICAO-SALDO",
-                      "duration": 10480,
+                      "duration": 1273,
                       "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617153905 Requisicao/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617153905 Requisicao/i).first()\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617153905 Requisicao/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617153905 Requisicao/i).first()\u001b[22m\n\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:125:50\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:56:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:108:3",
+                        "message": "Error: Could not find clickable control: Enviar para aprovação | Enviar | Solicitar aprovação",
+                        "stack": "Error: Could not find clickable control: Enviar para aprovação | Enviar | Solicitar aprovação\n    at clickAny (/home/colatto/repo/R3/4s/support/ui.js:41:22)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:124:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:108:3",
                         "location": {
-                          "file": "/home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js",
-                          "column": 50,
-                          "line": 125
+                          "file": "/home/colatto/repo/R3/4s/support/ui.js",
+                          "column": 22,
+                          "line": 41
                         },
-                        "snippet": "  123 |     await submitForm(page);\n  124 |     await clickAny(page, ['Enviar para aprovação', 'Enviar', 'Solicitar aprovação']);\n> 125 |     await expect(byText(page, data.requisition)).toBeVisible();\n      |                                                  ^\n  126 |\n  127 |     await clickAny(page, ['Novo', 'Adicionar', 'Criar']);\n  128 |     await chooseFirstAvailableOption(page, ['Obra']);"
+                        "snippet": "\u001b[90m   at \u001b[39m../support/ui.js:41\n\n  39 |   }\n  40 |   const target = await firstVisible(locators);\n> 41 |   if (!target) throw new Error(`Could not find clickable control: ${names.join(' | ')}`);\n     |                      ^\n  42 |   await target.click(options);\n  43 | }\n  44 |"
                       }
                     }
                   ],
-                  "startTime": "2026-06-17T15:39:05.371Z",
+                  "startTime": "2026-06-17T19:22:38.397Z",
                   "annotations": [],
                   "attachments": [
                     {
-                      "name": "diagnostic-CONSOLE-1781710751512",
-                      "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDT05TT0xFLTE3ODE3MTA3NTE1MTIiLAogICJzZXZlcml0eSI6ICJtZWRpYSIsCiAgImNhc2VJZCI6ICJDVDAxMi1DVDAxOSAtIGludGVncmF0ZWQgcHJvY3VyZW1lbnQsIHBheW1lbnQsIGRhc2hib2FyZCBhbmQgYXVkaXQgZmxvdyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9yZXF1aXNpY29lcyIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA2MTcxNTM5MDUiLAogICJleHBlY3RlZCI6ICJBIHRlbGEgbmFvIGRldmUgZW1pdGlyIGVycm9zIEphdmFTY3JpcHQgbm8gY29uc29sZS4iLAogICJhY3R1YWwiOiAiRmFsaGEgYW8gc2luY3Jvbml6YXIgcmVxdWlzaWNvZXMgbm8gTHVtaTogRXJyb3I6IE9QRVJBVElPTl9GQUlMRUQ6IEluc3VmZmljaWVudCBwZXJtaXNzaW9ucyB0byB1cGRhdGUgZG9jdW1lbnRcbiAgICBhdCBELjxhbm9ueW1vdXM+IChodHRwczovLzRzLnJ1YXRyZXouY29tL2Fzc2V0cy9wcmVyZW5kZXItRDVGUnFQVFouanM6MzAzOTQ6MzMpXG4gICAgYXQgR2VuZXJhdG9yLm5leHQgKDxhbm9ueW1vdXM+KVxuICAgIGF0IG4gKGh0dHBzOi8vNHMucnVhdHJlei5jb20vYXNzZXRzL3ByZXJlbmRlci1ENUZScVBUWi5qczozMDEzNjoxMSkiLAogICJpbXBhY3QiOiAiRXJyb3MgZGUgY29uc29sZSBwb2RlbSBpbmRpY2FyIGZhbGhhcyBkZSBpbnRlcmZhY2UsIGRhZG9zIG5hbyByZW5kZXJpemFkb3Mgb3UgcmVncmVzc2FvIHRlY25pY2EuIiwKICAicmVjb21tZW5kYXRpb24iOiAiQ29ycmlnaXIgYSBleGNlY2FvIG5vIGZyb250ZW5kIGUgYWRpY2lvbmFyIGNvYmVydHVyYSBhdXRvbWF0aXphZGEgcGFyYSBhIHRlbGEgYWZldGFkYS4iLAogICJldmlkZW5jZSI6ICIvaG9tZS9jb2xhdHRvL3JlcG8vUjMvNHMvdGVzdC1yZXN1bHRzL0NPTlNPTEUtMTc4MTcxMDc1MTUxMi5wbmciLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNi0xN1QxNTozOToxMS41NjZaIgp9"
-                    },
-                    {
-                      "name": "diagnostic-CONSOLE-1781710751565",
-                      "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDT05TT0xFLTE3ODE3MTA3NTE1NjUiLAogICJzZXZlcml0eSI6ICJtZWRpYSIsCiAgImNhc2VJZCI6ICJDVDAxMi1DVDAxOSAtIGludGVncmF0ZWQgcHJvY3VyZW1lbnQsIHBheW1lbnQsIGRhc2hib2FyZCBhbmQgYXVkaXQgZmxvdyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9yZXF1aXNpY29lcyIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA2MTcxNTM5MDUiLAogICJleHBlY3RlZCI6ICJBIHRlbGEgbmFvIGRldmUgZW1pdGlyIGVycm9zIEphdmFTY3JpcHQgbm8gY29uc29sZS4iLAogICJhY3R1YWwiOiAiRmFsaGEgYW8gc2luY3Jvbml6YXIgbG9nc19hdWRpdG9yaWEgbm8gTHVtaTogRXJyb3I6IE9QRVJBVElPTl9GQUlMRUQ6IEluc3VmZmljaWVudCBwZXJtaXNzaW9ucyB0byB1cGRhdGUgZG9jdW1lbnRcbiAgICBhdCBELjxhbm9ueW1vdXM+IChodHRwczovLzRzLnJ1YXRyZXouY29tL2Fzc2V0cy9wcmVyZW5kZXItRDVGUnFQVFouanM6MzAzOTQ6MzMpXG4gICAgYXQgR2VuZXJhdG9yLm5leHQgKDxhbm9ueW1vdXM+KVxuICAgIGF0IG4gKGh0dHBzOi8vNHMucnVhdHJlei5jb20vYXNzZXRzL3ByZXJlbmRlci1ENUZScVBUWi5qczozMDEzNjoxMSkiLAogICJpbXBhY3QiOiAiRXJyb3MgZGUgY29uc29sZSBwb2RlbSBpbmRpY2FyIGZhbGhhcyBkZSBpbnRlcmZhY2UsIGRhZG9zIG5hbyByZW5kZXJpemFkb3Mgb3UgcmVncmVzc2FvIHRlY25pY2EuIiwKICAicmVjb21tZW5kYXRpb24iOiAiQ29ycmlnaXIgYSBleGNlY2FvIG5vIGZyb250ZW5kIGUgYWRpY2lvbmFyIGNvYmVydHVyYSBhdXRvbWF0aXphZGEgcGFyYSBhIHRlbGEgYWZldGFkYS4iLAogICJldmlkZW5jZSI6ICIvaG9tZS9jb2xhdHRvL3JlcG8vUjMvNHMvdGVzdC1yZXN1bHRzL0NPTlNPTEUtMTc4MTcxMDc1MTU2NS5wbmciLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNi0xN1QxNTozOToxMS42MjBaIgp9"
-                    },
-                    {
                       "name": "diagnostic-CT012-REQUISICAO-SALDO",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAxMi1SRVFVSVNJQ0FPLVNBTERPIiwKICAic2V2ZXJpdHkiOiAiY3JpdGljYSIsCiAgImNhc2VJZCI6ICJDVDAxMi1DVDAxOSAtIGludGVncmF0ZWQgcHJvY3VyZW1lbnQsIHBheW1lbnQsIGRhc2hib2FyZCBhbmQgYXVkaXQgZmxvdyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9yZXF1aXNpY29lcyIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA2MTcxNTM5MDUiLAogICJleHBlY3RlZCI6ICJSZXF1aXNpY2FvIGRlbnRybyBkbyBzYWxkbyBzZWd1ZSBwYXJhIGFwcm92YWNhbzsgYWNpbWEgZG8gc2FsZG8gZmljYSBibG9xdWVhZGEgb3Ugc2luYWxpemFkYS4iLAogICJhY3R1YWwiOiAiXHUwMDFiWzJtZXhwZWN0KFx1MDAxYlsyMm1cdTAwMWJbMzFtbG9jYXRvclx1MDAxYlszOW1cdTAwMWJbMm0pLlx1MDAxYlsyMm10b0JlVmlzaWJsZVx1MDAxYlsybShcdTAwMWJbMjJtXHUwMDFiWzJtKVx1MDAxYlsyMm0gZmFpbGVkXG5cbkxvY2F0b3I6IGdldEJ5VGV4dCgvQVVUTy00Uy0yMDI2MDYxNzE1MzkwNSBSZXF1aXNpY2FvL2kpLmZpcnN0KClcbkV4cGVjdGVkOiB2aXNpYmxlXG5UaW1lb3V0OiAxMDAwMG1zXG5FcnJvcjogZWxlbWVudChzKSBub3QgZm91bmRcblxuQ2FsbCBsb2c6XG5cdTAwMWJbMm0gIC0gRXhwZWN0IFwidG9CZVZpc2libGVcIiB3aXRoIHRpbWVvdXQgMTAwMDBtc1x1MDAxYlsyMm1cblx1MDAxYlsybSAgLSB3YWl0aW5nIGZvciBnZXRCeVRleHQoL0FVVE8tNFMtMjAyNjA2MTcxNTM5MDUgUmVxdWlzaWNhby9pKS5maXJzdCgpXHUwMDFiWzIybVxuIiwKICAiaW1wYWN0IjogIlBlcm1pdGlyIGNvbXByYSBhY2ltYSBkbyBzYWxkbyByb21wZSBjb250cm9sZSBmaW5hbmNlaXJvIGRhIG9icmEuIiwKICAicmVjb21tZW5kYXRpb24iOiAiVmFsaWRhciBzYWxkbyBubyBiYWNrZW5kIGFudGVzIGRlIGF2YW5jYXIgc3RhdHVzIGUgYmxvcXVlYXIgY290YWNhbyBkZSByZXF1aXNpY29lcyBleGNlZGVudGVzLiIsCiAgImV2aWRlbmNlIjogIi9ob21lL2NvbGF0dG8vcmVwby9SMy80cy90ZXN0LXJlc3VsdHMvQ1QwMTItUkVRVUlTSUNBTy1TQUxETy5wbmciLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNi0xN1QxNTozOToyMS4xMzBaIgp9"
+                      "body": "ewogICJpZCI6ICJDVDAxMi1SRVFVSVNJQ0FPLVNBTERPIiwKICAic2V2ZXJpdHkiOiAiY3JpdGljYSIsCiAgImNhc2VJZCI6ICJDVDAxMi1DVDAxOSAtIGludGVncmF0ZWQgcHJvY3VyZW1lbnQsIHBheW1lbnQsIGRhc2hib2FyZCBhbmQgYXVkaXQgZmxvdyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9yZXF1aXNpY29lcyIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA2MTcxOTIyMzgiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMTItQ1QwMTkgLSBpbnRlZ3JhdGVkIHByb2N1cmVtZW50LCBwYXltZW50LCBkYXNoYm9hcmQgYW5kIGF1ZGl0IGZsb3dcIiBlIG9ic2VydmFyIGEgZXRhcGEgcXVlIGZhbGhvdS4iLAogICJleHBlY3RlZCI6ICJSZXF1aXNpY2FvIGRlbnRybyBkbyBzYWxkbyBzZWd1ZSBwYXJhIGFwcm92YWNhbzsgYWNpbWEgZG8gc2FsZG8gZmljYSBibG9xdWVhZGEgb3Ugc2luYWxpemFkYS4iLAogICJhY3R1YWwiOiAiQ291bGQgbm90IGZpbmQgY2xpY2thYmxlIGNvbnRyb2w6IEVudmlhciBwYXJhIGFwcm92YcOnw6NvIHwgRW52aWFyIHwgU29saWNpdGFyIGFwcm92YcOnw6NvIiwKICAiaW1wYWN0IjogIlBlcm1pdGlyIGNvbXByYSBhY2ltYSBkbyBzYWxkbyByb21wZSBjb250cm9sZSBmaW5hbmNlaXJvIGRhIG9icmEuIiwKICAiYnVzaW5lc3NJbXBhY3QiOiAiUGVybWl0aXIgY29tcHJhIGFjaW1hIGRvIHNhbGRvIHJvbXBlIGNvbnRyb2xlIGZpbmFuY2Vpcm8gZGEgb2JyYS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJWYWxpZGFyIHNhbGRvIG5vIGJhY2tlbmQgYW50ZXMgZGUgYXZhbmNhciBzdGF0dXMgZSBibG9xdWVhciBjb3RhY2FvIGRlIHJlcXVpc2ljb2VzIGV4Y2VkZW50ZXMuIiwKICAic3RhdHVzIjogInJlcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogIi9ob21lL2NvbGF0dG8vcmVwby9SMy80cy90ZXN0LXJlc3VsdHMvQ1QwMTItUkVRVUlTSUNBTy1TQUxETy5wbmciLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNi0xN1QxOToyMjo1Ny41MDRaIgp9"
                     },
                     {
                       "name": "screenshot",
@@ -429,9 +409,9 @@
                     }
                   ],
                   "errorLocation": {
-                    "file": "/home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js",
-                    "column": 50,
-                    "line": 125
+                    "file": "/home/colatto/repo/R3/4s/support/ui.js",
+                    "column": 22,
+                    "line": 41
                   }
                 }
               ],
@@ -453,7 +433,7 @@
       "specs": [
         {
           "title": "CT002, CT009, CT010, CT020 - permissions, protected budget and workflow decisions",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -466,83 +446,36 @@
                 {
                   "workerIndex": 2,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 24556,
-                  "error": {
-                    "message": "Error: Could not find clickable control: Editar | Alterar",
-                    "stack": "Error: Could not find clickable control: Editar | Alterar\n    at clickAny (/home/colatto/repo/R3/4s/support/ui.js:41:22)\n    at /home/colatto/repo/R3/4s/tests/03-permissions-workflow.spec.js:49:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:56:5)\n    at /home/colatto/repo/R3/4s/tests/03-permissions-workflow.spec.js:40:3",
-                    "location": {
-                      "file": "/home/colatto/repo/R3/4s/support/ui.js",
-                      "column": 22,
-                      "line": 41
-                    },
-                    "snippet": "\u001b[90m   at \u001b[39m../support/ui.js:41\n\n  39 |   }\n  40 |   const target = await firstVisible(locators);\n> 41 |   if (!target) throw new Error(`Could not find clickable control: ${names.join(' | ')}`);\n     |                      ^\n  42 |   await target.click(options);\n  43 | }\n  44 |"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/colatto/repo/R3/4s/support/ui.js",
-                        "column": 22,
-                        "line": 41
-                      },
-                      "message": "Error: Could not find clickable control: Editar | Alterar\n\n   at ../support/ui.js:41\n\n  39 |   }\n  40 |   const target = await firstVisible(locators);\n> 41 |   if (!target) throw new Error(`Could not find clickable control: ${names.join(' | ')}`);\n     |                      ^\n  42 |   await target.click(options);\n  43 | }\n  44 |\n    at clickAny (/home/colatto/repo/R3/4s/support/ui.js:41:22)\n    at /home/colatto/repo/R3/4s/tests/03-permissions-workflow.spec.js:49:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:56:5)\n    at /home/colatto/repo/R3/4s/tests/03-permissions-workflow.spec.js:40:3"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 52395,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "steps": [
                     {
                       "title": "CT002-USUARIO-OPERACIONAL",
-                      "duration": 1144
+                      "duration": 1653
                     },
                     {
                       "title": "CT009-ORCAMENTO-PROTEGIDO-ALTERACAO",
-                      "duration": 142,
-                      "error": {
-                        "message": "Error: Could not find clickable control: Editar | Alterar",
-                        "stack": "Error: Could not find clickable control: Editar | Alterar\n    at clickAny (/home/colatto/repo/R3/4s/support/ui.js:41:22)\n    at /home/colatto/repo/R3/4s/tests/03-permissions-workflow.spec.js:49:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:56:5)\n    at /home/colatto/repo/R3/4s/tests/03-permissions-workflow.spec.js:40:3",
-                        "location": {
-                          "file": "/home/colatto/repo/R3/4s/support/ui.js",
-                          "column": 22,
-                          "line": 41
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39m../support/ui.js:41\n\n  39 |   }\n  40 |   const target = await firstVisible(locators);\n> 41 |   if (!target) throw new Error(`Could not find clickable control: ${names.join(' | ')}`);\n     |                      ^\n  42 |   await target.click(options);\n  43 | }\n  44 |"
-                      }
+                      "duration": 1216
+                    },
+                    {
+                      "title": "CT010-ORCAMENTO-PROTEGIDO-EXCLUSAO",
+                      "duration": 228
+                    },
+                    {
+                      "title": "CT020-WORKFLOW-PERFIL-CORRETO",
+                      "duration": 314
                     }
                   ],
-                  "startTime": "2026-06-17T15:39:21.666Z",
+                  "startTime": "2026-06-17T19:22:58.077Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "diagnostic-CT009-ORCAMENTO-PROTEGIDO-ALTERACAO",
-                      "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAwOS1PUkNBTUVOVE8tUFJPVEVHSURPLUFMVEVSQUNBTyIsCiAgInNldmVyaXR5IjogImNyaXRpY2EiLAogICJjYXNlSWQiOiAiQ1QwMDIsIENUMDA5LCBDVDAxMCwgQ1QwMjAgLSBwZXJtaXNzaW9ucywgcHJvdGVjdGVkIGJ1ZGdldCBhbmQgd29ya2Zsb3cgZGVjaXNpb25zIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL29yY2FtZW50byIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA2MTcxNTM5MjEiLAogICJleHBlY3RlZCI6ICJVc3VhcmlvIGNvbXVtIG5hbyBkZXZlIGFsdGVyYXIgaXRlbSBvcmNhZG8gcHJvdGVnaWRvIGRpcmV0YW1lbnRlOyBkZXZlIGdlcmFyIGFwcm92YWNhby4iLAogICJhY3R1YWwiOiAiQ291bGQgbm90IGZpbmQgY2xpY2thYmxlIGNvbnRyb2w6IEVkaXRhciB8IEFsdGVyYXIiLAogICJpbXBhY3QiOiAiQWx0ZXJhY2FvIGxpdnJlIGRlIG9yY2FtZW50byBjb21wcm9tZXRlIGdvdmVybmFuY2EgZmluYW5jZWlyYS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJCbG9xdWVhciBlZGljYW8gZGlyZXRhIHBhcmEgcGVyZmlzIG5hbyBhdXRvcml6YWRvcyBlIGVuY2FtaW5oYXIgc29saWNpdGFjYW8gYW8gV29ya2Zsb3cgPiBBcHJvdmFjb2VzLiIsCiAgImV2aWRlbmNlIjogIi9ob21lL2NvbGF0dG8vcmVwby9SMy80cy90ZXN0LXJlc3VsdHMvQ1QwMDktT1JDQU1FTlRPLVBST1RFR0lETy1BTFRFUkFDQU8ucG5nIiwKICAidGltZXN0YW1wIjogIjIwMjYtMDYtMTdUMTU6Mzk6NDYuMTUwWiIKfQ=="
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/colatto/repo/R3/4s/test-results/artifacts/03-permissions-workflow-CT-685e9-dget-and-workflow-decisions-chromium-desktop/test-failed-1.png"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/colatto/repo/R3/4s/test-results/artifacts/03-permissions-workflow-CT-685e9-dget-and-workflow-decisions-chromium-desktop/error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/home/colatto/repo/R3/4s/test-results/artifacts/03-permissions-workflow-CT-685e9-dget-and-workflow-decisions-chromium-desktop/trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/colatto/repo/R3/4s/support/ui.js",
-                    "column": 22,
-                    "line": 41
-                  }
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "c398f1c451214130455b-535a15ed011b4e83593b",
@@ -571,10 +504,10 @@
               "projectName": "chromium-desktop",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 6462,
+                  "duration": 18764,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -582,26 +515,26 @@
                   "steps": [
                     {
                       "title": "REG-FILTROS-Financeiro-Contas-a-Pagar",
-                      "duration": 115
+                      "duration": 106
                     },
                     {
                       "title": "REG-FILTROS-Financeiro-Pagamentos",
-                      "duration": 154
+                      "duration": 148
                     },
                     {
                       "title": "REG-FILTROS-Workflow-Auditoria",
-                      "duration": 279
+                      "duration": 416
                     },
                     {
                       "title": "REG-FILTROS-Dashboard",
-                      "duration": 128
+                      "duration": 142
                     },
                     {
                       "title": "REG-CONFIRMACAO-EXCLUSAO",
-                      "duration": 161
+                      "duration": 159
                     }
                   ],
-                  "startTime": "2026-06-17T15:39:46.784Z",
+                  "startTime": "2026-06-17T19:23:50.589Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -619,11 +552,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-06-17T15:38:28.502Z",
-    "duration": 84883.34400000001,
-    "expected": 3,
+    "startTime": "2026-06-17T19:21:18.197Z",
+    "duration": 171207.281,
+    "expected": 4,
     "skipped": 0,
-    "unexpected": 3,
+    "unexpected": 2,
     "flaky": 0
   }
 }
