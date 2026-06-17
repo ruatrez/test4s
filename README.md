@@ -1,4 +1,4 @@
-# Teste Exploratorio
+# Teste Exploratorio - Sistema 4S
 
 Implementei e executei os testes no próprio sistema [4s.ruatrez.com](https://4s.ruatrez.com), usando o Brave, navegador baseado em chromium, instalado localmente em /usr/bin/brave-browser.
 
