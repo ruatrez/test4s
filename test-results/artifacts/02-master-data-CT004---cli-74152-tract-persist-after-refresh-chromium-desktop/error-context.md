@@ -1,0 +1,147 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: 02-master-data.spec.ts >> CT004 - client and contract persist after refresh
+- Location: tests/02-master-data.spec.ts:13:5
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: getByText(/AUTO-4S-20260618191314 Cliente/i).first()
+Expected: visible
+Timeout: 10000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 10000ms
+  - waiting for getByText(/AUTO-4S-20260618191314 Cliente/i).first()
+
+```
+
+```yaml
+- img "APP 4S"
+- text: Inovando o Amanha com Ciencia, Tecnologia e Engenharia
+- heading "Entrar" [level=1]
+- text: E-mail
+- textbox "seu@email.com"
+- text: Senha
+- textbox "********"
+- button "Entrar"
+- paragraph: Acesso restrito. Solicite suas credenciais ao administrador do sistema.
+```
+
+# Test source
+
+```ts
+  62  |       if (childVisible) continue;
+  63  |     }
+  64  |     await clickAny(page, [segment]);
+  65  |     await page.waitForLoadState('networkidle').catch(() => {});
+  66  |   }
+  67  | }
+  68  | 
+  69  | export async function fillField(page: Page, labels: string[], value: string | number) {
+  70  |   const candidates: Locator[] = [];
+  71  |   for (const label of labels) {
+  72  |     const patterns = [new RegExp(label, 'i')];
+  73  |     if (/^email$/i.test(label)) patterns.push(/e-?mail/i);
+  74  |     for (const pattern of patterns) {
+  75  |       candidates.push(page.getByLabel(pattern));
+  76  |       candidates.push(page.getByPlaceholder(pattern));
+  77  |     }
+  78  |     candidates.push(page.locator(`input[name*="${label}" i]`));
+  79  |     candidates.push(page.locator(`textarea[name*="${label}" i]`));
+  80  |     candidates.push(page.locator(`xpath=//*[starts-with(normalize-space(.), ${xpathLiteral(label)}) and (./input or ./textarea)]//*[self::input or self::textarea]`));
+  81  |   }
+  82  |   const target = await firstVisible(candidates);
+  83  |   if (!target) throw new Error(`Could not find field: ${labels.join(' | ')}`);
+  84  |   await target.fill(String(value));
+  85  | }
+  86  | 
+  87  | export async function chooseOption(page: Page, labels: string[], value: string) {
+  88  |   const candidates = labels.flatMap((label) => [
+  89  |     page.getByLabel(new RegExp(label, 'i')),
+  90  |     page.locator(`select[name*="${label}" i]`),
+  91  |     page.locator(`xpath=//*[starts-with(normalize-space(.), ${xpathLiteral(label)}) and ./select]//select`)
+  92  |   ]);
+  93  |   const target = await firstVisible(candidates);
+  94  |   if (!target) throw new Error(`Could not find select/control: ${labels.join(' | ')}`);
+  95  | 
+  96  |   const tagName = await target.evaluate((element) => element.tagName.toLowerCase()).catch(() => '');
+  97  |   if (tagName === 'select') {
+  98  |     const option = await target.locator('option').filter({ hasText: new RegExp(escapeRegex(value), 'i') }).first();
+  99  |     if (await option.count()) {
+  100 |       await target.selectOption({ label: await option.innerText() });
+  101 |       return;
+  102 |     }
+  103 |   }
+  104 | 
+  105 |   await target.click();
+  106 |   await clickAny(page, [value]);
+  107 | }
+  108 | 
+  109 | export async function chooseFirstAvailableOption(page: Page, labels: string[]) {
+  110 |   const candidates = labels.flatMap((label) => [
+  111 |     page.getByLabel(new RegExp(label, 'i')),
+  112 |     page.locator(`xpath=//*[starts-with(normalize-space(.), ${xpathLiteral(label)}) and ./select]//select`)
+  113 |   ]);
+  114 |   const target = await firstVisible(candidates);
+  115 |   if (!target) throw new Error(`Could not find select/control: ${labels.join(' | ')}`);
+  116 |   const optionValue = await target.locator('option').evaluateAll((options) => {
+  117 |     const option = options.find((item) => item.value && !/selecione|todas/i.test(item.textContent || ''));
+  118 |     return option ? option.value : '';
+  119 |   });
+  120 |   if (!optionValue) throw new Error(`Could not find available option for: ${labels.join(' | ')}`);
+  121 |   await target.selectOption(optionValue);
+  122 | }
+  123 | 
+  124 | export async function submitForm(page: Page) {
+  125 |   const primarySubmit = await firstVisible([
+  126 |     page.getByRole('button', { name: /^(salvar|cadastrar|criar|confirmar|enviar)$/i }),
+  127 |     page.locator('button, [role="button"]').filter({ hasText: /salvar|confirmar|enviar|criar|cadastrar/i }).filter({ hasNotText: /cadastrar mais/i })
+  128 |   ]);
+  129 |   if (primarySubmit) {
+  130 |     await primarySubmit.click();
+  131 |   } else {
+  132 |     await clickAny(page, ['Salvar', 'Cadastrar', 'Criar', 'Confirmar', 'Enviar']);
+  133 |   }
+  134 |   await page.waitForLoadState('networkidle').catch(() => {});
+  135 |   await page.getByText(/salvando/i).waitFor({ state: 'hidden', timeout: 15_000 }).catch(() => {});
+  136 | }
+  137 | 
+  138 | export async function expectPageReady(page: Page, expectedTexts: string[] = []) {
+  139 |   await expect(page.locator('body')).toBeVisible();
+  140 |   await expect(page.locator('body')).not.toHaveText(/erro interno|internal server error|not found|undefined is not|cannot read/i);
+  141 |   for (const text of expectedTexts) {
+  142 |     await expect(byText(page, text)).toBeVisible();
+  143 |   }
+  144 | }
+  145 | 
+  146 | export async function tryCreateSimpleRecord(page: Page, menuPath: string[], recordName: string, fields: FieldInput[] = []) {
+  147 |   await gotoMenu(page, menuPath);
+  148 |   await clickAny(page, ['Novo', 'Adicionar', 'Cadastrar', 'Criar']);
+  149 |   for (const field of fields) {
+  150 |     if (field.type === 'select') {
+  151 |       await chooseOption(page, field.labels, field.value);
+  152 |     } else {
+  153 |       await fillField(page, field.labels, field.value);
+  154 |     }
+  155 |   }
+  156 |   await submitForm(page);
+  157 |   await expect(byText(page, recordName)).toBeVisible();
+  158 | }
+  159 | 
+  160 | export async function assertPersistedAfterRefresh(page: Page, text: string) {
+  161 |   await page.reload({ waitUntil: 'networkidle' });
+> 162 |   await expect(byText(page, text)).toBeVisible();
+      |                                    ^ Error: expect(locator).toBeVisible() failed
+  163 | }
+  164 | 
+```

@@ -3,37 +3,34 @@
     "argv": [
       "/home/linuxbrew/.linuxbrew/Cellar/node/26.3.0/bin/node",
       "/home/colatto/repo/R3/4s/node_modules/.bin/playwright",
-      "test"
+      "test",
+      "--list"
     ],
-    "configFile": "/home/colatto/repo/R3/4s/playwright.config.js",
+    "configFile": "/home/colatto/repo/R3/4s/playwright.config.ts",
     "rootDir": "/home/colatto/repo/R3/4s/tests",
     "failOnFlakyTests": false,
     "forbidOnly": false,
     "fullyParallel": false,
-    "globalSetup": "/home/colatto/repo/R3/4s/support/global-setup.js",
+    "globalSetup": "/home/colatto/repo/R3/4s/support/global-setup.ts",
     "globalTeardown": null,
     "globalTimeout": 0,
     "grep": {},
     "grepInvert": null,
     "maxFailures": 0,
-    "metadata": {
-      "actualWorkers": 1
-    },
+    "metadata": {},
     "preserveOutput": "always",
     "projects": [
       {
         "outputDir": "/home/colatto/repo/R3/4s/test-results/artifacts",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {
-          "actualWorkers": 1
-        },
+        "metadata": {},
         "id": "chromium-desktop",
         "name": "chromium-desktop",
         "testDir": "/home/colatto/repo/R3/4s/tests",
         "testIgnore": [],
         "testMatch": [
-          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+          "/.*\\.spec\\.ts/"
         ],
         "timeout": 90000
       }
@@ -72,13 +69,13 @@
   },
   "suites": [
     {
-      "title": "01-smoke.spec.js",
-      "file": "01-smoke.spec.js",
+      "title": "01-smoke.spec.ts",
+      "file": "01-smoke.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "CT001 - login, logout and invalid login behavior",
+          "title": "CT001 - login, logout, invalid login and session access",
           "ok": true,
           "tags": [],
           "tests": [
@@ -88,42 +85,34 @@
               "expectedStatus": "passed",
               "projectId": "chromium-desktop",
               "projectName": "chromium-desktop",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 26186,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "steps": [
-                    {
-                      "title": "CT001-LOGIN-ADMIN",
-                      "duration": 17568
-                    },
-                    {
-                      "title": "CT001-LOGOUT",
-                      "duration": 88
-                    },
-                    {
-                      "title": "CT001-LOGIN-INVALIDO",
-                      "duration": 8188
-                    }
-                  ],
-                  "startTime": "2026-06-17T19:21:18.536Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
-          "id": "d1d2dbbaeca0da0534b1-ccc9fac24e561b5c2d88",
-          "file": "01-smoke.spec.js",
-          "line": 11,
-          "column": 1
+          "id": "f4ef03261b0851aba39f-59f6eed945120637f65d",
+          "file": "01-smoke.spec.ts",
+          "line": 12,
+          "column": 5
+        },
+        {
+          "title": "CT003 - cadastro shortcuts route to functional screens",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "f4ef03261b0851aba39f-1980718b85d76c63ec8d",
+          "file": "01-smoke.spec.ts",
+          "line": 55,
+          "column": 5
         },
         {
           "title": "CT022 - main routes load without blank screens or technical errors",
@@ -136,303 +125,25 @@
               "expectedStatus": "passed",
               "projectId": "chromium-desktop",
               "projectName": "chromium-desktop",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 17461,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "steps": [
-                    {
-                      "title": "CT022-Dashboard",
-                      "duration": 12
-                    },
-                    {
-                      "title": "CT022-Cadastros",
-                      "duration": 56
-                    },
-                    {
-                      "title": "CT022-Configurações-Clientes-e-Contratos",
-                      "duration": 129
-                    },
-                    {
-                      "title": "CT022-Configurações-Obras-e-Centros",
-                      "duration": 69
-                    },
-                    {
-                      "title": "CT022-Configurações-Fornecedores",
-                      "duration": 75
-                    },
-                    {
-                      "title": "CT022-Configurações-Categorias",
-                      "duration": 83
-                    },
-                    {
-                      "title": "CT022-Configurações-Colaboradores",
-                      "duration": 75
-                    },
-                    {
-                      "title": "CT022-Configurações-Usuários",
-                      "duration": 70
-                    },
-                    {
-                      "title": "CT022-Orçamento-Itens-Orçados",
-                      "duration": 144
-                    },
-                    {
-                      "title": "CT022-Suprimentos-Requisições",
-                      "duration": 119
-                    },
-                    {
-                      "title": "CT022-Suprimentos-Cotações",
-                      "duration": 62
-                    },
-                    {
-                      "title": "CT022-Suprimentos-Ordens-de-Compra",
-                      "duration": 60
-                    },
-                    {
-                      "title": "CT022-Financeiro-Contas-a-Pagar",
-                      "duration": 118
-                    },
-                    {
-                      "title": "CT022-Financeiro-Pagamentos",
-                      "duration": 52
-                    },
-                    {
-                      "title": "CT022-Workflow-Aprovações",
-                      "duration": 107
-                    },
-                    {
-                      "title": "CT022-Workflow-Auditoria",
-                      "duration": 143
-                    }
-                  ],
-                  "startTime": "2026-06-17T19:21:44.829Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
-          "id": "d1d2dbbaeca0da0534b1-0dafce8c8222f2464b87",
-          "file": "01-smoke.spec.js",
-          "line": 49,
-          "column": 1
+          "id": "f4ef03261b0851aba39f-a8bab741814382dacc29",
+          "file": "01-smoke.spec.ts",
+          "line": 78,
+          "column": 5
         }
       ]
     },
     {
-      "title": "02-financial-flow.spec.js",
-      "file": "02-financial-flow.spec.js",
+      "title": "02-master-data.spec.ts",
+      "file": "02-master-data.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "CT004-CT008 - initial registrations and budget item persist across modules",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium-desktop",
-              "projectName": "chromium-desktop",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 35594,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617192118 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617192118 Cliente/i).first()\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617192118 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617192118 Cliente/i).first()\u001b[22m\n\n    at assertPersistedAfterRefresh (/home/colatto/repo/R3/4s/support/ui.js:158:36)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:37:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:22:3",
-                    "location": {
-                      "file": "/home/colatto/repo/R3/4s/support/ui.js",
-                      "column": 36,
-                      "line": 158
-                    },
-                    "snippet": "\u001b[90m   at \u001b[39m../support/ui.js:158\n\n  156 | async function assertPersistedAfterRefresh(page, text) {\n  157 |   await page.reload({ waitUntil: 'networkidle' });\n> 158 |   await expect(byText(page, text)).toBeVisible();\n      |                                    ^\n  159 | }\n  160 |\n  161 | module.exports = {"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/colatto/repo/R3/4s/support/ui.js",
-                        "column": 36,
-                        "line": 158
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617192118 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617192118 Cliente/i).first()\u001b[22m\n\n\n   at ../support/ui.js:158\n\n  156 | async function assertPersistedAfterRefresh(page, text) {\n  157 |   await page.reload({ waitUntil: 'networkidle' });\n> 158 |   await expect(byText(page, text)).toBeVisible();\n      |                                    ^\n  159 | }\n  160 |\n  161 | module.exports = {\n    at assertPersistedAfterRefresh (/home/colatto/repo/R3/4s/support/ui.js:158:36)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:37:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:22:3"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "steps": [
-                    {
-                      "title": "CT004-CLIENTE-CONTRATO",
-                      "duration": 18345,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617192118 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617192118 Cliente/i).first()\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617192118 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617192118 Cliente/i).first()\u001b[22m\n\n    at assertPersistedAfterRefresh (/home/colatto/repo/R3/4s/support/ui.js:158:36)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:37:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:22:3",
-                        "location": {
-                          "file": "/home/colatto/repo/R3/4s/support/ui.js",
-                          "column": 36,
-                          "line": 158
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39m../support/ui.js:158\n\n  156 | async function assertPersistedAfterRefresh(page, text) {\n  157 |   await page.reload({ waitUntil: 'networkidle' });\n> 158 |   await expect(byText(page, text)).toBeVisible();\n      |                                    ^\n  159 | }\n  160 |\n  161 | module.exports = {"
-                      }
-                    }
-                  ],
-                  "startTime": "2026-06-17T19:22:02.306Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "diagnostic-CT004-CLIENTE-CONTRATO",
-                      "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAwNC1DTElFTlRFLUNPTlRSQVRPIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAwNC1DVDAwOCAtIGluaXRpYWwgcmVnaXN0cmF0aW9ucyBhbmQgYnVkZ2V0IGl0ZW0gcGVyc2lzdCBhY3Jvc3MgbW9kdWxlcyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9jbGllbnRlcy8iLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNjE3MTkyMTE4IiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDA0LUNUMDA4IC0gaW5pdGlhbCByZWdpc3RyYXRpb25zIGFuZCBidWRnZXQgaXRlbSBwZXJzaXN0IGFjcm9zcyBtb2R1bGVzXCIgZSBvYnNlcnZhciBhIGV0YXBhIHF1ZSBmYWxob3UuIiwKICAiZXhwZWN0ZWQiOiAiQ2xpZW50ZSBlIGNvbnRyYXRvIGRldmVtIHNlciBjcmlhZG9zLCB2aW5jdWxhZG9zIGUgcGVyc2lzdGlkb3MuIiwKICAiYWN0dWFsIjogIlx1MDAxYlsybWV4cGVjdChcdTAwMWJbMjJtXHUwMDFiWzMxbWxvY2F0b3JcdTAwMWJbMzltXHUwMDFiWzJtKS5cdTAwMWJbMjJtdG9CZVZpc2libGVcdTAwMWJbMm0oXHUwMDFiWzIybVx1MDAxYlsybSlcdTAwMWJbMjJtIGZhaWxlZFxuXG5Mb2NhdG9yOiBnZXRCeVRleHQoL0FVVE8tNFMtMjAyNjA2MTcxOTIxMTggQ2xpZW50ZS9pKS5maXJzdCgpXG5FeHBlY3RlZDogdmlzaWJsZVxuVGltZW91dDogMTAwMDBtc1xuRXJyb3I6IGVsZW1lbnQocykgbm90IGZvdW5kXG5cbkNhbGwgbG9nOlxuXHUwMDFiWzJtICAtIEV4cGVjdCBcInRvQmVWaXNpYmxlXCIgd2l0aCB0aW1lb3V0IDEwMDAwbXNcdTAwMWJbMjJtXG5cdTAwMWJbMm0gIC0gd2FpdGluZyBmb3IgZ2V0QnlUZXh0KC9BVVRPLTRTLTIwMjYwNjE3MTkyMTE4IENsaWVudGUvaSkuZmlyc3QoKVx1MDAxYlsyMm1cbiIsCiAgImltcGFjdCI6ICJTZW0gY29udHJhdG8vY2xpZW50ZSBuYW8gZSBwb3NzaXZlbCBpbmljaWFyIGEgY2FkZWlhIGZpbmFuY2VpcmEgZGEgb2JyYS4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJTZW0gY29udHJhdG8vY2xpZW50ZSBuYW8gZSBwb3NzaXZlbCBpbmljaWFyIGEgY2FkZWlhIGZpbmFuY2VpcmEgZGEgb2JyYS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJDb3JyaWdpciBwZXJzaXN0ZW5jaWEgZSByZWxhY2lvbmFtZW50byBlbnRyZSBjbGllbnRlIGUgY29udHJhdG8uIiwKICAic3RhdHVzIjogInJlcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogIi9ob21lL2NvbGF0dG8vcmVwby9SMy80cy90ZXN0LXJlc3VsdHMvQ1QwMDQtQ0xJRU5URS1DT05UUkFUTy5wbmciLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNi0xN1QxOToyMjozNy41NDBaIgp9"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/colatto/repo/R3/4s/test-results/artifacts/02-financial-flow-CT004-CT-0e947-item-persist-across-modules-chromium-desktop/test-failed-1.png"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/colatto/repo/R3/4s/test-results/artifacts/02-financial-flow-CT004-CT-0e947-item-persist-across-modules-chromium-desktop/error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/home/colatto/repo/R3/4s/test-results/artifacts/02-financial-flow-CT004-CT-0e947-item-persist-across-modules-chromium-desktop/trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/colatto/repo/R3/4s/support/ui.js",
-                    "column": 36,
-                    "line": 158
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "de2d27955909c4617988-6b9010094ddc07a4a547",
-          "file": "02-financial-flow.spec.js",
-          "line": 21,
-          "column": 1
-        },
-        {
-          "title": "CT012-CT019 - integrated procurement, payment, dashboard and audit flow",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium-desktop",
-              "projectName": "chromium-desktop",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 19150,
-                  "error": {
-                    "message": "Error: Could not find clickable control: Enviar para aprovação | Enviar | Solicitar aprovação",
-                    "stack": "Error: Could not find clickable control: Enviar para aprovação | Enviar | Solicitar aprovação\n    at clickAny (/home/colatto/repo/R3/4s/support/ui.js:41:22)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:124:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:108:3",
-                    "location": {
-                      "file": "/home/colatto/repo/R3/4s/support/ui.js",
-                      "column": 22,
-                      "line": 41
-                    },
-                    "snippet": "\u001b[90m   at \u001b[39m../support/ui.js:41\n\n  39 |   }\n  40 |   const target = await firstVisible(locators);\n> 41 |   if (!target) throw new Error(`Could not find clickable control: ${names.join(' | ')}`);\n     |                      ^\n  42 |   await target.click(options);\n  43 | }\n  44 |"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/colatto/repo/R3/4s/support/ui.js",
-                        "column": 22,
-                        "line": 41
-                      },
-                      "message": "Error: Could not find clickable control: Enviar para aprovação | Enviar | Solicitar aprovação\n\n   at ../support/ui.js:41\n\n  39 |   }\n  40 |   const target = await firstVisible(locators);\n> 41 |   if (!target) throw new Error(`Could not find clickable control: ${names.join(' | ')}`);\n     |                      ^\n  42 |   await target.click(options);\n  43 | }\n  44 |\n    at clickAny (/home/colatto/repo/R3/4s/support/ui.js:41:22)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:124:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:108:3"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "steps": [
-                    {
-                      "title": "CT012-REQUISICAO-SALDO",
-                      "duration": 1273,
-                      "error": {
-                        "message": "Error: Could not find clickable control: Enviar para aprovação | Enviar | Solicitar aprovação",
-                        "stack": "Error: Could not find clickable control: Enviar para aprovação | Enviar | Solicitar aprovação\n    at clickAny (/home/colatto/repo/R3/4s/support/ui.js:41:22)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:124:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:108:3",
-                        "location": {
-                          "file": "/home/colatto/repo/R3/4s/support/ui.js",
-                          "column": 22,
-                          "line": 41
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39m../support/ui.js:41\n\n  39 |   }\n  40 |   const target = await firstVisible(locators);\n> 41 |   if (!target) throw new Error(`Could not find clickable control: ${names.join(' | ')}`);\n     |                      ^\n  42 |   await target.click(options);\n  43 | }\n  44 |"
-                      }
-                    }
-                  ],
-                  "startTime": "2026-06-17T19:22:38.397Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "diagnostic-CT012-REQUISICAO-SALDO",
-                      "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAxMi1SRVFVSVNJQ0FPLVNBTERPIiwKICAic2V2ZXJpdHkiOiAiY3JpdGljYSIsCiAgImNhc2VJZCI6ICJDVDAxMi1DVDAxOSAtIGludGVncmF0ZWQgcHJvY3VyZW1lbnQsIHBheW1lbnQsIGRhc2hib2FyZCBhbmQgYXVkaXQgZmxvdyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9yZXF1aXNpY29lcyIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA2MTcxOTIyMzgiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMTItQ1QwMTkgLSBpbnRlZ3JhdGVkIHByb2N1cmVtZW50LCBwYXltZW50LCBkYXNoYm9hcmQgYW5kIGF1ZGl0IGZsb3dcIiBlIG9ic2VydmFyIGEgZXRhcGEgcXVlIGZhbGhvdS4iLAogICJleHBlY3RlZCI6ICJSZXF1aXNpY2FvIGRlbnRybyBkbyBzYWxkbyBzZWd1ZSBwYXJhIGFwcm92YWNhbzsgYWNpbWEgZG8gc2FsZG8gZmljYSBibG9xdWVhZGEgb3Ugc2luYWxpemFkYS4iLAogICJhY3R1YWwiOiAiQ291bGQgbm90IGZpbmQgY2xpY2thYmxlIGNvbnRyb2w6IEVudmlhciBwYXJhIGFwcm92YcOnw6NvIHwgRW52aWFyIHwgU29saWNpdGFyIGFwcm92YcOnw6NvIiwKICAiaW1wYWN0IjogIlBlcm1pdGlyIGNvbXByYSBhY2ltYSBkbyBzYWxkbyByb21wZSBjb250cm9sZSBmaW5hbmNlaXJvIGRhIG9icmEuIiwKICAiYnVzaW5lc3NJbXBhY3QiOiAiUGVybWl0aXIgY29tcHJhIGFjaW1hIGRvIHNhbGRvIHJvbXBlIGNvbnRyb2xlIGZpbmFuY2Vpcm8gZGEgb2JyYS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJWYWxpZGFyIHNhbGRvIG5vIGJhY2tlbmQgYW50ZXMgZGUgYXZhbmNhciBzdGF0dXMgZSBibG9xdWVhciBjb3RhY2FvIGRlIHJlcXVpc2ljb2VzIGV4Y2VkZW50ZXMuIiwKICAic3RhdHVzIjogInJlcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogIi9ob21lL2NvbGF0dG8vcmVwby9SMy80cy90ZXN0LXJlc3VsdHMvQ1QwMTItUkVRVUlTSUNBTy1TQUxETy5wbmciLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNi0xN1QxOToyMjo1Ny41MDRaIgp9"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/colatto/repo/R3/4s/test-results/artifacts/02-financial-flow-CT012-CT-da056-nt-dashboard-and-audit-flow-chromium-desktop/test-failed-1.png"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/colatto/repo/R3/4s/test-results/artifacts/02-financial-flow-CT012-CT-da056-nt-dashboard-and-audit-flow-chromium-desktop/error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/home/colatto/repo/R3/4s/test-results/artifacts/02-financial-flow-CT012-CT-da056-nt-dashboard-and-audit-flow-chromium-desktop/trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/colatto/repo/R3/4s/support/ui.js",
-                    "column": 22,
-                    "line": 41
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "de2d27955909c4617988-ffcc7516c6332605da31",
-          "file": "02-financial-flow.spec.js",
-          "line": 107,
-          "column": 1
-        }
-      ]
-    },
-    {
-      "title": "03-permissions-workflow.spec.js",
-      "file": "03-permissions-workflow.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "CT002, CT009, CT010, CT020 - permissions, protected budget and workflow decisions",
+          "title": "CT004 - client and contract persist after refresh",
           "ok": true,
           "tags": [],
           "tests": [
@@ -442,52 +153,316 @@
               "expectedStatus": "passed",
               "projectId": "chromium-desktop",
               "projectName": "chromium-desktop",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 52395,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "steps": [
-                    {
-                      "title": "CT002-USUARIO-OPERACIONAL",
-                      "duration": 1653
-                    },
-                    {
-                      "title": "CT009-ORCAMENTO-PROTEGIDO-ALTERACAO",
-                      "duration": 1216
-                    },
-                    {
-                      "title": "CT010-ORCAMENTO-PROTEGIDO-EXCLUSAO",
-                      "duration": 228
-                    },
-                    {
-                      "title": "CT020-WORKFLOW-PERFIL-CORRETO",
-                      "duration": 314
-                    }
-                  ],
-                  "startTime": "2026-06-17T19:22:58.077Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
-          "id": "c398f1c451214130455b-535a15ed011b4e83593b",
-          "file": "03-permissions-workflow.spec.js",
-          "line": 12,
-          "column": 1
+          "id": "d59d1b04a1b8372da34c-25fc2d0539511a2d4269",
+          "file": "02-master-data.spec.ts",
+          "line": 13,
+          "column": 5
+        },
+        {
+          "title": "CT005 - unit, work and cost center persist and become available",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "d59d1b04a1b8372da34c-c8987d75f44696ab2e34",
+          "file": "02-master-data.spec.ts",
+          "line": 27,
+          "column": 5
+        },
+        {
+          "title": "CT006 - suppliers can be created for quotations",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "d59d1b04a1b8372da34c-15bdac707ce3993eefbc",
+          "file": "02-master-data.spec.ts",
+          "line": 41,
+          "column": 5
+        },
+        {
+          "title": "CT007 - budget categories can be created",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "d59d1b04a1b8372da34c-b85ccb663e8b50a317a4",
+          "file": "02-master-data.spec.ts",
+          "line": 55,
+          "column": 5
+        },
+        {
+          "title": "CT011 - collaborator allocation can compose real cost",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "d59d1b04a1b8372da34c-0d1b4122932bc345e120",
+          "file": "02-master-data.spec.ts",
+          "line": 69,
+          "column": 5
         }
       ]
     },
     {
-      "title": "04-diagnostics-regression.spec.js",
-      "file": "04-diagnostics-regression.spec.js",
+      "title": "03-budget-permissions.spec.ts",
+      "file": "03-budget-permissions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "CT002 - operational and inactive users reflect permission rules",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "2a7fa184013a0138b1b3-38d96c3c023b02f7ef1f",
+          "file": "03-budget-permissions.spec.ts",
+          "line": 19,
+          "column": 5
+        },
+        {
+          "title": "CT008 - budget item persists and exposes balance fields",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "2a7fa184013a0138b1b3-f216c14b48d867750352",
+          "file": "03-budget-permissions.spec.ts",
+          "line": 47,
+          "column": 5
+        },
+        {
+          "title": "CT009, CT010 and CT020 - protected budget changes go through workflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "2a7fa184013a0138b1b3-c3f0a86f587719e36493",
+          "file": "03-budget-permissions.spec.ts",
+          "line": 64,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "04-procurement-finance-e2e.spec.ts",
+      "file": "04-procurement-finance-e2e.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "CT012 - requisition validates budget balance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "a94c55c2290a00239667-1a174e6212b16584e8b9",
+          "file": "04-procurement-finance-e2e.spec.ts",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "CT013 - requisition approval updates origin status",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "a94c55c2290a00239667-ea6f735d2000d72b3e94",
+          "file": "04-procurement-finance-e2e.spec.ts",
+          "line": 31,
+          "column": 5
+        },
+        {
+          "title": "CT014 - quotation compares suppliers and persists winner",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "a94c55c2290a00239667-b74444d32d9b48a856db",
+          "file": "04-procurement-finance-e2e.spec.ts",
+          "line": 45,
+          "column": 5
+        },
+        {
+          "title": "CT015 - purchase order commits budget and creates payable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "a94c55c2290a00239667-b265050e069d2bad6948",
+          "file": "04-procurement-finance-e2e.spec.ts",
+          "line": 59,
+          "column": 5
+        },
+        {
+          "title": "CT016 - procurement records support edit/delete controls without technical errors",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "a94c55c2290a00239667-88b33b202024becaf7f4",
+          "file": "04-procurement-finance-e2e.spec.ts",
+          "line": 73,
+          "column": 5
+        },
+        {
+          "title": "CT017 and CT018 - payables and payments update financial status",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "a94c55c2290a00239667-321b209df4783707e2ae",
+          "file": "04-procurement-finance-e2e.spec.ts",
+          "line": 87,
+          "column": 5
+        },
+        {
+          "title": "CT019 and CT021 - dashboard and audit reflect integrated flow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "a94c55c2290a00239667-6035f24d9bed5204eb63",
+          "file": "04-procurement-finance-e2e.spec.ts",
+          "line": 112,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "05-regression.spec.ts",
+      "file": "05-regression.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
@@ -502,61 +477,25 @@
               "expectedStatus": "passed",
               "projectId": "chromium-desktop",
               "projectName": "chromium-desktop",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 18764,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "steps": [
-                    {
-                      "title": "REG-FILTROS-Financeiro-Contas-a-Pagar",
-                      "duration": 106
-                    },
-                    {
-                      "title": "REG-FILTROS-Financeiro-Pagamentos",
-                      "duration": 148
-                    },
-                    {
-                      "title": "REG-FILTROS-Workflow-Auditoria",
-                      "duration": 416
-                    },
-                    {
-                      "title": "REG-FILTROS-Dashboard",
-                      "duration": 142
-                    },
-                    {
-                      "title": "REG-CONFIRMACAO-EXCLUSAO",
-                      "duration": 159
-                    }
-                  ],
-                  "startTime": "2026-06-17T19:23:50.589Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
-          "id": "4bd7d76e13ba1fcc58f2-9d4d7241114a859daef6",
-          "file": "04-diagnostics-regression.spec.js",
+          "id": "5bd4dd292a84471ce8b5-c7cf2800f7ca3c5ee247",
+          "file": "05-regression.spec.ts",
           "line": 11,
-          "column": 1
+          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-06-17T19:21:18.197Z",
-    "duration": 171207.281,
-    "expected": 4,
-    "skipped": 0,
-    "unexpected": 2,
+    "startTime": "2026-06-18T19:17:16.952Z",
+    "duration": 17.65799999999996,
+    "expected": 0,
+    "skipped": 19,
+    "unexpected": 0,
     "flaky": 0
   }
 }

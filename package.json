@@ -6,8 +6,9 @@
   "scripts": {
     "test": "playwright test",
     "test:headed": "playwright test --headed",
-    "test:smoke": "playwright test tests/01-smoke.spec.js",
-    "test:e2e": "playwright test tests/02-financial-flow.spec.js",
+    "test:smoke": "playwright test tests/01-smoke.spec.ts",
+    "test:e2e": "playwright test tests/04-procurement-finance-e2e.spec.ts",
+    "test:list": "playwright test --list",
     "report": "node scripts/build-diagnostic-report.js",
     "show-report": "playwright show-report"
   },

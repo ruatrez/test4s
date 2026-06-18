@@ -1,6 +1,6 @@
 # Estrategia de Testes Automatizados 4S
 
-Esta suite implementa a validacao descrita no `RoteirodeTestes4S.pdf` para a Fase 1 do APP 4S.
+Esta suite Playwright + TypeScript implementa a validacao descrita no `RoteirodeTestes4S.pdf` para a Fase 1 do APP 4S.
 
 ## Execucao
 
@@ -32,14 +32,18 @@ Variaveis aceitas:
 - `OPERATIONAL_EMAIL`: usuario operacional existente, opcional
 - `OPERATIONAL_PASSWORD`: senha do usuario operacional, opcional
 - `RUN_ID`: identificador da massa de teste
+- `BROWSER_EXECUTABLE`: navegador Chromium/Brave local, opcional
+- `PW_VIDEO=1`: habilita videos retidos em falha
 
 ## Evidencias
 
 Os testes gravam evidencias em:
 
 - `test-results/results.json`
+- `test-results/case-results.jsonl`
 - `test-results/diagnostics.jsonl`
 - `test-results/diagnostic-report.md`
+- `test-results/diagnostic-report.html`
 - `test-results/artifacts`
 - `playwright-report`
 
@@ -47,10 +51,13 @@ Os testes gravam evidencias em:
 
 - CT001: login, logout e login invalido.
 - CT002: usuarios e permissoes.
+- CT003: cadastros rapidos.
 - CT004 a CT008: cadastros iniciais, fornecedores, categorias e orcamento.
 - CT009 e CT010: orcamento protegido.
+- CT011: colaboradores, cargos/faixas e alocacao.
 - CT012 a CT019: requisicao, aprovacao, cotacao, OC, contas, pagamentos, dashboard e auditoria.
 - CT020: workflow completo.
+- CT021: auditoria.
 - CT022: rotas principais.
 
 ## Severidade

@@ -5,7 +5,7 @@
   <title>Relatorio de Diagnostico 4S</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 24px; color: #1f2933; }
-    table { border-collapse: collapse; width: 100%; font-size: 12px; }
+    table { border-collapse: collapse; width: 100%; font-size: 12px; margin-bottom: 32px; }
     th, td { border: 1px solid #cbd2d9; padding: 8px; vertical-align: top; }
     th { background: #eef2f7; text-align: left; }
     td { word-break: break-word; }
@@ -13,27 +13,117 @@
 </head>
 <body>
   <h1>Relatorio de Diagnostico 4S</h1>
-  <p>Gerado em: 2026-06-17T19:24:22.410Z</p>
-  <p>Casos Playwright: 6. Falhas: 2. Aprovados: 4.</p>
-  <p>Problemas registrados: 2.</p>
+  <p>Gerado em: 2026-06-18T19:17:16.650Z</p>
+  <p>Casos Playwright: 19. Aprovados: 5. Falhas: 3. Nao executados: 11.</p>
+  <p>CTs consolidados: 22. Aprovados: 6. Reprovados: 3. Bloqueados: 13. Nao aplicaveis: 0.</p>
+  <h2>Resultado CT001-CT022</h2>
   <table>
     <thead>
-      <tr><th>ID</th><th>Severidade</th><th>Caso</th><th>Caminho</th><th>Perfil</th><th>Massa</th><th>Passos</th><th>Esperado</th><th>Obtido</th><th>Impacto</th><th>Evidencia</th><th>Recomendacao</th><th>Status</th></tr>
+      <tr><th>ID</th><th>Severidade</th><th>Caso</th><th>Caminho</th><th>Perfil</th><th>Massa</th><th>Esperado</th><th>Obtido</th><th>Evidencia</th><th>Defeito</th><th>Status</th></tr>
     </thead>
-    <tbody>
-      <tr><td>CT012-REQUISICAO-SALDO</td><td>critica</td><td>CT012-CT019 - integrated procurement, payment, dashboard and audit flow</td><td>https://4s.ruatrez.com/requisicoes</td><td>administrador</td><td>AUTO-4S-20260617192238</td><td>Executar o caso automatizado &quot;CT012-CT019 - integrated procurement, payment, dashboard and audit flow&quot; e observar a etapa que falhou.</td><td>Requisicao dentro do saldo segue para aprovacao; acima do saldo fica bloqueada ou sinalizada.</td><td>Could not find clickable control: Enviar para aprovação | Enviar | Solicitar aprovação</td><td>Permitir compra acima do saldo rompe controle financeiro da obra.</td><td>/home/colatto/repo/R3/4s/test-results/CT012-REQUISICAO-SALDO.png</td><td>Validar saldo no backend antes de avancar status e bloquear cotacao de requisicoes excedentes.</td><td>reprovado</td></tr>
-<tr><td>CT004-CLIENTE-CONTRATO</td><td>alta</td><td>CT004-CT008 - initial registrations and budget item persist across modules</td><td>https://4s.ruatrez.com/clientes/</td><td>administrador</td><td>AUTO-4S-20260617192118</td><td>Executar o caso automatizado &quot;CT004-CT008 - initial registrations and budget item persist across modules&quot; e observar a etapa que falhou.</td><td>Cliente e contrato devem ser criados, vinculados e persistidos.</td><td>[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+    <tbody><tr><td>CT001</td><td>critica</td><td>Login e acesso inicial</td><td>Tela de Login</td><td>administrador</td><td>AUTO-4S-20260618191314</td><td>Login valido permite acesso, login invalido exibe erro, logout encerra sessao e usuarios acessam somente telas permitidas.</td><td>Comportamento validado pela automacao.</td><td></td><td></td><td>aprovado</td></tr>
+<tr><td>CT008</td><td>critica</td><td>Orcamento base da obra</td><td>Orçamento &gt; Itens Orçados</td><td>administrador</td><td>AUTO-4S-20260618191449</td><td>Item orcado calcula valor previsto, exibe saldo/comprometido/pago e fica disponivel para requisicoes.</td><td>Could not find field: obra</td><td>/home/colatto/repo/R3/4s/test-results/CT008-ORCAMENTO-BASE.png</td><td>CT008-ORCAMENTO-BASE</td><td>reprovado</td></tr>
+<tr><td>CT009</td><td>critica</td><td>Alteracao de orcamento por usuario comum</td><td>Orçamento &gt; Itens Orçados</td><td>-</td><td>-</td><td>Usuario comum nao altera item protegido diretamente; solicitacao fica pendente e decisao gera auditoria.</td><td>Caso nao executado ou bloqueado antes de registrar resultado.</td><td></td><td></td><td>bloqueado</td></tr>
+<tr><td>CT010</td><td>critica</td><td>Exclusao de item orcado</td><td>Orçamento &gt; Itens Orçados</td><td>-</td><td>-</td><td>Exclusao por usuario comum gera aprovacao; administrador decide ou executa acao conforme regra; auditoria registra.</td><td>Caso nao executado ou bloqueado antes de registrar resultado.</td><td></td><td></td><td>bloqueado</td></tr>
+<tr><td>CT012</td><td>critica</td><td>Requisicoes com itens</td><td>Suprimentos &gt; Requisições</td><td>administrador</td><td>AUTO-4S-20260618191551</td><td>Requisicao com saldo segue para aprovacao; acima do saldo fica bloqueada ou sinalizada e nao gera cotacao.</td><td>locator.click: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(&#39;button, [role=&quot;button&quot;]&#39;).filter({ hasText: /salvar|confirmar|enviar|criar|cadastrar/i }).filter({ hasNotText: /cadastrar mais/i }).first()
+    - locator resolved to &lt;button&gt;Enviar aprovacao&lt;/button&gt;
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - &lt;div&gt;…&lt;/div&gt; intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - &lt;div&gt;…&lt;/div&gt; intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    29 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - &lt;div&gt;…&lt;/div&gt; intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+</td><td>/home/colatto/repo/R3/4s/test-results/CT012-REQUISICAO-SALDO.png</td><td>CT012-REQUISICAO-SALDO</td><td>reprovado</td></tr>
+<tr><td>CT015</td><td>critica</td><td>Ordem de compra</td><td>Suprimentos &gt; Ordens de Compra</td><td>-</td><td>-</td><td>OC nasce da cotacao, reflete itens vencedores, compromete orcamento e gera conta a pagar no ponto previsto.</td><td>Caso nao executado ou bloqueado antes de registrar resultado.</td><td></td><td></td><td>bloqueado</td></tr>
+<tr><td>CT017</td><td>critica</td><td>Contas a pagar</td><td>Financeiro &gt; Contas a Pagar</td><td>-</td><td>-</td><td>Conta automatica/manual aparece com status e saldo coerentes; filtros, edicao, exclusao e dashboard funcionam.</td><td>Caso nao executado ou bloqueado antes de registrar resultado.</td><td></td><td></td><td>bloqueado</td></tr>
+<tr><td>CT018</td><td>critica</td><td>Pagamentos</td><td>Financeiro &gt; Pagamentos</td><td>-</td><td>-</td><td>Pagamentos parcial/final atualizam conta, status, orcamento e custo real; pagamento acima do saldo e bloqueado.</td><td>Caso nao executado ou bloqueado antes de registrar resultado.</td><td></td><td></td><td>bloqueado</td></tr>
+<tr><td>CT002</td><td>alta</td><td>Usuarios e permissoes</td><td>Configurações &gt; Usuários</td><td>administrador</td><td>AUTO-4S-20260618191449</td><td>Usuario e salvo, perfil altera permissoes, usuario inativo nao opera e regras de exclusao protegida sao respeitadas.</td><td>Comportamento validado pela automacao.</td><td></td><td></td><td>aprovado</td></tr>
+<tr><td>CT004</td><td>alta</td><td>Clientes e contratos</td><td>Configurações &gt; Clientes e Contratos</td><td>administrador</td><td>AUTO-4S-20260618191314</td><td>Cliente e contrato sao salvos, vinculados, editaveis, removiveis quando permitido e persistem apos novo acesso.</td><td>expect(locator).toBeVisible() failed
 
-Locator: getByText(/AUTO-4S-20260617192118 Cliente/i).first()
+Locator: getByText(/AUTO-4S-20260618191314 Cliente/i).first()
 Expected: visible
 Timeout: 10000ms
 Error: element(s) not found
 
 Call log:
-[2m  - Expect &quot;toBeVisible&quot; with timeout 10000ms[22m
-[2m  - waiting for getByText(/AUTO-4S-20260617192118 Cliente/i).first()[22m
-</td><td>Sem contrato/cliente nao e possivel iniciar a cadeia financeira da obra.</td><td>/home/colatto/repo/R3/4s/test-results/CT004-CLIENTE-CONTRATO.png</td><td>Corrigir persistencia e relacionamento entre cliente e contrato.</td><td>reprovado</td></tr>
-    </tbody>
+  - Expect &quot;toBeVisible&quot; with timeout 10000ms
+  - waiting for getByText(/AUTO-4S-20260618191314 Cliente/i).first()
+</td><td>/home/colatto/repo/R3/4s/test-results/CT004-CLIENTE-CONTRATO.png</td><td>CT004-CLIENTE-CONTRATO</td><td>reprovado</td></tr>
+<tr><td>CT005</td><td>alta</td><td>Obras, unidades e centros de custo</td><td>Configurações &gt; Obras e Centros</td><td>-</td><td>-</td><td>Unidade, obra e centro de custo sao criados, vinculados e disponiveis para orcamento, requisicoes e financeiro.</td><td>Caso nao executado ou bloqueado antes de registrar resultado.</td><td></td><td></td><td>bloqueado</td></tr>
+<tr><td>CT011</td><td>alta</td><td>Colaboradores, cargos, faixas e alocacoes</td><td>Configurações &gt; Colaboradores</td><td>-</td><td>-</td><td>Colaborador e alocacao sao vinculados a obra e custo de mao de obra compoe custo real e dashboard.</td><td>Caso nao executado ou bloqueado antes de registrar resultado.</td><td></td><td></td><td>bloqueado</td></tr>
+<tr><td>CT013</td><td>alta</td><td>Aprovacao de requisicao</td><td>Workflow &gt; Aprovações</td><td>-</td><td>-</td><td>Aprovacao libera cotacao, rejeicao bloqueia continuidade e status/historico sao atualizados.</td><td>Caso nao executado ou bloqueado antes de registrar resultado.</td><td></td><td></td><td>bloqueado</td></tr>
+<tr><td>CT014</td><td>alta</td><td>Cotacoes e comparativo</td><td>Suprimentos &gt; Cotações</td><td>-</td><td>-</td><td>Cotacao vinculada compara fornecedores, registra vencedor, persiste e bloqueia aquisicao sem saldo.</td><td>Caso nao executado ou bloqueado antes de registrar resultado.</td><td></td><td></td><td>bloqueado</td></tr>
+<tr><td>CT019</td><td>alta</td><td>Dashboard financeiro</td><td>Dashboard</td><td>administrador</td><td>AUTO-4S-20260618191624</td><td>Indicadores refletem orcado, comprometido, pago, saldo, mao de obra, alertas e contas conforme fluxo real.</td><td>Comportamento validado pela automacao.</td><td></td><td></td><td>aprovado</td></tr>
+<tr><td>CT020</td><td>alta</td><td>Workflow completo de aprovacao</td><td>Workflow &gt; Aprovações</td><td>-</td><td>-</td><td>Somente perfil correto ou administrador aprova; rejeicao bloqueia avanco e modulo de origem/auditoria refletem a decisao.</td><td>Caso nao executado ou bloqueado antes de registrar resultado.</td><td></td><td></td><td>bloqueado</td></tr>
+<tr><td>CT021</td><td>alta</td><td>Auditoria</td><td>Workflow &gt; Auditoria</td><td>-</td><td>-</td><td>Criacao, edicao, exclusao/cancelamento e aprovacoes registram quem fez, o que fez, quando e modulo afetado.</td><td>Caso nao executado ou bloqueado antes de registrar resultado.</td><td></td><td></td><td>bloqueado</td></tr>
+<tr><td>CT022</td><td>alta</td><td>Validacao tecnica de rotas e entidades</td><td>Todas as telas principais da Fase 1</td><td>administrador</td><td>AUTO-4S-20260618191314</td><td>Todas as rotas carregam sem tela quebrada e entidades minimas existem para teste funcional.</td><td>Comportamento validado pela automacao.</td><td></td><td></td><td>aprovado</td></tr>
+<tr><td>CT003</td><td>media</td><td>Cadastros rapidos</td><td>Cadastros</td><td>administrador</td><td>AUTO-4S-20260618191314</td><td>Atalhos direcionam corretamente para clientes, contratos, obras, centros, fornecedores, categorias, cargos, faixas e colaboradores.</td><td>Comportamento validado pela automacao.</td><td></td><td></td><td>aprovado</td></tr>
+<tr><td>CT006</td><td>media</td><td>Fornecedores</td><td>Configurações &gt; Fornecedores</td><td>-</td><td>-</td><td>Fornecedores sao salvos, editaveis e disponiveis em cotacoes e ordens de compra.</td><td>Caso nao executado ou bloqueado antes de registrar resultado.</td><td></td><td></td><td>bloqueado</td></tr>
+<tr><td>CT007</td><td>media</td><td>Categorias orcamentarias</td><td>Configurações &gt; Categorias Orc.</td><td>-</td><td>-</td><td>Categorias sao salvas e ficam disponiveis para itens orcados e movimentos.</td><td>Caso nao executado ou bloqueado antes de registrar resultado.</td><td></td><td></td><td>bloqueado</td></tr>
+<tr><td>CT016</td><td>media</td><td>Edicao e exclusao de requisicoes, cotacoes e OC</td><td>Suprimentos</td><td>administrador</td><td>AUTO-4S-20260618191624</td><td>Edicoes persistem, exclusoes pedem confirmacao, filhos vinculados e valores comprometidos sao tratados e auditoria registra.</td><td>Comportamento validado pela automacao.</td><td></td><td></td><td>aprovado</td></tr></tbody>
+  </table>
+  <h2>Problemas Priorizados</h2>
+  <table>
+    <thead>
+      <tr><th>ID</th><th>Severidade</th><th>Caso</th><th>Caminho</th><th>Perfil</th><th>Massa</th><th>Passos</th><th>Esperado</th><th>Obtido</th><th>Impacto</th><th>Evidencia</th><th>Recomendacao</th><th>Status</th></tr>
+    </thead>
+    <tbody><tr><td>CT008-ORCAMENTO-BASE</td><td>critica</td><td>CT008</td><td>Orçamento &gt; Itens Orçados</td><td>administrador</td><td>AUTO-4S-20260618191449</td><td>Executar o caso automatizado &quot;CT008 - budget item persists and exposes balance fields&quot; e observar a etapa que falhou.</td><td>Item orcado deve calcular valor previsto e iniciar saldo disponivel.</td><td>Could not find field: obra</td><td>Erro no orcamento base compromete todo o controle de saldo, OC e pagamento.</td><td>/home/colatto/repo/R3/4s/test-results/CT008-ORCAMENTO-BASE.png</td><td>Corrigir calculo quantidade x valor unitario, persistencia e exposicao do item para requisicoes.</td><td>reprovado</td></tr>
+<tr><td>CT012-REQUISICAO-SALDO</td><td>critica</td><td>CT012</td><td>Suprimentos &gt; Requisições</td><td>administrador</td><td>AUTO-4S-20260618191551</td><td>Executar o caso automatizado &quot;CT012 - requisition validates budget balance&quot; e observar a etapa que falhou.</td><td>Requisicao dentro do saldo segue para aprovacao; acima do saldo fica bloqueada ou sinalizada.</td><td>locator.click: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(&#39;button, [role=&quot;button&quot;]&#39;).filter({ hasText: /salvar|confirmar|enviar|criar|cadastrar/i }).filter({ hasNotText: /cadastrar mais/i }).first()
+    - locator resolved to &lt;button&gt;Enviar aprovacao&lt;/button&gt;
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - &lt;div&gt;…&lt;/div&gt; intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - &lt;div&gt;…&lt;/div&gt; intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    29 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - &lt;div&gt;…&lt;/div&gt; intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+</td><td>Permitir compra acima do saldo rompe controle financeiro da obra.</td><td>/home/colatto/repo/R3/4s/test-results/CT012-REQUISICAO-SALDO.png</td><td>Validar saldo no backend antes de avancar status e bloquear cotacao de requisicoes excedentes.</td><td>reprovado</td></tr>
+<tr><td>CT004-CLIENTE-CONTRATO</td><td>alta</td><td>CT004</td><td>Configurações &gt; Clientes e Contratos</td><td>administrador</td><td>AUTO-4S-20260618191314</td><td>Executar o caso automatizado &quot;CT004 - client and contract persist after refresh&quot; e observar a etapa que falhou.</td><td>Cliente e contrato devem ser criados, vinculados e persistidos.</td><td>expect(locator).toBeVisible() failed
+
+Locator: getByText(/AUTO-4S-20260618191314 Cliente/i).first()
+Expected: visible
+Timeout: 10000ms
+Error: element(s) not found
+
+Call log:
+  - Expect &quot;toBeVisible&quot; with timeout 10000ms
+  - waiting for getByText(/AUTO-4S-20260618191314 Cliente/i).first()
+</td><td>Sem contrato/cliente nao e possivel iniciar a cadeia financeira da obra.</td><td>/home/colatto/repo/R3/4s/test-results/CT004-CLIENTE-CONTRATO.png</td><td>Corrigir persistencia e relacionamento entre cliente e contrato.</td><td>reprovado</td></tr></tbody>
   </table>
 </body>
 </html>

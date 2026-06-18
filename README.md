@@ -1,32 +1,55 @@
 # Teste Exploratorio - Sistema 4S
 
-Implementei e executei os testes no próprio sistema [4s.ruatrez.com](https://4s.ruatrez.com), usando o Brave, navegador baseado em chromium, instalado localmente em /usr/bin/brave-browser.
+Suite Playwright + TypeScript para validacao E2E da Fase 1 do APP 4S em [4s.ruatrez.com](https://4s.ruatrez.com), baseada no roteiro `RoteirodeTestes4S.pdf`.
 
-Resultado final da execução limpa: 6 testes, 4 aprovados e 2 reprovados. Passaram login/logout, login inválido, carregamento das rotas principais, permissões/workflow de orçamento protegido e regressão básica de filtros/telas. As reprovações restantes ficaram concentradas em persistência de cadastros e no avanço da requisição para aprovação.
+Os testes cobrem CT001 a CT022, com massa rastreavel `AUTO-4S-*`, Page Objects por dominio, captura de console/network errors, screenshots/traces em falha e relatorio consolidado Markdown/HTML.
 
-## Arquivos principais gerados:
+## Execucao
 
-- Relatório final: [test-results/diagnostic-report.md](./test-results/diagnostic-report.md)
-- Relatório final HTML: [test-results/diagnostic-report.html](./test-results/diagnostic-report.html)
+```bash
+npm install
+npm run test:smoke
+npm test
+npm run report
+```
+
+Variaveis aceitas:
+
+- `BASE_URL`: padrao `https://4s.ruatrez.com`
+- `ADMIN_EMAIL`: padrao `hello@ruatrez.com`
+- `ADMIN_PASSWORD`: padrao `admin123`
+- `OPERATIONAL_EMAIL` e `OPERATIONAL_PASSWORD`: opcionais
+- `RUN_ID`: identificador da massa de teste
+- `BROWSER_EXECUTABLE`: padrao `/usr/bin/brave-browser`, com fallback para Chromium instalado pelo Playwright
+- `PW_VIDEO=1`: grava videos em falha
+
+## Arquivos principais
+
+- Relatorio final: [test-results/diagnostic-report.md](./test-results/diagnostic-report.md)
+- Relatorio final HTML: [test-results/diagnostic-report.html](./test-results/diagnostic-report.html)
 - Resultado Playwright: [test-results/results.json](./test-results/results.json)
-- Estratégia/execução: [docs/test-strategy.md](./docs/test-strategy.md)
-- Configuração: [playwright.config.js](./playwright.config.js)
-
-## Principais achados:
-
-- Crítica: a requisição foi salva como bloqueada por saldo orçamentário e não apresentou ação para enviar à aprovação. Isso bloqueia o fluxo E2E antes de aprovação, cotação, ordem de compra, contas a pagar e pagamento.
-
-- Alta: o cliente criado não permaneceu visível após refresh; a aplicação voltou para a tela de login durante a validação de persistência. Isso impede confirmar cliente/contrato como base confiável para a cadeia financeira da obra.
+- Resultado consolidado por CT: [test-results/case-results.jsonl](./test-results/case-results.jsonl)
+- Estrategia/execucao: [docs/test-strategy.md](./docs/test-strategy.md)
+- Configuracao: [playwright.config.ts](./playwright.config.ts)
 
 ## Resultado por bloco
 
-- Aprovado: CT001 - login, logout e login inválido.
-- Aprovado: CT022 - carregamento das rotas principais sem telas em branco.
-- Aprovado: CT002, CT009, CT010 e CT020 - usuários, permissões, orçamento protegido e workflow.
-- Aprovado: regressão básica de filtros, telas e confirmações destrutivas.
-- Reprovado: CT004-CT008 - cadastros iniciais e orçamento; falhou em persistência de cliente após refresh.
-- Reprovado: CT012-CT019 - fluxo integrado de requisição, aprovação, cotação, OC, financeiro, dashboard e auditoria; falhou no envio da requisição para aprovação.
+Resultado consolidado CT001-CT022:
 
-## Testes implementados
+ - 6 aprovados
+ - 3 reprovados
+ - 13 bloqueados - Foram pulados automaticamente — não por escolha, mas porque dependiam dos testes que falharam.
 
-Os testes implementados em [tests/](./tests/) e helpers em [support/](./support/), com massa rastreável AUTO-4S-* e evidências em [test-results/](./test-results/). A execução final foi feita sem vídeo, com screenshots, traces, JSON e relatório Markdown/HTML. A senha de autenticação no ambiente foi admin123.
+Falhas principais registradas:
+
+ - CT004: cliente/contrato não aparece após refresh.
+ - CT008: tela de orçamento não expõe campo obra esperado para criar item orçado.
+ - CT012: botão Enviar aprovacao fica bloqueado por overlay/interceptação de clique.
+
+## Cobertura
+
+- Smoke, login/logout, login invalido, atalhos e rotas principais.
+- Cadastros: cliente/contrato, unidade/obra/centro, fornecedores, categorias e colaboradores.
+- Orcamento protegido, permissoes e workflow.
+- Fluxo integrado: requisicao, aprovacao, cotacao, OC, contas a pagar, pagamentos, dashboard e auditoria.
+- Cenarios negativos: saldo excedido, perfil incorreto, usuario inativo, pagamento acima do saldo e alteracao/exclusao protegida.
