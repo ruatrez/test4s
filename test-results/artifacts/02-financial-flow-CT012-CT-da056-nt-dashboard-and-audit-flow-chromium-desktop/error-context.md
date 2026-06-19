@@ -21,21 +21,21 @@ Call log:
       - element is visible, enabled and stable
       - scrolling into view if needed
       - done scrolling
-      - <div>…</div> intercepts pointer events
+      - <div class="modal-overlay" data-testid="requisicao-modal-overlay">…</div> intercepts pointer events
     - retrying click action
     - waiting 20ms
     2 × waiting for element to be visible, enabled and stable
       - element is visible, enabled and stable
       - scrolling into view if needed
       - done scrolling
-      - <div>…</div> intercepts pointer events
+      - <div class="modal-overlay" data-testid="requisicao-modal-overlay">…</div> intercepts pointer events
     - retrying click action
       - waiting 100ms
     29 × waiting for element to be visible, enabled and stable
        - element is visible, enabled and stable
        - scrolling into view if needed
        - done scrolling
-       - <div>…</div> intercepts pointer events
+       - <div class="modal-overlay" data-testid="requisicao-modal-overlay">…</div> intercepts pointer events
      - retrying click action
        - waiting 500ms
 
@@ -97,12 +97,23 @@ Call log:
       - generic [ref=e60]:
         - generic [ref=e61]:
           - heading "Requisicoes" [level=1] [ref=e62]
-          - paragraph [ref=e63]: 16 requisicoes
+          - paragraph [ref=e63]: 21 requisicoes
         - button "+ Nova Requisicao" [ref=e64] [cursor=pointer]
       - generic [ref=e65]:
         - textbox "Buscar..." [ref=e66]
         - combobox [ref=e67]:
           - option "Todas as obras" [selected]
+          - option "AUTO-4S-PROD-CT012-019-20260619-01 Obra"
+          - option "AUTO-4S-PROD-CT004-008-20260619-01 Obra"
+          - option "AUTO-4S-REG-CT004-08 Obra"
+          - option "AUTO-4S-FLOW-LOCAL-05 Obra"
+          - option "AUTO-4S-FLOW-LOCAL-04 Obra"
+          - option "AUTO-4S-FLOW-LOCAL-03 Obra"
+          - option "AUTO-4S-FLOW-LOCAL-02 Obra"
+          - option "AUTO-4S-FLOW-LOCAL-01 Obra"
+          - option "AUTO-4S-VERIFY-20260619-02 Obra"
+          - option "AUTO-4S-1781886239507 Obra"
+          - option "AUTO-4S-1781886161086 Obra"
           - option "AUTO-4S-1781787507433 Obra"
           - option "AUTO-4S-1781787088837 Obra"
           - option "AUTO-4S-1781787027511 Obra"
@@ -131,206 +142,277 @@ Call log:
             - columnheader "Status" [ref=e76]
             - columnheader "Acoes" [ref=e77]
         - rowgroup [ref=e78]:
-          - row "4S-237833-2026 AUTO-4S-1781786933497 Obra AUTO-4S-1781786933497 Centro 1 item(ns) AUTO-4S-1781786933497 Item R$ 100,00 EM APROVACAO Editar Verificar aprovacao Excluir" [ref=e79]:
-            - cell "4S-237833-2026" [ref=e80]
-            - cell "AUTO-4S-1781786933497 Obra" [ref=e81]
-            - cell "AUTO-4S-1781786933497 Centro" [ref=e82]
-            - cell "1 item(ns) AUTO-4S-1781786933497 Item" [ref=e83]:
+          - row "4S-615127-2026 AUTO-4S-FLOW-LOCAL-05 Obra AUTO-4S-FLOW-LOCAL-05 Centro 1 item(ns) AUTO-4S-FLOW-LOCAL-05 Item Orcado R$ 20.000,00 CONVERTIDA OCBLOQUEADA Editar Excluir" [ref=e79]:
+            - cell "4S-615127-2026" [ref=e80]
+            - cell "AUTO-4S-FLOW-LOCAL-05 Obra" [ref=e81]
+            - cell "AUTO-4S-FLOW-LOCAL-05 Centro" [ref=e82]
+            - cell "1 item(ns) AUTO-4S-FLOW-LOCAL-05 Item Orcado" [ref=e83]:
               - text: 1 item(ns)
-              - generic [ref=e84]: AUTO-4S-1781786933497 Item
-            - cell "R$ 100,00" [ref=e85]
-            - cell "EM APROVACAO" [ref=e86]
-            - cell "Editar Verificar aprovacao Excluir" [ref=e87]:
+              - generic [ref=e84]: AUTO-4S-FLOW-LOCAL-05 Item Orcado
+            - cell "R$ 20.000,00" [ref=e85]
+            - cell "CONVERTIDA OCBLOQUEADA" [ref=e86]
+            - cell "Editar Excluir" [ref=e87]:
               - button "Editar" [ref=e88] [cursor=pointer]
-              - button "Verificar aprovacao" [ref=e89] [cursor=pointer]
-              - button "Excluir" [ref=e90] [cursor=pointer]
-          - row "4S-852170-2026 R3 1 1 item(ns) 1 R$ 15.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e91]:
-            - cell "4S-852170-2026" [ref=e92]
-            - cell "R3" [ref=e93]
-            - cell "1" [ref=e94]
-            - cell "1 item(ns) 1" [ref=e95]:
+              - button "Excluir" [ref=e89] [cursor=pointer]
+          - row "4S-807674-2026 AUTO-4S-PROD-CT012-019-20260619-01 Obra AUTO-4S-PROD-CT012-019-20260619-01 Centro 1 item(ns) AUTO-4S-PROD-CT012-019-20260619-01 Item Orcado R$ 200,00 CONVERTIDA OC Editar Excluir" [ref=e90]:
+            - cell "4S-807674-2026" [ref=e91]
+            - cell "AUTO-4S-PROD-CT012-019-20260619-01 Obra" [ref=e92]
+            - cell "AUTO-4S-PROD-CT012-019-20260619-01 Centro" [ref=e93]
+            - cell "1 item(ns) AUTO-4S-PROD-CT012-019-20260619-01 Item Orcado" [ref=e94]:
               - text: 1 item(ns)
-              - generic [ref=e96]: "1"
-            - cell "R$ 15.000,00" [ref=e97]
-            - cell "RASCUNHOBLOQUEADA" [ref=e98]
-            - cell "Editar Excluir" [ref=e99]:
-              - button "Editar" [ref=e100] [cursor=pointer]
-              - button "Excluir" [ref=e101] [cursor=pointer]
-          - row "4S-480687-2026 AUTO-4S-1781787507433 Obra AUTO-4S-1781787507433 Centro 1 item(ns) AUTO-4S-1781787507433 Item R$ 2.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e102]:
-            - cell "4S-480687-2026" [ref=e103]
-            - cell "AUTO-4S-1781787507433 Obra" [ref=e104]
-            - cell "AUTO-4S-1781787507433 Centro" [ref=e105]
-            - cell "1 item(ns) AUTO-4S-1781787507433 Item" [ref=e106]:
+              - generic [ref=e95]: AUTO-4S-PROD-CT012-019-20260619-01 Item Orcado
+            - cell "R$ 200,00" [ref=e96]
+            - cell "CONVERTIDA OC" [ref=e97]
+            - cell "Editar Excluir" [ref=e98]:
+              - button "Editar" [ref=e99] [cursor=pointer]
+              - button "Excluir" [ref=e100] [cursor=pointer]
+          - row "4S-957563-2026 AUTO-4S-FLOW-LOCAL-04 Obra AUTO-4S-FLOW-LOCAL-04 Centro 1 item(ns) AUTO-4S-FLOW-LOCAL-04 Item Orcado R$ 200,00 CONVERTIDA OC Editar Excluir" [ref=e101]:
+            - cell "4S-957563-2026" [ref=e102]
+            - cell "AUTO-4S-FLOW-LOCAL-04 Obra" [ref=e103]
+            - cell "AUTO-4S-FLOW-LOCAL-04 Centro" [ref=e104]
+            - cell "1 item(ns) AUTO-4S-FLOW-LOCAL-04 Item Orcado" [ref=e105]:
               - text: 1 item(ns)
-              - generic [ref=e107]: AUTO-4S-1781787507433 Item
-            - cell "R$ 2.000,00" [ref=e108]
-            - cell "RASCUNHOBLOQUEADA" [ref=e109]
-            - cell "Editar Excluir" [ref=e110]:
-              - button "Editar" [ref=e111] [cursor=pointer]
-              - button "Excluir" [ref=e112] [cursor=pointer]
-          - row "4S-230792-2026 AUTO-4S-1781786933497 Obra AUTO-4S-1781786933497 Centro 1 item(ns) AUTO-4S-1781786933497 Item R$ 2.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e113]:
-            - cell "4S-230792-2026" [ref=e114]
-            - cell "AUTO-4S-1781786933497 Obra" [ref=e115]
-            - cell "AUTO-4S-1781786933497 Centro" [ref=e116]
-            - cell "1 item(ns) AUTO-4S-1781786933497 Item" [ref=e117]:
+              - generic [ref=e106]: AUTO-4S-FLOW-LOCAL-04 Item Orcado
+            - cell "R$ 200,00" [ref=e107]
+            - cell "CONVERTIDA OC" [ref=e108]
+            - cell "Editar Excluir" [ref=e109]:
+              - button "Editar" [ref=e110] [cursor=pointer]
+              - button "Excluir" [ref=e111] [cursor=pointer]
+          - row "4S-867059-2026 AUTO-4S-FLOW-LOCAL-03 Obra AUTO-4S-FLOW-LOCAL-03 Centro 1 item(ns) AUTO-4S-FLOW-LOCAL-03 Item Orcado R$ 200,00 EM COTACAO Editar Excluir" [ref=e112]:
+            - cell "4S-867059-2026" [ref=e113]
+            - cell "AUTO-4S-FLOW-LOCAL-03 Obra" [ref=e114]
+            - cell "AUTO-4S-FLOW-LOCAL-03 Centro" [ref=e115]
+            - cell "1 item(ns) AUTO-4S-FLOW-LOCAL-03 Item Orcado" [ref=e116]:
               - text: 1 item(ns)
-              - generic [ref=e118]: AUTO-4S-1781786933497 Item
-            - cell "R$ 2.000,00" [ref=e119]
-            - cell "RASCUNHOBLOQUEADA" [ref=e120]
-            - cell "Editar Excluir" [ref=e121]:
-              - button "Editar" [ref=e122] [cursor=pointer]
-              - button "Excluir" [ref=e123] [cursor=pointer]
-          - row "4S-548743-2026 AUTO-4S-1781786851917 Obra AUTO-4S-1781786851917 Centro 1 item(ns) AUTO-4S-1781786851917 Item R$ 100,00 RASCUNHO Editar Enviar aprovacao Excluir" [ref=e124]:
-            - cell "4S-548743-2026" [ref=e125]
-            - cell "AUTO-4S-1781786851917 Obra" [ref=e126]
-            - cell "AUTO-4S-1781786851917 Centro" [ref=e127]
-            - cell "1 item(ns) AUTO-4S-1781786851917 Item" [ref=e128]:
+              - generic [ref=e117]: AUTO-4S-FLOW-LOCAL-03 Item Orcado
+            - cell "R$ 200,00" [ref=e118]
+            - cell "EM COTACAO" [ref=e119]
+            - cell "Editar Excluir" [ref=e120]:
+              - button "Editar" [ref=e121] [cursor=pointer]
+              - button "Excluir" [ref=e122] [cursor=pointer]
+          - row "4S-760096-2026 AUTO-4S-FLOW-LOCAL-02 Obra AUTO-4S-FLOW-LOCAL-02 Centro 1 item(ns) AUTO-4S-FLOW-LOCAL-02 Item Orcado R$ 200,00 EM COTACAO Editar Excluir" [ref=e123]:
+            - cell "4S-760096-2026" [ref=e124]
+            - cell "AUTO-4S-FLOW-LOCAL-02 Obra" [ref=e125]
+            - cell "AUTO-4S-FLOW-LOCAL-02 Centro" [ref=e126]
+            - cell "1 item(ns) AUTO-4S-FLOW-LOCAL-02 Item Orcado" [ref=e127]:
               - text: 1 item(ns)
-              - generic [ref=e129]: AUTO-4S-1781786851917 Item
-            - cell "R$ 100,00" [ref=e130]
-            - cell "RASCUNHO" [ref=e131]
-            - cell "Editar Enviar aprovacao Excluir" [ref=e132]:
-              - button "Editar" [ref=e133] [cursor=pointer]
-              - button "Enviar aprovacao" [ref=e134] [cursor=pointer]
-              - button "Excluir" [ref=e135] [cursor=pointer]
-          - row "4S-852402-2026 AUTO-4S-1781786769827 Obra AUTO-4S-1781786769827 Centro 1 item(ns) AUTO-4S-1781786769827 Item R$ 100,00 RASCUNHO Editar Enviar aprovacao Excluir" [ref=e136]:
-            - cell "4S-852402-2026" [ref=e137]
-            - cell "AUTO-4S-1781786769827 Obra" [ref=e138]
-            - cell "AUTO-4S-1781786769827 Centro" [ref=e139]
-            - cell "1 item(ns) AUTO-4S-1781786769827 Item" [ref=e140]:
+              - generic [ref=e128]: AUTO-4S-FLOW-LOCAL-02 Item Orcado
+            - cell "R$ 200,00" [ref=e129]
+            - cell "EM COTACAO" [ref=e130]
+            - cell "Editar Excluir" [ref=e131]:
+              - button "Editar" [ref=e132] [cursor=pointer]
+              - button "Excluir" [ref=e133] [cursor=pointer]
+          - row "4S-237833-2026 AUTO-4S-1781786933497 Obra AUTO-4S-1781786933497 Centro 1 item(ns) AUTO-4S-1781786933497 Item R$ 100,00 EM APROVACAO Editar Verificar aprovacao Excluir" [ref=e134]:
+            - cell "4S-237833-2026" [ref=e135]
+            - cell "AUTO-4S-1781786933497 Obra" [ref=e136]
+            - cell "AUTO-4S-1781786933497 Centro" [ref=e137]
+            - cell "1 item(ns) AUTO-4S-1781786933497 Item" [ref=e138]:
               - text: 1 item(ns)
-              - generic [ref=e141]: AUTO-4S-1781786769827 Item
-            - cell "R$ 100,00" [ref=e142]
-            - cell "RASCUNHO" [ref=e143]
-            - cell "Editar Enviar aprovacao Excluir" [ref=e144]:
-              - button "Editar" [ref=e145] [cursor=pointer]
-              - button "Enviar aprovacao" [ref=e146] [cursor=pointer]
-              - button "Excluir" [ref=e147] [cursor=pointer]
-          - row "4S-432322-2026 PW CT009 20260617184225 Obra PW CT009 20260617184225 Centro 1 item(ns) PW CT009 20260617184225 Item R$ 12.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e148]:
-            - cell "4S-432322-2026" [ref=e149]
-            - cell "PW CT009 20260617184225 Obra" [ref=e150]
-            - cell "PW CT009 20260617184225 Centro" [ref=e151]
-            - cell "1 item(ns) PW CT009 20260617184225 Item" [ref=e152]:
+              - generic [ref=e139]: AUTO-4S-1781786933497 Item
+            - cell "R$ 100,00" [ref=e140]
+            - cell "EM APROVACAO" [ref=e141]
+            - cell "Editar Verificar aprovacao Excluir" [ref=e142]:
+              - button "Editar" [ref=e143] [cursor=pointer]
+              - button "Verificar aprovacao" [ref=e144] [cursor=pointer]
+              - button "Excluir" [ref=e145] [cursor=pointer]
+          - row "4S-852170-2026 R3 1 1 item(ns) 1 R$ 15.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e146]:
+            - cell "4S-852170-2026" [ref=e147]
+            - cell "R3" [ref=e148]
+            - cell "1" [ref=e149]
+            - cell "1 item(ns) 1" [ref=e150]:
               - text: 1 item(ns)
-              - generic [ref=e153]: PW CT009 20260617184225 Item
-            - cell "R$ 12.000,00" [ref=e154]
-            - cell "RASCUNHOBLOQUEADA" [ref=e155]
-            - cell "Editar Excluir" [ref=e156]:
-              - button "Editar" [ref=e157] [cursor=pointer]
-              - button "Excluir" [ref=e158] [cursor=pointer]
-          - row "4S-165544-2026 PW CT009 20260617184225 Obra PW CT009 20260617184225 Centro 0 item(ns) R$ 12.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e159]:
-            - cell "4S-165544-2026" [ref=e160]
-            - cell "PW CT009 20260617184225 Obra" [ref=e161]
-            - cell "PW CT009 20260617184225 Centro" [ref=e162]
-            - cell "0 item(ns)" [ref=e163]: 0 item(ns)
-            - cell "R$ 12.000,00" [ref=e164]
-            - cell "RASCUNHOBLOQUEADA" [ref=e165]
-            - cell "Editar Excluir" [ref=e166]:
-              - button "Editar" [ref=e167] [cursor=pointer]
-              - button "Excluir" [ref=e168] [cursor=pointer]
-          - row "4S-435113-2026 PW CT009 20260617184225 Obra PW CT009 20260617184225 Centro 0 item(ns) R$ 12.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e169]:
-            - cell "4S-435113-2026" [ref=e170]
-            - cell "PW CT009 20260617184225 Obra" [ref=e171]
-            - cell "PW CT009 20260617184225 Centro" [ref=e172]
-            - cell "0 item(ns)" [ref=e173]: 0 item(ns)
-            - cell "R$ 12.000,00" [ref=e174]
+              - generic [ref=e151]: "1"
+            - cell "R$ 15.000,00" [ref=e152]
+            - cell "RASCUNHOBLOQUEADA" [ref=e153]
+            - cell "Editar Excluir" [ref=e154]:
+              - button "Editar" [ref=e155] [cursor=pointer]
+              - button "Excluir" [ref=e156] [cursor=pointer]
+          - row "4S-480687-2026 AUTO-4S-1781787507433 Obra AUTO-4S-1781787507433 Centro 1 item(ns) AUTO-4S-1781787507433 Item R$ 2.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e157]:
+            - cell "4S-480687-2026" [ref=e158]
+            - cell "AUTO-4S-1781787507433 Obra" [ref=e159]
+            - cell "AUTO-4S-1781787507433 Centro" [ref=e160]
+            - cell "1 item(ns) AUTO-4S-1781787507433 Item" [ref=e161]:
+              - text: 1 item(ns)
+              - generic [ref=e162]: AUTO-4S-1781787507433 Item
+            - cell "R$ 2.000,00" [ref=e163]
+            - cell "RASCUNHOBLOQUEADA" [ref=e164]
+            - cell "Editar Excluir" [ref=e165]:
+              - button "Editar" [ref=e166] [cursor=pointer]
+              - button "Excluir" [ref=e167] [cursor=pointer]
+          - row "4S-230792-2026 AUTO-4S-1781786933497 Obra AUTO-4S-1781786933497 Centro 1 item(ns) AUTO-4S-1781786933497 Item R$ 2.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e168]:
+            - cell "4S-230792-2026" [ref=e169]
+            - cell "AUTO-4S-1781786933497 Obra" [ref=e170]
+            - cell "AUTO-4S-1781786933497 Centro" [ref=e171]
+            - cell "1 item(ns) AUTO-4S-1781786933497 Item" [ref=e172]:
+              - text: 1 item(ns)
+              - generic [ref=e173]: AUTO-4S-1781786933497 Item
+            - cell "R$ 2.000,00" [ref=e174]
             - cell "RASCUNHOBLOQUEADA" [ref=e175]
             - cell "Editar Excluir" [ref=e176]:
               - button "Editar" [ref=e177] [cursor=pointer]
               - button "Excluir" [ref=e178] [cursor=pointer]
-          - row "4S-393562-2026 R3 1 1 item(ns) 1 R$ 3.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e179]:
-            - cell "4S-393562-2026" [ref=e180]
-            - cell "R3" [ref=e181]
-            - cell "1" [ref=e182]
-            - cell "1 item(ns) 1" [ref=e183]:
+          - row "4S-548743-2026 AUTO-4S-1781786851917 Obra AUTO-4S-1781786851917 Centro 1 item(ns) AUTO-4S-1781786851917 Item R$ 100,00 RASCUNHO Editar Enviar aprovacao Excluir" [ref=e179]:
+            - cell "4S-548743-2026" [ref=e180]
+            - cell "AUTO-4S-1781786851917 Obra" [ref=e181]
+            - cell "AUTO-4S-1781786851917 Centro" [ref=e182]
+            - cell "1 item(ns) AUTO-4S-1781786851917 Item" [ref=e183]:
               - text: 1 item(ns)
-              - generic [ref=e184]: "1"
-            - cell "R$ 3.000,00" [ref=e185]
-            - cell "RASCUNHOBLOQUEADA" [ref=e186]
-            - cell "Editar Excluir" [ref=e187]:
+              - generic [ref=e184]: AUTO-4S-1781786851917 Item
+            - cell "R$ 100,00" [ref=e185]
+            - cell "RASCUNHO" [ref=e186]
+            - cell "Editar Enviar aprovacao Excluir" [ref=e187]:
               - button "Editar" [ref=e188] [cursor=pointer]
-              - button "Excluir" [ref=e189] [cursor=pointer]
-          - row "4S-711572-2026 PW CT012 20260617184225 Obra PW CT012 20260617184225 Centro 1 item(ns) PW CT012 20260617184225 Item R$ 200,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e190]:
-            - cell "4S-711572-2026" [ref=e191]
-            - cell "PW CT012 20260617184225 Obra" [ref=e192]
-            - cell "PW CT012 20260617184225 Centro" [ref=e193]
-            - cell "1 item(ns) PW CT012 20260617184225 Item" [ref=e194]:
+              - button "Enviar aprovacao" [ref=e189] [cursor=pointer]
+              - button "Excluir" [ref=e190] [cursor=pointer]
+          - row "4S-852402-2026 AUTO-4S-1781786769827 Obra AUTO-4S-1781786769827 Centro 1 item(ns) AUTO-4S-1781786769827 Item R$ 100,00 RASCUNHO Editar Enviar aprovacao Excluir" [ref=e191]:
+            - cell "4S-852402-2026" [ref=e192]
+            - cell "AUTO-4S-1781786769827 Obra" [ref=e193]
+            - cell "AUTO-4S-1781786769827 Centro" [ref=e194]
+            - cell "1 item(ns) AUTO-4S-1781786769827 Item" [ref=e195]:
               - text: 1 item(ns)
-              - generic [ref=e195]: PW CT012 20260617184225 Item
-            - cell "R$ 200,00" [ref=e196]
-            - cell "RASCUNHOBLOQUEADA" [ref=e197]
-            - cell "Editar Excluir" [ref=e198]:
-              - button "Editar" [ref=e199] [cursor=pointer]
-              - button "Excluir" [ref=e200] [cursor=pointer]
-          - row "4S-645894-2026 PW CT012 20260617184145 Obra PW CT012 20260617184145 Centro 1 item(ns) PW CT012 20260617184145 Item R$ 200,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e201]:
-            - cell "4S-645894-2026" [ref=e202]
-            - cell "PW CT012 20260617184145 Obra" [ref=e203]
-            - cell "PW CT012 20260617184145 Centro" [ref=e204]
-            - cell "1 item(ns) PW CT012 20260617184145 Item" [ref=e205]:
+              - generic [ref=e196]: AUTO-4S-1781786769827 Item
+            - cell "R$ 100,00" [ref=e197]
+            - cell "RASCUNHO" [ref=e198]
+            - cell "Editar Enviar aprovacao Excluir" [ref=e199]:
+              - button "Editar" [ref=e200] [cursor=pointer]
+              - button "Enviar aprovacao" [ref=e201] [cursor=pointer]
+              - button "Excluir" [ref=e202] [cursor=pointer]
+          - row "4S-432322-2026 PW CT009 20260617184225 Obra PW CT009 20260617184225 Centro 1 item(ns) PW CT009 20260617184225 Item R$ 12.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e203]:
+            - cell "4S-432322-2026" [ref=e204]
+            - cell "PW CT009 20260617184225 Obra" [ref=e205]
+            - cell "PW CT009 20260617184225 Centro" [ref=e206]
+            - cell "1 item(ns) PW CT009 20260617184225 Item" [ref=e207]:
               - text: 1 item(ns)
-              - generic [ref=e206]: PW CT012 20260617184145 Item
-            - cell "R$ 200,00" [ref=e207]
-            - cell "RASCUNHOBLOQUEADA" [ref=e208]
-            - cell "Editar Excluir" [ref=e209]:
-              - button "Editar" [ref=e210] [cursor=pointer]
-              - button "Excluir" [ref=e211] [cursor=pointer]
-          - row "4S-930525-2026 - - 1 item(ns) HML 1781630370967 Item Orcado R$ 2.000,00 REJEITADA Editar Excluir" [ref=e212]:
-            - cell "4S-930525-2026" [ref=e213]
-            - cell "-" [ref=e214]
-            - cell "-" [ref=e215]
-            - cell "1 item(ns) HML 1781630370967 Item Orcado" [ref=e216]:
-              - text: 1 item(ns)
-              - generic [ref=e217]: HML 1781630370967 Item Orcado
-            - cell "R$ 2.000,00" [ref=e218]
-            - cell "REJEITADA" [ref=e219]
-            - cell "Editar Excluir" [ref=e220]:
-              - button "Editar" [ref=e221] [cursor=pointer]
-              - button "Excluir" [ref=e222] [cursor=pointer]
-          - row "4S-260167-2026 - - 1 item(ns) HML 1781630633295 Item Orcado R$ 2.000,00 REJEITADA Editar Excluir" [ref=e223]:
-            - cell "4S-260167-2026" [ref=e224]
-            - cell "-" [ref=e225]
-            - cell "-" [ref=e226]
-            - cell "1 item(ns) HML 1781630633295 Item Orcado" [ref=e227]:
-              - text: 1 item(ns)
-              - generic [ref=e228]: HML 1781630633295 Item Orcado
-            - cell "R$ 2.000,00" [ref=e229]
-            - cell "REJEITADA" [ref=e230]
+              - generic [ref=e208]: PW CT009 20260617184225 Item
+            - cell "R$ 12.000,00" [ref=e209]
+            - cell "RASCUNHOBLOQUEADA" [ref=e210]
+            - cell "Editar Excluir" [ref=e211]:
+              - button "Editar" [ref=e212] [cursor=pointer]
+              - button "Excluir" [ref=e213] [cursor=pointer]
+          - row "4S-165544-2026 PW CT009 20260617184225 Obra PW CT009 20260617184225 Centro 0 item(ns) R$ 12.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e214]:
+            - cell "4S-165544-2026" [ref=e215]
+            - cell "PW CT009 20260617184225 Obra" [ref=e216]
+            - cell "PW CT009 20260617184225 Centro" [ref=e217]
+            - cell "0 item(ns)" [ref=e218]: 0 item(ns)
+            - cell "R$ 12.000,00" [ref=e219]
+            - cell "RASCUNHOBLOQUEADA" [ref=e220]
+            - cell "Editar Excluir" [ref=e221]:
+              - button "Editar" [ref=e222] [cursor=pointer]
+              - button "Excluir" [ref=e223] [cursor=pointer]
+          - row "4S-435113-2026 PW CT009 20260617184225 Obra PW CT009 20260617184225 Centro 0 item(ns) R$ 12.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e224]:
+            - cell "4S-435113-2026" [ref=e225]
+            - cell "PW CT009 20260617184225 Obra" [ref=e226]
+            - cell "PW CT009 20260617184225 Centro" [ref=e227]
+            - cell "0 item(ns)" [ref=e228]: 0 item(ns)
+            - cell "R$ 12.000,00" [ref=e229]
+            - cell "RASCUNHOBLOQUEADA" [ref=e230]
             - cell "Editar Excluir" [ref=e231]:
               - button "Editar" [ref=e232] [cursor=pointer]
               - button "Excluir" [ref=e233] [cursor=pointer]
-          - row "4S-911856-2026 - - 1 item(ns) HML 1781630595874 Item Orcado R$ 2.000,00 REJEITADA Editar Excluir" [ref=e234]:
-            - cell "4S-911856-2026" [ref=e235]
-            - cell "-" [ref=e236]
-            - cell "-" [ref=e237]
-            - cell "1 item(ns) HML 1781630595874 Item Orcado" [ref=e238]:
+          - row "4S-393562-2026 R3 1 1 item(ns) 1 R$ 3.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e234]:
+            - cell "4S-393562-2026" [ref=e235]
+            - cell "R3" [ref=e236]
+            - cell "1" [ref=e237]
+            - cell "1 item(ns) 1" [ref=e238]:
               - text: 1 item(ns)
-              - generic [ref=e239]: HML 1781630595874 Item Orcado
-            - cell "R$ 2.000,00" [ref=e240]
-            - cell "REJEITADA" [ref=e241]
+              - generic [ref=e239]: "1"
+            - cell "R$ 3.000,00" [ref=e240]
+            - cell "RASCUNHOBLOQUEADA" [ref=e241]
             - cell "Editar Excluir" [ref=e242]:
               - button "Editar" [ref=e243] [cursor=pointer]
               - button "Excluir" [ref=e244] [cursor=pointer]
-          - row "4S-985811-2026 - - 1 item(ns) HML 1781630773579 Item Orcado R$ 2.000,00 APROVADA Editar Excluir" [ref=e245]:
-            - cell "4S-985811-2026" [ref=e246]
-            - cell "-" [ref=e247]
-            - cell "-" [ref=e248]
-            - cell "1 item(ns) HML 1781630773579 Item Orcado" [ref=e249]:
+          - row "4S-711572-2026 PW CT012 20260617184225 Obra PW CT012 20260617184225 Centro 1 item(ns) PW CT012 20260617184225 Item R$ 200,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e245]:
+            - cell "4S-711572-2026" [ref=e246]
+            - cell "PW CT012 20260617184225 Obra" [ref=e247]
+            - cell "PW CT012 20260617184225 Centro" [ref=e248]
+            - cell "1 item(ns) PW CT012 20260617184225 Item" [ref=e249]:
               - text: 1 item(ns)
-              - generic [ref=e250]: HML 1781630773579 Item Orcado
-            - cell "R$ 2.000,00" [ref=e251]
-            - cell "APROVADA" [ref=e252]
+              - generic [ref=e250]: PW CT012 20260617184225 Item
+            - cell "R$ 200,00" [ref=e251]
+            - cell "RASCUNHOBLOQUEADA" [ref=e252]
             - cell "Editar Excluir" [ref=e253]:
               - button "Editar" [ref=e254] [cursor=pointer]
               - button "Excluir" [ref=e255] [cursor=pointer]
-      - generic [ref=e257]:
-        - heading "Nova Requisicao" [level=2] [ref=e258]
-        - paragraph [ref=e259]: Inclua itens vinculados ao orcamento para validar saldo.
-        - generic [ref=e260]:
-          - generic [ref=e261]:
-            - generic [ref=e262]: Obra *
-            - combobox [ref=e263]:
+          - row "4S-645894-2026 PW CT012 20260617184145 Obra PW CT012 20260617184145 Centro 1 item(ns) PW CT012 20260617184145 Item R$ 200,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e256]:
+            - cell "4S-645894-2026" [ref=e257]
+            - cell "PW CT012 20260617184145 Obra" [ref=e258]
+            - cell "PW CT012 20260617184145 Centro" [ref=e259]
+            - cell "1 item(ns) PW CT012 20260617184145 Item" [ref=e260]:
+              - text: 1 item(ns)
+              - generic [ref=e261]: PW CT012 20260617184145 Item
+            - cell "R$ 200,00" [ref=e262]
+            - cell "RASCUNHOBLOQUEADA" [ref=e263]
+            - cell "Editar Excluir" [ref=e264]:
+              - button "Editar" [ref=e265] [cursor=pointer]
+              - button "Excluir" [ref=e266] [cursor=pointer]
+          - row "4S-930525-2026 - - 1 item(ns) HML 1781630370967 Item Orcado R$ 2.000,00 REJEITADA Editar Excluir" [ref=e267]:
+            - cell "4S-930525-2026" [ref=e268]
+            - cell "-" [ref=e269]
+            - cell "-" [ref=e270]
+            - cell "1 item(ns) HML 1781630370967 Item Orcado" [ref=e271]:
+              - text: 1 item(ns)
+              - generic [ref=e272]: HML 1781630370967 Item Orcado
+            - cell "R$ 2.000,00" [ref=e273]
+            - cell "REJEITADA" [ref=e274]
+            - cell "Editar Excluir" [ref=e275]:
+              - button "Editar" [ref=e276] [cursor=pointer]
+              - button "Excluir" [ref=e277] [cursor=pointer]
+          - row "4S-260167-2026 - - 1 item(ns) HML 1781630633295 Item Orcado R$ 2.000,00 REJEITADA Editar Excluir" [ref=e278]:
+            - cell "4S-260167-2026" [ref=e279]
+            - cell "-" [ref=e280]
+            - cell "-" [ref=e281]
+            - cell "1 item(ns) HML 1781630633295 Item Orcado" [ref=e282]:
+              - text: 1 item(ns)
+              - generic [ref=e283]: HML 1781630633295 Item Orcado
+            - cell "R$ 2.000,00" [ref=e284]
+            - cell "REJEITADA" [ref=e285]
+            - cell "Editar Excluir" [ref=e286]:
+              - button "Editar" [ref=e287] [cursor=pointer]
+              - button "Excluir" [ref=e288] [cursor=pointer]
+          - row "4S-911856-2026 - - 1 item(ns) HML 1781630595874 Item Orcado R$ 2.000,00 REJEITADA Editar Excluir" [ref=e289]:
+            - cell "4S-911856-2026" [ref=e290]
+            - cell "-" [ref=e291]
+            - cell "-" [ref=e292]
+            - cell "1 item(ns) HML 1781630595874 Item Orcado" [ref=e293]:
+              - text: 1 item(ns)
+              - generic [ref=e294]: HML 1781630595874 Item Orcado
+            - cell "R$ 2.000,00" [ref=e295]
+            - cell "REJEITADA" [ref=e296]
+            - cell "Editar Excluir" [ref=e297]:
+              - button "Editar" [ref=e298] [cursor=pointer]
+              - button "Excluir" [ref=e299] [cursor=pointer]
+          - row "4S-985811-2026 - - 1 item(ns) HML 1781630773579 Item Orcado R$ 2.000,00 APROVADA Editar Excluir" [ref=e300]:
+            - cell "4S-985811-2026" [ref=e301]
+            - cell "-" [ref=e302]
+            - cell "-" [ref=e303]
+            - cell "1 item(ns) HML 1781630773579 Item Orcado" [ref=e304]:
+              - text: 1 item(ns)
+              - generic [ref=e305]: HML 1781630773579 Item Orcado
+            - cell "R$ 2.000,00" [ref=e306]
+            - cell "APROVADA" [ref=e307]
+            - cell "Editar Excluir" [ref=e308]:
+              - button "Editar" [ref=e309] [cursor=pointer]
+              - button "Excluir" [ref=e310] [cursor=pointer]
+      - generic [ref=e312]:
+        - heading "Nova Requisicao" [level=2] [ref=e313]
+        - paragraph [ref=e314]: Inclua itens vinculados ao orcamento para validar saldo.
+        - generic [ref=e315]:
+          - generic [ref=e316]:
+            - generic [ref=e317]: Obra *
+            - combobox [ref=e318]:
               - option "Selecione..."
-              - option "AUTO-4S-1781787507433 Obra" [selected]
+              - option "AUTO-4S-PROD-CT012-019-20260619-01 Obra" [selected]
+              - option "AUTO-4S-PROD-CT004-008-20260619-01 Obra"
+              - option "AUTO-4S-REG-CT004-08 Obra"
+              - option "AUTO-4S-FLOW-LOCAL-05 Obra"
+              - option "AUTO-4S-FLOW-LOCAL-04 Obra"
+              - option "AUTO-4S-FLOW-LOCAL-03 Obra"
+              - option "AUTO-4S-FLOW-LOCAL-02 Obra"
+              - option "AUTO-4S-FLOW-LOCAL-01 Obra"
+              - option "AUTO-4S-VERIFY-20260619-02 Obra"
+              - option "AUTO-4S-1781886239507 Obra"
+              - option "AUTO-4S-1781886161086 Obra"
+              - option "AUTO-4S-1781787507433 Obra"
               - option "AUTO-4S-1781787088837 Obra"
               - option "AUTO-4S-1781787027511 Obra"
               - option "AUTO-4S-1781786933497 Obra"
@@ -347,47 +429,47 @@ Call log:
               - option "R3"
               - option "VIA MOBILIDADE - TROCA DE PISOS"
               - option "4S-OBR-053-CAP-VMO"
-          - generic [ref=e264]:
-            - generic [ref=e265]: Centro de custo *
-            - combobox [ref=e266]:
+          - generic [ref=e319]:
+            - generic [ref=e320]: Centro de custo *
+            - combobox [ref=e321]:
               - option "Selecione..."
-              - option "AUTO-4S-1781787507433 Centro" [selected]
-          - generic [ref=e267]:
-            - generic [ref=e268]: Tipo
-            - combobox [ref=e269]:
+              - option "AUTO-4S-PROD-CT012-019-20260619-01 Centro" [selected]
+          - generic [ref=e322]:
+            - generic [ref=e323]: Tipo
+            - combobox [ref=e324]:
               - option "MATERIAL" [selected]
               - option "SERVICO"
               - option "LOCACAO"
-          - generic [ref=e270]:
-            - generic [ref=e271]: Data
-            - textbox [ref=e272]: 2026-06-19
-          - generic [ref=e273]:
-            - generic [ref=e274]: Justificativa *
-            - textbox [ref=e275]: AUTO-4S-20260619155325 Requisicao
-        - generic [ref=e276]:
-          - generic [ref=e277]:
-            - paragraph [ref=e278]: Itens da requisicao
-            - button "+ Item" [ref=e279] [cursor=pointer]
-          - generic [ref=e280]:
-            - generic [ref=e281]:
-              - generic [ref=e282]: Item orcado
-              - combobox [ref=e283]:
+          - generic [ref=e325]:
+            - generic [ref=e326]: Data
+            - textbox [ref=e327]: 2026-06-19
+          - generic [ref=e328]:
+            - generic [ref=e329]: Justificativa *
+            - textbox [ref=e330]: AUTO-4S-20260619175640 Requisicao
+        - generic [ref=e331]:
+          - generic [ref=e332]:
+            - paragraph [ref=e333]: Itens da requisicao
+            - button "+ Item" [ref=e334] [cursor=pointer]
+          - generic [ref=e335]:
+            - generic [ref=e336]:
+              - generic [ref=e337]: Item orcado
+              - combobox [ref=e338]:
                 - option "Selecione..."
-                - option "AUTO-4S-1781787507433 Item - saldo R$ 1.000,00" [selected]
-            - generic [ref=e284]:
-              - generic [ref=e285]: Qtd.
-              - spinbutton [ref=e286]: "10"
-            - generic [ref=e287]:
-              - generic [ref=e288]: Vlr unit.
-              - spinbutton [active] [ref=e289]: "1200"
-            - generic [ref=e290]:
-              - generic [ref=e291]: Total
-              - generic [ref=e292]: R$ 12.000,00
-            - button "remover" [ref=e293] [cursor=pointer]
-          - generic [ref=e294]: "Total: R$ 12.000,00"
-        - generic [ref=e295]:
-          - button "Cancelar" [ref=e296] [cursor=pointer]
-          - button "Criar Requisicao" [ref=e297] [cursor=pointer]
+                - option "AUTO-4S-PROD-CT012-019-20260619-01 Item Orcado - saldo R$ 808,00" [selected]
+            - generic [ref=e339]:
+              - generic [ref=e340]: Qtd.
+              - spinbutton [ref=e341]: "10"
+            - generic [ref=e342]:
+              - generic [ref=e343]: Vlr unit.
+              - spinbutton [active] [ref=e344]: "1200"
+            - generic [ref=e345]:
+              - generic [ref=e346]: Total
+              - generic [ref=e347]: R$ 12.000,00
+            - button "remover" [ref=e348] [cursor=pointer]
+          - generic [ref=e349]: "Total: R$ 12.000,00"
+        - generic [ref=e350]:
+          - button "Cancelar" [ref=e351] [cursor=pointer]
+          - button "Criar Requisicao" [ref=e352] [cursor=pointer]
 ```
 
 # Test source
