@@ -12,7 +12,33 @@
 # Error details
 
 ```
-Error: Could not find clickable control: Enviar para aprovação | Enviar | Solicitar aprovação
+TimeoutError: locator.click: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator('button, [role="button"]').filter({ hasText: /salvar|confirmar|enviar|criar|cadastrar/i }).filter({ hasNotText: /cadastrar mais/i }).first()
+    - locator resolved to <button>Enviar aprovacao</button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div>…</div> intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div>…</div> intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    29 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div>…</div> intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+
 ```
 
 # Page snapshot
@@ -64,18 +90,26 @@ Error: Could not find clickable control: Enviar para aprovação | Enviar | Soli
         - paragraph [ref=e52]: ADMINISTRADOR
       - button "⏻" [ref=e53] [cursor=pointer]
   - main [ref=e54]:
-    - generic [ref=e56]: ADMINISTRADOR
-    - generic [ref=e58]:
-      - generic [ref=e59]: Requisicao salva, mas bloqueada por saldo orcamentario.
+    - generic [ref=e55]:
+      - button "⚠ 3 aprovações pendentes" [ref=e56] [cursor=pointer]
+      - generic [ref=e57]: ADMINISTRADOR
+    - generic [ref=e59]:
       - generic [ref=e60]:
         - generic [ref=e61]:
           - heading "Requisicoes" [level=1] [ref=e62]
-          - paragraph [ref=e63]: 11 requisicoes
+          - paragraph [ref=e63]: 16 requisicoes
         - button "+ Nova Requisicao" [ref=e64] [cursor=pointer]
       - generic [ref=e65]:
         - textbox "Buscar..." [ref=e66]
         - combobox [ref=e67]:
           - option "Todas as obras" [selected]
+          - option "AUTO-4S-1781787507433 Obra"
+          - option "AUTO-4S-1781787088837 Obra"
+          - option "AUTO-4S-1781787027511 Obra"
+          - option "AUTO-4S-1781786933497 Obra"
+          - option "AUTO-4S-1781786851917 Obra"
+          - option "AUTO-4S-1781786769827 Obra"
+          - option "AUTO-4S-1781786694588 Obra"
           - option "PW CT009 20260617184225 Obra"
           - option "PW CT012 20260617184225 Obra"
           - option "PW CT012 20260617184145 Obra"
@@ -97,164 +131,268 @@ Error: Could not find clickable control: Enviar para aprovação | Enviar | Soli
             - columnheader "Status" [ref=e76]
             - columnheader "Acoes" [ref=e77]
         - rowgroup [ref=e78]:
-          - row "4S-165544-2026 PW CT009 20260617184225 Obra PW CT009 20260617184225 Centro 0 item(ns) R$ 12.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e79]:
-            - cell "4S-165544-2026" [ref=e80]
-            - cell "PW CT009 20260617184225 Obra" [ref=e81]
-            - cell "PW CT009 20260617184225 Centro" [ref=e82]
-            - cell "0 item(ns)" [ref=e83]: 0 item(ns)
-            - cell "R$ 12.000,00" [ref=e84]
-            - cell "RASCUNHOBLOQUEADA" [ref=e85]
-            - cell "Editar Excluir" [ref=e86]:
-              - button "Editar" [ref=e87] [cursor=pointer]
-              - button "Excluir" [ref=e88] [cursor=pointer]
-          - row "4S-435113-2026 PW CT009 20260617184225 Obra PW CT009 20260617184225 Centro 0 item(ns) R$ 12.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e89]:
-            - cell "4S-435113-2026" [ref=e90]
-            - cell "PW CT009 20260617184225 Obra" [ref=e91]
-            - cell "PW CT009 20260617184225 Centro" [ref=e92]
-            - cell "0 item(ns)" [ref=e93]: 0 item(ns)
-            - cell "R$ 12.000,00" [ref=e94]
-            - cell "RASCUNHOBLOQUEADA" [ref=e95]
-            - cell "Editar Excluir" [ref=e96]:
-              - button "Editar" [ref=e97] [cursor=pointer]
-              - button "Excluir" [ref=e98] [cursor=pointer]
-          - row "4S-393562-2026 R3 1 1 item(ns) 1 R$ 3.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e99]:
-            - cell "4S-393562-2026" [ref=e100]
-            - cell "R3" [ref=e101]
-            - cell "1" [ref=e102]
-            - cell "1 item(ns) 1" [ref=e103]:
+          - row "4S-237833-2026 AUTO-4S-1781786933497 Obra AUTO-4S-1781786933497 Centro 1 item(ns) AUTO-4S-1781786933497 Item R$ 100,00 EM APROVACAO Editar Verificar aprovacao Excluir" [ref=e79]:
+            - cell "4S-237833-2026" [ref=e80]
+            - cell "AUTO-4S-1781786933497 Obra" [ref=e81]
+            - cell "AUTO-4S-1781786933497 Centro" [ref=e82]
+            - cell "1 item(ns) AUTO-4S-1781786933497 Item" [ref=e83]:
               - text: 1 item(ns)
-              - generic [ref=e104]: "1"
-            - cell "R$ 3.000,00" [ref=e105]
-            - cell "RASCUNHOBLOQUEADA" [ref=e106]
-            - cell "Editar Excluir" [ref=e107]:
-              - button "Editar" [ref=e108] [cursor=pointer]
-              - button "Excluir" [ref=e109] [cursor=pointer]
-          - row "4S-711572-2026 PW CT012 20260617184225 Obra PW CT012 20260617184225 Centro 1 item(ns) PW CT012 20260617184225 Item R$ 200,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e110]:
-            - cell "4S-711572-2026" [ref=e111]
-            - cell "PW CT012 20260617184225 Obra" [ref=e112]
-            - cell "PW CT012 20260617184225 Centro" [ref=e113]
-            - cell "1 item(ns) PW CT012 20260617184225 Item" [ref=e114]:
+              - generic [ref=e84]: AUTO-4S-1781786933497 Item
+            - cell "R$ 100,00" [ref=e85]
+            - cell "EM APROVACAO" [ref=e86]
+            - cell "Editar Verificar aprovacao Excluir" [ref=e87]:
+              - button "Editar" [ref=e88] [cursor=pointer]
+              - button "Verificar aprovacao" [ref=e89] [cursor=pointer]
+              - button "Excluir" [ref=e90] [cursor=pointer]
+          - row "4S-852170-2026 R3 1 1 item(ns) 1 R$ 15.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e91]:
+            - cell "4S-852170-2026" [ref=e92]
+            - cell "R3" [ref=e93]
+            - cell "1" [ref=e94]
+            - cell "1 item(ns) 1" [ref=e95]:
               - text: 1 item(ns)
-              - generic [ref=e115]: PW CT012 20260617184225 Item
-            - cell "R$ 200,00" [ref=e116]
-            - cell "RASCUNHOBLOQUEADA" [ref=e117]
-            - cell "Editar Excluir" [ref=e118]:
-              - button "Editar" [ref=e119] [cursor=pointer]
-              - button "Excluir" [ref=e120] [cursor=pointer]
-          - row "4S-645894-2026 PW CT012 20260617184145 Obra PW CT012 20260617184145 Centro 1 item(ns) PW CT012 20260617184145 Item R$ 200,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e121]:
-            - cell "4S-645894-2026" [ref=e122]
-            - cell "PW CT012 20260617184145 Obra" [ref=e123]
-            - cell "PW CT012 20260617184145 Centro" [ref=e124]
-            - cell "1 item(ns) PW CT012 20260617184145 Item" [ref=e125]:
+              - generic [ref=e96]: "1"
+            - cell "R$ 15.000,00" [ref=e97]
+            - cell "RASCUNHOBLOQUEADA" [ref=e98]
+            - cell "Editar Excluir" [ref=e99]:
+              - button "Editar" [ref=e100] [cursor=pointer]
+              - button "Excluir" [ref=e101] [cursor=pointer]
+          - row "4S-480687-2026 AUTO-4S-1781787507433 Obra AUTO-4S-1781787507433 Centro 1 item(ns) AUTO-4S-1781787507433 Item R$ 2.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e102]:
+            - cell "4S-480687-2026" [ref=e103]
+            - cell "AUTO-4S-1781787507433 Obra" [ref=e104]
+            - cell "AUTO-4S-1781787507433 Centro" [ref=e105]
+            - cell "1 item(ns) AUTO-4S-1781787507433 Item" [ref=e106]:
               - text: 1 item(ns)
-              - generic [ref=e126]: PW CT012 20260617184145 Item
-            - cell "R$ 200,00" [ref=e127]
-            - cell "RASCUNHOBLOQUEADA" [ref=e128]
-            - cell "Editar Excluir" [ref=e129]:
-              - button "Editar" [ref=e130] [cursor=pointer]
-              - button "Excluir" [ref=e131] [cursor=pointer]
-          - row "4S-469309-2026 PW CT012 20260617183903 Obra PW CT012 20260617183903 Centro 1 item(ns) PW CT012 20260617183903 Item R$ 200,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e132]:
-            - cell "4S-469309-2026" [ref=e133]
-            - cell "PW CT012 20260617183903 Obra" [ref=e134]
-            - cell "PW CT012 20260617183903 Centro" [ref=e135]
-            - cell "1 item(ns) PW CT012 20260617183903 Item" [ref=e136]:
+              - generic [ref=e107]: AUTO-4S-1781787507433 Item
+            - cell "R$ 2.000,00" [ref=e108]
+            - cell "RASCUNHOBLOQUEADA" [ref=e109]
+            - cell "Editar Excluir" [ref=e110]:
+              - button "Editar" [ref=e111] [cursor=pointer]
+              - button "Excluir" [ref=e112] [cursor=pointer]
+          - row "4S-230792-2026 AUTO-4S-1781786933497 Obra AUTO-4S-1781786933497 Centro 1 item(ns) AUTO-4S-1781786933497 Item R$ 2.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e113]:
+            - cell "4S-230792-2026" [ref=e114]
+            - cell "AUTO-4S-1781786933497 Obra" [ref=e115]
+            - cell "AUTO-4S-1781786933497 Centro" [ref=e116]
+            - cell "1 item(ns) AUTO-4S-1781786933497 Item" [ref=e117]:
               - text: 1 item(ns)
-              - generic [ref=e137]: PW CT012 20260617183903 Item
-            - cell "R$ 200,00" [ref=e138]
-            - cell "RASCUNHOBLOQUEADA" [ref=e139]
-            - cell "Editar Excluir" [ref=e140]:
-              - button "Editar" [ref=e141] [cursor=pointer]
-              - button "Excluir" [ref=e142] [cursor=pointer]
-          - row "4S-930525-2026 - - 1 item(ns) HML 1781630370967 Item Orcado R$ 2.000,00 REJEITADA Editar Excluir" [ref=e143]:
-            - cell "4S-930525-2026" [ref=e144]
-            - cell "-" [ref=e145]
-            - cell "-" [ref=e146]
-            - cell "1 item(ns) HML 1781630370967 Item Orcado" [ref=e147]:
+              - generic [ref=e118]: AUTO-4S-1781786933497 Item
+            - cell "R$ 2.000,00" [ref=e119]
+            - cell "RASCUNHOBLOQUEADA" [ref=e120]
+            - cell "Editar Excluir" [ref=e121]:
+              - button "Editar" [ref=e122] [cursor=pointer]
+              - button "Excluir" [ref=e123] [cursor=pointer]
+          - row "4S-548743-2026 AUTO-4S-1781786851917 Obra AUTO-4S-1781786851917 Centro 1 item(ns) AUTO-4S-1781786851917 Item R$ 100,00 RASCUNHO Editar Enviar aprovacao Excluir" [ref=e124]:
+            - cell "4S-548743-2026" [ref=e125]
+            - cell "AUTO-4S-1781786851917 Obra" [ref=e126]
+            - cell "AUTO-4S-1781786851917 Centro" [ref=e127]
+            - cell "1 item(ns) AUTO-4S-1781786851917 Item" [ref=e128]:
               - text: 1 item(ns)
-              - generic [ref=e148]: HML 1781630370967 Item Orcado
-            - cell "R$ 2.000,00" [ref=e149]
-            - cell "REJEITADA" [ref=e150]
-            - cell "Editar Excluir" [ref=e151]:
-              - button "Editar" [ref=e152] [cursor=pointer]
-              - button "Excluir" [ref=e153] [cursor=pointer]
-          - row "4S-260167-2026 - - 1 item(ns) HML 1781630633295 Item Orcado R$ 2.000,00 REJEITADA Editar Excluir" [ref=e154]:
-            - cell "4S-260167-2026" [ref=e155]
-            - cell "-" [ref=e156]
-            - cell "-" [ref=e157]
-            - cell "1 item(ns) HML 1781630633295 Item Orcado" [ref=e158]:
+              - generic [ref=e129]: AUTO-4S-1781786851917 Item
+            - cell "R$ 100,00" [ref=e130]
+            - cell "RASCUNHO" [ref=e131]
+            - cell "Editar Enviar aprovacao Excluir" [ref=e132]:
+              - button "Editar" [ref=e133] [cursor=pointer]
+              - button "Enviar aprovacao" [ref=e134] [cursor=pointer]
+              - button "Excluir" [ref=e135] [cursor=pointer]
+          - row "4S-852402-2026 AUTO-4S-1781786769827 Obra AUTO-4S-1781786769827 Centro 1 item(ns) AUTO-4S-1781786769827 Item R$ 100,00 RASCUNHO Editar Enviar aprovacao Excluir" [ref=e136]:
+            - cell "4S-852402-2026" [ref=e137]
+            - cell "AUTO-4S-1781786769827 Obra" [ref=e138]
+            - cell "AUTO-4S-1781786769827 Centro" [ref=e139]
+            - cell "1 item(ns) AUTO-4S-1781786769827 Item" [ref=e140]:
               - text: 1 item(ns)
-              - generic [ref=e159]: HML 1781630633295 Item Orcado
-            - cell "R$ 2.000,00" [ref=e160]
-            - cell "REJEITADA" [ref=e161]
-            - cell "Editar Excluir" [ref=e162]:
-              - button "Editar" [ref=e163] [cursor=pointer]
-              - button "Excluir" [ref=e164] [cursor=pointer]
-          - row "4S-911856-2026 - - 1 item(ns) HML 1781630595874 Item Orcado R$ 2.000,00 REJEITADA Editar Excluir" [ref=e165]:
-            - cell "4S-911856-2026" [ref=e166]
-            - cell "-" [ref=e167]
-            - cell "-" [ref=e168]
-            - cell "1 item(ns) HML 1781630595874 Item Orcado" [ref=e169]:
+              - generic [ref=e141]: AUTO-4S-1781786769827 Item
+            - cell "R$ 100,00" [ref=e142]
+            - cell "RASCUNHO" [ref=e143]
+            - cell "Editar Enviar aprovacao Excluir" [ref=e144]:
+              - button "Editar" [ref=e145] [cursor=pointer]
+              - button "Enviar aprovacao" [ref=e146] [cursor=pointer]
+              - button "Excluir" [ref=e147] [cursor=pointer]
+          - row "4S-432322-2026 PW CT009 20260617184225 Obra PW CT009 20260617184225 Centro 1 item(ns) PW CT009 20260617184225 Item R$ 12.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e148]:
+            - cell "4S-432322-2026" [ref=e149]
+            - cell "PW CT009 20260617184225 Obra" [ref=e150]
+            - cell "PW CT009 20260617184225 Centro" [ref=e151]
+            - cell "1 item(ns) PW CT009 20260617184225 Item" [ref=e152]:
               - text: 1 item(ns)
-              - generic [ref=e170]: HML 1781630595874 Item Orcado
-            - cell "R$ 2.000,00" [ref=e171]
-            - cell "REJEITADA" [ref=e172]
-            - cell "Editar Excluir" [ref=e173]:
-              - button "Editar" [ref=e174] [cursor=pointer]
-              - button "Excluir" [ref=e175] [cursor=pointer]
-          - row "4S-985811-2026 - - 1 item(ns) HML 1781630773579 Item Orcado R$ 2.000,00 APROVADA Editar Excluir" [ref=e176]:
-            - cell "4S-985811-2026" [ref=e177]
-            - cell "-" [ref=e178]
-            - cell "-" [ref=e179]
-            - cell "1 item(ns) HML 1781630773579 Item Orcado" [ref=e180]:
+              - generic [ref=e153]: PW CT009 20260617184225 Item
+            - cell "R$ 12.000,00" [ref=e154]
+            - cell "RASCUNHOBLOQUEADA" [ref=e155]
+            - cell "Editar Excluir" [ref=e156]:
+              - button "Editar" [ref=e157] [cursor=pointer]
+              - button "Excluir" [ref=e158] [cursor=pointer]
+          - row "4S-165544-2026 PW CT009 20260617184225 Obra PW CT009 20260617184225 Centro 0 item(ns) R$ 12.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e159]:
+            - cell "4S-165544-2026" [ref=e160]
+            - cell "PW CT009 20260617184225 Obra" [ref=e161]
+            - cell "PW CT009 20260617184225 Centro" [ref=e162]
+            - cell "0 item(ns)" [ref=e163]: 0 item(ns)
+            - cell "R$ 12.000,00" [ref=e164]
+            - cell "RASCUNHOBLOQUEADA" [ref=e165]
+            - cell "Editar Excluir" [ref=e166]:
+              - button "Editar" [ref=e167] [cursor=pointer]
+              - button "Excluir" [ref=e168] [cursor=pointer]
+          - row "4S-435113-2026 PW CT009 20260617184225 Obra PW CT009 20260617184225 Centro 0 item(ns) R$ 12.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e169]:
+            - cell "4S-435113-2026" [ref=e170]
+            - cell "PW CT009 20260617184225 Obra" [ref=e171]
+            - cell "PW CT009 20260617184225 Centro" [ref=e172]
+            - cell "0 item(ns)" [ref=e173]: 0 item(ns)
+            - cell "R$ 12.000,00" [ref=e174]
+            - cell "RASCUNHOBLOQUEADA" [ref=e175]
+            - cell "Editar Excluir" [ref=e176]:
+              - button "Editar" [ref=e177] [cursor=pointer]
+              - button "Excluir" [ref=e178] [cursor=pointer]
+          - row "4S-393562-2026 R3 1 1 item(ns) 1 R$ 3.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e179]:
+            - cell "4S-393562-2026" [ref=e180]
+            - cell "R3" [ref=e181]
+            - cell "1" [ref=e182]
+            - cell "1 item(ns) 1" [ref=e183]:
               - text: 1 item(ns)
-              - generic [ref=e181]: HML 1781630773579 Item Orcado
-            - cell "R$ 2.000,00" [ref=e182]
-            - cell "APROVADA" [ref=e183]
-            - cell "Editar Excluir" [ref=e184]:
-              - button "Editar" [ref=e185] [cursor=pointer]
-              - button "Excluir" [ref=e186] [cursor=pointer]
-          - row "4S-432322-2026 PW CT009 20260617184225 Obra PW CT009 20260617184225 Centro 1 item(ns) PW CT009 20260617184225 Item R$ 12.000,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e187]:
-            - cell "4S-432322-2026" [ref=e188]
-            - cell "PW CT009 20260617184225 Obra" [ref=e189]
-            - cell "PW CT009 20260617184225 Centro" [ref=e190]
-            - cell "1 item(ns) PW CT009 20260617184225 Item" [ref=e191]:
+              - generic [ref=e184]: "1"
+            - cell "R$ 3.000,00" [ref=e185]
+            - cell "RASCUNHOBLOQUEADA" [ref=e186]
+            - cell "Editar Excluir" [ref=e187]:
+              - button "Editar" [ref=e188] [cursor=pointer]
+              - button "Excluir" [ref=e189] [cursor=pointer]
+          - row "4S-711572-2026 PW CT012 20260617184225 Obra PW CT012 20260617184225 Centro 1 item(ns) PW CT012 20260617184225 Item R$ 200,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e190]:
+            - cell "4S-711572-2026" [ref=e191]
+            - cell "PW CT012 20260617184225 Obra" [ref=e192]
+            - cell "PW CT012 20260617184225 Centro" [ref=e193]
+            - cell "1 item(ns) PW CT012 20260617184225 Item" [ref=e194]:
               - text: 1 item(ns)
-              - generic [ref=e192]: PW CT009 20260617184225 Item
-            - cell "R$ 12.000,00" [ref=e193]
-            - cell "RASCUNHOBLOQUEADA" [ref=e194]
-            - cell "Editar Excluir" [ref=e195]:
-              - button "Editar" [ref=e196] [cursor=pointer]
-              - button "Excluir" [ref=e197] [cursor=pointer]
+              - generic [ref=e195]: PW CT012 20260617184225 Item
+            - cell "R$ 200,00" [ref=e196]
+            - cell "RASCUNHOBLOQUEADA" [ref=e197]
+            - cell "Editar Excluir" [ref=e198]:
+              - button "Editar" [ref=e199] [cursor=pointer]
+              - button "Excluir" [ref=e200] [cursor=pointer]
+          - row "4S-645894-2026 PW CT012 20260617184145 Obra PW CT012 20260617184145 Centro 1 item(ns) PW CT012 20260617184145 Item R$ 200,00 RASCUNHOBLOQUEADA Editar Excluir" [ref=e201]:
+            - cell "4S-645894-2026" [ref=e202]
+            - cell "PW CT012 20260617184145 Obra" [ref=e203]
+            - cell "PW CT012 20260617184145 Centro" [ref=e204]
+            - cell "1 item(ns) PW CT012 20260617184145 Item" [ref=e205]:
+              - text: 1 item(ns)
+              - generic [ref=e206]: PW CT012 20260617184145 Item
+            - cell "R$ 200,00" [ref=e207]
+            - cell "RASCUNHOBLOQUEADA" [ref=e208]
+            - cell "Editar Excluir" [ref=e209]:
+              - button "Editar" [ref=e210] [cursor=pointer]
+              - button "Excluir" [ref=e211] [cursor=pointer]
+          - row "4S-930525-2026 - - 1 item(ns) HML 1781630370967 Item Orcado R$ 2.000,00 REJEITADA Editar Excluir" [ref=e212]:
+            - cell "4S-930525-2026" [ref=e213]
+            - cell "-" [ref=e214]
+            - cell "-" [ref=e215]
+            - cell "1 item(ns) HML 1781630370967 Item Orcado" [ref=e216]:
+              - text: 1 item(ns)
+              - generic [ref=e217]: HML 1781630370967 Item Orcado
+            - cell "R$ 2.000,00" [ref=e218]
+            - cell "REJEITADA" [ref=e219]
+            - cell "Editar Excluir" [ref=e220]:
+              - button "Editar" [ref=e221] [cursor=pointer]
+              - button "Excluir" [ref=e222] [cursor=pointer]
+          - row "4S-260167-2026 - - 1 item(ns) HML 1781630633295 Item Orcado R$ 2.000,00 REJEITADA Editar Excluir" [ref=e223]:
+            - cell "4S-260167-2026" [ref=e224]
+            - cell "-" [ref=e225]
+            - cell "-" [ref=e226]
+            - cell "1 item(ns) HML 1781630633295 Item Orcado" [ref=e227]:
+              - text: 1 item(ns)
+              - generic [ref=e228]: HML 1781630633295 Item Orcado
+            - cell "R$ 2.000,00" [ref=e229]
+            - cell "REJEITADA" [ref=e230]
+            - cell "Editar Excluir" [ref=e231]:
+              - button "Editar" [ref=e232] [cursor=pointer]
+              - button "Excluir" [ref=e233] [cursor=pointer]
+          - row "4S-911856-2026 - - 1 item(ns) HML 1781630595874 Item Orcado R$ 2.000,00 REJEITADA Editar Excluir" [ref=e234]:
+            - cell "4S-911856-2026" [ref=e235]
+            - cell "-" [ref=e236]
+            - cell "-" [ref=e237]
+            - cell "1 item(ns) HML 1781630595874 Item Orcado" [ref=e238]:
+              - text: 1 item(ns)
+              - generic [ref=e239]: HML 1781630595874 Item Orcado
+            - cell "R$ 2.000,00" [ref=e240]
+            - cell "REJEITADA" [ref=e241]
+            - cell "Editar Excluir" [ref=e242]:
+              - button "Editar" [ref=e243] [cursor=pointer]
+              - button "Excluir" [ref=e244] [cursor=pointer]
+          - row "4S-985811-2026 - - 1 item(ns) HML 1781630773579 Item Orcado R$ 2.000,00 APROVADA Editar Excluir" [ref=e245]:
+            - cell "4S-985811-2026" [ref=e246]
+            - cell "-" [ref=e247]
+            - cell "-" [ref=e248]
+            - cell "1 item(ns) HML 1781630773579 Item Orcado" [ref=e249]:
+              - text: 1 item(ns)
+              - generic [ref=e250]: HML 1781630773579 Item Orcado
+            - cell "R$ 2.000,00" [ref=e251]
+            - cell "APROVADA" [ref=e252]
+            - cell "Editar Excluir" [ref=e253]:
+              - button "Editar" [ref=e254] [cursor=pointer]
+              - button "Excluir" [ref=e255] [cursor=pointer]
+      - generic [ref=e257]:
+        - heading "Nova Requisicao" [level=2] [ref=e258]
+        - paragraph [ref=e259]: Inclua itens vinculados ao orcamento para validar saldo.
+        - generic [ref=e260]:
+          - generic [ref=e261]:
+            - generic [ref=e262]: Obra *
+            - combobox [ref=e263]:
+              - option "Selecione..."
+              - option "AUTO-4S-1781787507433 Obra" [selected]
+              - option "AUTO-4S-1781787088837 Obra"
+              - option "AUTO-4S-1781787027511 Obra"
+              - option "AUTO-4S-1781786933497 Obra"
+              - option "AUTO-4S-1781786851917 Obra"
+              - option "AUTO-4S-1781786769827 Obra"
+              - option "AUTO-4S-1781786694588 Obra"
+              - option "PW CT009 20260617184225 Obra"
+              - option "PW CT012 20260617184225 Obra"
+              - option "PW CT012 20260617184145 Obra"
+              - option "PW CT009 20260617183934 Obra"
+              - option "PW CT012 20260617183903 Obra"
+              - option "PW CT009 20260617183009 Obra"
+              - option "PW CT012 20260617182923 Obra"
+              - option "R3"
+              - option "VIA MOBILIDADE - TROCA DE PISOS"
+              - option "4S-OBR-053-CAP-VMO"
+          - generic [ref=e264]:
+            - generic [ref=e265]: Centro de custo *
+            - combobox [ref=e266]:
+              - option "Selecione..."
+              - option "AUTO-4S-1781787507433 Centro" [selected]
+          - generic [ref=e267]:
+            - generic [ref=e268]: Tipo
+            - combobox [ref=e269]:
+              - option "MATERIAL" [selected]
+              - option "SERVICO"
+              - option "LOCACAO"
+          - generic [ref=e270]:
+            - generic [ref=e271]: Data
+            - textbox [ref=e272]: 2026-06-19
+          - generic [ref=e273]:
+            - generic [ref=e274]: Justificativa *
+            - textbox [ref=e275]: AUTO-4S-20260619155325 Requisicao
+        - generic [ref=e276]:
+          - generic [ref=e277]:
+            - paragraph [ref=e278]: Itens da requisicao
+            - button "+ Item" [ref=e279] [cursor=pointer]
+          - generic [ref=e280]:
+            - generic [ref=e281]:
+              - generic [ref=e282]: Item orcado
+              - combobox [ref=e283]:
+                - option "Selecione..."
+                - option "AUTO-4S-1781787507433 Item - saldo R$ 1.000,00" [selected]
+            - generic [ref=e284]:
+              - generic [ref=e285]: Qtd.
+              - spinbutton [ref=e286]: "10"
+            - generic [ref=e287]:
+              - generic [ref=e288]: Vlr unit.
+              - spinbutton [active] [ref=e289]: "1200"
+            - generic [ref=e290]:
+              - generic [ref=e291]: Total
+              - generic [ref=e292]: R$ 12.000,00
+            - button "remover" [ref=e293] [cursor=pointer]
+          - generic [ref=e294]: "Total: R$ 12.000,00"
+        - generic [ref=e295]:
+          - button "Cancelar" [ref=e296] [cursor=pointer]
+          - button "Criar Requisicao" [ref=e297] [cursor=pointer]
 ```
 
 # Test source
 
 ```ts
-  1   | const { expect } = require('@playwright/test');
-  2   | 
-  3   | function byText(page, text) {
-  4   |   return page.getByText(new RegExp(escapeRegex(text), 'i')).first();
-  5   | }
-  6   | 
-  7   | function escapeRegex(text) {
-  8   |   return String(text).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  9   | }
-  10  | 
-  11  | function xpathLiteral(text) {
-  12  |   const value = String(text);
-  13  |   if (!value.includes("'")) return `'${value}'`;
-  14  |   if (!value.includes('"')) return `"${value}"`;
-  15  |   return `concat('${value.replace(/'/g, "',\"'\",'")}')`;
-  16  | }
-  17  | 
-  18  | async function firstVisible(locators) {
-  19  |   for (const locator of locators) {
-  20  |     if (await locator.count()) {
-  21  |       const first = locator.first();
-  22  |       if (await first.isVisible().catch(() => false)) return first;
-  23  |     }
-  24  |   }
-  25  |   return null;
   26  | }
   27  | 
   28  | async function clickAny(page, names, options = {}) {
@@ -270,8 +408,7 @@ Error: Could not find clickable control: Enviar para aprovação | Enviar | Soli
   38  |     locators.push(page.locator('button, a, [role="button"]').filter({ hasText: /^\s*\+/ }));
   39  |   }
   40  |   const target = await firstVisible(locators);
-> 41  |   if (!target) throw new Error(`Could not find clickable control: ${names.join(' | ')}`);
-      |                      ^ Error: Could not find clickable control: Enviar para aprovação | Enviar | Solicitar aprovação
+  41  |   if (!target) throw new Error(`Could not find clickable control: ${names.join(' | ')}`);
   42  |   await target.click(options);
   43  | }
   44  | 
@@ -356,7 +493,8 @@ Error: Could not find clickable control: Enviar para aprovação | Enviar | Soli
   123 |     page.locator('button, [role="button"]').filter({ hasText: /salvar|confirmar|enviar|criar|cadastrar/i }).filter({ hasNotText: /cadastrar mais/i })
   124 |   ]);
   125 |   if (primarySubmit) {
-  126 |     await primarySubmit.click();
+> 126 |     await primarySubmit.click();
+      |                         ^ TimeoutError: locator.click: Timeout 15000ms exceeded.
   127 |   } else {
   128 |     await clickAny(page, ['Salvar', 'Cadastrar', 'Criar', 'Confirmar', 'Enviar']);
   129 |   }
@@ -372,4 +510,36 @@ Error: Could not find clickable control: Enviar para aprovação | Enviar | Soli
   139 |   }
   140 | }
   141 | 
+  142 | async function tryCreateSimpleRecord(page, path, recordName, fields = []) {
+  143 |   await gotoMenu(page, path);
+  144 |   await clickAny(page, ['Novo', 'Adicionar', 'Cadastrar', 'Criar']);
+  145 |   for (const field of fields) {
+  146 |     if (field.type === 'select') {
+  147 |       await chooseOption(page, field.labels, field.value);
+  148 |     } else {
+  149 |       await fillField(page, field.labels, field.value);
+  150 |     }
+  151 |   }
+  152 |   await submitForm(page);
+  153 |   await expect(byText(page, recordName)).toBeVisible();
+  154 | }
+  155 | 
+  156 | async function assertPersistedAfterRefresh(page, text) {
+  157 |   await page.reload({ waitUntil: 'networkidle' });
+  158 |   await expect(byText(page, text)).toBeVisible();
+  159 | }
+  160 | 
+  161 | module.exports = {
+  162 |   byText,
+  163 |   clickAny,
+  164 |   gotoMenu,
+  165 |   fillField,
+  166 |   chooseOption,
+  167 |   chooseFirstAvailableOption,
+  168 |   submitForm,
+  169 |   expectPageReady,
+  170 |   tryCreateSimpleRecord,
+  171 |   assertPersistedAfterRefresh
+  172 | };
+  173 | 
 ```

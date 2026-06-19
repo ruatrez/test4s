@@ -1,7 +1,7 @@
 {
   "config": {
     "argv": [
-      "/home/linuxbrew/.linuxbrew/Cellar/node/26.3.0/bin/node",
+      "/home/linuxbrew/.linuxbrew/Cellar/node/26.3.1/bin/node",
       "/home/colatto/repo/R3/4s/node_modules/.bin/playwright",
       "test"
     ],
@@ -93,7 +93,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 26186,
+                  "duration": 26194,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -101,18 +101,18 @@
                   "steps": [
                     {
                       "title": "CT001-LOGIN-ADMIN",
-                      "duration": 17568
+                      "duration": 17413
                     },
                     {
                       "title": "CT001-LOGOUT",
-                      "duration": 88
+                      "duration": 89
                     },
                     {
                       "title": "CT001-LOGIN-INVALIDO",
-                      "duration": 8188
+                      "duration": 8383
                     }
                   ],
-                  "startTime": "2026-06-17T19:21:18.536Z",
+                  "startTime": "2026-06-19T15:52:01.259Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -141,7 +141,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 17461,
+                  "duration": 19708,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -153,66 +153,66 @@
                     },
                     {
                       "title": "CT022-Cadastros",
-                      "duration": 56
+                      "duration": 38
                     },
                     {
                       "title": "CT022-Configurações-Clientes-e-Contratos",
-                      "duration": 129
+                      "duration": 134
                     },
                     {
                       "title": "CT022-Configurações-Obras-e-Centros",
-                      "duration": 69
+                      "duration": 87
                     },
                     {
                       "title": "CT022-Configurações-Fornecedores",
-                      "duration": 75
+                      "duration": 84
                     },
                     {
                       "title": "CT022-Configurações-Categorias",
-                      "duration": 83
+                      "duration": 87
                     },
                     {
                       "title": "CT022-Configurações-Colaboradores",
-                      "duration": 75
+                      "duration": 72
                     },
                     {
                       "title": "CT022-Configurações-Usuários",
-                      "duration": 70
+                      "duration": 74
                     },
                     {
                       "title": "CT022-Orçamento-Itens-Orçados",
-                      "duration": 144
+                      "duration": 145
                     },
                     {
                       "title": "CT022-Suprimentos-Requisições",
-                      "duration": 119
+                      "duration": 126
                     },
                     {
                       "title": "CT022-Suprimentos-Cotações",
-                      "duration": 62
+                      "duration": 73
                     },
                     {
                       "title": "CT022-Suprimentos-Ordens-de-Compra",
-                      "duration": 60
+                      "duration": 66
                     },
                     {
                       "title": "CT022-Financeiro-Contas-a-Pagar",
-                      "duration": 118
+                      "duration": 102
                     },
                     {
                       "title": "CT022-Financeiro-Pagamentos",
-                      "duration": 52
+                      "duration": 60
                     },
                     {
                       "title": "CT022-Workflow-Aprovações",
-                      "duration": 107
+                      "duration": 73
                     },
                     {
                       "title": "CT022-Workflow-Auditoria",
-                      "duration": 143
+                      "duration": 210
                     }
                   ],
-                  "startTime": "2026-06-17T19:21:44.829Z",
+                  "startTime": "2026-06-19T15:52:27.561Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -249,16 +249,16 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "failed",
-                  "duration": 35594,
+                  "duration": 37697,
                   "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617192118 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617192118 Cliente/i).first()\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617192118 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617192118 Cliente/i).first()\u001b[22m\n\n    at assertPersistedAfterRefresh (/home/colatto/repo/R3/4s/support/ui.js:158:36)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:37:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:22:3",
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260619155201 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260619155201 Cliente/i).first()\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260619155201 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260619155201 Cliente/i).first()\u001b[22m\n\n    at assertPersistedAfterRefresh (/home/colatto/repo/R3/4s/support/ui.js:158:36)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:37:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:22:3",
                     "location": {
                       "file": "/home/colatto/repo/R3/4s/support/ui.js",
                       "column": 36,
                       "line": 158
                     },
-                    "snippet": "\u001b[90m   at \u001b[39m../support/ui.js:158\n\n  156 | async function assertPersistedAfterRefresh(page, text) {\n  157 |   await page.reload({ waitUntil: 'networkidle' });\n> 158 |   await expect(byText(page, text)).toBeVisible();\n      |                                    ^\n  159 | }\n  160 |\n  161 | module.exports = {"
+                    "snippet": "\u001b[90m   at \u001b[39m../support/ui.js:158\n\n\u001b[0m \u001b[90m 156 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m assertPersistedAfterRefresh(page\u001b[33m,\u001b[39m text) {\n \u001b[90m 157 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mreload({ waitUntil\u001b[33m:\u001b[39m \u001b[32m'networkidle'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 158 |\u001b[39m   \u001b[36mawait\u001b[39m expect(byText(page\u001b[33m,\u001b[39m text))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 159 |\u001b[39m }\n \u001b[90m 160 |\u001b[39m\n \u001b[90m 161 |\u001b[39m module\u001b[33m.\u001b[39mexports \u001b[33m=\u001b[39m {\u001b[0m"
                   },
                   "errors": [
                     {
@@ -267,7 +267,7 @@
                         "column": 36,
                         "line": 158
                       },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617192118 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617192118 Cliente/i).first()\u001b[22m\n\n\n   at ../support/ui.js:158\n\n  156 | async function assertPersistedAfterRefresh(page, text) {\n  157 |   await page.reload({ waitUntil: 'networkidle' });\n> 158 |   await expect(byText(page, text)).toBeVisible();\n      |                                    ^\n  159 | }\n  160 |\n  161 | module.exports = {\n    at assertPersistedAfterRefresh (/home/colatto/repo/R3/4s/support/ui.js:158:36)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:37:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:22:3"
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260619155201 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260619155201 Cliente/i).first()\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../support/ui.js:158\n\n\u001b[0m \u001b[90m 156 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m assertPersistedAfterRefresh(page\u001b[33m,\u001b[39m text) {\n \u001b[90m 157 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mreload({ waitUntil\u001b[33m:\u001b[39m \u001b[32m'networkidle'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 158 |\u001b[39m   \u001b[36mawait\u001b[39m expect(byText(page\u001b[33m,\u001b[39m text))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 159 |\u001b[39m }\n \u001b[90m 160 |\u001b[39m\n \u001b[90m 161 |\u001b[39m module\u001b[33m.\u001b[39mexports \u001b[33m=\u001b[39m {\u001b[0m\n\u001b[2m    at assertPersistedAfterRefresh (/home/colatto/repo/R3/4s/support/ui.js:158:36)\u001b[22m\n\u001b[2m    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:37:5\u001b[22m\n\u001b[2m    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\u001b[22m\n\u001b[2m    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:22:3\u001b[22m"
                     }
                   ],
                   "stdout": [],
@@ -276,26 +276,26 @@
                   "steps": [
                     {
                       "title": "CT004-CLIENTE-CONTRATO",
-                      "duration": 18345,
+                      "duration": 19305,
                       "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617192118 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617192118 Cliente/i).first()\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260617192118 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260617192118 Cliente/i).first()\u001b[22m\n\n    at assertPersistedAfterRefresh (/home/colatto/repo/R3/4s/support/ui.js:158:36)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:37:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:22:3",
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260619155201 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260619155201 Cliente/i).first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260619155201 Cliente/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260619155201 Cliente/i).first()\u001b[22m\n\n    at assertPersistedAfterRefresh (/home/colatto/repo/R3/4s/support/ui.js:158:36)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:37:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:22:3",
                         "location": {
                           "file": "/home/colatto/repo/R3/4s/support/ui.js",
                           "column": 36,
                           "line": 158
                         },
-                        "snippet": "\u001b[90m   at \u001b[39m../support/ui.js:158\n\n  156 | async function assertPersistedAfterRefresh(page, text) {\n  157 |   await page.reload({ waitUntil: 'networkidle' });\n> 158 |   await expect(byText(page, text)).toBeVisible();\n      |                                    ^\n  159 | }\n  160 |\n  161 | module.exports = {"
+                        "snippet": "\u001b[90m   at \u001b[39m../support/ui.js:158\n\n\u001b[0m \u001b[90m 156 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m assertPersistedAfterRefresh(page\u001b[33m,\u001b[39m text) {\n \u001b[90m 157 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mreload({ waitUntil\u001b[33m:\u001b[39m \u001b[32m'networkidle'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 158 |\u001b[39m   \u001b[36mawait\u001b[39m expect(byText(page\u001b[33m,\u001b[39m text))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 159 |\u001b[39m }\n \u001b[90m 160 |\u001b[39m\n \u001b[90m 161 |\u001b[39m module\u001b[33m.\u001b[39mexports \u001b[33m=\u001b[39m {\u001b[0m"
                       }
                     }
                   ],
-                  "startTime": "2026-06-17T19:22:02.306Z",
+                  "startTime": "2026-06-19T15:52:47.290Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "diagnostic-CT004-CLIENTE-CONTRATO",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAwNC1DTElFTlRFLUNPTlRSQVRPIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAwNC1DVDAwOCAtIGluaXRpYWwgcmVnaXN0cmF0aW9ucyBhbmQgYnVkZ2V0IGl0ZW0gcGVyc2lzdCBhY3Jvc3MgbW9kdWxlcyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9jbGllbnRlcy8iLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNjE3MTkyMTE4IiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDA0LUNUMDA4IC0gaW5pdGlhbCByZWdpc3RyYXRpb25zIGFuZCBidWRnZXQgaXRlbSBwZXJzaXN0IGFjcm9zcyBtb2R1bGVzXCIgZSBvYnNlcnZhciBhIGV0YXBhIHF1ZSBmYWxob3UuIiwKICAiZXhwZWN0ZWQiOiAiQ2xpZW50ZSBlIGNvbnRyYXRvIGRldmVtIHNlciBjcmlhZG9zLCB2aW5jdWxhZG9zIGUgcGVyc2lzdGlkb3MuIiwKICAiYWN0dWFsIjogIlx1MDAxYlsybWV4cGVjdChcdTAwMWJbMjJtXHUwMDFiWzMxbWxvY2F0b3JcdTAwMWJbMzltXHUwMDFiWzJtKS5cdTAwMWJbMjJtdG9CZVZpc2libGVcdTAwMWJbMm0oXHUwMDFiWzIybVx1MDAxYlsybSlcdTAwMWJbMjJtIGZhaWxlZFxuXG5Mb2NhdG9yOiBnZXRCeVRleHQoL0FVVE8tNFMtMjAyNjA2MTcxOTIxMTggQ2xpZW50ZS9pKS5maXJzdCgpXG5FeHBlY3RlZDogdmlzaWJsZVxuVGltZW91dDogMTAwMDBtc1xuRXJyb3I6IGVsZW1lbnQocykgbm90IGZvdW5kXG5cbkNhbGwgbG9nOlxuXHUwMDFiWzJtICAtIEV4cGVjdCBcInRvQmVWaXNpYmxlXCIgd2l0aCB0aW1lb3V0IDEwMDAwbXNcdTAwMWJbMjJtXG5cdTAwMWJbMm0gIC0gd2FpdGluZyBmb3IgZ2V0QnlUZXh0KC9BVVRPLTRTLTIwMjYwNjE3MTkyMTE4IENsaWVudGUvaSkuZmlyc3QoKVx1MDAxYlsyMm1cbiIsCiAgImltcGFjdCI6ICJTZW0gY29udHJhdG8vY2xpZW50ZSBuYW8gZSBwb3NzaXZlbCBpbmljaWFyIGEgY2FkZWlhIGZpbmFuY2VpcmEgZGEgb2JyYS4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJTZW0gY29udHJhdG8vY2xpZW50ZSBuYW8gZSBwb3NzaXZlbCBpbmljaWFyIGEgY2FkZWlhIGZpbmFuY2VpcmEgZGEgb2JyYS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJDb3JyaWdpciBwZXJzaXN0ZW5jaWEgZSByZWxhY2lvbmFtZW50byBlbnRyZSBjbGllbnRlIGUgY29udHJhdG8uIiwKICAic3RhdHVzIjogInJlcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogIi9ob21lL2NvbGF0dG8vcmVwby9SMy80cy90ZXN0LXJlc3VsdHMvQ1QwMDQtQ0xJRU5URS1DT05UUkFUTy5wbmciLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNi0xN1QxOToyMjozNy41NDBaIgp9"
+                      "body": "ewogICJpZCI6ICJDVDAwNC1DTElFTlRFLUNPTlRSQVRPIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAwNC1DVDAwOCAtIGluaXRpYWwgcmVnaXN0cmF0aW9ucyBhbmQgYnVkZ2V0IGl0ZW0gcGVyc2lzdCBhY3Jvc3MgbW9kdWxlcyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9jbGllbnRlcy8iLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNjE5MTU1MjAxIiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDA0LUNUMDA4IC0gaW5pdGlhbCByZWdpc3RyYXRpb25zIGFuZCBidWRnZXQgaXRlbSBwZXJzaXN0IGFjcm9zcyBtb2R1bGVzXCIgZSBvYnNlcnZhciBhIGV0YXBhIHF1ZSBmYWxob3UuIiwKICAiZXhwZWN0ZWQiOiAiQ2xpZW50ZSBlIGNvbnRyYXRvIGRldmVtIHNlciBjcmlhZG9zLCB2aW5jdWxhZG9zIGUgcGVyc2lzdGlkb3MuIiwKICAiYWN0dWFsIjogIlx1MDAxYlsybWV4cGVjdChcdTAwMWJbMjJtXHUwMDFiWzMxbWxvY2F0b3JcdTAwMWJbMzltXHUwMDFiWzJtKS5cdTAwMWJbMjJtdG9CZVZpc2libGVcdTAwMWJbMm0oXHUwMDFiWzIybVx1MDAxYlsybSlcdTAwMWJbMjJtIGZhaWxlZFxuXG5Mb2NhdG9yOiBnZXRCeVRleHQoL0FVVE8tNFMtMjAyNjA2MTkxNTUyMDEgQ2xpZW50ZS9pKS5maXJzdCgpXG5FeHBlY3RlZDogdmlzaWJsZVxuVGltZW91dDogMTAwMDBtc1xuRXJyb3I6IGVsZW1lbnQocykgbm90IGZvdW5kXG5cbkNhbGwgbG9nOlxuXHUwMDFiWzJtICAtIEV4cGVjdCBcInRvQmVWaXNpYmxlXCIgd2l0aCB0aW1lb3V0IDEwMDAwbXNcdTAwMWJbMjJtXG5cdTAwMWJbMm0gIC0gd2FpdGluZyBmb3IgZ2V0QnlUZXh0KC9BVVRPLTRTLTIwMjYwNjE5MTU1MjAxIENsaWVudGUvaSkuZmlyc3QoKVx1MDAxYlsyMm1cbiIsCiAgImltcGFjdCI6ICJTZW0gY29udHJhdG8vY2xpZW50ZSBuYW8gZSBwb3NzaXZlbCBpbmljaWFyIGEgY2FkZWlhIGZpbmFuY2VpcmEgZGEgb2JyYS4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJTZW0gY29udHJhdG8vY2xpZW50ZSBuYW8gZSBwb3NzaXZlbCBpbmljaWFyIGEgY2FkZWlhIGZpbmFuY2VpcmEgZGEgb2JyYS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJDb3JyaWdpciBwZXJzaXN0ZW5jaWEgZSByZWxhY2lvbmFtZW50byBlbnRyZSBjbGllbnRlIGUgY29udHJhdG8uIiwKICAic3RhdHVzIjogInJlcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogIi9ob21lL2NvbGF0dG8vcmVwby9SMy80cy90ZXN0LXJlc3VsdHMvQ1QwMDQtQ0xJRU5URS1DT05UUkFUTy5wbmciLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNi0xOVQxNTo1MzoyNC42MzNaIgp9"
                     },
                     {
                       "name": "screenshot",
@@ -344,25 +344,25 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "failed",
-                  "duration": 19150,
+                  "duration": 33021,
                   "error": {
-                    "message": "Error: Could not find clickable control: Enviar para aprovação | Enviar | Solicitar aprovação",
-                    "stack": "Error: Could not find clickable control: Enviar para aprovação | Enviar | Solicitar aprovação\n    at clickAny (/home/colatto/repo/R3/4s/support/ui.js:41:22)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:124:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:108:3",
+                    "message": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button, [role=\"button\"]').filter({ hasText: /salvar|confirmar|enviar|criar|cadastrar/i }).filter({ hasNotText: /cadastrar mais/i }).first()\u001b[22m\n\u001b[2m    - locator resolved to <button>Enviar aprovacao</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div>…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div>…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    29 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div>…</div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+                    "stack": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button, [role=\"button\"]').filter({ hasText: /salvar|confirmar|enviar|criar|cadastrar/i }).filter({ hasNotText: /cadastrar mais/i }).first()\u001b[22m\n\u001b[2m    - locator resolved to <button>Enviar aprovacao</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div>…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div>…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    29 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div>…</div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at submitForm (/home/colatto/repo/R3/4s/support/ui.js:126:25)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:123:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:108:3",
                     "location": {
                       "file": "/home/colatto/repo/R3/4s/support/ui.js",
-                      "column": 22,
-                      "line": 41
+                      "column": 25,
+                      "line": 126
                     },
-                    "snippet": "\u001b[90m   at \u001b[39m../support/ui.js:41\n\n  39 |   }\n  40 |   const target = await firstVisible(locators);\n> 41 |   if (!target) throw new Error(`Could not find clickable control: ${names.join(' | ')}`);\n     |                      ^\n  42 |   await target.click(options);\n  43 | }\n  44 |"
+                    "snippet": "\u001b[90m   at \u001b[39m../support/ui.js:126\n\n\u001b[0m \u001b[90m 124 |\u001b[39m   ])\u001b[33m;\u001b[39m\n \u001b[90m 125 |\u001b[39m   \u001b[36mif\u001b[39m (primarySubmit) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 126 |\u001b[39m     \u001b[36mawait\u001b[39m primarySubmit\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 127 |\u001b[39m   } \u001b[36melse\u001b[39m {\n \u001b[90m 128 |\u001b[39m     \u001b[36mawait\u001b[39m clickAny(page\u001b[33m,\u001b[39m [\u001b[32m'Salvar'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Cadastrar'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Criar'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Confirmar'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Enviar'\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m 129 |\u001b[39m   }\u001b[0m"
                   },
                   "errors": [
                     {
                       "location": {
                         "file": "/home/colatto/repo/R3/4s/support/ui.js",
-                        "column": 22,
-                        "line": 41
+                        "column": 25,
+                        "line": 126
                       },
-                      "message": "Error: Could not find clickable control: Enviar para aprovação | Enviar | Solicitar aprovação\n\n   at ../support/ui.js:41\n\n  39 |   }\n  40 |   const target = await firstVisible(locators);\n> 41 |   if (!target) throw new Error(`Could not find clickable control: ${names.join(' | ')}`);\n     |                      ^\n  42 |   await target.click(options);\n  43 | }\n  44 |\n    at clickAny (/home/colatto/repo/R3/4s/support/ui.js:41:22)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:124:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:108:3"
+                      "message": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button, [role=\"button\"]').filter({ hasText: /salvar|confirmar|enviar|criar|cadastrar/i }).filter({ hasNotText: /cadastrar mais/i }).first()\u001b[22m\n\u001b[2m    - locator resolved to <button>Enviar aprovacao</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div>…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div>…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    29 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div>…</div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../support/ui.js:126\n\n\u001b[0m \u001b[90m 124 |\u001b[39m   ])\u001b[33m;\u001b[39m\n \u001b[90m 125 |\u001b[39m   \u001b[36mif\u001b[39m (primarySubmit) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 126 |\u001b[39m     \u001b[36mawait\u001b[39m primarySubmit\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 127 |\u001b[39m   } \u001b[36melse\u001b[39m {\n \u001b[90m 128 |\u001b[39m     \u001b[36mawait\u001b[39m clickAny(page\u001b[33m,\u001b[39m [\u001b[32m'Salvar'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Cadastrar'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Criar'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Confirmar'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Enviar'\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m 129 |\u001b[39m   }\u001b[0m\n\u001b[2m    at submitForm (/home/colatto/repo/R3/4s/support/ui.js:126:25)\u001b[22m\n\u001b[2m    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:123:5\u001b[22m\n\u001b[2m    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\u001b[22m\n\u001b[2m    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:108:3\u001b[22m"
                     }
                   ],
                   "stdout": [],
@@ -371,26 +371,26 @@
                   "steps": [
                     {
                       "title": "CT012-REQUISICAO-SALDO",
-                      "duration": 1273,
+                      "duration": 15448,
                       "error": {
-                        "message": "Error: Could not find clickable control: Enviar para aprovação | Enviar | Solicitar aprovação",
-                        "stack": "Error: Could not find clickable control: Enviar para aprovação | Enviar | Solicitar aprovação\n    at clickAny (/home/colatto/repo/R3/4s/support/ui.js:41:22)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:124:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:108:3",
+                        "message": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button, [role=\"button\"]').filter({ hasText: /salvar|confirmar|enviar|criar|cadastrar/i }).filter({ hasNotText: /cadastrar mais/i }).first()\u001b[22m\n\u001b[2m    - locator resolved to <button>Enviar aprovacao</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div>…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div>…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    29 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div>…</div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+                        "stack": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button, [role=\"button\"]').filter({ hasText: /salvar|confirmar|enviar|criar|cadastrar/i }).filter({ hasNotText: /cadastrar mais/i }).first()\u001b[22m\n\u001b[2m    - locator resolved to <button>Enviar aprovacao</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div>…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div>…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    29 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div>…</div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at submitForm (/home/colatto/repo/R3/4s/support/ui.js:126:25)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:123:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/4s/support/diagnostics.js:67:5)\n    at /home/colatto/repo/R3/4s/tests/02-financial-flow.spec.js:108:3",
                         "location": {
                           "file": "/home/colatto/repo/R3/4s/support/ui.js",
-                          "column": 22,
-                          "line": 41
+                          "column": 25,
+                          "line": 126
                         },
-                        "snippet": "\u001b[90m   at \u001b[39m../support/ui.js:41\n\n  39 |   }\n  40 |   const target = await firstVisible(locators);\n> 41 |   if (!target) throw new Error(`Could not find clickable control: ${names.join(' | ')}`);\n     |                      ^\n  42 |   await target.click(options);\n  43 | }\n  44 |"
+                        "snippet": "\u001b[90m   at \u001b[39m../support/ui.js:126\n\n\u001b[0m \u001b[90m 124 |\u001b[39m   ])\u001b[33m;\u001b[39m\n \u001b[90m 125 |\u001b[39m   \u001b[36mif\u001b[39m (primarySubmit) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 126 |\u001b[39m     \u001b[36mawait\u001b[39m primarySubmit\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 127 |\u001b[39m   } \u001b[36melse\u001b[39m {\n \u001b[90m 128 |\u001b[39m     \u001b[36mawait\u001b[39m clickAny(page\u001b[33m,\u001b[39m [\u001b[32m'Salvar'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Cadastrar'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Criar'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Confirmar'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Enviar'\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m 129 |\u001b[39m   }\u001b[0m"
                       }
                     }
                   ],
-                  "startTime": "2026-06-17T19:22:38.397Z",
+                  "startTime": "2026-06-19T15:53:25.499Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "diagnostic-CT012-REQUISICAO-SALDO",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAxMi1SRVFVSVNJQ0FPLVNBTERPIiwKICAic2V2ZXJpdHkiOiAiY3JpdGljYSIsCiAgImNhc2VJZCI6ICJDVDAxMi1DVDAxOSAtIGludGVncmF0ZWQgcHJvY3VyZW1lbnQsIHBheW1lbnQsIGRhc2hib2FyZCBhbmQgYXVkaXQgZmxvdyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9yZXF1aXNpY29lcyIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA2MTcxOTIyMzgiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMTItQ1QwMTkgLSBpbnRlZ3JhdGVkIHByb2N1cmVtZW50LCBwYXltZW50LCBkYXNoYm9hcmQgYW5kIGF1ZGl0IGZsb3dcIiBlIG9ic2VydmFyIGEgZXRhcGEgcXVlIGZhbGhvdS4iLAogICJleHBlY3RlZCI6ICJSZXF1aXNpY2FvIGRlbnRybyBkbyBzYWxkbyBzZWd1ZSBwYXJhIGFwcm92YWNhbzsgYWNpbWEgZG8gc2FsZG8gZmljYSBibG9xdWVhZGEgb3Ugc2luYWxpemFkYS4iLAogICJhY3R1YWwiOiAiQ291bGQgbm90IGZpbmQgY2xpY2thYmxlIGNvbnRyb2w6IEVudmlhciBwYXJhIGFwcm92YcOnw6NvIHwgRW52aWFyIHwgU29saWNpdGFyIGFwcm92YcOnw6NvIiwKICAiaW1wYWN0IjogIlBlcm1pdGlyIGNvbXByYSBhY2ltYSBkbyBzYWxkbyByb21wZSBjb250cm9sZSBmaW5hbmNlaXJvIGRhIG9icmEuIiwKICAiYnVzaW5lc3NJbXBhY3QiOiAiUGVybWl0aXIgY29tcHJhIGFjaW1hIGRvIHNhbGRvIHJvbXBlIGNvbnRyb2xlIGZpbmFuY2Vpcm8gZGEgb2JyYS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJWYWxpZGFyIHNhbGRvIG5vIGJhY2tlbmQgYW50ZXMgZGUgYXZhbmNhciBzdGF0dXMgZSBibG9xdWVhciBjb3RhY2FvIGRlIHJlcXVpc2ljb2VzIGV4Y2VkZW50ZXMuIiwKICAic3RhdHVzIjogInJlcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogIi9ob21lL2NvbGF0dG8vcmVwby9SMy80cy90ZXN0LXJlc3VsdHMvQ1QwMTItUkVRVUlTSUNBTy1TQUxETy5wbmciLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNi0xN1QxOToyMjo1Ny41MDRaIgp9"
+                      "body": "ewogICJpZCI6ICJDVDAxMi1SRVFVSVNJQ0FPLVNBTERPIiwKICAic2V2ZXJpdHkiOiAiY3JpdGljYSIsCiAgImNhc2VJZCI6ICJDVDAxMi1DVDAxOSAtIGludGVncmF0ZWQgcHJvY3VyZW1lbnQsIHBheW1lbnQsIGRhc2hib2FyZCBhbmQgYXVkaXQgZmxvdyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9yZXF1aXNpY29lcyIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA2MTkxNTUzMjUiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMTItQ1QwMTkgLSBpbnRlZ3JhdGVkIHByb2N1cmVtZW50LCBwYXltZW50LCBkYXNoYm9hcmQgYW5kIGF1ZGl0IGZsb3dcIiBlIG9ic2VydmFyIGEgZXRhcGEgcXVlIGZhbGhvdS4iLAogICJleHBlY3RlZCI6ICJSZXF1aXNpY2FvIGRlbnRybyBkbyBzYWxkbyBzZWd1ZSBwYXJhIGFwcm92YWNhbzsgYWNpbWEgZG8gc2FsZG8gZmljYSBibG9xdWVhZGEgb3Ugc2luYWxpemFkYS4iLAogICJhY3R1YWwiOiAibG9jYXRvci5jbGljazogVGltZW91dCAxNTAwMG1zIGV4Y2VlZGVkLlxuQ2FsbCBsb2c6XG5cdTAwMWJbMm0gIC0gd2FpdGluZyBmb3IgbG9jYXRvcignYnV0dG9uLCBbcm9sZT1cImJ1dHRvblwiXScpLmZpbHRlcih7IGhhc1RleHQ6IC9zYWx2YXJ8Y29uZmlybWFyfGVudmlhcnxjcmlhcnxjYWRhc3RyYXIvaSB9KS5maWx0ZXIoeyBoYXNOb3RUZXh0OiAvY2FkYXN0cmFyIG1haXMvaSB9KS5maXJzdCgpXHUwMDFiWzIybVxuXHUwMDFiWzJtICAgIC0gbG9jYXRvciByZXNvbHZlZCB0byA8YnV0dG9uPkVudmlhciBhcHJvdmFjYW88L2J1dHRvbj5cdTAwMWJbMjJtXG5cdTAwMWJbMm0gIC0gYXR0ZW1wdGluZyBjbGljayBhY3Rpb25cdTAwMWJbMjJtXG5cdTAwMWJbMm0gICAgMiDDlyB3YWl0aW5nIGZvciBlbGVtZW50IHRvIGJlIHZpc2libGUsIGVuYWJsZWQgYW5kIHN0YWJsZVx1MDAxYlsyMm1cblx1MDAxYlsybSAgICAgIC0gZWxlbWVudCBpcyB2aXNpYmxlLCBlbmFibGVkIGFuZCBzdGFibGVcdTAwMWJbMjJtXG5cdTAwMWJbMm0gICAgICAtIHNjcm9sbGluZyBpbnRvIHZpZXcgaWYgbmVlZGVkXHUwMDFiWzIybVxuXHUwMDFiWzJtICAgICAgLSBkb25lIHNjcm9sbGluZ1x1MDAxYlsyMm1cblx1MDAxYlsybSAgICAgIC0gPGRpdj7igKY8L2Rpdj4gaW50ZXJjZXB0cyBwb2ludGVyIGV2ZW50c1x1MDAxYlsyMm1cblx1MDAxYlsybSAgICAtIHJldHJ5aW5nIGNsaWNrIGFjdGlvblx1MDAxYlsyMm1cblx1MDAxYlsybSAgICAtIHdhaXRpbmcgMjBtc1x1MDAxYlsyMm1cblx1MDAxYlsybSAgICAyIMOXIHdhaXRpbmcgZm9yIGVsZW1lbnQgdG8gYmUgdmlzaWJsZSwgZW5hYmxlZCBhbmQgc3RhYmxlXHUwMDFiWzIybVxuXHUwMDFiWzJtICAgICAgLSBlbGVtZW50IGlzIHZpc2libGUsIGVuYWJsZWQgYW5kIHN0YWJsZVx1MDAxYlsyMm1cblx1MDAxYlsybSAgICAgIC0gc2Nyb2xsaW5nIGludG8gdmlldyBpZiBuZWVkZWRcdTAwMWJbMjJtXG5cdTAwMWJbMm0gICAgICAtIGRvbmUgc2Nyb2xsaW5nXHUwMDFiWzIybVxuXHUwMDFiWzJtICAgICAgLSA8ZGl2PuKApjwvZGl2PiBpbnRlcmNlcHRzIHBvaW50ZXIgZXZlbnRzXHUwMDFiWzIybVxuXHUwMDFiWzJtICAgIC0gcmV0cnlpbmcgY2xpY2sgYWN0aW9uXHUwMDFiWzIybVxuXHUwMDFiWzJtICAgICAgLSB3YWl0aW5nIDEwMG1zXHUwMDFiWzIybVxuXHUwMDFiWzJtICAgIDI5IMOXIHdhaXRpbmcgZm9yIGVsZW1lbnQgdG8gYmUgdmlzaWJsZSwgZW5hYmxlZCBhbmQgc3RhYmxlXHUwMDFiWzIybVxuXHUwMDFiWzJtICAgICAgIC0gZWxlbWVudCBpcyB2aXNpYmxlLCBlbmFibGVkIGFuZCBzdGFibGVcdTAwMWJbMjJtXG5cdTAwMWJbMm0gICAgICAgLSBzY3JvbGxpbmcgaW50byB2aWV3IGlmIG5lZWRlZFx1MDAxYlsyMm1cblx1MDAxYlsybSAgICAgICAtIGRvbmUgc2Nyb2xsaW5nXHUwMDFiWzIybVxuXHUwMDFiWzJtICAgICAgIC0gPGRpdj7igKY8L2Rpdj4gaW50ZXJjZXB0cyBwb2ludGVyIGV2ZW50c1x1MDAxYlsyMm1cblx1MDAxYlsybSAgICAgLSByZXRyeWluZyBjbGljayBhY3Rpb25cdTAwMWJbMjJtXG5cdTAwMWJbMm0gICAgICAgLSB3YWl0aW5nIDUwMG1zXHUwMDFiWzIybVxuIiwKICAiaW1wYWN0IjogIlBlcm1pdGlyIGNvbXByYSBhY2ltYSBkbyBzYWxkbyByb21wZSBjb250cm9sZSBmaW5hbmNlaXJvIGRhIG9icmEuIiwKICAiYnVzaW5lc3NJbXBhY3QiOiAiUGVybWl0aXIgY29tcHJhIGFjaW1hIGRvIHNhbGRvIHJvbXBlIGNvbnRyb2xlIGZpbmFuY2Vpcm8gZGEgb2JyYS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJWYWxpZGFyIHNhbGRvIG5vIGJhY2tlbmQgYW50ZXMgZGUgYXZhbmNhciBzdGF0dXMgZSBibG9xdWVhciBjb3RhY2FvIGRlIHJlcXVpc2ljb2VzIGV4Y2VkZW50ZXMuIiwKICAic3RhdHVzIjogInJlcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogIi9ob21lL2NvbGF0dG8vcmVwby9SMy80cy90ZXN0LXJlc3VsdHMvQ1QwMTItUkVRVUlTSUNBTy1TQUxETy5wbmciLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNi0xOVQxNTo1Mzo1OC40NDlaIgp9"
                     },
                     {
                       "name": "screenshot",
@@ -410,8 +410,8 @@
                   ],
                   "errorLocation": {
                     "file": "/home/colatto/repo/R3/4s/support/ui.js",
-                    "column": 22,
-                    "line": 41
+                    "column": 25,
+                    "line": 126
                   }
                 }
               ],
@@ -433,7 +433,7 @@
       "specs": [
         {
           "title": "CT002, CT009, CT010, CT020 - permissions, protected budget and workflow decisions",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -446,36 +446,72 @@
                 {
                   "workerIndex": 2,
                   "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 52395,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 59027,
+                  "error": {
+                    "message": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /⏻/i }).first()\u001b[22m\n\u001b[2m    - locator resolved to <button title=\"Sair\">⏻</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"modal-overlay\">…</div> from <main>…</main> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"modal-overlay\">…</div> from <main>…</main> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    29 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"modal-overlay\">…</div> from <main>…</main> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+                    "stack": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /⏻/i }).first()\u001b[22m\n\u001b[2m    - locator resolved to <button title=\"Sair\">⏻</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"modal-overlay\">…</div> from <main>…</main> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"modal-overlay\">…</div> from <main>…</main> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    29 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"modal-overlay\">…</div> from <main>…</main> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at clickAny (/home/colatto/repo/R3/4s/support/ui.js:42:16)\n    at logout (/home/colatto/repo/R3/4s/support/auth.js:32:3)\n    at /home/colatto/repo/R3/4s/tests/03-permissions-workflow.spec.js:71:3",
+                    "location": {
+                      "file": "/home/colatto/repo/R3/4s/support/ui.js",
+                      "column": 16,
+                      "line": 42
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m../support/ui.js:42\n\n\u001b[0m \u001b[90m 40 |\u001b[39m   \u001b[36mconst\u001b[39m target \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m firstVisible(locators)\u001b[33m;\u001b[39m\n \u001b[90m 41 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mtarget) \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Could not find clickable control: ${names.join(' | ')}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 42 |\u001b[39m   \u001b[36mawait\u001b[39m target\u001b[33m.\u001b[39mclick(options)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 43 |\u001b[39m }\n \u001b[90m 44 |\u001b[39m\n \u001b[90m 45 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m gotoMenu(page\u001b[33m,\u001b[39m path) {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/colatto/repo/R3/4s/support/ui.js",
+                        "column": 16,
+                        "line": 42
+                      },
+                      "message": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /⏻/i }).first()\u001b[22m\n\u001b[2m    - locator resolved to <button title=\"Sair\">⏻</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"modal-overlay\">…</div> from <main>…</main> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"modal-overlay\">…</div> from <main>…</main> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    29 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"modal-overlay\">…</div> from <main>…</main> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../support/ui.js:42\n\n\u001b[0m \u001b[90m 40 |\u001b[39m   \u001b[36mconst\u001b[39m target \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m firstVisible(locators)\u001b[33m;\u001b[39m\n \u001b[90m 41 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mtarget) \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Could not find clickable control: ${names.join(' | ')}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 42 |\u001b[39m   \u001b[36mawait\u001b[39m target\u001b[33m.\u001b[39mclick(options)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 43 |\u001b[39m }\n \u001b[90m 44 |\u001b[39m\n \u001b[90m 45 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m gotoMenu(page\u001b[33m,\u001b[39m path) {\u001b[0m\n\u001b[2m    at clickAny (/home/colatto/repo/R3/4s/support/ui.js:42:16)\u001b[22m\n\u001b[2m    at logout (/home/colatto/repo/R3/4s/support/auth.js:32:3)\u001b[22m\n\u001b[2m    at /home/colatto/repo/R3/4s/tests/03-permissions-workflow.spec.js:71:3\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "steps": [
                     {
                       "title": "CT002-USUARIO-OPERACIONAL",
-                      "duration": 1653
+                      "duration": 1655
                     },
                     {
                       "title": "CT009-ORCAMENTO-PROTEGIDO-ALTERACAO",
-                      "duration": 1216
+                      "duration": 1221
                     },
                     {
                       "title": "CT010-ORCAMENTO-PROTEGIDO-EXCLUSAO",
-                      "duration": 228
-                    },
-                    {
-                      "title": "CT020-WORKFLOW-PERFIL-CORRETO",
-                      "duration": 314
+                      "duration": 257
                     }
                   ],
-                  "startTime": "2026-06-17T19:22:58.077Z",
+                  "startTime": "2026-06-19T15:53:59.072Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/colatto/repo/R3/4s/test-results/artifacts/03-permissions-workflow-CT-685e9-dget-and-workflow-decisions-chromium-desktop/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/colatto/repo/R3/4s/test-results/artifacts/03-permissions-workflow-CT-685e9-dget-and-workflow-decisions-chromium-desktop/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/colatto/repo/R3/4s/test-results/artifacts/03-permissions-workflow-CT-685e9-dget-and-workflow-decisions-chromium-desktop/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/colatto/repo/R3/4s/support/ui.js",
+                    "column": 16,
+                    "line": 42
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "c398f1c451214130455b-535a15ed011b4e83593b",
@@ -504,10 +540,10 @@
               "projectName": "chromium-desktop",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 18764,
+                  "duration": 19909,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -515,26 +551,26 @@
                   "steps": [
                     {
                       "title": "REG-FILTROS-Financeiro-Contas-a-Pagar",
-                      "duration": 106
+                      "duration": 107
                     },
                     {
                       "title": "REG-FILTROS-Financeiro-Pagamentos",
-                      "duration": 148
+                      "duration": 174
                     },
                     {
                       "title": "REG-FILTROS-Workflow-Auditoria",
-                      "duration": 416
+                      "duration": 494
                     },
                     {
                       "title": "REG-FILTROS-Dashboard",
-                      "duration": 142
+                      "duration": 172
                     },
                     {
                       "title": "REG-CONFIRMACAO-EXCLUSAO",
-                      "duration": 159
+                      "duration": 171
                     }
                   ],
-                  "startTime": "2026-06-17T19:23:50.589Z",
+                  "startTime": "2026-06-19T15:54:58.711Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -552,11 +588,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-06-17T19:21:18.197Z",
-    "duration": 171207.281,
-    "expected": 4,
+    "startTime": "2026-06-19T15:52:00.915Z",
+    "duration": 197848.799,
+    "expected": 3,
     "skipped": 0,
-    "unexpected": 2,
+    "unexpected": 3,
     "flaky": 0
   }
 }

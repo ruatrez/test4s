@@ -14,14 +14,14 @@
 ```
 Error: expect(locator).toBeVisible() failed
 
-Locator: getByText(/AUTO-4S-20260617192118 Cliente/i).first()
+Locator: getByText(/AUTO-4S-20260619155201 Cliente/i).first()
 Expected: visible
 Timeout: 10000ms
 Error: element(s) not found
 
 Call log:
   - Expect "toBeVisible" with timeout 10000ms
-  - waiting for getByText(/AUTO-4S-20260617192118 Cliente/i).first()
+  - waiting for getByText(/AUTO-4S-20260619155201 Cliente/i).first()
 
 ```
 

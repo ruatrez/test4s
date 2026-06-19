@@ -2,7 +2,7 @@
 
 Implementei e executei os testes no próprio sistema [4s.ruatrez.com](https://4s.ruatrez.com), usando o Brave, navegador baseado em chromium, instalado localmente em /usr/bin/brave-browser.
 
-Resultado final da execução limpa: 6 testes, 4 aprovados e 2 reprovados. Passaram login/logout, login inválido, carregamento das rotas principais, permissões/workflow de orçamento protegido e regressão básica de filtros/telas. As reprovações restantes ficaram concentradas em persistência de cadastros e no avanço da requisição para aprovação.
+Resultado final da execução limpa mais recente: 6 testes, 3 aprovados e 3 reprovados. Passaram login/logout, login inválido, carregamento das rotas principais e regressão básica de filtros/telas. As reprovações restantes ficaram concentradas em persistência de cadastros, avanço da requisição para aprovação e conclusão do fluxo de permissões/workflow após sobreposição modal.
 
 ## Arquivos principais gerados:
 
@@ -20,12 +20,13 @@ Resultado final da execução limpa: 6 testes, 4 aprovados e 2 reprovados. Passa
 
 ## Resultado por bloco
 
-- Aprovado: CT001 - login, logout e login inválido.
-- Aprovado: CT022 - carregamento das rotas principais sem telas em branco.
-- Aprovado: CT002, CT009, CT010 e CT020 - usuários, permissões, orçamento protegido e workflow.
-- Aprovado: regressão básica de filtros, telas e confirmações destrutivas.
-- Reprovado: CT004-CT008 - cadastros iniciais e orçamento; falhou em persistência de cliente após refresh.
-- Reprovado: CT012-CT019 - fluxo integrado de requisição, aprovação, cotação, OC, financeiro, dashboard e auditoria; falhou no envio da requisição para aprovação.
+- Execução mais recente: 6 testes, 3 aprovados e 3 reprovados, iniciada em 2026-06-19T15:52:00Z. Evidências consolidadas em [test-results/results.json](./test-results/results.json), [test-results/diagnostic-report.md](./test-results/diagnostic-report.md) e [playwright-report/index.html](./playwright-report/index.html).
+- Aprovado: CT001 - login, logout e login inválido. Evidências: [CT001-LOGIN-ADMIN.png](./test-results/CT001-LOGIN-ADMIN.png) e [CT001-LOGOUT.png](./test-results/CT001-LOGOUT.png).
+- Aprovado: CT022 - carregamento das rotas principais sem telas em branco. Evidências: [CT022-Dashboard.png](./test-results/CT022-Dashboard.png) e [CT022-Configura--es-Obras-e-Centros.png](./test-results/CT022-Configura--es-Obras-e-Centros.png).
+- Aprovado: regressão básica de filtros, telas e confirmações destrutivas, sem falhas técnicas inesperadas na execução final.
+- Reprovado: CT004-CT008 - cadastros iniciais e orçamento; o cliente `AUTO-4S-20260619155201 Cliente` não permaneceu visível após refresh e a tela voltou ao login. Evidências: [CT004-CLIENTE-CONTRATO.png](./test-results/CT004-CLIENTE-CONTRATO.png), [error-context.md](./test-results/artifacts/02-financial-flow-CT004-CT-0e947-item-persist-across-modules-chromium-desktop/error-context.md) e [trace.zip](./test-results/artifacts/02-financial-flow-CT004-CT-0e947-item-persist-across-modules-chromium-desktop/trace.zip).
+- Reprovado: CT012-CT019 - fluxo integrado de requisição, aprovação, cotação, OC, financeiro, dashboard e auditoria; o botão `Enviar aprovacao` foi encontrado, mas o clique ficou bloqueado por uma sobreposição (`<div>` interceptando eventos), impedindo avançar a requisição para aprovação. Evidências: [CT012-REQUISICAO-SALDO.png](./test-results/CT012-REQUISICAO-SALDO.png), [error-context.md](./test-results/artifacts/02-financial-flow-CT012-CT-da056-nt-dashboard-and-audit-flow-chromium-desktop/error-context.md) e [trace.zip](./test-results/artifacts/02-financial-flow-CT012-CT-da056-nt-dashboard-and-audit-flow-chromium-desktop/trace.zip).
+- Reprovado: CT002, CT009, CT010 e CT020 - usuários, permissões, orçamento protegido e workflow; a automação criou o usuário operacional e chegou ao orçamento protegido, mas uma `modal-overlay` interceptou o botão de logout, bloqueando a troca de sessão e a conclusão das decisões de workflow. Evidências: [CT002-USUARIO-OPERACIONAL.png](./test-results/CT002-USUARIO-OPERACIONAL.png), [CT009-ORCAMENTO-PROTEGIDO-ALTERACAO.png](./test-results/CT009-ORCAMENTO-PROTEGIDO-ALTERACAO.png), [CT010-ORCAMENTO-PROTEGIDO-EXCLUSAO.png](./test-results/CT010-ORCAMENTO-PROTEGIDO-EXCLUSAO.png), [error-context.md](./test-results/artifacts/03-permissions-workflow-CT-685e9-dget-and-workflow-decisions-chromium-desktop/error-context.md) e [trace.zip](./test-results/artifacts/03-permissions-workflow-CT-685e9-dget-and-workflow-decisions-chromium-desktop/trace.zip).
 
 ## Testes implementados
 
