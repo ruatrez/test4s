@@ -39,7 +39,6 @@
   - Capturar evidências automáticas:
       - screenshots em falha
       - traces em falha
-      - vídeos quando habilitado por config/env
       - console errors
       - falhas HTTP 4xx/5xx inesperadas
       - dados de teste usados

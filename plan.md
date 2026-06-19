@@ -69,7 +69,6 @@
 
   - Crítica: impede fluxo financeiro E2E, compromete pagamento/custo real/dashboard, permite operação sem permissão
     ou corrompe dados.
-
   - Alta: quebra regra central de aprovação, saldo, orçamento protegido, persistência ou vínculo entre módulos.
   - Média: falha funcional contornável, filtro incorreto, cálculo secundário inconsistente ou auditoria incompleta.
   - Baixa: problemas visuais, textos, mensagens pouco claras ou inconsistências sem bloqueio operacional.
