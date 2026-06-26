@@ -22,11 +22,11 @@ Resultado final da execução limpa mais recente: 6 testes, 4 aprovados e 2 repr
   - 13 foram pulados/bloqueados por dependência
 
 - CT005 reprovado: não encontrou campo obra em Obras e Centros.
-    Evidência: [test-results/CTOO5-OBRA-CENTRO.png](./test-results/CTOO5-OBRA-CENTRO.png)
+    Evidência: [test-results/CTOO5-OBRA-CENTRO.png](./test-results/CT005-OBRA-CENTRO.png)
 - CT006 reprovado: fornecedor criado não apareceu na listagem dentro do timeout.
-    Evidência: [test-results/CTOO6-FORNECEDORES.png](./test-results/CTOO6-FORNECEDORES.png)
+    Evidência: [test-results/CTOO6-FORNECEDORES.png](./test-results/CT006-FORNECEDORES.png)
 - CT020 reprovado: perfil operacional não tinha acesso/controle Workflow.
-    Evidência: [test-results/CTO20-WORKFLOW-PERFIL-INCORRETO.png](./test-results/CTO20-WORKFLOW-PERFIL-INCORRETO.png)
+    Evidência: [test-results/CTO20-WORKFLOW-PERFIL-INCORRETO.png](./test-results/CT020-WORKFLOW-PERFIL-INCORRETO.png)
 
 ## Testes implementados
 
