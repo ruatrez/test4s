@@ -14,12 +14,19 @@ Resultado final da execução limpa mais recente: 6 testes, 4 aprovados e 2 repr
 
 ## Principais achados
 
-- CT005 reprovado: cadastro unidade/obra/centro não encontrou campo unidade.
-- CT006 reprovado: cadastro fornecedor não encontrou campo email.
-- CT007 reprovado: categoria criada não apareceu/persistiu na listagem.
-- CT020 reprovado: perfil operacional não tinha acesso/controle Workflow.
-- CT008-CT019 e CT021 ficaram bloqueados por dependências raiz registradas.
+  Resultado da suíte completa (npm test):
 
+  - 22 testes executados
+  - 6 passaram
+  - 3 falharam
+  - 13 foram pulados/bloqueados por dependência
+
+- CT005 reprovado: não encontrou campo obra em Obras e Centros.
+    Evidência: [test-results/CTOO5-OBRA-CENTRO.png](./test-results/CTOO5-OBRA-CENTRO.png)
+- CT006 reprovado: fornecedor criado não apareceu na listagem dentro do timeout.
+    Evidência: [test-results/CTOO6-FORNECEDORES.png](./test-results/CTOO6-FORNECEDORES.png)
+- CT020 reprovado: perfil operacional não tinha acesso/controle Workflow.
+    Evidência: [test-results/CTO20-WORKFLOW-PERFIL-INCORRETO.png](./test-results/CTO20-WORKFLOW-PERFIL-INCORRETO.png)
 
 ## Testes implementados
 

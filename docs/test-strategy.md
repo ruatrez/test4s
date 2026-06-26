@@ -8,7 +8,7 @@ Esta suite implementa a validacao descrita no `RoteirodeTestes4S.pdf` para a Fas
 
    ```bash
    npm install
-   npx playwright install chromium
+   npx playwright install brave
    ```
 
 2. Rodar smoke:

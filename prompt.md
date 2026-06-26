@@ -2,13 +2,9 @@
 
   ## Resumo
 
-  Implementar e executar uma suíte Playwright + TypeScript para validar o roteiro RoteirodeTestes4S.pdf contra
-  https://4s.ruatrez.com, cobrindo CT001 a CT022, fluxo financeiro ponta a ponta, permissões, persistência,
-  auditoria, regressão técnica e relatório final com evidências.
+  Implementar e executar uma suíte Playwright + TypeScript para validar o https://4s.ruatrez.com, cobrindo CT001 a CT022, fluxo financeiro ponta a ponta, permissões, persistência, auditoria, regressão técnica e relatório final com evidências.
 
-  O repositório já possui uma suíte Playwright em JavaScript, helpers reutilizáveis e uma execução anterior com 6
-  testes, 4 aprovados e 2 reprovados. A implementação deve evoluir essa base para TypeScript, Page Objects e
-  cobertura mais determinística, mantendo os relatórios existentes.
+  O repositório já possui uma suíte Playwright em JavaScript, helpers reutilizáveis e uma execução anterior com 6 testes, 4 aprovados e 2 reprovados. A implementação deve evoluir essa base para TypeScript, Page Objects e cobertura mais determinística, mantendo os relatórios existentes.
 
   ## Mudanças Principais
 
@@ -25,9 +21,7 @@
       - workflow/auditoria
       - dashboard
 
-  - Criar massa rastreável com prefixo AUTO-4S-${RUN_ID} para cliente, contrato, unidade, obra, centro de custo,
-    categorias, fornecedores, colaborador, usuário operacional, item orçado, requisições, cotação, OC, conta e
-    pagamentos.
+  - Criar massa rastreável com prefixo AUTO-4S-${RUN_ID} para cliente, contrato, unidade, obra, centro de custo, categorias, fornecedores, colaborador, usuário operacional, item orçado, requisições, cotação, OC, conta e pagamentos.
 
   - Manter credenciais por variáveis:
       - BASE_URL, padrão https://4s.ruatrez.com
@@ -43,8 +37,7 @@
       - falhas HTTP 4xx/5xx inesperadas
       - dados de teste usados
 
-  - Atualizar o gerador de relatório Markdown/HTML para listar todos os casos CT001-CT022 com status aprovado,
-    reprovado, bloqueado ou nao aplicavel, não apenas falhas capturadas.
+  - Atualizar o gerador de relatório Markdown/HTML para listar todos os casos CT001-CT022 com status aprovado, reprovado, bloqueado ou nao aplicavel, não apenas falhas capturadas.
 
   ## Cobertura De Testes
 
@@ -129,8 +122,6 @@
   - A automação pode criar, editar, cancelar, inativar ou excluir dados de teste no ambiente https://4s.ruatrez.com.
   - Os dados criados com prefixo AUTO-4S-* podem permanecer no ambiente se a regra de negócio impedir exclusão.
   - A credencial hello@ruatrez.com / admin123 é administrativa e válida.
-  - Se um perfil operacional não existir, a suíte tentará criá-lo; se a criação falhar por regra ou permissão, o
-    caso de permissão será marcado como bloqueado com evidência.
+  - Se um perfil operacional não existir, a suíte tentará criá-lo; se a criação falhar por regra ou permissão, o caso de permissão será marcado como bloqueado com evidência.
 
-  - O navegador padrão pode continuar sendo Chromium/Brave via BROWSER_EXECUTABLE=/usr/bin/brave-browser, com
-    fallback documentado caso não esteja disponível.
+  - O navegador padrão pode continuar sendo Chromium/Brave via BROWSER_EXECUTABLE=/usr/bin/brave-browser, com fallback documentado caso não esteja disponível.
