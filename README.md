@@ -22,9 +22,9 @@ Resultado final da execução limpa mais recente: 6 testes, 4 aprovados e 2 repr
   - 12 foram pulados/bloqueados por dependência
 
  CT005 reprovado: Unidade, Obra e Centro de Custo: unidade cadastrada não ficou visível após cadastro.
-  Evidência: [test-results/CT005-OBRA-CENTRO.png(./test-results/CT005-OBRA-CENTRO.png)
+  Evidência: [test-results/CT005-OBRA-CENTRO.png](./test-results/CT005-OBRA-CENTRO.png)
  CT006 reprovado: Fornecedor: fornecedor cadastrado não ficou visível após cadastro. 
-  Evidência: [test-results/CT006-FORNECEDORES.png(./test-results/CT006-FORNECEDORES.png)
+  Evidência: [test-results/CT006-FORNECEDORES.png](./test-results/CT006-FORNECEDORES.png)
 
 ## Causa principal dos bloqueios
 
