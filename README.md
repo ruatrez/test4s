@@ -17,16 +17,19 @@ Resultado final da execução limpa mais recente: 6 testes, 4 aprovados e 2 repr
   Resultado da suíte completa (npm test):
 
   - 22 testes executados
-  - 6 passaram
-  - 3 falharam
-  - 13 foram pulados/bloqueados por dependência
+  - 8 passaram
+  - 2 falharam
+  - 12 foram pulados/bloqueados por dependência
 
-- CT005 reprovado: não encontrou campo obra em Obras e Centros.
-    Evidência: [test-results/CTOO5-OBRA-CENTRO.png](./test-results/CT005-OBRA-CENTRO.png)
-- CT006 reprovado: fornecedor criado não apareceu na listagem dentro do timeout.
-    Evidência: [test-results/CTOO6-FORNECEDORES.png](./test-results/CT006-FORNECEDORES.png)
-- CT020 reprovado: perfil operacional não tinha acesso/controle Workflow.
-    Evidência: [test-results/CTO20-WORKFLOW-PERFIL-INCORRETO.png](./test-results/CT020-WORKFLOW-PERFIL-INCORRETO.png)
+ CT005 reprovado: Unidade, Obra e Centro de Custo: unidade cadastrada não ficou visível após cadastro.
+  Evidência: [test-results/CT005-OBRA-CENTRO.png(./test-results/CT005-OBRA-CENTRO.png)
+ CT006 reprovado: Fornecedor: fornecedor cadastrado não ficou visível após cadastro. 
+  Evidência: [test-results/CT006-FORNECEDORES.png(./test-results/CT006-FORNECEDORES.png)
+
+## Causa principal dos bloqueios
+
+ CT005: Bloqueou orçamento, obra/alocação e cadeia financeira. 
+ CT006: Bloqueou cotação com fornecedores e os fluxos dependentes. 
 
 ## Testes implementados
 

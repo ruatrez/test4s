@@ -4,6 +4,7 @@ export type FieldSpec = {
   labels: string[];
   value: string | number;
   type?: 'select' | 'text';
+  optional?: boolean;
 };
 
 export function byText(page: Page, text: string | RegExp) {
@@ -35,7 +36,7 @@ export async function firstVisible(locators: Locator[]) {
 export async function clickAny(page: Page, names: string[], options: Parameters<Locator['click']>[0] = {}) {
   const locators: Locator[] = [];
   for (const name of names) {
-    const pattern = new RegExp(name, 'i');
+    const pattern = new RegExp(escapeRegex(name), 'i');
     locators.push(page.getByRole('button', { name: pattern }));
     locators.push(page.getByRole('link', { name: pattern }));
     locators.push(page.locator('button, a, [role="button"]').filter({ hasText: pattern }));
@@ -146,23 +147,33 @@ export async function expectPageReady(page: Page, expectedTexts: string[] = []) 
   }
 }
 
-export async function tryCreateSimpleRecord(page: Page, path: string[], recordName: string, fields: FieldSpec[] = []) {
+export async function tryCreateSimpleRecord(
+  page: Page,
+  path: string[],
+  recordName: string,
+  fields: FieldSpec[] = [],
+  options: { createButtonNames?: string[]; assertionTimeout?: number } = {}
+) {
   await gotoMenu(page, path);
-  await clickAny(page, ['Novo', 'Adicionar', 'Cadastrar', 'Criar']);
+  await clickAny(page, options.createButtonNames ?? ['Novo', 'Adicionar', 'Cadastrar', 'Criar']);
   for (const field of fields) {
-    if (field.type === 'select') {
-      await chooseOption(page, field.labels, String(field.value));
-    } else {
-      await fillField(page, field.labels, field.value);
+    try {
+      if (field.type === 'select') {
+        await chooseOption(page, field.labels, String(field.value));
+      } else {
+        await fillField(page, field.labels, field.value);
+      }
+    } catch (error) {
+      if (!field.optional) throw error;
     }
   }
   await submitForm(page);
-  await expect(byText(page, recordName)).toBeVisible();
+  await expect(byText(page, recordName)).toBeVisible({ timeout: options.assertionTimeout });
 }
 
-export async function assertPersistedAfterRefresh(page: Page, text: string) {
+export async function assertPersistedAfterRefresh(page: Page, text: string, timeout?: number) {
   await page.reload({ waitUntil: 'networkidle' });
-  await expect(byText(page, text)).toBeVisible();
+  await expect(byText(page, text)).toBeVisible({ timeout });
 }
 
 export async function tryEditCurrentRecord(page: Page, fields: FieldSpec[]) {

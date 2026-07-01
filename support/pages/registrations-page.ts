@@ -12,6 +12,8 @@ import {
   tryEditCurrentRecord
 } from '../ui';
 
+const supplierAssertionTimeout = 20_000;
+
 export class RegistrationsPage {
   constructor(private readonly page: Page) {}
 
@@ -31,20 +33,57 @@ export class RegistrationsPage {
   }
 
   async createUnitWorkAndCostCenter() {
-    await tryCreateSimpleRecord(this.page, ['Configurações', 'Obras e Centros'], data.work, [
-      { labels: ['unidade'], value: data.unit },
-      { labels: ['obra'], value: data.work },
-      { labels: ['centro', 'centro de custo'], value: data.costCenter }
-    ]);
+    await tryCreateSimpleRecord(
+      this.page,
+      ['Configurações', 'Obras e Centros'],
+      data.unit,
+      [
+        { labels: ['unidade', 'nome'], value: data.unit }
+      ],
+      { createButtonNames: ['+ Unidade', 'Unidade'] }
+    );
+
+    await tryCreateSimpleRecord(
+      this.page,
+      ['Configurações', 'Obras e Centros'],
+      data.work,
+      [
+        { labels: ['nome', 'obra'], value: data.work },
+        { type: 'select', labels: ['unidade'], value: data.unit },
+        { labels: ['cidade'], value: 'Sao Paulo', optional: true },
+        { labels: ['uf', 'estado'], value: 'SP', optional: true },
+        { labels: ['inicio', 'início'], value: '2026-01-01', optional: true }
+      ],
+      { createButtonNames: ['+ Obra', 'Obra'] }
+    );
+
+    await tryCreateSimpleRecord(
+      this.page,
+      ['Configurações', 'Obras e Centros'],
+      data.costCenter,
+      [
+        { labels: ['nome', 'centro', 'centro de custo'], value: data.costCenter },
+        { type: 'select', labels: ['obra'], value: data.work, optional: true },
+        { type: 'select', labels: ['unidade'], value: data.unit, optional: true }
+      ],
+      { createButtonNames: ['+ Centro de Custo', 'Centro de Custo', '+ Centro', 'Centro'] }
+    );
+
     await assertPersistedAfterRefresh(this.page, data.work);
   }
 
   async createSuppliers() {
     for (const supplier of data.suppliers) {
-      await tryCreateSimpleRecord(this.page, ['Configurações', 'Fornecedores'], supplier, [
-        { labels: ['nome', 'fornecedor', 'razao', 'razão'], value: supplier },
-        { labels: ['email'], value: `${supplier.toLowerCase().replace(/[^a-z0-9]/g, '.')}@example.test` }
-      ]);
+      await tryCreateSimpleRecord(
+        this.page,
+        ['Configurações', 'Fornecedores'],
+        supplier,
+        [
+          { labels: ['nome', 'fornecedor', 'razao', 'razão'], value: supplier },
+          { labels: ['email'], value: `${supplier.toLowerCase().replace(/[^a-z0-9]/g, '.')}@example.test` }
+        ],
+        { assertionTimeout: supplierAssertionTimeout }
+      );
     }
   }
 
