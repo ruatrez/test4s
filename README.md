@@ -29,12 +29,8 @@ Pulado CT005, CT008-CT019 dependem da cadeia quebrada.
 
 ### CTs Reprovados
 
-- CT004 - Não encontrou o campo Razão Social | Razão Social - [test-results/artifacts/02-master-data-CT004---cli-154a6-icao-persistencia-e-vinculo-chromium-desktop/
-    test-failed-1.png](./test-results/artifacts/02-master-data-CT004---cli-154a6-icao-persistencia-e-vinculo-chromium-desktop/
-    test-failed-1.png)
-- CT007 - Categoria criada não apareceu na listagem (AUTO-4S-20260703120000 Materiais) - [test-results/artifacts/02-master-data-CT007---categorias-orcamentarias-chromium-desktop/test-failed-
-    1.png](./test-results/artifacts/02-master-data-CT007---categorias-orcamentarias-chromium-desktop/test-failed-
-    1.png)
+- CT004 - Não encontrou o campo Razão Social | Razão Social - [test-results/artifacts/02-master-data-CT004---cli-154a6-icao-persistencia-e-vinculo-chromium-desktop/test-failed-1.png](./test-results/artifacts/02-master-data-CT004---cli-154a6-icao-persistencia-e-vinculo-chromium-desktop/test-failed-1.png)
+- CT007 - Categoria criada não apareceu na listagem (AUTO-4S-20260703120000 Materiais) - [test-results/artifacts/02-master-data-CT007---categorias-orcamentarias-chromium-desktop/test-failed-1.png](./test-results/artifacts/02-master-data-CT007---categorias-orcamentarias-chromium-desktop/test-failed-1.png)
 
 ## Testes implementados
 
