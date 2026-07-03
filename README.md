@@ -14,24 +14,28 @@ Resultado final da execução limpa mais recente: 6 testes, 4 aprovados e 2 repr
 
 ## Principais achados
 
-  Resultado da suíte completa (npm test):
+Resultado da suíte completa (npm test):
 
-  - 22 testes executados
-  - 8 passaram
-  - 2 falharam
-  - 12 foram pulados/bloqueados por dependência
+Por Spec
 
-CT005 reprovado: Unidade, Obra e Centro de Custo: unidade cadastrada não ficou visível após cadastro.
-  Evidência: [test-results/CT005-OBRA-CENTRO.png](./test-results/CT005-OBRA-CENTRO.png)
+Spec                            |   Aprovador   |   Reprovados   |   Bloqueados
+- 01-smoke                      |       3       |       0        |      0
+- 02-master-data                |       4       |       1        |      0
+- 03-budget-labor               |       0       |       1        |      2
+- 04-procurement-finance-e2e    |       0       |       0        |      8
+- 05-permissions-audit          |       3       |       0        |      0
 
-CT006 reprovado: Fornecedor: fornecedor cadastrado não ficou visível após cadastro. 
-  Evidência: [test-results/CT006-FORNECEDORES.png](./test-results/CT006-FORNECEDORES.png)
+O spec 04 foi pulado porque CT012-CT019 dependem da cadeia quebrada em CT008.
 
-## Causa principal dos bloqueios
+### CTs Reprovados
 
-CT005: Bloqueou orçamento, obra/alocação e cadeia financeira. 
+CT    |       Observação                  |       Evidência
+008   |   Campo obra não encontrado       |   [test-results/CT008-ORCAMENTO-BASE.png](./test-results/CT008-ORCAMENTO-BASE.png)
+011   |   Campo nome / colaborador não    |   [test-results/CT011-COLABORADOR-ALOCACAO.png](./test-results/CT011-COLABORADOR-ALOCACAO.png)
+                    encontrado
 
-CT006: Bloqueou cotação com fornecedores e os fluxos dependentes. 
+OBS: CT009, CT010 e do CT012 ao CT019, foram bloqueados por dependências do CT008. 
+
 
 ## Testes implementados
 

@@ -5,6 +5,7 @@ export type FieldSpec = {
   value: string | number;
   type?: 'select' | 'text';
   optional?: boolean;
+  fallbackToFirstOption?: boolean;
 };
 
 export function byText(page: Page, text: string | RegExp) {
@@ -48,6 +49,20 @@ export async function clickAny(page: Page, names: string[], options: Parameters<
   const target = await firstVisible(locators);
   if (!target) throw new Error(`Could not find clickable control: ${names.join(' | ')}`);
   await target.click(options);
+}
+
+export async function clickExactControl(page: Page, names: string[], options: Parameters<Locator['click']>[0] = {}) {
+  const locators: Locator[] = [];
+  for (const name of names) {
+    const pattern = new RegExp(`^\\s*${escapeRegex(name)}\\s*$`, 'i');
+    locators.push(page.getByRole('button', { name: pattern }));
+    locators.push(page.getByRole('link', { name: pattern }));
+    locators.push(page.locator('button, a, [role="button"]').filter({ hasText: pattern }));
+  }
+  const target = await firstVisible(locators);
+  if (!target) throw new Error(`Could not find exact clickable control: ${names.join(' | ')}`);
+  await target.click(options);
+  await page.waitForLoadState('networkidle').catch(() => {});
 }
 
 export async function gotoMenu(page: Page, path: string[]) {
@@ -152,14 +167,18 @@ export async function tryCreateSimpleRecord(
   path: string[],
   recordName: string,
   fields: FieldSpec[] = [],
-  options: { createButtonNames?: string[]; assertionTimeout?: number } = {}
+  options: { createButtonNames?: string[]; assertionTimeout?: number; listButtonNames?: string[] } = {}
 ) {
   await gotoMenu(page, path);
+  if (options.listButtonNames) await clickExactControl(page, options.listButtonNames);
   await clickAny(page, options.createButtonNames ?? ['Novo', 'Adicionar', 'Cadastrar', 'Criar']);
   for (const field of fields) {
     try {
       if (field.type === 'select') {
-        await chooseOption(page, field.labels, String(field.value));
+        await chooseOption(page, field.labels, String(field.value)).catch(async (error) => {
+          if (!field.fallbackToFirstOption) throw error;
+          await chooseFirstAvailableOption(page, field.labels);
+        });
       } else {
         await fillField(page, field.labels, field.value);
       }
@@ -168,6 +187,7 @@ export async function tryCreateSimpleRecord(
     }
   }
   await submitForm(page);
+  if (options.listButtonNames) await clickExactControl(page, options.listButtonNames);
   await expect(byText(page, recordName)).toBeVisible({ timeout: options.assertionTimeout });
 }
 

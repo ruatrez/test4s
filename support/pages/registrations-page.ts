@@ -40,7 +40,7 @@ export class RegistrationsPage {
       [
         { labels: ['unidade', 'nome'], value: data.unit }
       ],
-      { createButtonNames: ['+ Unidade', 'Unidade'] }
+      { createButtonNames: ['+ Unidade', 'Unidade'], listButtonNames: ['Unidades'] }
     );
 
     await tryCreateSimpleRecord(
@@ -48,13 +48,14 @@ export class RegistrationsPage {
       ['Configurações', 'Obras e Centros'],
       data.work,
       [
+        { type: 'select', labels: ['contrato'], value: data.contract, fallbackToFirstOption: true },
         { labels: ['nome', 'obra'], value: data.work },
         { type: 'select', labels: ['unidade'], value: data.unit },
         { labels: ['cidade'], value: 'Sao Paulo', optional: true },
         { labels: ['uf', 'estado'], value: 'SP', optional: true },
         { labels: ['inicio', 'início'], value: '2026-01-01', optional: true }
       ],
-      { createButtonNames: ['+ Obra', 'Obra'] }
+      { createButtonNames: ['+ Obra', 'Obra'], listButtonNames: ['Obras'] }
     );
 
     await tryCreateSimpleRecord(
@@ -66,21 +67,25 @@ export class RegistrationsPage {
         { type: 'select', labels: ['obra'], value: data.work, optional: true },
         { type: 'select', labels: ['unidade'], value: data.unit, optional: true }
       ],
-      { createButtonNames: ['+ Centro de Custo', 'Centro de Custo', '+ Centro', 'Centro'] }
+      { createButtonNames: ['+ Centro de Custo', 'Centro de Custo', '+ Centro', 'Centro'], listButtonNames: ['Centros'] }
     );
 
     await assertPersistedAfterRefresh(this.page, data.work);
   }
 
   async createSuppliers() {
-    for (const supplier of data.suppliers) {
+    for (const [index, supplier] of data.suppliers.entries()) {
       await tryCreateSimpleRecord(
         this.page,
         ['Configurações', 'Fornecedores'],
         supplier,
         [
-          { labels: ['nome', 'fornecedor', 'razao', 'razão'], value: supplier },
-          { labels: ['email'], value: `${supplier.toLowerCase().replace(/[^a-z0-9]/g, '.')}@example.test` }
+          { labels: ['Razão Social', 'Razao Social'], value: supplier },
+          { labels: ['Nome Fantasia'], value: supplier },
+          { labels: ['CNPJ/CPF', 'Documento'], value: `${data.runDocument}${index + 1}` },
+          { labels: ['email'], value: `${supplier.toLowerCase().replace(/[^a-z0-9]/g, '.')}@example.test` },
+          { labels: ['Contato Principal'], value: 'QA Automatizado', optional: true },
+          { type: 'select', labels: ['Status'], value: 'ATIVO', optional: true }
         ],
         { assertionTimeout: supplierAssertionTimeout }
       );
