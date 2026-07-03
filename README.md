@@ -20,22 +20,18 @@ Por Spec
 
 Spec-------------------------------| Aprovados | Reprovados | Bloqueados ¬
 - 01-smoke------------------------|-----3-----|------0-----|------0-----|
-- 02-master-data------------------|-----4-----|------1-----|------0-----|
-- 03-budget-labor-----------------|-----0-----|------1-----|------2-----|
-- 04-procurement-finance-e2e--|-----0-----|------0-----|------8------|
+- 02-master-data------------------|-----5-----|------0-----|------0-----|
+- 03-budget-labor-----------------|-----1-----|------2-----|------0-----|
+- 04-procurement-finance-e2e--|-----0-----|------1-----|------7------|
 - 05-permissions-audit-----------|-----3-----|------0-----|------0-----|
 
-O spec 04 foi pulado porque CT012-CT019 dependem da cadeia quebrada em CT008.
+Pulado CT012-CT019 dependem da cadeia quebrada.
 
 ### CTs Reprovados
 
-CT    |       Observação                  |       Evidência
-008   |   Campo obra não encontrado       |   [test-results/CT008-ORCAMENTO-BASE.png](./test-results/CT008-ORCAMENTO-BASE.png)
-011   |   Campo nome / colaborador não    |   [test-results/CT011-COLABORADOR-ALOCACAO.png](./test-results/CT011-COLABORADOR-ALOCACAO.png)
-                    encontrado
-
-OBS: CT009, CT010 e do CT012 ao CT019, foram bloqueados por dependências do CT008. 
-
+CT------|----------------------Observação-----------------------|------------------Evidência------------------|
+09/10---|--------Controle Orçamento ñ ficou clicável-------| [test-results/CT008-ORCAMENTO-BASE.png](./test-results/CT008-ORCAMENTO-BASE.png)
+012-----|Não encontrou opção disponível para Iten orçado| [test-results/CT011-COLABORADOR-ALOCACAO.png](./test-results/CT011-COLABORADOR-ALOCACAO.png)
 
 ## Testes implementados
 

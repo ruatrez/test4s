@@ -102,10 +102,14 @@ export class RegistrationsPage {
 
   async createCollaboratorAllocationIfAvailable() {
     await tryCreateSimpleRecord(this.page, ['Configurações', 'Colaboradores'], data.collaborator, [
-      { labels: ['nome', 'colaborador'], value: data.collaborator },
-      { labels: ['cargo'], value: data.role },
-      { labels: ['faixa'], value: data.costRange },
-      { labels: ['custo', 'salario', 'salário'], value: data.money.laborMonthlyCost }
+      { labels: ['nome completo', 'nome', 'colaborador'], value: data.collaborator },
+      { labels: ['cpf', 'documento'], value: data.runDocument },
+      { type: 'select', labels: ['vinculo', 'vínculo'], value: 'CLT', optional: true },
+      { type: 'select', labels: ['cargo'], value: data.role, fallbackToFirstOption: true },
+      { labels: ['data admissao', 'data admissão', 'admissao', 'admissão'], value: '2026-01-01' },
+      { labels: ['salario base', 'salário base', 'custo', 'salario', 'salário'], value: data.money.laborMonthlyCost },
+      { labels: ['encargos'], value: 0, optional: true },
+      { labels: ['beneficios mensais', 'benefícios mensais', 'beneficios', 'benefícios'], value: data.money.laborBenefits, optional: true }
     ]);
     await expect(byText(this.page, data.collaborator)).toBeVisible();
   }

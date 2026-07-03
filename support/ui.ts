@@ -24,6 +24,12 @@ function xpathLiteral(text: string) {
   return `concat('${value.replace(/'/g, "',\"'\",'")}')`;
 }
 
+function xpathStartsWithText(text: string) {
+  const upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÁÀÂÃÉÊÍÓÔÕÚÇ';
+  const lower = 'abcdefghijklmnopqrstuvwxyzáàâãéêíóôõúç';
+  return `starts-with(translate(normalize-space(.), ${xpathLiteral(upper)}, ${xpathLiteral(lower)}), ${xpathLiteral(String(text).toLowerCase())})`;
+}
+
 export async function firstVisible(locators: Locator[]) {
   for (const locator of locators) {
     if (await locator.count()) {
@@ -96,7 +102,9 @@ export async function fillField(page: Page, labels: string[], value: string | nu
     }
     candidates.push(page.locator(`input[name*="${label}" i]`));
     candidates.push(page.locator(`textarea[name*="${label}" i]`));
-    candidates.push(page.locator(`xpath=//*[starts-with(normalize-space(.), ${xpathLiteral(label)}) and (./input or ./textarea)]//*[self::input or self::textarea]`));
+    const labelText = xpathStartsWithText(label);
+    candidates.push(page.locator(`xpath=//*[${labelText} and (./input or ./textarea)]//*[self::input or self::textarea]`));
+    candidates.push(page.locator(`xpath=//*[${labelText}]/ancestor::*[.//input or .//textarea][1]//*[self::input or self::textarea][not(@type="hidden")]`));
   }
   const target = await firstVisible(candidates);
   if (!target) throw new Error(`Could not find field: ${labels.join(' | ')}`);
@@ -104,25 +112,44 @@ export async function fillField(page: Page, labels: string[], value: string | nu
 }
 
 export async function chooseOption(page: Page, labels: string[], value: string) {
-  const candidates = labels.flatMap((label) => [
-    page.getByLabel(new RegExp(label, 'i')),
-    page.locator(`select[name*="${label}" i]`),
-    page.locator(`xpath=//*[starts-with(normalize-space(.), ${xpathLiteral(label)}) and ./select]//select`)
-  ]);
+  const candidates = labels.flatMap((label) => {
+    const labelText = xpathStartsWithText(label);
+    return [
+      page.getByLabel(new RegExp(label, 'i')),
+      page.locator(`select[name*="${label}" i]`),
+      page.locator(`xpath=//*[${labelText} and ./select]//select`),
+      page.locator(`xpath=//*[${labelText}]/ancestor::*[.//select][1]//select`),
+      page.locator(`xpath=//*[${labelText}]/ancestor::*[.//*[@role="combobox"]][1]//*[@role="combobox"]`)
+    ];
+  });
   const target = await firstVisible(candidates);
   if (!target) throw new Error(`Could not find select/control: ${labels.join(' | ')}`);
 
   const tagName = await target.evaluate((element) => element.tagName.toLowerCase()).catch(() => '');
-  if (tagName === 'select') {
-    const option = target.locator('option').filter({ hasText: new RegExp(escapeRegex(value), 'i') }).first();
+  const select = tagName === 'select'
+    ? target
+    : await firstVisible([target.locator('select')]);
+  if (select) {
+    const option = select.locator('option').filter({ hasText: new RegExp(escapeRegex(value), 'i') }).first();
     if (await option.count()) {
-      await target.selectOption({ label: await option.innerText() });
+      await select.selectOption({ label: await option.innerText() });
       return;
     }
   }
 
   await target.click();
-  await clickAny(page, [value]);
+  const optionPattern = new RegExp(`^\\s*${escapeRegex(value)}\\s*$`, 'i');
+  const optionTarget = await firstVisible([
+    page.getByRole('option', { name: optionPattern }),
+    page.locator('[role="option"], li, [data-radix-select-item], [data-value]').filter({ hasText: optionPattern }),
+    page.getByText(optionPattern)
+  ]);
+  if (!optionTarget) {
+    await target.press('ArrowDown').catch(() => {});
+    await target.press('Enter').catch(() => {});
+    return;
+  }
+  await optionTarget.click();
 }
 
 export async function chooseFirstAvailableOption(page: Page, labels: string[]) {

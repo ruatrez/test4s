@@ -1,6 +1,6 @@
 import { expect, type Page } from '@playwright/test';
 import { data } from '../test-data';
-import { byText, clickAny, fillField, gotoMenu, submitForm } from '../ui';
+import { byText, chooseOption, clickAny, fillField, gotoMenu, submitForm } from '../ui';
 
 export class BudgetPage {
   constructor(private readonly page: Page) {}
@@ -8,11 +8,12 @@ export class BudgetPage {
   async createBaseBudgetItem() {
     await gotoMenu(this.page, ['Orçamento', 'Itens Orçados']);
     await clickAny(this.page, ['Novo', 'Adicionar', 'Cadastrar', 'Criar']);
-    await fillField(this.page, ['descricao', 'descrição', 'item', 'nome'], data.budgetItem);
-    await fillField(this.page, ['obra'], data.work);
-    await fillField(this.page, ['centro', 'centro de custo'], data.costCenter);
-    await fillField(this.page, ['categoria'], data.categories[1]);
-    await fillField(this.page, ['unidade de medida', 'unidade'], 'un');
+    await chooseOption(this.page, ['obra'], data.work);
+    await chooseOption(this.page, ['centro de custo', 'centro'], data.costCenter);
+    await chooseOption(this.page, ['categoria'], data.categories[1]);
+    await fillField(this.page, ['nome do item', 'item', 'nome'], data.budgetItem);
+    await fillField(this.page, ['descricao', 'descrição'], data.budgetItem).catch(() => {});
+    await chooseOption(this.page, ['unidade de medida', 'unidade'], 'un');
     await fillField(this.page, ['quantidade'], data.money.budgetQuantity);
     await fillField(this.page, ['valor unitario', 'valor unitário', 'valor'], data.money.budgetUnitValue);
     await submitForm(this.page);
