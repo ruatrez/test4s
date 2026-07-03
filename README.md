@@ -18,12 +18,12 @@ Resultado da suíte completa (npm test):
 
 Por Spec
 
-Spec                            |   Aprovador   |   Reprovados   |   Bloqueados
-- 01-smoke                      |       3       |       0        |      0
-- 02-master-data                |       4       |       1        |      0
-- 03-budget-labor               |       0       |       1        |      2
-- 04-procurement-finance-e2e    |       0       |       0        |      8
-- 05-permissions-audit          |       3       |       0        |      0
+Spec----------------------------| Aprovados | Reprovados | Bloqueados ¬
+- 01-smoke----------------------|-----3-----|------0-----|------0-----|
+- 02-master-data----------------|-----4-----|------1-----|------0-----|
+- 03-budget-labor---------------|-----0-----|------1-----|------2-----|
+- 04-procurement-finance-e2e----|-----0-----|------0-----|------8-----|
+- 05-permissions-audit----------|-----3-----|------0-----|------0-----|
 
 O spec 04 foi pulado porque CT012-CT019 dependem da cadeia quebrada em CT008.
 
