@@ -29,9 +29,8 @@ Pulado CT012-CT019 dependem da cadeia quebrada.
 
 ### CTs Reprovados
 
-CT------|----------------------Observação-----------------------|------------------Evidência------------------|
-09/10---|--------Controle Orçamento ñ ficou clicável-------| [test-results/CT008-ORCAMENTO-BASE.png](./test-results/CT008-ORCAMENTO-BASE.png)
-012-----|Não encontrou opção disponível para Iten orçado| [test-results/CT011-COLABORADOR-ALOCACAO.png](./test-results/CT011-COLABORADOR-ALOCACAO.png)
+- CT09 - CT010 - Controle Orçamento não ficou clicável - [test-results/CT008-ORCAMENTO-BASE.png](./test-results/CT008-ORCAMENTO-BASE.png)
+- CT012 - Não encontrou opção disponível para Item orçado - [test-results/CT011-COLABORADOR-ALOCACAO.png](./test-results/CT011-COLABORADOR-ALOCACAO.png)
 
 ## Testes implementados
 
