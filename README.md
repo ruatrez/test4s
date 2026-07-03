@@ -20,18 +20,21 @@ Por Spec
 
 Spec-------------------------------| Aprovados | Reprovados | Bloqueados ¬
 - 01-smoke------------------------|-----3-----|------0-----|------0-----|
-- 02-master-data------------------|-----5-----|------0-----|------0-----|
-- 03-budget-labor-----------------|-----1-----|------2-----|------0-----|
-- 04-procurement-finance-e2e--|-----0-----|------1-----|------7------|
+- 02-master-data------------------|-----1-----|------2-----|------2-----|
+- 03-budget-labor-----------------|-----0-----|------0-----|------3-----|
+- 04-procurement-finance-e2e--|-----0-----|------0-----|------8------|
 - 05-permissions-audit-----------|-----3-----|------0-----|------0-----|
 
-Pulado CT012-CT019 dependem da cadeia quebrada.
+Pulado CT005, CT008-CT019 dependem da cadeia quebrada.
 
 ### CTs Reprovados
 
-- CT009 - Controle Orçamento não ficou clicável - [test-results/CT009-ORCAMENTO-PROTEGIDO-ALTERACAO.png](./test-results/CT009-ORCAMENTO-PROTEGIDO-ALTERACAO.png)
-- CT010 - Controle Orçamento não ficou clicável - [test-results/CT010-ORCAMENTO-PROTEGIDO-EXCLUSAO-OPERACIONAL.png](./test-results/CT010-ORCAMENTO-PROTEGIDO-EXCLUSAO-OPERACIONAL.png)
-- CT012 - Não encontrou opção disponível para Item orçado - [test-results/CT012-REQUISICAO-SALDO.png](./test-results/CT012-REQUISICAO-SALDO.png)
+- CT004 - Não encontrou o campo Razão Social | Razão Social - [test-results/artifacts/02-master-data-CT004---cli-154a6-icao-persistencia-e-vinculo-chromium-desktop/
+    test-failed-1.png](./test-results/artifacts/02-master-data-CT004---cli-154a6-icao-persistencia-e-vinculo-chromium-desktop/
+    test-failed-1.png)
+- CT007 - Categoria criada não apareceu na listagem (AUTO-4S-20260703120000 Materiais) - [test-results/artifacts/02-master-data-CT007---categorias-orcamentarias-chromium-desktop/test-failed-
+    1.png](./test-results/artifacts/02-master-data-CT007---categorias-orcamentarias-chromium-desktop/test-failed-
+    1.png)
 
 ## Testes implementados
 

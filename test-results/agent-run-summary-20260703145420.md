@@ -16,7 +16,10 @@ Observacao operacional: a primeira tentativa do smoke dentro do sandbox falhou a
 | 4 | `tests/04-procurement-finance-e2e.spec.ts` | 0 | 1 | 7 | reprovado com bloqueios dependentes |
 | 5 | `tests/05-permissions-audit.spec.ts` | 3 | 0 | 0 | aprovado |
 
-Totais da execucao por spec: 12 aprovados, 3 reprovados, 7 bloqueados/skipped.
+Totais da execucao inicial por spec, conforme saida do Playwright: 12 aprovados, 3 falhas tecnicas, 7 skipped.
+Rerun seletivo executado para `CT009|CT010` apos confirmar usuario operacional loginavel: CT009 aprovado; CT010 inicialmente falhou por localizacao do botao lateral.
+Novo rerun seletivo executado apenas para `CT010` com `OPERATIONAL_EMAIL=fehdarua@gmail.com` e `OPERATIONAL_PASSWORD=admin123`: aprovado.
+Totais por CT apos triagem e reruns seletivos: 14 aprovados, 1 reprovado, 7 bloqueados.
 
 ## Resultado Por CT
 
@@ -30,8 +33,8 @@ Totais da execucao por spec: 12 aprovados, 3 reprovados, 7 bloqueados/skipped.
 | CT006 | aprovado | Fornecedores validados. |
 | CT007 | aprovado | Categorias orcamentarias validadas. |
 | CT008 | aprovado | Item orcado, previsto, saldo, comprometido e pago validados. |
-| CT009 | reprovado | Falha tecnica/funcional: controle `Orcamento` nao ficou clicavel para o perfil usado. |
-| CT010 | reprovado | Falha tecnica/funcional: controle `Orcamento` nao ficou clicavel para o perfil usado. |
+| CT009 | aprovado | Rerun seletivo com usuario operacional loginavel validou que usuario comum nao altera item orcado protegido diretamente. |
+| CT010 | aprovado | Rerun seletivo com perfil `ENGENHARIA` (`fehdarua@gmail.com`) clicou no botao lateral `Solicitar exclusao`; validou a solicitacao operacional e o fluxo administrativo. |
 | CT011 | aprovado | Colaborador, cargo/faixa e alocacao validados quando a UI permitiu. |
 | CT012 | reprovado | Falha ao criar requisicao: sem opcao disponivel para `Item orcado`/`Item orcado`. |
 | CT013 | bloqueado | Skipped por dependencia de CT012. |
@@ -50,6 +53,9 @@ Totais da execucao por spec: 12 aprovados, 3 reprovados, 7 bloqueados/skipped.
 - CT009: `test-results/CT009-ORCAMENTO-PROTEGIDO-ALTERACAO.png`
 - CT010: `test-results/CT010-ORCAMENTO-PROTEGIDO-EXCLUSAO-OPERACIONAL.png`
 - CT012: `test-results/CT012-REQUISICAO-SALDO.png`
+- CT010 rerun Playwright: `test-results/artifacts/03-budget-labor-CT010---ex-fbb7a-uario-comum-e-administrador-chromium-desktop/test-failed-1.png`
+- CT010 rerun trace: `test-results/artifacts/03-budget-labor-CT010---ex-fbb7a-uario-comum-e-administrador-chromium-desktop/trace.zip`
+- CT010 rerun final: `test-results/results.json`
 - Relatorio gerado: `test-results/diagnostic-report.md`
 - Relatorio HTML gerado: `test-results/diagnostic-report.html`
 

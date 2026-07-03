@@ -13,26 +13,36 @@
 </head>
 <body>
   <h1>Relatorio de Diagnostico 4S</h1>
-  <p>Gerado em: 2026-07-03T18:07:54.101Z</p>
-  <p>Casos Playwright: 3. Falhas: 0. Aprovados: 3.</p>
-  <p>Status CT001-CT022: aprovado 3, reprovado 0, bloqueado 19, nao aplicavel 0.</p>
-  <p>Problemas registrados: 0.</p>
+  <p>Gerado em: 2026-07-03T21:15:03.972Z</p>
+  <p>Casos Playwright: 5. Falhas: 2. Aprovados: 3.</p>
+  <p>Status CT001-CT022: aprovado 7, reprovado 2, bloqueado 13, nao aplicavel 0.</p>
+  <p>Problemas registrados: 4.</p>
   <h2>Matriz CT001-CT022</h2>
   <table>
     <thead>
       <tr><th>CT</th><th>Status</th><th>Severidade</th><th>Titulo</th><th>Dependencias</th><th>Obtido</th><th>Evidencia</th><th>Recomendacao</th></tr>
     </thead>
-    <tbody><tr><td>CT001</td><td>bloqueado</td><td>critica</td><td>Login valido, logout, login invalido e sessao expirada quando observavel</td><td></td><td>Caso nao executado ou sem registro no diagnostics.jsonl.</td><td></td><td>Executar a suite completa e confirmar se houve interrupcao antes deste CT.</td></tr>
+    <tbody><tr><td>CT001</td><td>aprovado</td><td>critica</td><td>Login valido, logout, login invalido e sessao expirada quando observavel</td><td></td><td>Comportamento observado conforme esperado.</td><td></td><td>Confirmar credenciais, invalidacao de sessao e mensagens de erro de autenticacao.</td></tr>
 <tr><td>CT002</td><td>aprovado</td><td>alta</td><td>Criacao, edicao, inativacao e login bloqueado de usuario inativo</td><td></td><td>Comportamento observado conforme esperado.</td><td></td><td>Revisar matriz de perfis, status de usuario e validacao de login no backend.</td></tr>
-<tr><td>CT003</td><td>bloqueado</td><td>media</td><td>Atalhos da tela Cadastros</td><td></td><td>Caso nao executado ou sem registro no diagnostics.jsonl.</td><td></td><td>Executar a suite completa e confirmar se houve interrupcao antes deste CT.</td></tr>
-<tr><td>CT004</td><td>bloqueado</td><td>alta</td><td>Cliente e contrato com edicao, persistencia e vinculo</td><td></td><td>Caso nao executado ou sem registro no diagnostics.jsonl.</td><td></td><td>Executar a suite completa e confirmar se houve interrupcao antes deste CT.</td></tr>
-<tr><td>CT005</td><td>bloqueado</td><td>alta</td><td>Unidade, obra e centro de custo</td><td>CT004</td><td>Caso nao executado ou sem registro no diagnostics.jsonl.</td><td></td><td>Executar a suite completa e confirmar se houve interrupcao antes deste CT.</td></tr>
-<tr><td>CT006</td><td>bloqueado</td><td>media</td><td>Fornecedores</td><td></td><td>Caso nao executado ou sem registro no diagnostics.jsonl.</td><td></td><td>Executar a suite completa e confirmar se houve interrupcao antes deste CT.</td></tr>
-<tr><td>CT007</td><td>bloqueado</td><td>media</td><td>Categorias orcamentarias</td><td></td><td>Caso nao executado ou sem registro no diagnostics.jsonl.</td><td></td><td>Executar a suite completa e confirmar se houve interrupcao antes deste CT.</td></tr>
+<tr><td>CT003</td><td>aprovado</td><td>media</td><td>Atalhos da tela Cadastros</td><td></td><td>Comportamento observado conforme esperado.</td><td></td><td>Corrigir links/rotas dos cards ou botoes da tela Cadastros.</td></tr>
+<tr><td>CT004</td><td>reprovado</td><td>alta</td><td>Cliente e contrato com edicao, persistencia e vinculo</td><td></td><td>Could not find field: Razão Social | Razao Social</td><td>/home/colatto/repo/R3/test4s/test-results/CT004-CLIENTE-CONTRATO.png</td><td>Corrigir persistencia e relacionamento entre cliente e contrato.</td></tr>
+<tr><td>CT005</td><td>bloqueado</td><td>alta</td><td>Unidade, obra e centro de custo</td><td>CT004</td><td>Caso bloqueado por dependencia CT004 registrada como reprovado.</td><td></td><td>Corrigir primeiro o caso raiz CT004 e reexecutar este fluxo.</td></tr>
+<tr><td>CT006</td><td>aprovado</td><td>media</td><td>Fornecedores</td><td></td><td>Comportamento observado conforme esperado.</td><td></td><td>Garantir cadastro e selecao de fornecedores ativos em cotacoes.</td></tr>
+<tr><td>CT007</td><td>reprovado</td><td>media</td><td>Categorias orcamentarias</td><td></td><td>[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+Locator: getByText(/AUTO-4S-20260703120000 Materiais/i).first()
+Expected: visible
+Timeout: 10000ms
+Error: element(s) not found
+
+Call log:
+[2m  - Expect &quot;toBeVisible&quot; with timeout 10000ms[22m
+[2m  - waiting for getByText(/AUTO-4S-20260703120000 Materiais/i).first()[22m
+</td><td>/home/colatto/repo/R3/test4s/test-results/CT007-CATEGORIAS.png</td><td>Corrigir cadastro, listagem e uso das categorias nos selects de movimento.</td></tr>
 <tr><td>CT008</td><td>bloqueado</td><td>critica</td><td>Item orcado com previsto, saldo, comprometido e pago</td><td>CT004, CT005, CT007</td><td>Caso nao executado ou sem registro no diagnostics.jsonl.</td><td></td><td>Executar a suite completa e confirmar se houve interrupcao antes deste CT.</td></tr>
 <tr><td>CT009</td><td>bloqueado</td><td>critica</td><td>Alteracao de orcamento protegida por usuario comum</td><td>CT002, CT008</td><td>Caso nao executado ou sem registro no diagnostics.jsonl.</td><td></td><td>Executar a suite completa e confirmar se houve interrupcao antes deste CT.</td></tr>
 <tr><td>CT010</td><td>bloqueado</td><td>critica</td><td>Exclusao de item orcado por usuario comum e administrador</td><td>CT002, CT008</td><td>Caso nao executado ou sem registro no diagnostics.jsonl.</td><td></td><td>Executar a suite completa e confirmar se houve interrupcao antes deste CT.</td></tr>
-<tr><td>CT011</td><td>bloqueado</td><td>media</td><td>Colaborador, cargo/faixa e alocacao quando a UI permitir</td><td>CT005</td><td>Caso nao executado ou sem registro no diagnostics.jsonl.</td><td></td><td>Executar a suite completa e confirmar se houve interrupcao antes deste CT.</td></tr>
+<tr><td>CT011</td><td>bloqueado</td><td>media</td><td>Colaborador, cargo/faixa e alocacao quando a UI permitir</td><td>CT005</td><td>Caso bloqueado por dependencia CT005 registrada como bloqueado.</td><td></td><td>Corrigir primeiro o caso raiz CT005 e reexecutar este fluxo.</td></tr>
 <tr><td>CT012</td><td>bloqueado</td><td>critica</td><td>Requisicao dentro do saldo e acima do saldo</td><td>CT008</td><td>Caso nao executado ou sem registro no diagnostics.jsonl.</td><td></td><td>Executar a suite completa e confirmar se houve interrupcao antes deste CT.</td></tr>
 <tr><td>CT013</td><td>bloqueado</td><td>alta</td><td>Aprovacao e rejeicao de requisicao</td><td>CT012</td><td>Caso nao executado ou sem registro no diagnostics.jsonl.</td><td></td><td>Executar a suite completa e confirmar se houve interrupcao antes deste CT.</td></tr>
 <tr><td>CT014</td><td>bloqueado</td><td>alta</td><td>Cotacao com 3 fornecedores, comparativo e vencedor</td><td>CT006, CT013</td><td>Caso nao executado ou sem registro no diagnostics.jsonl.</td><td></td><td>Executar a suite completa e confirmar se houve interrupcao antes deste CT.</td></tr>
@@ -43,14 +53,27 @@
 <tr><td>CT019</td><td>bloqueado</td><td>alta</td><td>Dashboard financeiro apos compra/pagamento/mao de obra</td><td>CT011, CT018</td><td>Caso nao executado ou sem registro no diagnostics.jsonl.</td><td></td><td>Executar a suite completa e confirmar se houve interrupcao antes deste CT.</td></tr>
 <tr><td>CT020</td><td>aprovado</td><td>alta</td><td>Workflow com perfil correto/incorreto, aprovacao e rejeicao</td><td>CT002</td><td>Comportamento observado conforme esperado.</td><td></td><td>Aplicar autorizacao no backend e esconder/desabilitar acoes no frontend para perfis sem permissao.</td></tr>
 <tr><td>CT021</td><td>aprovado</td><td>media</td><td>Auditoria de criacao, edicao, exclusao/cancelamento e decisoes</td><td>CT020</td><td>Comportamento observado conforme esperado.</td><td></td><td>Garantir eventos de auditoria para entidades financeiras, cadastros e workflow.</td></tr>
-<tr><td>CT022</td><td>bloqueado</td><td>alta</td><td>Rotas principais sem tela em branco, erros JS criticos ou HTTP 5xx</td><td></td><td>Caso nao executado ou sem registro no diagnostics.jsonl.</td><td></td><td>Executar a suite completa e confirmar se houve interrupcao antes deste CT.</td></tr></tbody>
+<tr><td>CT022</td><td>aprovado</td><td>alta</td><td>Rotas principais sem tela em branco, erros JS criticos ou HTTP 5xx</td><td></td><td>Comportamento observado conforme esperado.</td><td></td><td>Corrigir rota, permissao, carregamento de dados ou componente frontend da tela afetada.</td></tr></tbody>
   </table>
   <h2>Problemas Priorizados</h2>
   <table>
     <thead>
       <tr><th>ID</th><th>Severidade</th><th>Caso</th><th>Caminho</th><th>Perfil</th><th>Massa</th><th>Passos</th><th>Esperado</th><th>Obtido</th><th>Impacto</th><th>Evidencia</th><th>Recomendacao</th><th>Status</th></tr>
     </thead>
-    <tbody><tr><td colspan="13">Nenhum problema registrado pelos hooks de diagnostico.</td></tr></tbody>
+    <tbody><tr><td>CT004-CLIENTE-CONTRATO</td><td>alta</td><td>CT004</td><td>https://4s.ruatrez.com/clientes</td><td>administrador</td><td>AUTO-4S-20260703120000</td><td>Executar o caso automatizado &quot;CT004&quot; e observar o resultado registrado.</td><td>Cliente e contrato devem ser criados, editados, vinculados e persistidos apos refresh.</td><td>Could not find field: Razão Social | Razao Social</td><td>Sem contrato/cliente nao e possivel iniciar a cadeia financeira da obra.</td><td>/home/colatto/repo/R3/test4s/test-results/CT004-CLIENTE-CONTRATO.png</td><td>Corrigir persistencia e relacionamento entre cliente e contrato.</td><td>reprovado</td></tr>
+<tr><td>CT005-OBRA-CENTRO</td><td>alta</td><td>CT005</td><td>https://4s.ruatrez.com/dashboard</td><td>administrador</td><td>AUTO-4S-20260703120000</td><td>Executar o caso automatizado &quot;CT005&quot; e observar o resultado registrado.</td><td>Unidade, obra e centro de custo devem ficar disponiveis para os modulos seguintes.</td><td>Caso bloqueado por dependencia CT004 registrada como reprovado.</td><td>Falha nesse cadastro impede orcamento, requisicao e financeiro.</td><td></td><td>Corrigir primeiro o caso raiz CT004 e reexecutar este fluxo.</td><td>bloqueado</td></tr>
+<tr><td>CT007-CATEGORIAS</td><td>media</td><td>CT007</td><td>https://4s.ruatrez.com/categorias</td><td>administrador</td><td>AUTO-4S-20260703120000</td><td>Executar o caso automatizado &quot;CT007&quot; e observar o resultado registrado.</td><td>Categorias orcamentarias devem ficar disponiveis para itens e movimentos.</td><td>[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+Locator: getByText(/AUTO-4S-20260703120000 Materiais/i).first()
+Expected: visible
+Timeout: 10000ms
+Error: element(s) not found
+
+Call log:
+[2m  - Expect &quot;toBeVisible&quot; with timeout 10000ms[22m
+[2m  - waiting for getByText(/AUTO-4S-20260703120000 Materiais/i).first()[22m
+</td><td>Classificacao financeira incorreta prejudica dashboard e saldo por categoria.</td><td>/home/colatto/repo/R3/test4s/test-results/CT007-CATEGORIAS.png</td><td>Corrigir cadastro, listagem e uso das categorias nos selects de movimento.</td><td>reprovado</td></tr>
+<tr><td>CT011-COLABORADOR-ALOCACAO</td><td>media</td><td>CT011</td><td>https://4s.ruatrez.com/dashboard</td><td>administrador</td><td>AUTO-4S-20260703120000</td><td>Executar o caso automatizado &quot;CT011&quot; e observar o resultado registrado.</td><td>Colaborador, cargo/faixa e alocacao devem ser cadastrados quando a UI disponibilizar o fluxo.</td><td>Caso bloqueado por dependencia CT005 registrada como bloqueado.</td><td>Mao de obra ausente distorce custo real e dashboard financeiro.</td><td></td><td>Corrigir primeiro o caso raiz CT005 e reexecutar este fluxo.</td><td>bloqueado</td></tr></tbody>
   </table>
 </body>
 </html>

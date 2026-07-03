@@ -5,6 +5,18 @@ import { byText, chooseOption, clickAny, fillField, gotoMenu, submitForm } from 
 export class BudgetPage {
   constructor(private readonly page: Page) {}
 
+  private budgetItemRow() {
+    return this.page.getByRole('row').filter({ hasText: data.budgetItem }).first();
+  }
+
+  private async clickBudgetItemAction(action: RegExp) {
+    const row = this.budgetItemRow();
+    await expect(row).toBeVisible();
+    const button = row.getByRole('button', { name: action }).first();
+    await button.scrollIntoViewIfNeeded();
+    await button.click();
+  }
+
   async createBaseBudgetItem() {
     await gotoMenu(this.page, ['Orçamento', 'Itens Orçados']);
     await clickAny(this.page, ['Novo', 'Adicionar', 'Cadastrar', 'Criar']);
@@ -35,8 +47,7 @@ export class BudgetPage {
 
   async requestProtectedBudgetDeletion() {
     await gotoMenu(this.page, ['Orçamento', 'Itens Orçados']);
-    await clickAny(this.page, [data.budgetItem]).catch(() => {});
-    await clickAny(this.page, ['Solicitar exclusão', 'Solicitar exclusao', 'Excluir', 'Remover', 'Cancelar']);
+    await this.clickBudgetItemAction(/Solicitar exclus(?:ão|ao|Ã£o)/i);
     await fillField(this.page, ['justificativa', 'observacao', 'observação'], 'Solicitacao automatizada de exclusao').catch(() => {});
     await clickAny(this.page, ['Confirmar', 'Solicitar', 'Enviar']);
     await expect(this.page.locator('body')).toHaveText(/aprov|pendente|solicit|administrador|permiss/i);
