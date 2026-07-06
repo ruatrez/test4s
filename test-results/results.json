@@ -93,7 +93,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 44641,
+                  "duration": 43246,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -101,16 +101,16 @@
                   "steps": [
                     {
                       "title": "CT001-AUTH",
-                      "duration": 44328
+                      "duration": 42935
                     }
                   ],
-                  "startTime": "2026-07-06T22:19:16.221Z",
+                  "startTime": "2026-07-06T22:47:48.277Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "diagnostic-CT001-AUTH",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAwMS1BVVRIIiwKICAic2V2ZXJpdHkiOiAiY3JpdGljYSIsCiAgImNhc2VJZCI6ICJDVDAwMSIsCiAgInRpdGxlIjogIkxvZ2luIHZhbGlkbywgbG9nb3V0LCBsb2dpbiBpbnZhbGlkbyBlIHNlc3NhbyBleHBpcmFkYSBxdWFuZG8gb2JzZXJ2YXZlbCIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS8iLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzA2MTkxOTAwIiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDAxXCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIkxvZ2luIHZhbGlkbyBkZXZlIGFicmlyIGEgYXBsaWNhY2FvLCBsb2dvdXQgZGV2ZSBlbmNlcnJhciBzZXNzYW8gZSBsb2dpbiBpbnZhbGlkbyBkZXZlIGJsb3F1ZWFyIGFjZXNzby4iLAogICJhY3R1YWwiOiAiQ29tcG9ydGFtZW50byBvYnNlcnZhZG8gY29uZm9ybWUgZXNwZXJhZG8uIiwKICAiaW1wYWN0IjogIlNlbSBhdXRlbnRpY2FjYW8gY29uZmlhdmVsIG5hbyBoYSB2YWxpZGFjYW8gc2VndXJhIGRvcyBmbHV4b3MgZGEgRmFzZSAxLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIlNlbSBhdXRlbnRpY2FjYW8gY29uZmlhdmVsIG5hbyBoYSB2YWxpZGFjYW8gc2VndXJhIGRvcyBmbHV4b3MgZGEgRmFzZSAxLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvbmZpcm1hciBjcmVkZW5jaWFpcywgaW52YWxpZGFjYW8gZGUgc2Vzc2FvIGUgbWVuc2FnZW5zIGRlIGVycm8gZGUgYXV0ZW50aWNhY2FvLiIsCiAgInN0YXR1cyI6ICJhcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMjI6MjA6MDAuNzUwWiIKfQ=="
+                      "body": "ewogICJpZCI6ICJDVDAwMS1BVVRIIiwKICAic2V2ZXJpdHkiOiAiY3JpdGljYSIsCiAgImNhc2VJZCI6ICJDVDAwMSIsCiAgInRpdGxlIjogIkxvZ2luIHZhbGlkbywgbG9nb3V0LCBsb2dpbiBpbnZhbGlkbyBlIHNlc3NhbyBleHBpcmFkYSBxdWFuZG8gb2JzZXJ2YXZlbCIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS8iLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzA2MTk0NzI3IiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDAxXCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIkxvZ2luIHZhbGlkbyBkZXZlIGFicmlyIGEgYXBsaWNhY2FvLCBsb2dvdXQgZGV2ZSBlbmNlcnJhciBzZXNzYW8gZSBsb2dpbiBpbnZhbGlkbyBkZXZlIGJsb3F1ZWFyIGFjZXNzby4iLAogICJhY3R1YWwiOiAiQ29tcG9ydGFtZW50byBvYnNlcnZhZG8gY29uZm9ybWUgZXNwZXJhZG8uIiwKICAiaW1wYWN0IjogIlNlbSBhdXRlbnRpY2FjYW8gY29uZmlhdmVsIG5hbyBoYSB2YWxpZGFjYW8gc2VndXJhIGRvcyBmbHV4b3MgZGEgRmFzZSAxLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIlNlbSBhdXRlbnRpY2FjYW8gY29uZmlhdmVsIG5hbyBoYSB2YWxpZGFjYW8gc2VndXJhIGRvcyBmbHV4b3MgZGEgRmFzZSAxLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvbmZpcm1hciBjcmVkZW5jaWFpcywgaW52YWxpZGFjYW8gZGUgc2Vzc2FvIGUgbWVuc2FnZW5zIGRlIGVycm8gZGUgYXV0ZW50aWNhY2FvLiIsCiAgInN0YXR1cyI6ICJhcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMjI6NDg6MzEuNDEzWiIKfQ=="
                     }
                   ]
                 }
@@ -139,7 +139,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 27724,
+                  "duration": 27844,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -147,16 +147,16 @@
                   "steps": [
                     {
                       "title": "CT003-CADASTROS-ATALHOS",
-                      "duration": 1199
+                      "duration": 1191
                     }
                   ],
-                  "startTime": "2026-07-06T22:20:00.981Z",
+                  "startTime": "2026-07-06T22:48:31.641Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "diagnostic-CT003-CADASTROS-ATALHOS",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAwMy1DQURBU1RST1MtQVRBTEhPUyIsCiAgInNldmVyaXR5IjogIm1lZGlhIiwKICAiY2FzZUlkIjogIkNUMDAzIiwKICAidGl0bGUiOiAiQXRhbGhvcyBkYSB0ZWxhIENhZGFzdHJvcyIsCiAgInBhdGgiOiAiQ2FkYXN0cm9zIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjE5MTkwMCIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAwM1wiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJBdGFsaG9zIGRlIENhZGFzdHJvcyBkZXZlbSBhYnJpciBvcyBjYWRhc3Ryb3MgbWVzdHJlcyBleGliaWRvcyBuYSB0ZWxhLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiQXRhbGhvcyBxdWVicmFkb3MgcmVkdXplbSBwcm9kdXRpdmlkYWRlIGUgcG9kZW0gb2N1bHRhciBtb2R1bG9zIGFkbWluaXN0cmF0aXZvcy4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJBdGFsaG9zIHF1ZWJyYWRvcyByZWR1emVtIHByb2R1dGl2aWRhZGUgZSBwb2RlbSBvY3VsdGFyIG1vZHVsb3MgYWRtaW5pc3RyYXRpdm9zLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIGxpbmtzL3JvdGFzIGRvcyBjYXJkcyBvdSBib3RvZXMgZGEgdGVsYSBDYWRhc3Ryb3MuIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0wNlQyMjoyMDoyOC42NzFaIgp9"
+                      "body": "ewogICJpZCI6ICJDVDAwMy1DQURBU1RST1MtQVRBTEhPUyIsCiAgInNldmVyaXR5IjogIm1lZGlhIiwKICAiY2FzZUlkIjogIkNUMDAzIiwKICAidGl0bGUiOiAiQXRhbGhvcyBkYSB0ZWxhIENhZGFzdHJvcyIsCiAgInBhdGgiOiAiQ2FkYXN0cm9zIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjE5NDcyNyIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAwM1wiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJBdGFsaG9zIGRlIENhZGFzdHJvcyBkZXZlbSBhYnJpciBvcyBjYWRhc3Ryb3MgbWVzdHJlcyBleGliaWRvcyBuYSB0ZWxhLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiQXRhbGhvcyBxdWVicmFkb3MgcmVkdXplbSBwcm9kdXRpdmlkYWRlIGUgcG9kZW0gb2N1bHRhciBtb2R1bG9zIGFkbWluaXN0cmF0aXZvcy4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJBdGFsaG9zIHF1ZWJyYWRvcyByZWR1emVtIHByb2R1dGl2aWRhZGUgZSBwb2RlbSBvY3VsdGFyIG1vZHVsb3MgYWRtaW5pc3RyYXRpdm9zLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIGxpbmtzL3JvdGFzIGRvcyBjYXJkcyBvdSBib3RvZXMgZGEgdGVsYSBDYWRhc3Ryb3MuIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0wNlQyMjo0ODo1OS40NTNaIgp9"
                     }
                   ]
                 }
@@ -185,7 +185,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 26915,
+                  "duration": 26763,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -193,16 +193,16 @@
                   "steps": [
                     {
                       "title": "CT022-ROTAS-PRINCIPAIS",
-                      "duration": 1350
+                      "duration": 1292
                     }
                   ],
-                  "startTime": "2026-07-06T22:20:28.713Z",
+                  "startTime": "2026-07-06T22:48:59.494Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "diagnostic-CT022-ROTAS-PRINCIPAIS",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAyMi1ST1RBUy1QUklOQ0lQQUlTIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAyMiIsCiAgInRpdGxlIjogIlJvdGFzIHByaW5jaXBhaXMgc2VtIHRlbGEgZW0gYnJhbmNvLCBlcnJvcyBKUyBjcml0aWNvcyBvdSBIVFRQIDV4eCIsCiAgInBhdGgiOiAiTWVudSBwcmluY2lwYWwiLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzA2MTkxOTAwIiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDIyXCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIlRvZGFzIGFzIHJvdGFzIHByaW5jaXBhaXMgZGV2ZW0gY2FycmVnYXIgY29udGV1ZG8gdmlzaXZlbCBzZW0gdGVsYSBlbSBicmFuY28sIGVycm8gSlMgY3JpdGljbyBvdSBIVFRQIDV4eC4iLAogICJhY3R1YWwiOiAiQ29tcG9ydGFtZW50byBvYnNlcnZhZG8gY29uZm9ybWUgZXNwZXJhZG8uIiwKICAiaW1wYWN0IjogIlRlbGEgcXVlYnJhZGEgYmxvcXVlaWEgdmFsaWRhY2FvIGZ1bmNpb25hbCBlIG9wZXJhY2FvIGRvIG1vZHVsby4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJUZWxhIHF1ZWJyYWRhIGJsb3F1ZWlhIHZhbGlkYWNhbyBmdW5jaW9uYWwgZSBvcGVyYWNhbyBkbyBtb2R1bG8uIiwKICAicmVjb21tZW5kYXRpb24iOiAiQ29ycmlnaXIgcm90YSwgcGVybWlzc2FvLCBjYXJyZWdhbWVudG8gZGUgZGFkb3Mgb3UgY29tcG9uZW50ZSBmcm9udGVuZCBkYSB0ZWxhIGFmZXRhZGEuIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0wNlQyMjoyMDo1NS41OTRaIgp9"
+                      "body": "ewogICJpZCI6ICJDVDAyMi1ST1RBUy1QUklOQ0lQQUlTIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAyMiIsCiAgInRpdGxlIjogIlJvdGFzIHByaW5jaXBhaXMgc2VtIHRlbGEgZW0gYnJhbmNvLCBlcnJvcyBKUyBjcml0aWNvcyBvdSBIVFRQIDV4eCIsCiAgInBhdGgiOiAiTWVudSBwcmluY2lwYWwiLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzA2MTk0NzI3IiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDIyXCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIlRvZGFzIGFzIHJvdGFzIHByaW5jaXBhaXMgZGV2ZW0gY2FycmVnYXIgY29udGV1ZG8gdmlzaXZlbCBzZW0gdGVsYSBlbSBicmFuY28sIGVycm8gSlMgY3JpdGljbyBvdSBIVFRQIDV4eC4iLAogICJhY3R1YWwiOiAiQ29tcG9ydGFtZW50byBvYnNlcnZhZG8gY29uZm9ybWUgZXNwZXJhZG8uIiwKICAiaW1wYWN0IjogIlRlbGEgcXVlYnJhZGEgYmxvcXVlaWEgdmFsaWRhY2FvIGZ1bmNpb25hbCBlIG9wZXJhY2FvIGRvIG1vZHVsby4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJUZWxhIHF1ZWJyYWRhIGJsb3F1ZWlhIHZhbGlkYWNhbyBmdW5jaW9uYWwgZSBvcGVyYWNhbyBkbyBtb2R1bG8uIiwKICAicmVjb21tZW5kYXRpb24iOiAiQ29ycmlnaXIgcm90YSwgcGVybWlzc2FvLCBjYXJyZWdhbWVudG8gZGUgZGFkb3Mgb3UgY29tcG9uZW50ZSBmcm9udGVuZCBkYSB0ZWxhIGFmZXRhZGEuIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0wNlQyMjo0OToyNi4yMTdaIgp9"
                     }
                   ]
                 }
@@ -239,7 +239,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "failed",
-                  "duration": 27789,
+                  "duration": 26382,
                   "error": {
                     "message": "Error: Could not find submit control inside the active modal",
                     "stack": "Error: Could not find submit control inside the active modal\n    at submitForm (/home/colatto/repo/R3/test4s/support/ui.ts:272:11)\n    at tryCreateSimpleRecord (/home/colatto/repo/R3/test4s/support/ui.ts:374:3)\n    at RegistrationsPage.createClientAndContract (/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts:22:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:21:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:13:3",
@@ -266,7 +266,7 @@
                   "steps": [
                     {
                       "title": "CT004-CLIENTE-CONTRATO",
-                      "duration": 449,
+                      "duration": 415,
                       "error": {
                         "message": "Error: Could not find submit control inside the active modal",
                         "stack": "Error: Could not find submit control inside the active modal\n    at submitForm (/home/colatto/repo/R3/test4s/support/ui.ts:272:11)\n    at tryCreateSimpleRecord (/home/colatto/repo/R3/test4s/support/ui.ts:374:3)\n    at RegistrationsPage.createClientAndContract (/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts:22:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:21:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:13:3",
@@ -279,13 +279,13 @@
                       }
                     }
                   ],
-                  "startTime": "2026-07-06T22:20:55.639Z",
+                  "startTime": "2026-07-06T22:49:26.271Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "diagnostic-CT004-CLIENTE-CONTRATO",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAwNC1DTElFTlRFLUNPTlRSQVRPIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAwNCIsCiAgInRpdGxlIjogIkNsaWVudGUgZSBjb250cmF0byBjb20gZWRpY2FvLCBwZXJzaXN0ZW5jaWEgZSB2aW5jdWxvIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2NsaWVudGVzIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjE5MTkwMCIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAwNFwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJDbGllbnRlIGUgY29udHJhdG8gZGV2ZW0gc2VyIGNyaWFkb3MsIGVkaXRhZG9zLCB2aW5jdWxhZG9zIGUgcGVyc2lzdGlkb3MgYXBvcyByZWZyZXNoLiIsCiAgImFjdHVhbCI6ICJDb3VsZCBub3QgZmluZCBzdWJtaXQgY29udHJvbCBpbnNpZGUgdGhlIGFjdGl2ZSBtb2RhbCIsCiAgImltcGFjdCI6ICJTZW0gY29udHJhdG8vY2xpZW50ZSBuYW8gZSBwb3NzaXZlbCBpbmljaWFyIGEgY2FkZWlhIGZpbmFuY2VpcmEgZGEgb2JyYS4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJTZW0gY29udHJhdG8vY2xpZW50ZSBuYW8gZSBwb3NzaXZlbCBpbmljaWFyIGEgY2FkZWlhIGZpbmFuY2VpcmEgZGEgb2JyYS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJDb3JyaWdpciBwZXJzaXN0ZW5jaWEgZSByZWxhY2lvbmFtZW50byBlbnRyZSBjbGllbnRlIGUgY29udHJhdG8uIiwKICAic3RhdHVzIjogInJlcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogIi9ob21lL2NvbGF0dG8vcmVwby9SMy90ZXN0NHMvdGVzdC1yZXN1bHRzL0NUMDA0LUNMSUVOVEUtQ09OVFJBVE8ucG5nIiwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMjI6MjE6MjMuMTU1WiIKfQ=="
+                      "body": "ewogICJpZCI6ICJDVDAwNC1DTElFTlRFLUNPTlRSQVRPIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAwNCIsCiAgInRpdGxlIjogIkNsaWVudGUgZSBjb250cmF0byBjb20gZWRpY2FvLCBwZXJzaXN0ZW5jaWEgZSB2aW5jdWxvIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2NsaWVudGVzIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjE5NDcyNyIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAwNFwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJDbGllbnRlIGUgY29udHJhdG8gZGV2ZW0gc2VyIGNyaWFkb3MsIGVkaXRhZG9zLCB2aW5jdWxhZG9zIGUgcGVyc2lzdGlkb3MgYXBvcyByZWZyZXNoLiIsCiAgImFjdHVhbCI6ICJDb3VsZCBub3QgZmluZCBzdWJtaXQgY29udHJvbCBpbnNpZGUgdGhlIGFjdGl2ZSBtb2RhbCIsCiAgImltcGFjdCI6ICJTZW0gY29udHJhdG8vY2xpZW50ZSBuYW8gZSBwb3NzaXZlbCBpbmljaWFyIGEgY2FkZWlhIGZpbmFuY2VpcmEgZGEgb2JyYS4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJTZW0gY29udHJhdG8vY2xpZW50ZSBuYW8gZSBwb3NzaXZlbCBpbmljaWFyIGEgY2FkZWlhIGZpbmFuY2VpcmEgZGEgb2JyYS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJDb3JyaWdpciBwZXJzaXN0ZW5jaWEgZSByZWxhY2lvbmFtZW50byBlbnRyZSBjbGllbnRlIGUgY29udHJhdG8uIiwKICAic3RhdHVzIjogInJlcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogIi9ob21lL2NvbGF0dG8vcmVwby9SMy90ZXN0NHMvdGVzdC1yZXN1bHRzL0NUMDA0LUNMSUVOVEUtQ09OVFJBVE8ucG5nIiwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMjI6NDk6NTIuNDIzWiIKfQ=="
                     },
                     {
                       "name": "screenshot",
@@ -344,12 +344,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 23712,
+                  "duration": 31308,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-06T22:21:23.926Z",
+                  "startTime": "2026-07-06T22:49:53.086Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -365,7 +365,7 @@
                     {
                       "name": "diagnostic-CT005-OBRA-CENTRO",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAwNS1PQlJBLUNFTlRSTyIsCiAgInNldmVyaXR5IjogImFsdGEiLAogICJjYXNlSWQiOiAiQ1QwMDUiLAogICJ0aXRsZSI6ICJVbmlkYWRlLCBvYnJhIGUgY2VudHJvIGRlIGN1c3RvIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2Rhc2hib2FyZCIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MDYxOTE5MDAiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMDVcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiVW5pZGFkZSwgb2JyYSBlIGNlbnRybyBkZSBjdXN0byBkZXZlbSBmaWNhciBkaXNwb25pdmVpcyBwYXJhIG9zIG1vZHVsb3Mgc2VndWludGVzLiIsCiAgImFjdHVhbCI6ICJDYXNvIGJsb3F1ZWFkbyBwb3IgZGVwZW5kZW5jaWEgQ1QwMDQgcmVnaXN0cmFkYSBjb21vIHJlcHJvdmFkby4iLAogICJpbXBhY3QiOiAiRmFsaGEgbmVzc2UgY2FkYXN0cm8gaW1wZWRlIG9yY2FtZW50bywgcmVxdWlzaWNhbyBlIGZpbmFuY2Vpcm8uIiwKICAiYnVzaW5lc3NJbXBhY3QiOiAiRmFsaGEgbmVzc2UgY2FkYXN0cm8gaW1wZWRlIG9yY2FtZW50bywgcmVxdWlzaWNhbyBlIGZpbmFuY2Vpcm8uIiwKICAicmVjb21tZW5kYXRpb24iOiAiQ29ycmlnaXIgcHJpbWVpcm8gbyBjYXNvIHJhaXogQ1QwMDQgZSByZWV4ZWN1dGFyIGVzdGUgZmx1eG8uIiwKICAic3RhdHVzIjogImJsb3F1ZWFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMjI6MjE6NDcuNzE1WiIKfQ=="
+                      "body": "ewogICJpZCI6ICJDVDAwNS1PQlJBLUNFTlRSTyIsCiAgInNldmVyaXR5IjogImFsdGEiLAogICJjYXNlSWQiOiAiQ1QwMDUiLAogICJ0aXRsZSI6ICJVbmlkYWRlLCBvYnJhIGUgY2VudHJvIGRlIGN1c3RvIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2Rhc2hib2FyZCIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MDYxOTQ3MjciLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMDVcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiVW5pZGFkZSwgb2JyYSBlIGNlbnRybyBkZSBjdXN0byBkZXZlbSBmaWNhciBkaXNwb25pdmVpcyBwYXJhIG9zIG1vZHVsb3Mgc2VndWludGVzLiIsCiAgImFjdHVhbCI6ICJDYXNvIGJsb3F1ZWFkbyBwb3IgZGVwZW5kZW5jaWEgQ1QwMDQgcmVnaXN0cmFkYSBjb21vIHJlcHJvdmFkby4iLAogICJpbXBhY3QiOiAiRmFsaGEgbmVzc2UgY2FkYXN0cm8gaW1wZWRlIG9yY2FtZW50bywgcmVxdWlzaWNhbyBlIGZpbmFuY2Vpcm8uIiwKICAiYnVzaW5lc3NJbXBhY3QiOiAiRmFsaGEgbmVzc2UgY2FkYXN0cm8gaW1wZWRlIG9yY2FtZW50bywgcmVxdWlzaWNhbyBlIGZpbmFuY2Vpcm8uIiwKICAicmVjb21tZW5kYXRpb24iOiAiQ29ycmlnaXIgcHJpbWVpcm8gbyBjYXNvIHJhaXogQ1QwMDQgZSByZWV4ZWN1dGFyIGVzdGUgZmx1eG8uIiwKICAic3RhdHVzIjogImJsb3F1ZWFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMjI6NTA6MjQuNDU5WiIKfQ=="
                     }
                   ]
                 }
@@ -394,7 +394,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 24837,
+                  "duration": 29612,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -402,16 +402,16 @@
                   "steps": [
                     {
                       "title": "CT006-FORNECEDORES",
-                      "duration": 2245
+                      "duration": 2288
                     }
                   ],
-                  "startTime": "2026-07-06T22:21:47.757Z",
+                  "startTime": "2026-07-06T22:50:24.509Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "diagnostic-CT006-FORNECEDORES",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAwNi1GT1JORUNFRE9SRVMiLAogICJzZXZlcml0eSI6ICJtZWRpYSIsCiAgImNhc2VJZCI6ICJDVDAwNiIsCiAgInRpdGxlIjogIkZvcm5lY2Vkb3JlcyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9mb3JuZWNlZG9yZXMiLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzA2MTkxOTAwIiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDA2XCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIlRyZXMgZm9ybmVjZWRvcmVzIGF0aXZvcyBkZXZlbSBwb2RlciBzZXIgdXNhZG9zIGVtIGNvdGFjb2VzLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiU2VtIGZvcm5lY2Vkb3JlcyBzdWZpY2llbnRlcyBvIGNvbXBhcmF0aXZvIGRlIGNvdGFjYW8gZmljYSBpbmNvbXBsZXRvLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIlNlbSBmb3JuZWNlZG9yZXMgc3VmaWNpZW50ZXMgbyBjb21wYXJhdGl2byBkZSBjb3RhY2FvIGZpY2EgaW5jb21wbGV0by4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJHYXJhbnRpciBjYWRhc3RybyBlIHNlbGVjYW8gZGUgZm9ybmVjZWRvcmVzIGF0aXZvcyBlbSBjb3RhY29lcy4iLAogICJzdGF0dXMiOiAiYXByb3ZhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTA2VDIyOjIyOjEyLjU1M1oiCn0="
+                      "body": "ewogICJpZCI6ICJDVDAwNi1GT1JORUNFRE9SRVMiLAogICJzZXZlcml0eSI6ICJtZWRpYSIsCiAgImNhc2VJZCI6ICJDVDAwNiIsCiAgInRpdGxlIjogIkZvcm5lY2Vkb3JlcyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9mb3JuZWNlZG9yZXMiLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzA2MTk0NzI3IiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDA2XCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIlRyZXMgZm9ybmVjZWRvcmVzIGF0aXZvcyBkZXZlbSBwb2RlciBzZXIgdXNhZG9zIGVtIGNvdGFjb2VzLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiU2VtIGZvcm5lY2Vkb3JlcyBzdWZpY2llbnRlcyBvIGNvbXBhcmF0aXZvIGRlIGNvdGFjYW8gZmljYSBpbmNvbXBsZXRvLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIlNlbSBmb3JuZWNlZG9yZXMgc3VmaWNpZW50ZXMgbyBjb21wYXJhdGl2byBkZSBjb3RhY2FvIGZpY2EgaW5jb21wbGV0by4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJHYXJhbnRpciBjYWRhc3RybyBlIHNlbGVjYW8gZGUgZm9ybmVjZWRvcmVzIGF0aXZvcyBlbSBjb3RhY29lcy4iLAogICJzdGF0dXMiOiAiYXByb3ZhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTA2VDIyOjUwOjU0LjA5NFoiCn0="
                     }
                   ]
                 }
@@ -440,7 +440,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 39545,
+                  "duration": 40916,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -448,16 +448,16 @@
                   "steps": [
                     {
                       "title": "CT007-CATEGORIAS",
-                      "duration": 15270
+                      "duration": 15370
                     }
                   ],
-                  "startTime": "2026-07-06T22:22:12.602Z",
+                  "startTime": "2026-07-06T22:50:54.130Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "diagnostic-CT007-CATEGORIAS",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAwNy1DQVRFR09SSUFTIiwKICAic2V2ZXJpdHkiOiAibWVkaWEiLAogICJjYXNlSWQiOiAiQ1QwMDciLAogICJ0aXRsZSI6ICJDYXRlZ29yaWFzIG9yY2FtZW50YXJpYXMiLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vY2F0ZWdvcmlhcyIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MDYxOTE5MDAiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMDdcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiQ2F0ZWdvcmlhcyBvcmNhbWVudGFyaWFzIGRldmVtIGZpY2FyIGRpc3Bvbml2ZWlzIHBhcmEgaXRlbnMgZSBtb3ZpbWVudG9zLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiQ2xhc3NpZmljYWNhbyBmaW5hbmNlaXJhIGluY29ycmV0YSBwcmVqdWRpY2EgZGFzaGJvYXJkIGUgc2FsZG8gcG9yIGNhdGVnb3JpYS4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJDbGFzc2lmaWNhY2FvIGZpbmFuY2VpcmEgaW5jb3JyZXRhIHByZWp1ZGljYSBkYXNoYm9hcmQgZSBzYWxkbyBwb3IgY2F0ZWdvcmlhLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIGNhZGFzdHJvLCBsaXN0YWdlbSBlIHVzbyBkYXMgY2F0ZWdvcmlhcyBub3Mgc2VsZWN0cyBkZSBtb3ZpbWVudG8uIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0wNlQyMjoyMjo1Mi4xMTZaIgp9"
+                      "body": "ewogICJpZCI6ICJDVDAwNy1DQVRFR09SSUFTIiwKICAic2V2ZXJpdHkiOiAibWVkaWEiLAogICJjYXNlSWQiOiAiQ1QwMDciLAogICJ0aXRsZSI6ICJDYXRlZ29yaWFzIG9yY2FtZW50YXJpYXMiLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vY2F0ZWdvcmlhcyIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MDYxOTQ3MjciLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMDdcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiQ2F0ZWdvcmlhcyBvcmNhbWVudGFyaWFzIGRldmVtIGZpY2FyIGRpc3Bvbml2ZWlzIHBhcmEgaXRlbnMgZSBtb3ZpbWVudG9zLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiQ2xhc3NpZmljYWNhbyBmaW5hbmNlaXJhIGluY29ycmV0YSBwcmVqdWRpY2EgZGFzaGJvYXJkIGUgc2FsZG8gcG9yIGNhdGVnb3JpYS4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJDbGFzc2lmaWNhY2FvIGZpbmFuY2VpcmEgaW5jb3JyZXRhIHByZWp1ZGljYSBkYXNoYm9hcmQgZSBzYWxkbyBwb3IgY2F0ZWdvcmlhLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIGNhZGFzdHJvLCBsaXN0YWdlbSBlIHVzbyBkYXMgY2F0ZWdvcmlhcyBub3Mgc2VsZWN0cyBkZSBtb3ZpbWVudG8uIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0wNlQyMjo1MTozNS4wMTVaIgp9"
                     }
                   ]
                 }
@@ -496,12 +496,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 25131,
+                  "duration": 28248,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-06T22:22:52.155Z",
+                  "startTime": "2026-07-06T22:51:35.057Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -517,7 +517,7 @@
                     {
                       "name": "diagnostic-CT011-COLABORADOR-ALOCACAO",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAxMS1DT0xBQk9SQURPUi1BTE9DQUNBTyIsCiAgInNldmVyaXR5IjogIm1lZGlhIiwKICAiY2FzZUlkIjogIkNUMDExIiwKICAidGl0bGUiOiAiQ29sYWJvcmFkb3IsIGNhcmdvL2ZhaXhhIGUgYWxvY2FjYW8gcXVhbmRvIGEgVUkgcGVybWl0aXIiLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vZGFzaGJvYXJkIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjE5MTkwMCIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxMVwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJDb2xhYm9yYWRvciwgY2FyZ28vZmFpeGEgZSBhbG9jYWNhbyBkZXZlbSBzZXIgY2FkYXN0cmFkb3MgcXVhbmRvIGEgVUkgZGlzcG9uaWJpbGl6YXIgbyBmbHV4by4iLAogICJhY3R1YWwiOiAiQ2FzbyBibG9xdWVhZG8gcG9yIGRlcGVuZGVuY2lhIENUMDA1IHJlZ2lzdHJhZGEgY29tbyBibG9xdWVhZG8uIiwKICAiaW1wYWN0IjogIk1hbyBkZSBvYnJhIGF1c2VudGUgZGlzdG9yY2UgY3VzdG8gcmVhbCBlIGRhc2hib2FyZCBmaW5hbmNlaXJvLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIk1hbyBkZSBvYnJhIGF1c2VudGUgZGlzdG9yY2UgY3VzdG8gcmVhbCBlIGRhc2hib2FyZCBmaW5hbmNlaXJvLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIHByaW1laXJvIG8gY2FzbyByYWl6IENUMDA1IGUgcmVleGVjdXRhciBlc3RlIGZsdXhvLiIsCiAgInN0YXR1cyI6ICJibG9xdWVhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTA2VDIyOjIzOjE3LjI1OVoiCn0="
+                      "body": "ewogICJpZCI6ICJDVDAxMS1DT0xBQk9SQURPUi1BTE9DQUNBTyIsCiAgInNldmVyaXR5IjogIm1lZGlhIiwKICAiY2FzZUlkIjogIkNUMDExIiwKICAidGl0bGUiOiAiQ29sYWJvcmFkb3IsIGNhcmdvL2ZhaXhhIGUgYWxvY2FjYW8gcXVhbmRvIGEgVUkgcGVybWl0aXIiLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vZGFzaGJvYXJkIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjE5NDcyNyIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxMVwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJDb2xhYm9yYWRvciwgY2FyZ28vZmFpeGEgZSBhbG9jYWNhbyBkZXZlbSBzZXIgY2FkYXN0cmFkb3MgcXVhbmRvIGEgVUkgZGlzcG9uaWJpbGl6YXIgbyBmbHV4by4iLAogICJhY3R1YWwiOiAiQ2FzbyBibG9xdWVhZG8gcG9yIGRlcGVuZGVuY2lhIENUMDA1IHJlZ2lzdHJhZGEgY29tbyBibG9xdWVhZG8uIiwKICAiaW1wYWN0IjogIk1hbyBkZSBvYnJhIGF1c2VudGUgZGlzdG9yY2UgY3VzdG8gcmVhbCBlIGRhc2hib2FyZCBmaW5hbmNlaXJvLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIk1hbyBkZSBvYnJhIGF1c2VudGUgZGlzdG9yY2UgY3VzdG8gcmVhbCBlIGRhc2hib2FyZCBmaW5hbmNlaXJvLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIHByaW1laXJvIG8gY2FzbyByYWl6IENUMDA1IGUgcmVleGVjdXRhciBlc3RlIGZsdXhvLiIsCiAgInN0YXR1cyI6ICJibG9xdWVhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTA2VDIyOjUyOjAzLjI3OFoiCn0="
                     }
                   ]
                 }
@@ -564,12 +564,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 28395,
+                  "duration": 30797,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-06T22:23:17.296Z",
+                  "startTime": "2026-07-06T22:52:03.324Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -585,7 +585,7 @@
                     {
                       "name": "diagnostic-CT008-ORCAMENTO-BASE",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAwOC1PUkNBTUVOVE8tQkFTRSIsCiAgInNldmVyaXR5IjogImNyaXRpY2EiLAogICJjYXNlSWQiOiAiQ1QwMDgiLAogICJ0aXRsZSI6ICJJdGVtIG9yY2FkbyBjb20gcHJldmlzdG8sIHNhbGRvLCBjb21wcm9tZXRpZG8gZSBwYWdvIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2Rhc2hib2FyZCIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MDYxOTE5MDAiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMDhcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiSXRlbSBvcmNhZG8gZGV2ZSBjYWxjdWxhciB2YWxvciBwcmV2aXN0bywgc2FsZG8sIGNvbXByb21ldGlkbyBlIHBhZ28uIiwKICAiYWN0dWFsIjogIkNhc28gYmxvcXVlYWRvIHBvciBkZXBlbmRlbmNpYSBDVDAwNCByZWdpc3RyYWRhIGNvbW8gcmVwcm92YWRvLiIsCiAgImltcGFjdCI6ICJFcnJvIG5vIG9yY2FtZW50byBiYXNlIGNvbXByb21ldGUgY29udHJvbGUgZGUgc2FsZG8sIE9DIGUgcGFnYW1lbnRvLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIkVycm8gbm8gb3JjYW1lbnRvIGJhc2UgY29tcHJvbWV0ZSBjb250cm9sZSBkZSBzYWxkbywgT0MgZSBwYWdhbWVudG8uIiwKICAicmVjb21tZW5kYXRpb24iOiAiQ29ycmlnaXIgcHJpbWVpcm8gbyBjYXNvIHJhaXogQ1QwMDQgZSByZWV4ZWN1dGFyIGVzdGUgZmx1eG8uIiwKICAic3RhdHVzIjogImJsb3F1ZWFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMjI6MjM6NDUuNjYzWiIKfQ=="
+                      "body": "ewogICJpZCI6ICJDVDAwOC1PUkNBTUVOVE8tQkFTRSIsCiAgInNldmVyaXR5IjogImNyaXRpY2EiLAogICJjYXNlSWQiOiAiQ1QwMDgiLAogICJ0aXRsZSI6ICJJdGVtIG9yY2FkbyBjb20gcHJldmlzdG8sIHNhbGRvLCBjb21wcm9tZXRpZG8gZSBwYWdvIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2Rhc2hib2FyZCIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MDYxOTQ3MjciLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMDhcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiSXRlbSBvcmNhZG8gZGV2ZSBjYWxjdWxhciB2YWxvciBwcmV2aXN0bywgc2FsZG8sIGNvbXByb21ldGlkbyBlIHBhZ28uIiwKICAiYWN0dWFsIjogIkNhc28gYmxvcXVlYWRvIHBvciBkZXBlbmRlbmNpYSBDVDAwNCByZWdpc3RyYWRhIGNvbW8gcmVwcm92YWRvLiIsCiAgImltcGFjdCI6ICJFcnJvIG5vIG9yY2FtZW50byBiYXNlIGNvbXByb21ldGUgY29udHJvbGUgZGUgc2FsZG8sIE9DIGUgcGFnYW1lbnRvLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIkVycm8gbm8gb3JjYW1lbnRvIGJhc2UgY29tcHJvbWV0ZSBjb250cm9sZSBkZSBzYWxkbywgT0MgZSBwYWdhbWVudG8uIiwKICAicmVjb21tZW5kYXRpb24iOiAiQ29ycmlnaXIgcHJpbWVpcm8gbyBjYXNvIHJhaXogQ1QwMDQgZSByZWV4ZWN1dGFyIGVzdGUgZmx1eG8uIiwKICAic3RhdHVzIjogImJsb3F1ZWFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMjI6NTI6MzQuMDk1WiIKfQ=="
                     }
                   ]
                 }
@@ -614,7 +614,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90426,
+                  "duration": 90385,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -635,7 +635,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-06T22:23:45.700Z",
+                  "startTime": "2026-07-06T22:52:34.132Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -680,7 +680,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "failed",
-                  "duration": 71158,
+                  "duration": 71363,
                   "error": {
                     "message": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel(/e-?mail|email|usuario|usuário/i).or(getByPlaceholder(/e-?mail|email|usuario|usuário/i)).or(locator('input[type=\"email\"]')).first() to be visible\u001b[22m\n",
                     "stack": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel(/e-?mail|email|usuario|usuário/i).or(getByPlaceholder(/e-?mail|email|usuario|usuário/i)).or(locator('input[type=\"email\"]')).first() to be visible\u001b[22m\n\n    at login (/home/colatto/repo/R3/test4s/support/auth.ts:12:20)\n    at AuthPage.loginAsAdmin (/home/colatto/repo/R3/test4s/support/pages/auth-page.ts:10:5)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:15:5\n    at ensureOperationalLogin (/home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:14:3)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:62:3",
@@ -704,7 +704,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-06T22:25:16.758Z",
+                  "startTime": "2026-07-06T22:54:05.152Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -772,12 +772,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 24199,
+                  "duration": 26243,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-06T22:26:28.489Z",
+                  "startTime": "2026-07-06T22:55:17.087Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -793,7 +793,7 @@
                     {
                       "name": "diagnostic-CT012-REQUISICAO-SALDO",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAxMi1SRVFVSVNJQ0FPLVNBTERPIiwKICAic2V2ZXJpdHkiOiAiY3JpdGljYSIsCiAgImNhc2VJZCI6ICJDVDAxMiIsCiAgInRpdGxlIjogIlJlcXVpc2ljYW8gZGVudHJvIGRvIHNhbGRvIGUgYWNpbWEgZG8gc2FsZG8iLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vZGFzaGJvYXJkIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjE5MTkwMCIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxMlwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJSZXF1aXNpY2FvIGRlbnRybyBkbyBzYWxkbyBkZXZlIHNlZ3VpciBwYXJhIGFwcm92YWNhbzsgYWNpbWEgZG8gc2FsZG8gZGV2ZSBzZXIgYmxvcXVlYWRhIG91IHNpbmFsaXphZGEuIiwKICAiYWN0dWFsIjogIkNhc28gYmxvcXVlYWRvIHBvciBkZXBlbmRlbmNpYSBDVDAwOCByZWdpc3RyYWRhIGNvbW8gYmxvcXVlYWRvLiIsCiAgImltcGFjdCI6ICJQZXJtaXRpciBjb21wcmEgYWNpbWEgZG8gc2FsZG8gcm9tcGUgY29udHJvbGUgZmluYW5jZWlybyBkYSBvYnJhLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIlBlcm1pdGlyIGNvbXByYSBhY2ltYSBkbyBzYWxkbyByb21wZSBjb250cm9sZSBmaW5hbmNlaXJvIGRhIG9icmEuIiwKICAicmVjb21tZW5kYXRpb24iOiAiQ29ycmlnaXIgcHJpbWVpcm8gbyBjYXNvIHJhaXogQ1QwMDggZSByZWV4ZWN1dGFyIGVzdGUgZmx1eG8uIiwKICAic3RhdHVzIjogImJsb3F1ZWFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMjI6MjY6NTIuNzQ5WiIKfQ=="
+                      "body": "ewogICJpZCI6ICJDVDAxMi1SRVFVSVNJQ0FPLVNBTERPIiwKICAic2V2ZXJpdHkiOiAiY3JpdGljYSIsCiAgImNhc2VJZCI6ICJDVDAxMiIsCiAgInRpdGxlIjogIlJlcXVpc2ljYW8gZGVudHJvIGRvIHNhbGRvIGUgYWNpbWEgZG8gc2FsZG8iLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vZGFzaGJvYXJkIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjE5NDcyNyIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxMlwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJSZXF1aXNpY2FvIGRlbnRybyBkbyBzYWxkbyBkZXZlIHNlZ3VpciBwYXJhIGFwcm92YWNhbzsgYWNpbWEgZG8gc2FsZG8gZGV2ZSBzZXIgYmxvcXVlYWRhIG91IHNpbmFsaXphZGEuIiwKICAiYWN0dWFsIjogIkNhc28gYmxvcXVlYWRvIHBvciBkZXBlbmRlbmNpYSBDVDAwOCByZWdpc3RyYWRhIGNvbW8gYmxvcXVlYWRvLiIsCiAgImltcGFjdCI6ICJQZXJtaXRpciBjb21wcmEgYWNpbWEgZG8gc2FsZG8gcm9tcGUgY29udHJvbGUgZmluYW5jZWlybyBkYSBvYnJhLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIlBlcm1pdGlyIGNvbXByYSBhY2ltYSBkbyBzYWxkbyByb21wZSBjb250cm9sZSBmaW5hbmNlaXJvIGRhIG9icmEuIiwKICAicmVjb21tZW5kYXRpb24iOiAiQ29ycmlnaXIgcHJpbWVpcm8gbyBjYXNvIHJhaXogQ1QwMDggZSByZWV4ZWN1dGFyIGVzdGUgZmx1eG8uIiwKICAic3RhdHVzIjogImJsb3F1ZWFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMjI6NTU6NDMuMzczWiIKfQ=="
                     }
                   ]
                 }
@@ -832,12 +832,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 25777,
+                  "duration": 28591,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-06T22:26:52.796Z",
+                  "startTime": "2026-07-06T22:55:43.444Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -853,7 +853,7 @@
                     {
                       "name": "diagnostic-CT013-APROVACAO-REJEICAO-REQUISICAO",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAxMy1BUFJPVkFDQU8tUkVKRUlDQU8tUkVRVUlTSUNBTyIsCiAgInNldmVyaXR5IjogImFsdGEiLAogICJjYXNlSWQiOiAiQ1QwMTMiLAogICJ0aXRsZSI6ICJBcHJvdmFjYW8gZSByZWplaWNhbyBkZSByZXF1aXNpY2FvIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2Rhc2hib2FyZCIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MDYxOTE5MDAiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMTNcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiQXByb3ZhY2FvIGRldmUgbGliZXJhciByZXF1aXNpY2FvIHBhcmEgY290YWNhbyBlIHJlamVpY2FvIGRldmUgZW5jZXJyYXIgZmx1eG8gY29tIGRlY2lzYW8gYXVkaXRhdmVsLiIsCiAgImFjdHVhbCI6ICJDYXNvIGJsb3F1ZWFkbyBwb3IgZGVwZW5kZW5jaWEgQ1QwMTIgcmVnaXN0cmFkYSBjb21vIGJsb3F1ZWFkby4iLAogICJpbXBhY3QiOiAiV29ya2Zsb3cgcXVlYnJhZG8gcGVybWl0ZSBhdmFuY29zIGluZGV2aWRvcyBvdSBibG9xdWVpYSBjb21wcmFzIHZhbGlkYXMuIiwKICAiYnVzaW5lc3NJbXBhY3QiOiAiV29ya2Zsb3cgcXVlYnJhZG8gcGVybWl0ZSBhdmFuY29zIGluZGV2aWRvcyBvdSBibG9xdWVpYSBjb21wcmFzIHZhbGlkYXMuIiwKICAicmVjb21tZW5kYXRpb24iOiAiQ29ycmlnaXIgcHJpbWVpcm8gbyBjYXNvIHJhaXogQ1QwMTIgZSByZWV4ZWN1dGFyIGVzdGUgZmx1eG8uIiwKICAic3RhdHVzIjogImJsb3F1ZWFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMjI6Mjc6MTguNTQ2WiIKfQ=="
+                      "body": "ewogICJpZCI6ICJDVDAxMy1BUFJPVkFDQU8tUkVKRUlDQU8tUkVRVUlTSUNBTyIsCiAgInNldmVyaXR5IjogImFsdGEiLAogICJjYXNlSWQiOiAiQ1QwMTMiLAogICJ0aXRsZSI6ICJBcHJvdmFjYW8gZSByZWplaWNhbyBkZSByZXF1aXNpY2FvIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2Rhc2hib2FyZCIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MDYxOTQ3MjciLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMTNcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiQXByb3ZhY2FvIGRldmUgbGliZXJhciByZXF1aXNpY2FvIHBhcmEgY290YWNhbyBlIHJlamVpY2FvIGRldmUgZW5jZXJyYXIgZmx1eG8gY29tIGRlY2lzYW8gYXVkaXRhdmVsLiIsCiAgImFjdHVhbCI6ICJDYXNvIGJsb3F1ZWFkbyBwb3IgZGVwZW5kZW5jaWEgQ1QwMTIgcmVnaXN0cmFkYSBjb21vIGJsb3F1ZWFkby4iLAogICJpbXBhY3QiOiAiV29ya2Zsb3cgcXVlYnJhZG8gcGVybWl0ZSBhdmFuY29zIGluZGV2aWRvcyBvdSBibG9xdWVpYSBjb21wcmFzIHZhbGlkYXMuIiwKICAiYnVzaW5lc3NJbXBhY3QiOiAiV29ya2Zsb3cgcXVlYnJhZG8gcGVybWl0ZSBhdmFuY29zIGluZGV2aWRvcyBvdSBibG9xdWVpYSBjb21wcmFzIHZhbGlkYXMuIiwKICAicmVjb21tZW5kYXRpb24iOiAiQ29ycmlnaXIgcHJpbWVpcm8gbyBjYXNvIHJhaXogQ1QwMTIgZSByZWV4ZWN1dGFyIGVzdGUgZmx1eG8uIiwKICAic3RhdHVzIjogImJsb3F1ZWFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMjI6NTY6MTIuMDA4WiIKfQ=="
                     }
                   ]
                 }
@@ -892,12 +892,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 24896,
+                  "duration": 26624,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-06T22:27:18.581Z",
+                  "startTime": "2026-07-06T22:56:12.045Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -913,7 +913,7 @@
                     {
                       "name": "diagnostic-CT014-COTACAO",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAxNC1DT1RBQ0FPIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAxNCIsCiAgInRpdGxlIjogIkNvdGFjYW8gY29tIDMgZm9ybmVjZWRvcmVzLCBjb21wYXJhdGl2byBlIHZlbmNlZG9yIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2Rhc2hib2FyZCIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MDYxOTE5MDAiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMTRcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiQ290YWNhbyBkZXZlIGNvbXBhcmFyIGZvcm5lY2Vkb3JlcywgcmVnaXN0cmFyIHZlbmNlZG9yIGUgcGVyc2lzdGlyLiIsCiAgImFjdHVhbCI6ICJDYXNvIGJsb3F1ZWFkbyBwb3IgZGVwZW5kZW5jaWEgQ1QwMTMgcmVnaXN0cmFkYSBjb21vIGJsb3F1ZWFkby4iLAogICJpbXBhY3QiOiAiQ29tcGFyYXRpdm8gaW5jb3JyZXRvIGFmZXRhIGRlY2lzYW8gZGUgY29tcHJhIGUgcmFzdHJlYWJpbGlkYWRlLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIkNvbXBhcmF0aXZvIGluY29ycmV0byBhZmV0YSBkZWNpc2FvIGRlIGNvbXByYSBlIHJhc3RyZWFiaWxpZGFkZS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJDb3JyaWdpciBwcmltZWlybyBvIGNhc28gcmFpeiBDVDAxMyBlIHJlZXhlY3V0YXIgZXN0ZSBmbHV4by4iLAogICJzdGF0dXMiOiAiYmxvcXVlYWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0wNlQyMjoyNzo0My40MzRaIgp9"
+                      "body": "ewogICJpZCI6ICJDVDAxNC1DT1RBQ0FPIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAxNCIsCiAgInRpdGxlIjogIkNvdGFjYW8gY29tIDMgZm9ybmVjZWRvcmVzLCBjb21wYXJhdGl2byBlIHZlbmNlZG9yIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2Rhc2hib2FyZCIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MDYxOTQ3MjciLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMTRcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiQ290YWNhbyBkZXZlIGNvbXBhcmFyIGZvcm5lY2Vkb3JlcywgcmVnaXN0cmFyIHZlbmNlZG9yIGUgcGVyc2lzdGlyLiIsCiAgImFjdHVhbCI6ICJDYXNvIGJsb3F1ZWFkbyBwb3IgZGVwZW5kZW5jaWEgQ1QwMTMgcmVnaXN0cmFkYSBjb21vIGJsb3F1ZWFkby4iLAogICJpbXBhY3QiOiAiQ29tcGFyYXRpdm8gaW5jb3JyZXRvIGFmZXRhIGRlY2lzYW8gZGUgY29tcHJhIGUgcmFzdHJlYWJpbGlkYWRlLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIkNvbXBhcmF0aXZvIGluY29ycmV0byBhZmV0YSBkZWNpc2FvIGRlIGNvbXByYSBlIHJhc3RyZWFiaWxpZGFkZS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJDb3JyaWdpciBwcmltZWlybyBvIGNhc28gcmFpeiBDVDAxMyBlIHJlZXhlY3V0YXIgZXN0ZSBmbHV4by4iLAogICJzdGF0dXMiOiAiYmxvcXVlYWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0wNlQyMjo1NjozOC42MzdaIgp9"
                     }
                   ]
                 }
@@ -952,12 +952,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 28201,
+                  "duration": 29976,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-06T22:27:43.486Z",
+                  "startTime": "2026-07-06T22:56:38.678Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -973,7 +973,7 @@
                     {
                       "name": "diagnostic-CT015-ORDEM-COMPRA",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAxNS1PUkRFTS1DT01QUkEiLAogICJzZXZlcml0eSI6ICJjcml0aWNhIiwKICAiY2FzZUlkIjogIkNUMDE1IiwKICAidGl0bGUiOiAiT3JkZW0gZGUgY29tcHJhIGUgY29tcHJvbWV0aW1lbnRvIGRvIG9yY2FtZW50byIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9kYXNoYm9hcmQiLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzA2MTkxOTAwIiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDE1XCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIk9DIGRldmUgbmFzY2VyIGRhIGNvdGFjYW8sIGNvbXByb21ldGVyIG9yY2FtZW50byBlIGdlcmFyIGNvbnRhIGEgcGFnYXIgbm8gcG9udG8gcHJldmlzdG8uIiwKICAiYWN0dWFsIjogIkNhc28gYmxvcXVlYWRvIHBvciBkZXBlbmRlbmNpYSBDVDAxNCByZWdpc3RyYWRhIGNvbW8gYmxvcXVlYWRvLiIsCiAgImltcGFjdCI6ICJTZW0gY29tcHJvbWV0aW1lbnRvIGRvIG9yY2FtZW50byBuYW8gaGEgY29udHJvbGUgcmVhbCBkZSBjb21wcmFzLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIlNlbSBjb21wcm9tZXRpbWVudG8gZG8gb3JjYW1lbnRvIG5hbyBoYSBjb250cm9sZSByZWFsIGRlIGNvbXByYXMuIiwKICAicmVjb21tZW5kYXRpb24iOiAiQ29ycmlnaXIgcHJpbWVpcm8gbyBjYXNvIHJhaXogQ1QwMTQgZSByZWV4ZWN1dGFyIGVzdGUgZmx1eG8uIiwKICAic3RhdHVzIjogImJsb3F1ZWFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMjI6Mjg6MTEuNjQ5WiIKfQ=="
+                      "body": "ewogICJpZCI6ICJDVDAxNS1PUkRFTS1DT01QUkEiLAogICJzZXZlcml0eSI6ICJjcml0aWNhIiwKICAiY2FzZUlkIjogIkNUMDE1IiwKICAidGl0bGUiOiAiT3JkZW0gZGUgY29tcHJhIGUgY29tcHJvbWV0aW1lbnRvIGRvIG9yY2FtZW50byIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9kYXNoYm9hcmQiLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzA2MTk0NzI3IiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDE1XCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIk9DIGRldmUgbmFzY2VyIGRhIGNvdGFjYW8sIGNvbXByb21ldGVyIG9yY2FtZW50byBlIGdlcmFyIGNvbnRhIGEgcGFnYXIgbm8gcG9udG8gcHJldmlzdG8uIiwKICAiYWN0dWFsIjogIkNhc28gYmxvcXVlYWRvIHBvciBkZXBlbmRlbmNpYSBDVDAxNCByZWdpc3RyYWRhIGNvbW8gYmxvcXVlYWRvLiIsCiAgImltcGFjdCI6ICJTZW0gY29tcHJvbWV0aW1lbnRvIGRvIG9yY2FtZW50byBuYW8gaGEgY29udHJvbGUgcmVhbCBkZSBjb21wcmFzLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIlNlbSBjb21wcm9tZXRpbWVudG8gZG8gb3JjYW1lbnRvIG5hbyBoYSBjb250cm9sZSByZWFsIGRlIGNvbXByYXMuIiwKICAicmVjb21tZW5kYXRpb24iOiAiQ29ycmlnaXIgcHJpbWVpcm8gbyBjYXNvIHJhaXogQ1QwMTQgZSByZWV4ZWN1dGFyIGVzdGUgZmx1eG8uIiwKICAic3RhdHVzIjogImJsb3F1ZWFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMjI6NTc6MDguNjIzWiIKfQ=="
                     }
                   ]
                 }
@@ -1012,12 +1012,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 26146,
+                  "duration": 30818,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-06T22:28:11.694Z",
+                  "startTime": "2026-07-06T22:57:08.665Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -1033,7 +1033,7 @@
                     {
                       "name": "diagnostic-CT016-EDICAO-CANCELAMENTO-DOCUMENTOS",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAxNi1FRElDQU8tQ0FOQ0VMQU1FTlRPLURPQ1VNRU5UT1MiLAogICJzZXZlcml0eSI6ICJtZWRpYSIsCiAgImNhc2VJZCI6ICJDVDAxNiIsCiAgInRpdGxlIjogIkVkaWNhby9leGNsdXNhby9jYW5jZWxhbWVudG8gZGUgcmVxdWlzaWNhbywgY290YWNhbyBlIE9DIHF1YW5kbyBwZXJtaXRpZG8iLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vZGFzaGJvYXJkIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjE5MTkwMCIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxNlwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJSZXF1aXNpY2FvLCBjb3RhY2FvIGUgT0MgZGV2ZW0gcGVybWl0aXIgZWRpY2FvL2NhbmNlbGFtZW50byBxdWFuZG8gYSByZWdyYSBwZXJtaXRpciBvdSBleGliaXIgYmxvcXVlaW8gZGUgbmVnb2Npby4iLAogICJhY3R1YWwiOiAiQ2FzbyBibG9xdWVhZG8gcG9yIGRlcGVuZGVuY2lhIENUMDEyIHJlZ2lzdHJhZGEgY29tbyBibG9xdWVhZG8uIiwKICAiaW1wYWN0IjogIlNlbSBhY2FvIGFkbWluaXN0cmF0aXZhIGNsYXJhLCBkb2N1bWVudG9zIGluY29ycmV0b3MgcGVybWFuZWNlbSBubyBmbHV4byBmaW5hbmNlaXJvLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIlNlbSBhY2FvIGFkbWluaXN0cmF0aXZhIGNsYXJhLCBkb2N1bWVudG9zIGluY29ycmV0b3MgcGVybWFuZWNlbSBubyBmbHV4byBmaW5hbmNlaXJvLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIHByaW1laXJvIG8gY2FzbyByYWl6IENUMDEyIGUgcmVleGVjdXRhciBlc3RlIGZsdXhvLiIsCiAgInN0YXR1cyI6ICJibG9xdWVhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTA2VDIyOjI4OjM3LjgxMloiCn0="
+                      "body": "ewogICJpZCI6ICJDVDAxNi1FRElDQU8tQ0FOQ0VMQU1FTlRPLURPQ1VNRU5UT1MiLAogICJzZXZlcml0eSI6ICJtZWRpYSIsCiAgImNhc2VJZCI6ICJDVDAxNiIsCiAgInRpdGxlIjogIkVkaWNhby9leGNsdXNhby9jYW5jZWxhbWVudG8gZGUgcmVxdWlzaWNhbywgY290YWNhbyBlIE9DIHF1YW5kbyBwZXJtaXRpZG8iLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vZGFzaGJvYXJkIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjE5NDcyNyIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxNlwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJSZXF1aXNpY2FvLCBjb3RhY2FvIGUgT0MgZGV2ZW0gcGVybWl0aXIgZWRpY2FvL2NhbmNlbGFtZW50byBxdWFuZG8gYSByZWdyYSBwZXJtaXRpciBvdSBleGliaXIgYmxvcXVlaW8gZGUgbmVnb2Npby4iLAogICJhY3R1YWwiOiAiQ2FzbyBibG9xdWVhZG8gcG9yIGRlcGVuZGVuY2lhIENUMDEyIHJlZ2lzdHJhZGEgY29tbyBibG9xdWVhZG8uIiwKICAiaW1wYWN0IjogIlNlbSBhY2FvIGFkbWluaXN0cmF0aXZhIGNsYXJhLCBkb2N1bWVudG9zIGluY29ycmV0b3MgcGVybWFuZWNlbSBubyBmbHV4byBmaW5hbmNlaXJvLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIlNlbSBhY2FvIGFkbWluaXN0cmF0aXZhIGNsYXJhLCBkb2N1bWVudG9zIGluY29ycmV0b3MgcGVybWFuZWNlbSBubyBmbHV4byBmaW5hbmNlaXJvLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIHByaW1laXJvIG8gY2FzbyByYWl6IENUMDEyIGUgcmVleGVjdXRhciBlc3RlIGZsdXhvLiIsCiAgInN0YXR1cyI6ICJibG9xdWVhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTA2VDIyOjU3OjM5LjQ1OFoiCn0="
                     }
                   ]
                 }
@@ -1072,12 +1072,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 18144,
+                  "duration": 23740,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-06T22:28:37.849Z",
+                  "startTime": "2026-07-06T22:57:39.495Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -1093,7 +1093,7 @@
                     {
                       "name": "diagnostic-CT017-CONTAS-PAGAR",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAxNy1DT05UQVMtUEFHQVIiLAogICJzZXZlcml0eSI6ICJjcml0aWNhIiwKICAiY2FzZUlkIjogIkNUMDE3IiwKICAidGl0bGUiOiAiQ29udGFzIGEgcGFnYXIsIHN0YXR1cyBlIGZpbHRyb3MiLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vZGFzaGJvYXJkIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjE5MTkwMCIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxN1wiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJDb250YXMgYSBwYWdhciBkZXZlbSBleGliaXIgc3RhdHVzIGUgZmlsdHJvcyBmdW5jaW9uYWlzIGFwb3MgT0MuIiwKICAiYWN0dWFsIjogIkNhc28gYmxvcXVlYWRvIHBvciBkZXBlbmRlbmNpYSBDVDAxNSByZWdpc3RyYWRhIGNvbW8gYmxvcXVlYWRvLiIsCiAgImltcGFjdCI6ICJTZW0gY29udGEgYSBwYWdhciByYXN0cmVhdmVsIG8gZmluYW5jZWlybyBuYW8gY29uc2VndWUgcHJvZ3JhbWFyIG91IHJlY29uY2lsaWFyIHBhZ2FtZW50b3MuIiwKICAiYnVzaW5lc3NJbXBhY3QiOiAiU2VtIGNvbnRhIGEgcGFnYXIgcmFzdHJlYXZlbCBvIGZpbmFuY2Vpcm8gbmFvIGNvbnNlZ3VlIHByb2dyYW1hciBvdSByZWNvbmNpbGlhciBwYWdhbWVudG9zLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIHByaW1laXJvIG8gY2FzbyByYWl6IENUMDE1IGUgcmVleGVjdXRhciBlc3RlIGZsdXhvLiIsCiAgInN0YXR1cyI6ICJibG9xdWVhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTA2VDIyOjI4OjU1Ljk1N1oiCn0="
+                      "body": "ewogICJpZCI6ICJDVDAxNy1DT05UQVMtUEFHQVIiLAogICJzZXZlcml0eSI6ICJjcml0aWNhIiwKICAiY2FzZUlkIjogIkNUMDE3IiwKICAidGl0bGUiOiAiQ29udGFzIGEgcGFnYXIsIHN0YXR1cyBlIGZpbHRyb3MiLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vZGFzaGJvYXJkIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjE5NDcyNyIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxN1wiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJDb250YXMgYSBwYWdhciBkZXZlbSBleGliaXIgc3RhdHVzIGUgZmlsdHJvcyBmdW5jaW9uYWlzIGFwb3MgT0MuIiwKICAiYWN0dWFsIjogIkNhc28gYmxvcXVlYWRvIHBvciBkZXBlbmRlbmNpYSBDVDAxNSByZWdpc3RyYWRhIGNvbW8gYmxvcXVlYWRvLiIsCiAgImltcGFjdCI6ICJTZW0gY29udGEgYSBwYWdhciByYXN0cmVhdmVsIG8gZmluYW5jZWlybyBuYW8gY29uc2VndWUgcHJvZ3JhbWFyIG91IHJlY29uY2lsaWFyIHBhZ2FtZW50b3MuIiwKICAiYnVzaW5lc3NJbXBhY3QiOiAiU2VtIGNvbnRhIGEgcGFnYXIgcmFzdHJlYXZlbCBvIGZpbmFuY2Vpcm8gbmFvIGNvbnNlZ3VlIHByb2dyYW1hciBvdSByZWNvbmNpbGlhciBwYWdhbWVudG9zLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIHByaW1laXJvIG8gY2FzbyByYWl6IENUMDE1IGUgcmVleGVjdXRhciBlc3RlIGZsdXhvLiIsCiAgInN0YXR1cyI6ICJibG9xdWVhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTA2VDIyOjU4OjAzLjIxMVoiCn0="
                     }
                   ]
                 }
@@ -1132,12 +1132,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 26177,
+                  "duration": 26938,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-06T22:28:56.005Z",
+                  "startTime": "2026-07-06T22:58:03.244Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -1153,7 +1153,7 @@
                     {
                       "name": "diagnostic-CT018-PAGAMENTOS",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAxOC1QQUdBTUVOVE9TIiwKICAic2V2ZXJpdHkiOiAiY3JpdGljYSIsCiAgImNhc2VJZCI6ICJDVDAxOCIsCiAgInRpdGxlIjogIlBhZ2FtZW50byBwYXJjaWFsLCBmaW5hbCBlIHRlbnRhdGl2YSBhY2ltYSBkbyBzYWxkbyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9kYXNoYm9hcmQiLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzA2MTkxOTAwIiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDE4XCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIlBhZ2FtZW50byBwYXJjaWFsL2ZpbmFsIGRldmUgYXR1YWxpemFyIHNhbGRvIGUgdGVudGF0aXZhIGFjaW1hIGRvIHNhbGRvIGRldmUgc2VyIGJsb3F1ZWFkYS4iLAogICJhY3R1YWwiOiAiQ2FzbyBibG9xdWVhZG8gcG9yIGRlcGVuZGVuY2lhIENUMDE3IHJlZ2lzdHJhZGEgY29tbyBibG9xdWVhZG8uIiwKICAiaW1wYWN0IjogIkVycm8gZW0gcGFnYW1lbnRvIGRpc3RvcmNlIGN1c3RvIHJlYWwsIGRhc2hib2FyZCBlIHRvbWFkYSBkZSBkZWNpc2FvLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIkVycm8gZW0gcGFnYW1lbnRvIGRpc3RvcmNlIGN1c3RvIHJlYWwsIGRhc2hib2FyZCBlIHRvbWFkYSBkZSBkZWNpc2FvLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIHByaW1laXJvIG8gY2FzbyByYWl6IENUMDE3IGUgcmVleGVjdXRhciBlc3RlIGZsdXhvLiIsCiAgInN0YXR1cyI6ICJibG9xdWVhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTA2VDIyOjI5OjIyLjE1NFoiCn0="
+                      "body": "ewogICJpZCI6ICJDVDAxOC1QQUdBTUVOVE9TIiwKICAic2V2ZXJpdHkiOiAiY3JpdGljYSIsCiAgImNhc2VJZCI6ICJDVDAxOCIsCiAgInRpdGxlIjogIlBhZ2FtZW50byBwYXJjaWFsLCBmaW5hbCBlIHRlbnRhdGl2YSBhY2ltYSBkbyBzYWxkbyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9kYXNoYm9hcmQiLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzA2MTk0NzI3IiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDE4XCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIlBhZ2FtZW50byBwYXJjaWFsL2ZpbmFsIGRldmUgYXR1YWxpemFyIHNhbGRvIGUgdGVudGF0aXZhIGFjaW1hIGRvIHNhbGRvIGRldmUgc2VyIGJsb3F1ZWFkYS4iLAogICJhY3R1YWwiOiAiQ2FzbyBibG9xdWVhZG8gcG9yIGRlcGVuZGVuY2lhIENUMDE3IHJlZ2lzdHJhZGEgY29tbyBibG9xdWVhZG8uIiwKICAiaW1wYWN0IjogIkVycm8gZW0gcGFnYW1lbnRvIGRpc3RvcmNlIGN1c3RvIHJlYWwsIGRhc2hib2FyZCBlIHRvbWFkYSBkZSBkZWNpc2FvLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIkVycm8gZW0gcGFnYW1lbnRvIGRpc3RvcmNlIGN1c3RvIHJlYWwsIGRhc2hib2FyZCBlIHRvbWFkYSBkZSBkZWNpc2FvLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIHByaW1laXJvIG8gY2FzbyByYWl6IENUMDE3IGUgcmVleGVjdXRhciBlc3RlIGZsdXhvLiIsCiAgInN0YXR1cyI6ICJibG9xdWVhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTA2VDIyOjU4OjMwLjE1M1oiCn0="
                     }
                   ]
                 }
@@ -1192,12 +1192,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 24885,
+                  "duration": 30406,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-06T22:29:22.193Z",
+                  "startTime": "2026-07-06T22:58:30.193Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -1213,7 +1213,7 @@
                     {
                       "name": "diagnostic-CT019-DASHBOARD-FINANCEIRO",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAxOS1EQVNIQk9BUkQtRklOQU5DRUlSTyIsCiAgInNldmVyaXR5IjogImFsdGEiLAogICJjYXNlSWQiOiAiQ1QwMTkiLAogICJ0aXRsZSI6ICJEYXNoYm9hcmQgZmluYW5jZWlybyBhcG9zIGNvbXByYS9wYWdhbWVudG8vbWFvIGRlIG9icmEiLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vZGFzaGJvYXJkIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjE5MTkwMCIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxOVwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJEYXNoYm9hcmQgZGV2ZSByZWZsZXRpciBjb21wcmEsIHBhZ2FtZW50b3MsIG1hbyBkZSBvYnJhLCBjdXN0byByZWFsIGUgc2FsZG9zLiIsCiAgImFjdHVhbCI6ICJDYXNvIGJsb3F1ZWFkbyBwb3IgZGVwZW5kZW5jaWEgQ1QwMTEgcmVnaXN0cmFkYSBjb21vIGJsb3F1ZWFkby4iLAogICJpbXBhY3QiOiAiSW5kaWNhZG9yZXMgaW5jb25zaXN0ZW50ZXMgcHJlanVkaWNhbSBjb250cm9sZSBmaW5hbmNlaXJvIGUgcmFzdHJlYWJpbGlkYWRlLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIkluZGljYWRvcmVzIGluY29uc2lzdGVudGVzIHByZWp1ZGljYW0gY29udHJvbGUgZmluYW5jZWlybyBlIHJhc3RyZWFiaWxpZGFkZS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJDb3JyaWdpciBwcmltZWlybyBvIGNhc28gcmFpeiBDVDAxMSBlIHJlZXhlY3V0YXIgZXN0ZSBmbHV4by4iLAogICJzdGF0dXMiOiAiYmxvcXVlYWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0wNlQyMjoyOTo0Ny4wNDhaIgp9"
+                      "body": "ewogICJpZCI6ICJDVDAxOS1EQVNIQk9BUkQtRklOQU5DRUlSTyIsCiAgInNldmVyaXR5IjogImFsdGEiLAogICJjYXNlSWQiOiAiQ1QwMTkiLAogICJ0aXRsZSI6ICJEYXNoYm9hcmQgZmluYW5jZWlybyBhcG9zIGNvbXByYS9wYWdhbWVudG8vbWFvIGRlIG9icmEiLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vZGFzaGJvYXJkIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjE5NDcyNyIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxOVwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJEYXNoYm9hcmQgZGV2ZSByZWZsZXRpciBjb21wcmEsIHBhZ2FtZW50b3MsIG1hbyBkZSBvYnJhLCBjdXN0byByZWFsIGUgc2FsZG9zLiIsCiAgImFjdHVhbCI6ICJDYXNvIGJsb3F1ZWFkbyBwb3IgZGVwZW5kZW5jaWEgQ1QwMTEgcmVnaXN0cmFkYSBjb21vIGJsb3F1ZWFkby4iLAogICJpbXBhY3QiOiAiSW5kaWNhZG9yZXMgaW5jb25zaXN0ZW50ZXMgcHJlanVkaWNhbSBjb250cm9sZSBmaW5hbmNlaXJvIGUgcmFzdHJlYWJpbGlkYWRlLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIkluZGljYWRvcmVzIGluY29uc2lzdGVudGVzIHByZWp1ZGljYW0gY29udHJvbGUgZmluYW5jZWlybyBlIHJhc3RyZWFiaWxpZGFkZS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJDb3JyaWdpciBwcmltZWlybyBvIGNhc28gcmFpeiBDVDAxMSBlIHJlZXhlY3V0YXIgZXN0ZSBmbHV4by4iLAogICJzdGF0dXMiOiAiYmxvcXVlYWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0wNlQyMjo1OTowMC41NjhaIgp9"
                     }
                   ]
                 }
@@ -1250,7 +1250,7 @@
                   "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 78415,
+                  "duration": 78116,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -1258,16 +1258,16 @@
                   "steps": [
                     {
                       "title": "CT002-USUARIOS-PERMISSOES",
-                      "duration": 50073
+                      "duration": 49667
                     }
                   ],
-                  "startTime": "2026-07-06T22:29:47.088Z",
+                  "startTime": "2026-07-06T22:59:00.613Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "diagnostic-CT002-USUARIOS-PERMISSOES",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAwMi1VU1VBUklPUy1QRVJNSVNTT0VTIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAwMiIsCiAgInRpdGxlIjogIkNyaWFjYW8sIGVkaWNhbywgaW5hdGl2YWNhbyBlIGxvZ2luIGJsb3F1ZWFkbyBkZSB1c3VhcmlvIGluYXRpdm8iLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vb3JjYW1lbnRvIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjE5MTkwMCIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAwMlwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJVc3VhcmlvIG9wZXJhY2lvbmFsIGRldmUgcG9kZXIgc2VyIGNyaWFkby9lZGl0YWRvOyB1c3VhcmlvIGluYXRpdm8gZGV2ZSBzZXIgaW1wZWRpZG8gZGUgYXV0ZW50aWNhci4iLAogICJhY3R1YWwiOiAiQ29tcG9ydGFtZW50byBvYnNlcnZhZG8gY29uZm9ybWUgZXNwZXJhZG8uIiwKICAiaW1wYWN0IjogIlBlcm1pc3NvZXMgaW5jb3JyZXRhcyBwb2RlbSBleHBvciBmaW5hbmNlaXJvIG91IHdvcmtmbG93IGEgcGVyZmlzIGluZGV2aWRvcy4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJQZXJtaXNzb2VzIGluY29ycmV0YXMgcG9kZW0gZXhwb3IgZmluYW5jZWlybyBvdSB3b3JrZmxvdyBhIHBlcmZpcyBpbmRldmlkb3MuIiwKICAicmVjb21tZW5kYXRpb24iOiAiUmV2aXNhciBtYXRyaXogZGUgcGVyZmlzLCBzdGF0dXMgZGUgdXN1YXJpbyBlIHZhbGlkYWNhbyBkZSBsb2dpbiBubyBiYWNrZW5kLiIsCiAgInN0YXR1cyI6ICJhcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMjI6MzE6MDUuNDcwWiIKfQ=="
+                      "body": "ewogICJpZCI6ICJDVDAwMi1VU1VBUklPUy1QRVJNSVNTT0VTIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAwMiIsCiAgInRpdGxlIjogIkNyaWFjYW8sIGVkaWNhbywgaW5hdGl2YWNhbyBlIGxvZ2luIGJsb3F1ZWFkbyBkZSB1c3VhcmlvIGluYXRpdm8iLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vb3JjYW1lbnRvIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjE5NDcyNyIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAwMlwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJVc3VhcmlvIG9wZXJhY2lvbmFsIGRldmUgcG9kZXIgc2VyIGNyaWFkby9lZGl0YWRvOyB1c3VhcmlvIGluYXRpdm8gZGV2ZSBzZXIgaW1wZWRpZG8gZGUgYXV0ZW50aWNhci4iLAogICJhY3R1YWwiOiAiQ29tcG9ydGFtZW50byBvYnNlcnZhZG8gY29uZm9ybWUgZXNwZXJhZG8uIiwKICAiaW1wYWN0IjogIlBlcm1pc3NvZXMgaW5jb3JyZXRhcyBwb2RlbSBleHBvciBmaW5hbmNlaXJvIG91IHdvcmtmbG93IGEgcGVyZmlzIGluZGV2aWRvcy4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJQZXJtaXNzb2VzIGluY29ycmV0YXMgcG9kZW0gZXhwb3IgZmluYW5jZWlybyBvdSB3b3JrZmxvdyBhIHBlcmZpcyBpbmRldmlkb3MuIiwKICAicmVjb21tZW5kYXRpb24iOiAiUmV2aXNhciBtYXRyaXogZGUgcGVyZmlzLCBzdGF0dXMgZGUgdXN1YXJpbyBlIHZhbGlkYWNhbyBkZSBsb2dpbiBubyBiYWNrZW5kLiIsCiAgInN0YXR1cyI6ICJhcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMjM6MDA6MTguNjk2WiIKfQ=="
                     }
                   ]
                 }
@@ -1296,7 +1296,7 @@
                   "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "failed",
-                  "duration": 75313,
+                  "duration": 76334,
                   "error": {
                     "message": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel(/e-?mail|email|usuario|usuário/i).or(getByPlaceholder(/e-?mail|email|usuario|usuário/i)).or(locator('input[type=\"email\"]')).first() to be visible\u001b[22m\n",
                     "stack": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel(/e-?mail|email|usuario|usuário/i).or(getByPlaceholder(/e-?mail|email|usuario|usuário/i)).or(locator('input[type=\"email\"]')).first() to be visible\u001b[22m\n\n    at login (/home/colatto/repo/R3/test4s/support/auth.ts:12:20)\n    at AuthPage.loginAsAdmin (/home/colatto/repo/R3/test4s/support/pages/auth-page.ts:10:5)\n    at /home/colatto/repo/R3/test4s/tests/05-permissions-audit.spec.ts:44:5\n    at /home/colatto/repo/R3/test4s/tests/05-permissions-audit.spec.ts:43:3",
@@ -1320,7 +1320,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-06T22:31:05.512Z",
+                  "startTime": "2026-07-06T23:00:18.739Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1370,7 +1370,7 @@
                   "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 34873,
+                  "duration": 25564,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -1378,16 +1378,16 @@
                   "steps": [
                     {
                       "title": "CT021-AUDITORIA",
-                      "duration": 105
+                      "duration": 112
                     }
                   ],
-                  "startTime": "2026-07-06T22:32:21.269Z",
+                  "startTime": "2026-07-06T23:01:35.525Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "diagnostic-CT021-AUDITORIA",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAyMS1BVURJVE9SSUEiLAogICJzZXZlcml0eSI6ICJtZWRpYSIsCiAgImNhc2VJZCI6ICJDVDAyMSIsCiAgInRpdGxlIjogIkF1ZGl0b3JpYSBkZSBjcmlhY2FvLCBlZGljYW8sIGV4Y2x1c2FvL2NhbmNlbGFtZW50byBlIGRlY2lzb2VzIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2F1ZGl0b3JpYSIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MDYxOTE5MDAiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMjFcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiQXVkaXRvcmlhIGRldmUgcmVnaXN0cmFyIGNyaWFjYW8sIGVkaWNhbywgZXhjbHVzYW8vY2FuY2VsYW1lbnRvIGUgZGVjaXNvZXMgY29tIHVzdWFyaW8vZGF0YS9ob3JhLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiQXVkaXRvcmlhIGluY29tcGxldGEgcmVkdXogcmFzdHJlYWJpbGlkYWRlIGUgY2FwYWNpZGFkZSBkZSBhcHVyYWNhby4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJBdWRpdG9yaWEgaW5jb21wbGV0YSByZWR1eiByYXN0cmVhYmlsaWRhZGUgZSBjYXBhY2lkYWRlIGRlIGFwdXJhY2FvLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkdhcmFudGlyIGV2ZW50b3MgZGUgYXVkaXRvcmlhIHBhcmEgZW50aWRhZGVzIGZpbmFuY2VpcmFzLCBjYWRhc3Ryb3MgZSB3b3JrZmxvdy4iLAogICJzdGF0dXMiOiAiYXByb3ZhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTA2VDIyOjMyOjU2LjIwMFoiCn0="
+                      "body": "ewogICJpZCI6ICJDVDAyMS1BVURJVE9SSUEiLAogICJzZXZlcml0eSI6ICJtZWRpYSIsCiAgImNhc2VJZCI6ICJDVDAyMSIsCiAgInRpdGxlIjogIkF1ZGl0b3JpYSBkZSBjcmlhY2FvLCBlZGljYW8sIGV4Y2x1c2FvL2NhbmNlbGFtZW50byBlIGRlY2lzb2VzIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2F1ZGl0b3JpYSIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MDYxOTQ3MjciLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMjFcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiQXVkaXRvcmlhIGRldmUgcmVnaXN0cmFyIGNyaWFjYW8sIGVkaWNhbywgZXhjbHVzYW8vY2FuY2VsYW1lbnRvIGUgZGVjaXNvZXMgY29tIHVzdWFyaW8vZGF0YS9ob3JhLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiQXVkaXRvcmlhIGluY29tcGxldGEgcmVkdXogcmFzdHJlYWJpbGlkYWRlIGUgY2FwYWNpZGFkZSBkZSBhcHVyYWNhby4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJBdWRpdG9yaWEgaW5jb21wbGV0YSByZWR1eiByYXN0cmVhYmlsaWRhZGUgZSBjYXBhY2lkYWRlIGRlIGFwdXJhY2FvLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkdhcmFudGlyIGV2ZW50b3MgZGUgYXVkaXRvcmlhIHBhcmEgZW50aWRhZGVzIGZpbmFuY2VpcmFzLCBjYWRhc3Ryb3MgZSB3b3JrZmxvdy4iLAogICJzdGF0dXMiOiAiYXByb3ZhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTA2VDIzOjAyOjAxLjE0OFoiCn0="
                     }
                   ]
                 }
@@ -1405,8 +1405,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-06T22:19:15.961Z",
-    "duration": 820333.311,
+    "startTime": "2026-07-06T22:47:48.030Z",
+    "duration": 853211.475,
     "expected": 7,
     "skipped": 11,
     "unexpected": 4,

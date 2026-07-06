@@ -38,7 +38,7 @@ Call log:
     - generic [ref=e20]:
       - generic [ref=e22]: A
       - generic [ref=e23]:
-        - paragraph [ref=e24]: AUTO-4S-20260706191900 Usuario Engenharia
+        - paragraph [ref=e24]: AUTO-4S-20260706194727 Usuario Engenharia
         - paragraph [ref=e25]: ENGENHARIA
       - button "⏻" [ref=e26] [cursor=pointer]
   - main [ref=e27]:
@@ -63,6 +63,11 @@ Call log:
           - option "4S-OBR-053-CAP-VMO"
         - combobox [ref=e39]:
           - option "Todas as categorias" [selected]
+          - option "AUTO-4S-20260706194727 Subempreiteiros"
+          - option "AUTO-4S-20260706194727 Mao de obra"
+          - option "AUTO-4S-20260706194727 Materiais"
+          - option "AUTO-4S-20260706194727 Equipamentos"
+          - option "AUTO-4S-20260706194727 Custos indiretos"
           - option "AUTO-4S-20260706191900 Subempreiteiros"
           - option "AUTO-4S-20260706191900 Equipamentos"
           - option "AUTO-4S-20260706191900 Custos indiretos"
