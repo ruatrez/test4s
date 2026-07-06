@@ -2,7 +2,7 @@
 
 Implementei e executei os testes no próprio sistema [4s.ruatrez.com](https://4s.ruatrez.com), usando o Brave, navegador baseado em chromium, instalado localmente em /usr/bin/brave-browser.
 
-Resultado final da execução limpa mais recente: 6 testes, 4 aprovados e 2 reprovados. Passaram login/logout, login inválido, carregamento das rotas principais, permissões/workflow e regressão básica de filtros/telas. As reprovações restantes ficaram concentradas no cadastro de obra/centro e no avanço da requisição para aprovação após sobreposição modal.
+Resultado final da execução limpa mais recente: 22 testes, 14 aprovados, 1 reprovado e 7 bloqueados. Passaram login/logout, login inválido, carregamento das rotas principais, cadastros base, orçamento base, permissões/workflow e auditoria. A reprovação restante ficou concentrada no CT012, bloqueando a cadeia de suprimentos/financeiro.
 
 ## Arquivos principais gerados:
 
@@ -29,8 +29,7 @@ Pulado CT005, CT008-CT019 dependem da cadeia quebrada.
 
 ### CTs Reprovados
 
-- CT004 - Não encontrou o campo Razão Social | Razão Social - [test-results/artifacts/02-master-data-CT004---cli-154a6-icao-persistencia-e-vinculo-chromium-desktop/test-failed-1.png](./test-results/artifacts/02-master-data-CT004---cli-154a6-icao-persistencia-e-vinculo-chromium-desktop/test-failed-1.png)
-- CT007 - Categoria criada não apareceu na listagem (AUTO-4S-20260703120000 Materiais) - [test-results/artifacts/02-master-data-CT007---categorias-orcamentarias-chromium-desktop/test-failed-1.png](./test-results/artifacts/02-master-data-CT007---categorias-orcamentarias-chromium-desktop/test-failed-1.png)
+- CT012 - Severidade: crítica | Tipo: falha legítima provável do produto | Descrição: em Suprimentos > Requisições, a obra e o centro da massa AUTO-4S-20260706114042 foram selecionados, mas o select Item orçado ficou vazio e a UI exibiu "Nenhum item orçado ativo encontrado para a obra selecionada", apesar de CT008 ter criado e persistido o item orçado. | Evidências: [screenshot](./test-results/artifacts/04-procurement-finance-e2e-8e21f-e-requisicao-acima-do-saldo-chromium-desktop/test-failed-1.png), [trace](./test-results/artifacts/04-procurement-finance-e2e-8e21f-e-requisicao-acima-do-saldo-chromium-desktop/trace.zip), [diagnostics](./test-results/diagnostics.jsonl) | Recomendação: revisar vínculo/status do item orçado criado no orçamento e sua exposição no módulo de requisições para a mesma obra/centro.
 
 ## Testes implementados
 

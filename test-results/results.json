@@ -3,8 +3,7 @@
     "argv": [
       "/home/linuxbrew/.linuxbrew/Cellar/node/26.4.0/bin/node",
       "/home/colatto/repo/R3/test4s/node_modules/.bin/playwright",
-      "test",
-      "tests/02-master-data.spec.ts"
+      "test"
     ],
     "configFile": "/home/colatto/repo/R3/test4s/playwright.config.ts",
     "rootDir": "/home/colatto/repo/R3/test4s/tests",
@@ -73,14 +72,14 @@
   },
   "suites": [
     {
-      "title": "02-master-data.spec.ts",
-      "file": "02-master-data.spec.ts",
+      "title": "01-smoke.spec.ts",
+      "file": "01-smoke.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "CT004 - cliente e contrato com edicao, persistencia e vinculo",
-          "ok": false,
+          "title": "CT001 - login valido, logout, login invalido e sessao expirada quando observavel",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -93,79 +92,176 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 28333,
-                  "error": {
-                    "message": "Error: Could not find field: Razão Social | Razao Social",
-                    "stack": "Error: Could not find field: Razão Social | Razao Social\n    at fillField (/home/colatto/repo/R3/test4s/support/ui.ts:110:22)\n    at tryCreateSimpleRecord (/home/colatto/repo/R3/test4s/support/ui.ts:210:9)\n    at RegistrationsPage.createClientAndContract (/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts:21:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:21:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:13:3",
-                    "location": {
-                      "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
-                      "column": 22,
-                      "line": 110
-                    },
-                    "snippet": "\u001b[90m   at \u001b[39m../support/ui.ts:110\n\n  108 |   }\n  109 |   const target = await firstVisible(candidates);\n> 110 |   if (!target) throw new Error(`Could not find field: ${labels.join(' | ')}`);\n      |                      ^\n  111 |   await target.fill(String(value));\n  112 | }\n  113 |"
-                  },
-                  "errors": [
+                  "status": "passed",
+                  "duration": 39452,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
                     {
-                      "location": {
-                        "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
-                        "column": 22,
-                        "line": 110
-                      },
-                      "message": "Error: Could not find field: Razão Social | Razao Social\n\n   at ../support/ui.ts:110\n\n  108 |   }\n  109 |   const target = await firstVisible(candidates);\n> 110 |   if (!target) throw new Error(`Could not find field: ${labels.join(' | ')}`);\n      |                      ^\n  111 |   await target.fill(String(value));\n  112 | }\n  113 |\n    at fillField (/home/colatto/repo/R3/test4s/support/ui.ts:110:22)\n    at tryCreateSimpleRecord (/home/colatto/repo/R3/test4s/support/ui.ts:210:9)\n    at RegistrationsPage.createClientAndContract (/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts:21:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:21:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:13:3"
+                      "title": "CT001-AUTH",
+                      "duration": 39141
                     }
                   ],
+                  "startTime": "2026-07-06T14:41:01.957Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT001-AUTH",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAwMS1BVVRIIiwKICAic2V2ZXJpdHkiOiAiY3JpdGljYSIsCiAgImNhc2VJZCI6ICJDVDAwMSIsCiAgInRpdGxlIjogIkxvZ2luIHZhbGlkbywgbG9nb3V0LCBsb2dpbiBpbnZhbGlkbyBlIHNlc3NhbyBleHBpcmFkYSBxdWFuZG8gb2JzZXJ2YXZlbCIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS8iLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzA2MTE0MDQyIiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDAxXCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIkxvZ2luIHZhbGlkbyBkZXZlIGFicmlyIGEgYXBsaWNhY2FvLCBsb2dvdXQgZGV2ZSBlbmNlcnJhciBzZXNzYW8gZSBsb2dpbiBpbnZhbGlkbyBkZXZlIGJsb3F1ZWFyIGFjZXNzby4iLAogICJhY3R1YWwiOiAiQ29tcG9ydGFtZW50byBvYnNlcnZhZG8gY29uZm9ybWUgZXNwZXJhZG8uIiwKICAiaW1wYWN0IjogIlNlbSBhdXRlbnRpY2FjYW8gY29uZmlhdmVsIG5hbyBoYSB2YWxpZGFjYW8gc2VndXJhIGRvcyBmbHV4b3MgZGEgRmFzZSAxLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIlNlbSBhdXRlbnRpY2FjYW8gY29uZmlhdmVsIG5hbyBoYSB2YWxpZGFjYW8gc2VndXJhIGRvcyBmbHV4b3MgZGEgRmFzZSAxLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvbmZpcm1hciBjcmVkZW5jaWFpcywgaW52YWxpZGFjYW8gZGUgc2Vzc2FvIGUgbWVuc2FnZW5zIGRlIGVycm8gZGUgYXV0ZW50aWNhY2FvLiIsCiAgInN0YXR1cyI6ICJhcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMTQ6NDE6NDEuMzAxWiIKfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f4ef03261b0851aba39f-d62e0f460686c4340758",
+          "file": "01-smoke.spec.ts",
+          "line": 11,
+          "column": 5
+        },
+        {
+          "title": "CT003 - atalhos da tela Cadastros abrem os dominios principais",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 27043,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT003-CADASTROS-ATALHOS",
+                      "duration": 1157
+                    }
+                  ],
+                  "startTime": "2026-07-06T14:41:41.528Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT003-CADASTROS-ATALHOS",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAwMy1DQURBU1RST1MtQVRBTEhPUyIsCiAgInNldmVyaXR5IjogIm1lZGlhIiwKICAiY2FzZUlkIjogIkNUMDAzIiwKICAidGl0bGUiOiAiQXRhbGhvcyBkYSB0ZWxhIENhZGFzdHJvcyIsCiAgInBhdGgiOiAiQ2FkYXN0cm9zIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjExNDA0MiIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAwM1wiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJBdGFsaG9zIGRlIENhZGFzdHJvcyBkZXZlbSBhYnJpciBvcyBjYWRhc3Ryb3MgbWVzdHJlcyBleGliaWRvcyBuYSB0ZWxhLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiQXRhbGhvcyBxdWVicmFkb3MgcmVkdXplbSBwcm9kdXRpdmlkYWRlIGUgcG9kZW0gb2N1bHRhciBtb2R1bG9zIGFkbWluaXN0cmF0aXZvcy4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJBdGFsaG9zIHF1ZWJyYWRvcyByZWR1emVtIHByb2R1dGl2aWRhZGUgZSBwb2RlbSBvY3VsdGFyIG1vZHVsb3MgYWRtaW5pc3RyYXRpdm9zLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIGxpbmtzL3JvdGFzIGRvcyBjYXJkcyBvdSBib3RvZXMgZGEgdGVsYSBDYWRhc3Ryb3MuIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0wNlQxNDo0MjowOC41MzVaIgp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f4ef03261b0851aba39f-2a353c88f15a2adde799",
+          "file": "01-smoke.spec.ts",
+          "line": 30,
+          "column": 5
+        },
+        {
+          "title": "CT022 - rotas principais sem tela em branco, erros JS criticos ou HTTP 5xx",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 31186,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT022-ROTAS-PRINCIPAIS",
+                      "duration": 1223
+                    }
+                  ],
+                  "startTime": "2026-07-06T14:42:08.579Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT022-ROTAS-PRINCIPAIS",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAyMi1ST1RBUy1QUklOQ0lQQUlTIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAyMiIsCiAgInRpdGxlIjogIlJvdGFzIHByaW5jaXBhaXMgc2VtIHRlbGEgZW0gYnJhbmNvLCBlcnJvcyBKUyBjcml0aWNvcyBvdSBIVFRQIDV4eCIsCiAgInBhdGgiOiAiTWVudSBwcmluY2lwYWwiLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzA2MTE0MDQyIiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDIyXCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIlRvZGFzIGFzIHJvdGFzIHByaW5jaXBhaXMgZGV2ZW0gY2FycmVnYXIgY29udGV1ZG8gdmlzaXZlbCBzZW0gdGVsYSBlbSBicmFuY28sIGVycm8gSlMgY3JpdGljbyBvdSBIVFRQIDV4eC4iLAogICJhY3R1YWwiOiAiQ29tcG9ydGFtZW50byBvYnNlcnZhZG8gY29uZm9ybWUgZXNwZXJhZG8uIiwKICAiaW1wYWN0IjogIlRlbGEgcXVlYnJhZGEgYmxvcXVlaWEgdmFsaWRhY2FvIGZ1bmNpb25hbCBlIG9wZXJhY2FvIGRvIG1vZHVsby4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJUZWxhIHF1ZWJyYWRhIGJsb3F1ZWlhIHZhbGlkYWNhbyBmdW5jaW9uYWwgZSBvcGVyYWNhbyBkbyBtb2R1bG8uIiwKICAicmVjb21tZW5kYXRpb24iOiAiQ29ycmlnaXIgcm90YSwgcGVybWlzc2FvLCBjYXJyZWdhbWVudG8gZGUgZGFkb3Mgb3UgY29tcG9uZW50ZSBmcm9udGVuZCBkYSB0ZWxhIGFmZXRhZGEuIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0wNlQxNDo0MjozOS43MjNaIgp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f4ef03261b0851aba39f-c1e3778bc8632781820a",
+          "file": "01-smoke.spec.ts",
+          "line": 50,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "02-master-data.spec.ts",
+      "file": "02-master-data.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "CT004 - cliente e contrato com edicao, persistencia e vinculo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 47286,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "steps": [
                     {
                       "title": "CT004-CLIENTE-CONTRATO",
-                      "duration": 241,
-                      "error": {
-                        "message": "Error: Could not find field: Razão Social | Razao Social",
-                        "stack": "Error: Could not find field: Razão Social | Razao Social\n    at fillField (/home/colatto/repo/R3/test4s/support/ui.ts:110:22)\n    at tryCreateSimpleRecord (/home/colatto/repo/R3/test4s/support/ui.ts:210:9)\n    at RegistrationsPage.createClientAndContract (/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts:21:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:21:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:13:3",
-                        "location": {
-                          "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
-                          "column": 22,
-                          "line": 110
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39m../support/ui.ts:110\n\n  108 |   }\n  109 |   const target = await firstVisible(candidates);\n> 110 |   if (!target) throw new Error(`Could not find field: ${labels.join(' | ')}`);\n      |                      ^\n  111 |   await target.fill(String(value));\n  112 | }\n  113 |"
-                      }
+                      "duration": 18174
                     }
                   ],
-                  "startTime": "2026-07-03T21:12:31.875Z",
+                  "startTime": "2026-07-06T14:42:39.778Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "diagnostic-CT004-CLIENTE-CONTRATO",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAwNC1DTElFTlRFLUNPTlRSQVRPIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAwNCIsCiAgInRpdGxlIjogIkNsaWVudGUgZSBjb250cmF0byBjb20gZWRpY2FvLCBwZXJzaXN0ZW5jaWEgZSB2aW5jdWxvIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2NsaWVudGVzIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwMzEyMDAwMCIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAwNFwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJDbGllbnRlIGUgY29udHJhdG8gZGV2ZW0gc2VyIGNyaWFkb3MsIGVkaXRhZG9zLCB2aW5jdWxhZG9zIGUgcGVyc2lzdGlkb3MgYXBvcyByZWZyZXNoLiIsCiAgImFjdHVhbCI6ICJDb3VsZCBub3QgZmluZCBmaWVsZDogUmF6w6NvIFNvY2lhbCB8IFJhemFvIFNvY2lhbCIsCiAgImltcGFjdCI6ICJTZW0gY29udHJhdG8vY2xpZW50ZSBuYW8gZSBwb3NzaXZlbCBpbmljaWFyIGEgY2FkZWlhIGZpbmFuY2VpcmEgZGEgb2JyYS4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJTZW0gY29udHJhdG8vY2xpZW50ZSBuYW8gZSBwb3NzaXZlbCBpbmljaWFyIGEgY2FkZWlhIGZpbmFuY2VpcmEgZGEgb2JyYS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJDb3JyaWdpciBwZXJzaXN0ZW5jaWEgZSByZWxhY2lvbmFtZW50byBlbnRyZSBjbGllbnRlIGUgY29udHJhdG8uIiwKICAic3RhdHVzIjogInJlcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogIi9ob21lL2NvbGF0dG8vcmVwby9SMy90ZXN0NHMvdGVzdC1yZXN1bHRzL0NUMDA0LUNMSUVOVEUtQ09OVFJBVE8ucG5nIiwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDNUMjE6MTM6MDAuMDkxWiIKfQ=="
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/02-master-data-CT004---cli-154a6-icao-persistencia-e-vinculo-chromium-desktop/test-failed-1.png"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/02-master-data-CT004---cli-154a6-icao-persistencia-e-vinculo-chromium-desktop/error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/02-master-data-CT004---cli-154a6-icao-persistencia-e-vinculo-chromium-desktop/trace.zip"
+                      "body": "ewogICJpZCI6ICJDVDAwNC1DTElFTlRFLUNPTlRSQVRPIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAwNCIsCiAgInRpdGxlIjogIkNsaWVudGUgZSBjb250cmF0byBjb20gZWRpY2FvLCBwZXJzaXN0ZW5jaWEgZSB2aW5jdWxvIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2NsaWVudGVzLyIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MDYxMTQwNDIiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMDRcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiQ2xpZW50ZSBlIGNvbnRyYXRvIGRldmVtIHNlciBjcmlhZG9zLCBlZGl0YWRvcywgdmluY3VsYWRvcyBlIHBlcnNpc3RpZG9zIGFwb3MgcmVmcmVzaC4iLAogICJhY3R1YWwiOiAiQ29tcG9ydGFtZW50byBvYnNlcnZhZG8gY29uZm9ybWUgZXNwZXJhZG8uIiwKICAiaW1wYWN0IjogIlNlbSBjb250cmF0by9jbGllbnRlIG5hbyBlIHBvc3NpdmVsIGluaWNpYXIgYSBjYWRlaWEgZmluYW5jZWlyYSBkYSBvYnJhLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIlNlbSBjb250cmF0by9jbGllbnRlIG5hbyBlIHBvc3NpdmVsIGluaWNpYXIgYSBjYWRlaWEgZmluYW5jZWlyYSBkYSBvYnJhLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIHBlcnNpc3RlbmNpYSBlIHJlbGFjaW9uYW1lbnRvIGVudHJlIGNsaWVudGUgZSBjb250cmF0by4iLAogICJzdGF0dXMiOiAiYXByb3ZhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTA2VDE0OjQzOjI3LjAzMloiCn0="
                     }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
-                    "column": 22,
-                    "line": 110
-                  }
+                  ]
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "d59d1b04a1b8372da34c-3dfc33f1f73fa9efada9",
@@ -180,52 +276,38 @@
           "tests": [
             {
               "timeout": 90000,
-              "annotations": [
-                {
-                  "type": "skip",
-                  "description": "Blocked by CT004",
-                  "location": {
-                    "file": "/home/colatto/repo/R3/test4s/support/diagnostics.ts",
-                    "line": 142,
-                    "column": 10
-                  }
-                }
-              ],
-              "expectedStatus": "skipped",
+              "annotations": [],
+              "expectedStatus": "passed",
               "projectId": "chromium-desktop",
               "projectName": "chromium-desktop",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "skipped",
-                  "duration": 25487,
+                  "status": "passed",
+                  "duration": 48908,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-03T21:13:00.713Z",
-                  "annotations": [
+                  "steps": [
                     {
-                      "type": "skip",
-                      "description": "Blocked by CT004",
-                      "location": {
-                        "file": "/home/colatto/repo/R3/test4s/support/diagnostics.ts",
-                        "line": 142,
-                        "column": 10
-                      }
+                      "title": "CT005-OBRA-CENTRO",
+                      "duration": 19383
                     }
                   ],
+                  "startTime": "2026-07-06T14:43:27.073Z",
+                  "annotations": [],
                   "attachments": [
                     {
                       "name": "diagnostic-CT005-OBRA-CENTRO",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAwNS1PQlJBLUNFTlRSTyIsCiAgInNldmVyaXR5IjogImFsdGEiLAogICJjYXNlSWQiOiAiQ1QwMDUiLAogICJ0aXRsZSI6ICJVbmlkYWRlLCBvYnJhIGUgY2VudHJvIGRlIGN1c3RvIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2Rhc2hib2FyZCIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MDMxMjAwMDAiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMDVcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiVW5pZGFkZSwgb2JyYSBlIGNlbnRybyBkZSBjdXN0byBkZXZlbSBmaWNhciBkaXNwb25pdmVpcyBwYXJhIG9zIG1vZHVsb3Mgc2VndWludGVzLiIsCiAgImFjdHVhbCI6ICJDYXNvIGJsb3F1ZWFkbyBwb3IgZGVwZW5kZW5jaWEgQ1QwMDQgcmVnaXN0cmFkYSBjb21vIHJlcHJvdmFkby4iLAogICJpbXBhY3QiOiAiRmFsaGEgbmVzc2UgY2FkYXN0cm8gaW1wZWRlIG9yY2FtZW50bywgcmVxdWlzaWNhbyBlIGZpbmFuY2Vpcm8uIiwKICAiYnVzaW5lc3NJbXBhY3QiOiAiRmFsaGEgbmVzc2UgY2FkYXN0cm8gaW1wZWRlIG9yY2FtZW50bywgcmVxdWlzaWNhbyBlIGZpbmFuY2Vpcm8uIiwKICAicmVjb21tZW5kYXRpb24iOiAiQ29ycmlnaXIgcHJpbWVpcm8gbyBjYXNvIHJhaXogQ1QwMDQgZSByZWV4ZWN1dGFyIGVzdGUgZmx1eG8uIiwKICAic3RhdHVzIjogImJsb3F1ZWFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDNUMjE6MTM6MjYuMjcwWiIKfQ=="
+                      "body": "ewogICJpZCI6ICJDVDAwNS1PQlJBLUNFTlRSTyIsCiAgInNldmVyaXR5IjogImFsdGEiLAogICJjYXNlSWQiOiAiQ1QwMDUiLAogICJ0aXRsZSI6ICJVbmlkYWRlLCBvYnJhIGUgY2VudHJvIGRlIGN1c3RvIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL29icmFzLyIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MDYxMTQwNDIiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMDVcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiVW5pZGFkZSwgb2JyYSBlIGNlbnRybyBkZSBjdXN0byBkZXZlbSBmaWNhciBkaXNwb25pdmVpcyBwYXJhIG9zIG1vZHVsb3Mgc2VndWludGVzLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiRmFsaGEgbmVzc2UgY2FkYXN0cm8gaW1wZWRlIG9yY2FtZW50bywgcmVxdWlzaWNhbyBlIGZpbmFuY2Vpcm8uIiwKICAiYnVzaW5lc3NJbXBhY3QiOiAiRmFsaGEgbmVzc2UgY2FkYXN0cm8gaW1wZWRlIG9yY2FtZW50bywgcmVxdWlzaWNhbyBlIGZpbmFuY2Vpcm8uIiwKICAicmVjb21tZW5kYXRpb24iOiAiUmV2aXNhciBvYnJpZ2F0b3JpZWRhZGUsIHZpbmN1bG9zIGUgcGVyc2lzdGVuY2lhIGRlIG9icmFzL2NlbnRyb3MuIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0wNlQxNDo0NDoxNS45NTZaIgp9"
                     }
                   ]
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
           "id": "d59d1b04a1b8372da34c-035add7100b207ce9ad0",
@@ -246,10 +328,10 @@
               "projectName": "chromium-desktop",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 26586,
+                  "duration": 27947,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -257,16 +339,16 @@
                   "steps": [
                     {
                       "title": "CT006-FORNECEDORES",
-                      "duration": 2261
+                      "duration": 2124
                     }
                   ],
-                  "startTime": "2026-07-03T21:13:26.308Z",
+                  "startTime": "2026-07-06T14:44:15.989Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "diagnostic-CT006-FORNECEDORES",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAwNi1GT1JORUNFRE9SRVMiLAogICJzZXZlcml0eSI6ICJtZWRpYSIsCiAgImNhc2VJZCI6ICJDVDAwNiIsCiAgInRpdGxlIjogIkZvcm5lY2Vkb3JlcyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9mb3JuZWNlZG9yZXMiLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzAzMTIwMDAwIiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDA2XCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIlRyZXMgZm9ybmVjZWRvcmVzIGF0aXZvcyBkZXZlbSBwb2RlciBzZXIgdXNhZG9zIGVtIGNvdGFjb2VzLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiU2VtIGZvcm5lY2Vkb3JlcyBzdWZpY2llbnRlcyBvIGNvbXBhcmF0aXZvIGRlIGNvdGFjYW8gZmljYSBpbmNvbXBsZXRvLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIlNlbSBmb3JuZWNlZG9yZXMgc3VmaWNpZW50ZXMgbyBjb21wYXJhdGl2byBkZSBjb3RhY2FvIGZpY2EgaW5jb21wbGV0by4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJHYXJhbnRpciBjYWRhc3RybyBlIHNlbGVjYW8gZGUgZm9ybmVjZWRvcmVzIGF0aXZvcyBlbSBjb3RhY29lcy4iLAogICJzdGF0dXMiOiAiYXByb3ZhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTAzVDIxOjEzOjUyLjg1M1oiCn0="
+                      "body": "ewogICJpZCI6ICJDVDAwNi1GT1JORUNFRE9SRVMiLAogICJzZXZlcml0eSI6ICJtZWRpYSIsCiAgImNhc2VJZCI6ICJDVDAwNiIsCiAgInRpdGxlIjogIkZvcm5lY2Vkb3JlcyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9mb3JuZWNlZG9yZXMiLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzA2MTE0MDQyIiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDA2XCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIlRyZXMgZm9ybmVjZWRvcmVzIGF0aXZvcyBkZXZlbSBwb2RlciBzZXIgdXNhZG9zIGVtIGNvdGFjb2VzLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiU2VtIGZvcm5lY2Vkb3JlcyBzdWZpY2llbnRlcyBvIGNvbXBhcmF0aXZvIGRlIGNvdGFjYW8gZmljYSBpbmNvbXBsZXRvLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIlNlbSBmb3JuZWNlZG9yZXMgc3VmaWNpZW50ZXMgbyBjb21wYXJhdGl2byBkZSBjb3RhY2FvIGZpY2EgaW5jb21wbGV0by4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJHYXJhbnRpciBjYWRhc3RybyBlIHNlbGVjYW8gZGUgZm9ybmVjZWRvcmVzIGF0aXZvcyBlbSBjb3RhY29lcy4iLAogICJzdGF0dXMiOiAiYXByb3ZhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTA2VDE0OjQ0OjQzLjkwOVoiCn0="
                     }
                   ]
                 }
@@ -281,7 +363,7 @@
         },
         {
           "title": "CT007 - categorias orcamentarias",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -292,81 +374,32 @@
               "projectName": "chromium-desktop",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 38932,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260703120000 Materiais/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260703120000 Materiais/i).first()\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260703120000 Materiais/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260703120000 Materiais/i).first()\u001b[22m\n\n    at tryCreateSimpleRecord (/home/colatto/repo/R3/test4s/support/ui.ts:218:42)\n    at RegistrationsPage.createBudgetCategories (/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts:97:7)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:63:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:55:3",
-                    "location": {
-                      "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
-                      "column": 42,
-                      "line": 218
-                    },
-                    "snippet": "\u001b[90m   at \u001b[39m../support/ui.ts:218\n\n  216 |   await submitForm(page);\n  217 |   if (options.listButtonNames) await clickExactControl(page, options.listButtonNames);\n> 218 |   await expect(byText(page, recordName)).toBeVisible({ timeout: options.assertionTimeout });\n      |                                          ^\n  219 | }\n  220 |\n  221 | export async function assertPersistedAfterRefresh(page: Page, text: string, timeout?: number) {"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
-                        "column": 42,
-                        "line": 218
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260703120000 Materiais/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260703120000 Materiais/i).first()\u001b[22m\n\n\n   at ../support/ui.ts:218\n\n  216 |   await submitForm(page);\n  217 |   if (options.listButtonNames) await clickExactControl(page, options.listButtonNames);\n> 218 |   await expect(byText(page, recordName)).toBeVisible({ timeout: options.assertionTimeout });\n      |                                          ^\n  219 | }\n  220 |\n  221 | export async function assertPersistedAfterRefresh(page: Page, text: string, timeout?: number) {\n    at tryCreateSimpleRecord (/home/colatto/repo/R3/test4s/support/ui.ts:218:42)\n    at RegistrationsPage.createBudgetCategories (/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts:97:7)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:63:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:55:3"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 30591,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "steps": [
                     {
                       "title": "CT007-CATEGORIAS",
-                      "duration": 11542,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260703120000 Materiais/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260703120000 Materiais/i).first()\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260703120000 Materiais/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260703120000 Materiais/i).first()\u001b[22m\n\n    at tryCreateSimpleRecord (/home/colatto/repo/R3/test4s/support/ui.ts:218:42)\n    at RegistrationsPage.createBudgetCategories (/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts:97:7)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:63:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:55:3",
-                        "location": {
-                          "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
-                          "column": 42,
-                          "line": 218
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39m../support/ui.ts:218\n\n  216 |   await submitForm(page);\n  217 |   if (options.listButtonNames) await clickExactControl(page, options.listButtonNames);\n> 218 |   await expect(byText(page, recordName)).toBeVisible({ timeout: options.assertionTimeout });\n      |                                          ^\n  219 | }\n  220 |\n  221 | export async function assertPersistedAfterRefresh(page: Page, text: string, timeout?: number) {"
-                      }
+                      "duration": 2543
                     }
                   ],
-                  "startTime": "2026-07-03T21:13:52.903Z",
+                  "startTime": "2026-07-06T14:44:43.943Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "diagnostic-CT007-CATEGORIAS",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAwNy1DQVRFR09SSUFTIiwKICAic2V2ZXJpdHkiOiAibWVkaWEiLAogICJjYXNlSWQiOiAiQ1QwMDciLAogICJ0aXRsZSI6ICJDYXRlZ29yaWFzIG9yY2FtZW50YXJpYXMiLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vY2F0ZWdvcmlhcyIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MDMxMjAwMDAiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMDdcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiQ2F0ZWdvcmlhcyBvcmNhbWVudGFyaWFzIGRldmVtIGZpY2FyIGRpc3Bvbml2ZWlzIHBhcmEgaXRlbnMgZSBtb3ZpbWVudG9zLiIsCiAgImFjdHVhbCI6ICJcdTAwMWJbMm1leHBlY3QoXHUwMDFiWzIybVx1MDAxYlszMW1sb2NhdG9yXHUwMDFiWzM5bVx1MDAxYlsybSkuXHUwMDFiWzIybXRvQmVWaXNpYmxlXHUwMDFiWzJtKFx1MDAxYlsyMm1cdTAwMWJbMm0pXHUwMDFiWzIybSBmYWlsZWRcblxuTG9jYXRvcjogZ2V0QnlUZXh0KC9BVVRPLTRTLTIwMjYwNzAzMTIwMDAwIE1hdGVyaWFpcy9pKS5maXJzdCgpXG5FeHBlY3RlZDogdmlzaWJsZVxuVGltZW91dDogMTAwMDBtc1xuRXJyb3I6IGVsZW1lbnQocykgbm90IGZvdW5kXG5cbkNhbGwgbG9nOlxuXHUwMDFiWzJtICAtIEV4cGVjdCBcInRvQmVWaXNpYmxlXCIgd2l0aCB0aW1lb3V0IDEwMDAwbXNcdTAwMWJbMjJtXG5cdTAwMWJbMm0gIC0gd2FpdGluZyBmb3IgZ2V0QnlUZXh0KC9BVVRPLTRTLTIwMjYwNzAzMTIwMDAwIE1hdGVyaWFpcy9pKS5maXJzdCgpXHUwMDFiWzIybVxuIiwKICAiaW1wYWN0IjogIkNsYXNzaWZpY2FjYW8gZmluYW5jZWlyYSBpbmNvcnJldGEgcHJlanVkaWNhIGRhc2hib2FyZCBlIHNhbGRvIHBvciBjYXRlZ29yaWEuIiwKICAiYnVzaW5lc3NJbXBhY3QiOiAiQ2xhc3NpZmljYWNhbyBmaW5hbmNlaXJhIGluY29ycmV0YSBwcmVqdWRpY2EgZGFzaGJvYXJkIGUgc2FsZG8gcG9yIGNhdGVnb3JpYS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJDb3JyaWdpciBjYWRhc3RybywgbGlzdGFnZW0gZSB1c28gZGFzIGNhdGVnb3JpYXMgbm9zIHNlbGVjdHMgZGUgbW92aW1lbnRvLiIsCiAgInN0YXR1cyI6ICJyZXByb3ZhZG8iLAogICJldmlkZW5jZSI6ICIvaG9tZS9jb2xhdHRvL3JlcG8vUjMvdGVzdDRzL3Rlc3QtcmVzdWx0cy9DVDAwNy1DQVRFR09SSUFTLnBuZyIsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTAzVDIxOjE0OjMxLjYzMFoiCn0="
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/02-master-data-CT007---categorias-orcamentarias-chromium-desktop/test-failed-1.png"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/02-master-data-CT007---categorias-orcamentarias-chromium-desktop/error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/02-master-data-CT007---categorias-orcamentarias-chromium-desktop/trace.zip"
+                      "body": "ewogICJpZCI6ICJDVDAwNy1DQVRFR09SSUFTIiwKICAic2V2ZXJpdHkiOiAibWVkaWEiLAogICJjYXNlSWQiOiAiQ1QwMDciLAogICJ0aXRsZSI6ICJDYXRlZ29yaWFzIG9yY2FtZW50YXJpYXMiLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vY2F0ZWdvcmlhcyIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MDYxMTQwNDIiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMDdcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiQ2F0ZWdvcmlhcyBvcmNhbWVudGFyaWFzIGRldmVtIGZpY2FyIGRpc3Bvbml2ZWlzIHBhcmEgaXRlbnMgZSBtb3ZpbWVudG9zLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiQ2xhc3NpZmljYWNhbyBmaW5hbmNlaXJhIGluY29ycmV0YSBwcmVqdWRpY2EgZGFzaGJvYXJkIGUgc2FsZG8gcG9yIGNhdGVnb3JpYS4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJDbGFzc2lmaWNhY2FvIGZpbmFuY2VpcmEgaW5jb3JyZXRhIHByZWp1ZGljYSBkYXNoYm9hcmQgZSBzYWxkbyBwb3IgY2F0ZWdvcmlhLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIGNhZGFzdHJvLCBsaXN0YWdlbSBlIHVzbyBkYXMgY2F0ZWdvcmlhcyBub3Mgc2VsZWN0cyBkZSBtb3ZpbWVudG8uIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0wNlQxNDo0NToxNC40OTZaIgp9"
                     }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
-                    "column": 42,
-                    "line": 218
-                  }
+                  ]
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "d59d1b04a1b8372da34c-1c66f8280569adb931b3",
@@ -381,10 +414,403 @@
           "tests": [
             {
               "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 26389,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT011-COLABORADOR-ALOCACAO",
+                      "duration": 485
+                    }
+                  ],
+                  "startTime": "2026-07-06T14:45:14.539Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT011-COLABORADOR-ALOCACAO",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAxMS1DT0xBQk9SQURPUi1BTE9DQUNBTyIsCiAgInNldmVyaXR5IjogIm1lZGlhIiwKICAiY2FzZUlkIjogIkNUMDExIiwKICAidGl0bGUiOiAiQ29sYWJvcmFkb3IsIGNhcmdvL2ZhaXhhIGUgYWxvY2FjYW8gcXVhbmRvIGEgVUkgcGVybWl0aXIiLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vY29sYWJvcmFkb3JlcyIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MDYxMTQwNDIiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMTFcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiQ29sYWJvcmFkb3IsIGNhcmdvL2ZhaXhhIGUgYWxvY2FjYW8gZGV2ZW0gc2VyIGNhZGFzdHJhZG9zIHF1YW5kbyBhIFVJIGRpc3BvbmliaWxpemFyIG8gZmx1eG8uIiwKICAiYWN0dWFsIjogIkNvbXBvcnRhbWVudG8gb2JzZXJ2YWRvIGNvbmZvcm1lIGVzcGVyYWRvLiIsCiAgImltcGFjdCI6ICJNYW8gZGUgb2JyYSBhdXNlbnRlIGRpc3RvcmNlIGN1c3RvIHJlYWwgZSBkYXNoYm9hcmQgZmluYW5jZWlyby4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJNYW8gZGUgb2JyYSBhdXNlbnRlIGRpc3RvcmNlIGN1c3RvIHJlYWwgZSBkYXNoYm9hcmQgZmluYW5jZWlyby4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJFeHBvciBmbHV4byBkZSBjYWRhc3Ryby9hbG9jYWNhbyBkZSBjb2xhYm9yYWRvcmVzIG91IGRvY3VtZW50YXIgYSByZWdyYSBkZSBpbmRpc3BvbmliaWxpZGFkZS4iLAogICJzdGF0dXMiOiAiYXByb3ZhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTA2VDE0OjQ1OjQwLjkwMVoiCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d59d1b04a1b8372da34c-5675d20f8c2880005abf",
+          "file": "02-master-data.spec.ts",
+          "line": 67,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "03-budget-labor.spec.ts",
+      "file": "03-budget-labor.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "CT008 - item orcado com previsto, saldo, comprometido e pago",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 43189,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT008-ORCAMENTO-BASE",
+                      "duration": 17782
+                    }
+                  ],
+                  "startTime": "2026-07-06T14:45:40.942Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT008-ORCAMENTO-BASE",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAwOC1PUkNBTUVOVE8tQkFTRSIsCiAgInNldmVyaXR5IjogImNyaXRpY2EiLAogICJjYXNlSWQiOiAiQ1QwMDgiLAogICJ0aXRsZSI6ICJJdGVtIG9yY2FkbyBjb20gcHJldmlzdG8sIHNhbGRvLCBjb21wcm9tZXRpZG8gZSBwYWdvIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL29yY2FtZW50by8iLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzA2MTE0MDQyIiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDA4XCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIkl0ZW0gb3JjYWRvIGRldmUgY2FsY3VsYXIgdmFsb3IgcHJldmlzdG8sIHNhbGRvLCBjb21wcm9tZXRpZG8gZSBwYWdvLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiRXJybyBubyBvcmNhbWVudG8gYmFzZSBjb21wcm9tZXRlIGNvbnRyb2xlIGRlIHNhbGRvLCBPQyBlIHBhZ2FtZW50by4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJFcnJvIG5vIG9yY2FtZW50byBiYXNlIGNvbXByb21ldGUgY29udHJvbGUgZGUgc2FsZG8sIE9DIGUgcGFnYW1lbnRvLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIGNhbGN1bG8gcXVhbnRpZGFkZSB4IHZhbG9yIHVuaXRhcmlvLCBwZXJzaXN0ZW5jaWEgZSBleHBvc2ljYW8gZG8gaXRlbSBwYXJhIHJlcXVpc2ljb2VzLiIsCiAgInN0YXR1cyI6ICJhcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMTQ6NDY6MjQuMDk3WiIKfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e00ed247767af563f7f0-dc9c19f9612153342d72",
+          "file": "03-budget-labor.spec.ts",
+          "line": 26,
+          "column": 5
+        },
+        {
+          "title": "CT009 - alteracao de orcamento protegida por usuario comum",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 27710,
+                  "error": {
+                    "message": "Error: Could not find clickable control: Orçamento",
+                    "stack": "Error: Could not find clickable control: Orçamento\n    at clickAny (/home/colatto/repo/R3/test4s/support/ui.ts:56:22)\n    at gotoMenu (/home/colatto/repo/R3/test4s/support/ui.ts:89:5)\n    at BudgetPage.requestProtectedBudgetChange (/home/colatto/repo/R3/test4s/support/pages/budget-page.ts:39:5)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:54:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:45:3",
+                    "location": {
+                      "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
+                      "column": 22,
+                      "line": 56
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m../support/ui.ts:56\n\n  54 |   }\n  55 |   const target = await firstVisible(locators);\n> 56 |   if (!target) throw new Error(`Could not find clickable control: ${names.join(' | ')}`);\n     |                      ^\n  57 |   await target.click(options);\n  58 | }\n  59 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
+                        "column": 22,
+                        "line": 56
+                      },
+                      "message": "Error: Could not find clickable control: Orçamento\n\n   at ../support/ui.ts:56\n\n  54 |   }\n  55 |   const target = await firstVisible(locators);\n> 56 |   if (!target) throw new Error(`Could not find clickable control: ${names.join(' | ')}`);\n     |                      ^\n  57 |   await target.click(options);\n  58 | }\n  59 |\n    at clickAny (/home/colatto/repo/R3/test4s/support/ui.ts:56:22)\n    at gotoMenu (/home/colatto/repo/R3/test4s/support/ui.ts:89:5)\n    at BudgetPage.requestProtectedBudgetChange (/home/colatto/repo/R3/test4s/support/pages/budget-page.ts:39:5)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:54:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:45:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT009-ORCAMENTO-PROTEGIDO-ALTERACAO",
+                      "duration": 11,
+                      "error": {
+                        "message": "Error: Could not find clickable control: Orçamento",
+                        "stack": "Error: Could not find clickable control: Orçamento\n    at clickAny (/home/colatto/repo/R3/test4s/support/ui.ts:56:22)\n    at gotoMenu (/home/colatto/repo/R3/test4s/support/ui.ts:89:5)\n    at BudgetPage.requestProtectedBudgetChange (/home/colatto/repo/R3/test4s/support/pages/budget-page.ts:39:5)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:54:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:45:3",
+                        "location": {
+                          "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
+                          "column": 22,
+                          "line": 56
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../support/ui.ts:56\n\n  54 |   }\n  55 |   const target = await firstVisible(locators);\n> 56 |   if (!target) throw new Error(`Could not find clickable control: ${names.join(' | ')}`);\n     |                      ^\n  57 |   await target.click(options);\n  58 | }\n  59 |"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-07-06T14:46:24.139Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT009-ORCAMENTO-PROTEGIDO-ALTERACAO",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAwOS1PUkNBTUVOVE8tUFJPVEVHSURPLUFMVEVSQUNBTyIsCiAgInNldmVyaXR5IjogImNyaXRpY2EiLAogICJjYXNlSWQiOiAiQ1QwMDkiLAogICJ0aXRsZSI6ICJBbHRlcmFjYW8gZGUgb3JjYW1lbnRvIHByb3RlZ2lkYSBwb3IgdXN1YXJpbyBjb211bSIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS8iLAogICJwcm9maWxlIjogIm9wZXJhY2lvbmFsIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjExNDA0MiIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAwOVwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJVc3VhcmlvIGNvbXVtIG5hbyBkZXZlIGFsdGVyYXIgaXRlbSBvcmNhZG8gcHJvdGVnaWRvIGRpcmV0YW1lbnRlOyBkZXZlIGdlcmFyIGFwcm92YWNhbyBvdSBibG9xdWVpby4iLAogICJhY3R1YWwiOiAiQ291bGQgbm90IGZpbmQgY2xpY2thYmxlIGNvbnRyb2w6IE9yw6dhbWVudG8iLAogICJpbXBhY3QiOiAiQWx0ZXJhY2FvIGxpdnJlIGRlIG9yY2FtZW50byBjb21wcm9tZXRlIGdvdmVybmFuY2EgZmluYW5jZWlyYS4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJBbHRlcmFjYW8gbGl2cmUgZGUgb3JjYW1lbnRvIGNvbXByb21ldGUgZ292ZXJuYW5jYSBmaW5hbmNlaXJhLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkJsb3F1ZWFyIGVkaWNhbyBkaXJldGEgcGFyYSBwZXJmaXMgbmFvIGF1dG9yaXphZG9zIGUgZW5jYW1pbmhhciBzb2xpY2l0YWNhbyBhbyBXb3JrZmxvdyA+IEFwcm92YWNvZXMuIiwKICAic3RhdHVzIjogInJlcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogIi9ob21lL2NvbGF0dG8vcmVwby9SMy90ZXN0NHMvdGVzdC1yZXN1bHRzL0NUMDA5LU9SQ0FNRU5UTy1QUk9URUdJRE8tQUxURVJBQ0FPLnBuZyIsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTA2VDE0OjQ2OjUxLjUwOFoiCn0="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/03-budget-labor-CT009---al-0737f-protegida-por-usuario-comum-chromium-desktop/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/03-budget-labor-CT009---al-0737f-protegida-por-usuario-comum-chromium-desktop/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/03-budget-labor-CT009---al-0737f-protegida-por-usuario-comum-chromium-desktop/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
+                    "column": 22,
+                    "line": 56
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e00ed247767af563f7f0-617531013f4a7858c2f9",
+          "file": "03-budget-labor.spec.ts",
+          "line": 41,
+          "column": 5
+        },
+        {
+          "title": "CT010 - exclusao de item orcado por usuario comum e administrador",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 29003,
+                  "error": {
+                    "message": "Error: Could not find clickable control: Orçamento",
+                    "stack": "Error: Could not find clickable control: Orçamento\n    at clickAny (/home/colatto/repo/R3/test4s/support/ui.ts:56:22)\n    at gotoMenu (/home/colatto/repo/R3/test4s/support/ui.ts:89:5)\n    at BudgetPage.requestProtectedBudgetDeletion (/home/colatto/repo/R3/test4s/support/pages/budget-page.ts:49:5)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:72:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:63:3",
+                    "location": {
+                      "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
+                      "column": 22,
+                      "line": 56
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m../support/ui.ts:56\n\n  54 |   }\n  55 |   const target = await firstVisible(locators);\n> 56 |   if (!target) throw new Error(`Could not find clickable control: ${names.join(' | ')}`);\n     |                      ^\n  57 |   await target.click(options);\n  58 | }\n  59 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
+                        "column": 22,
+                        "line": 56
+                      },
+                      "message": "Error: Could not find clickable control: Orçamento\n\n   at ../support/ui.ts:56\n\n  54 |   }\n  55 |   const target = await firstVisible(locators);\n> 56 |   if (!target) throw new Error(`Could not find clickable control: ${names.join(' | ')}`);\n     |                      ^\n  57 |   await target.click(options);\n  58 | }\n  59 |\n    at clickAny (/home/colatto/repo/R3/test4s/support/ui.ts:56:22)\n    at gotoMenu (/home/colatto/repo/R3/test4s/support/ui.ts:89:5)\n    at BudgetPage.requestProtectedBudgetDeletion (/home/colatto/repo/R3/test4s/support/pages/budget-page.ts:49:5)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:72:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:63:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT010-ORCAMENTO-PROTEGIDO-EXCLUSAO-OPERACIONAL",
+                      "duration": 17,
+                      "error": {
+                        "message": "Error: Could not find clickable control: Orçamento",
+                        "stack": "Error: Could not find clickable control: Orçamento\n    at clickAny (/home/colatto/repo/R3/test4s/support/ui.ts:56:22)\n    at gotoMenu (/home/colatto/repo/R3/test4s/support/ui.ts:89:5)\n    at BudgetPage.requestProtectedBudgetDeletion (/home/colatto/repo/R3/test4s/support/pages/budget-page.ts:49:5)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:72:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:63:3",
+                        "location": {
+                          "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
+                          "column": 22,
+                          "line": 56
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../support/ui.ts:56\n\n  54 |   }\n  55 |   const target = await firstVisible(locators);\n> 56 |   if (!target) throw new Error(`Could not find clickable control: ${names.join(' | ')}`);\n     |                      ^\n  57 |   await target.click(options);\n  58 | }\n  59 |"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-07-06T14:46:52.311Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT010-ORCAMENTO-PROTEGIDO-EXCLUSAO-OPERACIONAL",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAxMC1PUkNBTUVOVE8tUFJPVEVHSURPLUVYQ0xVU0FPLU9QRVJBQ0lPTkFMIiwKICAic2V2ZXJpdHkiOiAiY3JpdGljYSIsCiAgImNhc2VJZCI6ICJDVDAxMCIsCiAgInRpdGxlIjogIkV4Y2x1c2FvIGRlIGl0ZW0gb3JjYWRvIHBvciB1c3VhcmlvIGNvbXVtIGUgYWRtaW5pc3RyYWRvciIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS8iLAogICJwcm9maWxlIjogIm9wZXJhY2lvbmFsIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjExNDA0MiIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxMFwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJFeGNsdXNhbyBwb3IgdXN1YXJpbyBjb211bSBkZXZlIGdlcmFyIGFwcm92YWNhbyBkbyBhZG1pbmlzdHJhZG9yLiIsCiAgImFjdHVhbCI6ICJDb3VsZCBub3QgZmluZCBjbGlja2FibGUgY29udHJvbDogT3LDp2FtZW50byIsCiAgImltcGFjdCI6ICJFeGNsdXNhbyBpbmRldmlkYSByZW1vdmUgYmFzZSBkZSBjb250cm9sZSBmaW5hbmNlaXJvIGUgYWZldGEgc2FsZG9zLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIkV4Y2x1c2FvIGluZGV2aWRhIHJlbW92ZSBiYXNlIGRlIGNvbnRyb2xlIGZpbmFuY2Vpcm8gZSBhZmV0YSBzYWxkb3MuIiwKICAicmVjb21tZW5kYXRpb24iOiAiRXhpZ2lyIGFwcm92YWNhbyBhZG1pbmlzdHJhdGl2YSBlIGF1ZGl0YXIgZXhjbHVzb2VzIGRlIGl0ZW5zIG9yY2Fkb3MuIiwKICAic3RhdHVzIjogInJlcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogIi9ob21lL2NvbGF0dG8vcmVwby9SMy90ZXN0NHMvdGVzdC1yZXN1bHRzL0NUMDEwLU9SQ0FNRU5UTy1QUk9URUdJRE8tRVhDTFVTQU8tT1BFUkFDSU9OQUwucG5nIiwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMTQ6NDc6MjEuMDUzWiIKfQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/03-budget-labor-CT010---ex-fbb7a-uario-comum-e-administrador-chromium-desktop/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/03-budget-labor-CT010---ex-fbb7a-uario-comum-e-administrador-chromium-desktop/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/03-budget-labor-CT010---ex-fbb7a-uario-comum-e-administrador-chromium-desktop/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
+                    "column": 22,
+                    "line": 56
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e00ed247767af563f7f0-686ba873561f1a87697b",
+          "file": "03-budget-labor.spec.ts",
+          "line": 58,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "04-procurement-finance-e2e.spec.ts",
+      "file": "04-procurement-finance-e2e.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "CT012 - requisicao dentro do saldo e requisicao acima do saldo",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 27454,
+                  "error": {
+                    "message": "Error: Could not find available option for: Item orcado | Item orçado",
+                    "stack": "Error: Could not find available option for: Item orcado | Item orçado\n    at chooseFirstAvailableOption (/home/colatto/repo/R3/test4s/support/ui.ts:166:27)\n    at ProcurementPage.createRequisitionWithinBalance (/home/colatto/repo/R3/test4s/support/pages/procurement-page.ts:14:5)\n    at /home/colatto/repo/R3/test4s/tests/04-procurement-finance-e2e.spec.ts:24:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/04-procurement-finance-e2e.spec.ts:16:3",
+                    "location": {
+                      "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
+                      "column": 27,
+                      "line": 166
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m../support/ui.ts:166\n\n  164 |     return option ? option.value : '';\n  165 |   });\n> 166 |   if (!optionValue) throw new Error(`Could not find available option for: ${labels.join(' | ')}`);\n      |                           ^\n  167 |   await target.selectOption(optionValue);\n  168 | }\n  169 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
+                        "column": 27,
+                        "line": 166
+                      },
+                      "message": "Error: Could not find available option for: Item orcado | Item orçado\n\n   at ../support/ui.ts:166\n\n  164 |     return option ? option.value : '';\n  165 |   });\n> 166 |   if (!optionValue) throw new Error(`Could not find available option for: ${labels.join(' | ')}`);\n      |                           ^\n  167 |   await target.selectOption(optionValue);\n  168 | }\n  169 |\n    at chooseFirstAvailableOption (/home/colatto/repo/R3/test4s/support/ui.ts:166:27)\n    at ProcurementPage.createRequisitionWithinBalance (/home/colatto/repo/R3/test4s/support/pages/procurement-page.ts:14:5)\n    at /home/colatto/repo/R3/test4s/tests/04-procurement-finance-e2e.spec.ts:24:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/04-procurement-finance-e2e.spec.ts:16:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT012-REQUISICAO-SALDO",
+                      "duration": 297,
+                      "error": {
+                        "message": "Error: Could not find available option for: Item orcado | Item orçado",
+                        "stack": "Error: Could not find available option for: Item orcado | Item orçado\n    at chooseFirstAvailableOption (/home/colatto/repo/R3/test4s/support/ui.ts:166:27)\n    at ProcurementPage.createRequisitionWithinBalance (/home/colatto/repo/R3/test4s/support/pages/procurement-page.ts:14:5)\n    at /home/colatto/repo/R3/test4s/tests/04-procurement-finance-e2e.spec.ts:24:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/04-procurement-finance-e2e.spec.ts:16:3",
+                        "location": {
+                          "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
+                          "column": 27,
+                          "line": 166
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../support/ui.ts:166\n\n  164 |     return option ? option.value : '';\n  165 |   });\n> 166 |   if (!optionValue) throw new Error(`Could not find available option for: ${labels.join(' | ')}`);\n      |                           ^\n  167 |   await target.selectOption(optionValue);\n  168 | }\n  169 |"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-07-06T14:47:21.862Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT012-REQUISICAO-SALDO",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAxMi1SRVFVSVNJQ0FPLVNBTERPIiwKICAic2V2ZXJpdHkiOiAiY3JpdGljYSIsCiAgImNhc2VJZCI6ICJDVDAxMiIsCiAgInRpdGxlIjogIlJlcXVpc2ljYW8gZGVudHJvIGRvIHNhbGRvIGUgYWNpbWEgZG8gc2FsZG8iLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vcmVxdWlzaWNvZXMiLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzA2MTE0MDQyIiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDEyXCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIlJlcXVpc2ljYW8gZGVudHJvIGRvIHNhbGRvIGRldmUgc2VndWlyIHBhcmEgYXByb3ZhY2FvOyBhY2ltYSBkbyBzYWxkbyBkZXZlIHNlciBibG9xdWVhZGEgb3Ugc2luYWxpemFkYS4iLAogICJhY3R1YWwiOiAiQ291bGQgbm90IGZpbmQgYXZhaWxhYmxlIG9wdGlvbiBmb3I6IEl0ZW0gb3JjYWRvIHwgSXRlbSBvcsOnYWRvIiwKICAiaW1wYWN0IjogIlBlcm1pdGlyIGNvbXByYSBhY2ltYSBkbyBzYWxkbyByb21wZSBjb250cm9sZSBmaW5hbmNlaXJvIGRhIG9icmEuIiwKICAiYnVzaW5lc3NJbXBhY3QiOiAiUGVybWl0aXIgY29tcHJhIGFjaW1hIGRvIHNhbGRvIHJvbXBlIGNvbnRyb2xlIGZpbmFuY2Vpcm8gZGEgb2JyYS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJWYWxpZGFyIHNhbGRvIG5vIGJhY2tlbmQgYW50ZXMgZGUgYXZhbmNhciBzdGF0dXMgZSBibG9xdWVhciBjb3RhY2FvIGRlIHJlcXVpc2ljb2VzIGV4Y2VkZW50ZXMuIiwKICAic3RhdHVzIjogInJlcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogIi9ob21lL2NvbGF0dG8vcmVwby9SMy90ZXN0NHMvdGVzdC1yZXN1bHRzL0NUMDEyLVJFUVVJU0lDQU8tU0FMRE8ucG5nIiwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMTQ6NDc6NDkuMjE1WiIKfQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/04-procurement-finance-e2e-8e21f-e-requisicao-acima-do-saldo-chromium-desktop/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/04-procurement-finance-e2e-8e21f-e-requisicao-acima-do-saldo-chromium-desktop/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/04-procurement-finance-e2e-8e21f-e-requisicao-acima-do-saldo-chromium-desktop/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
+                    "column": 27,
+                    "line": 166
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a94c55c2290a00239667-de8770632486ad4612bb",
+          "file": "04-procurement-finance-e2e.spec.ts",
+          "line": 14,
+          "column": 5
+        },
+        {
+          "title": "CT013 - aprovacao e rejeicao de requisicao",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
               "annotations": [
                 {
                   "type": "skip",
-                  "description": "Blocked by CT005",
+                  "description": "Blocked by CT012",
                   "location": {
                     "file": "/home/colatto/repo/R3/test4s/support/diagnostics.ts",
                     "line": 142,
@@ -397,19 +823,19 @@
               "projectName": "chromium-desktop",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 25147,
+                  "duration": 24667,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-03T21:14:32.273Z",
+                  "startTime": "2026-07-06T14:47:49.822Z",
                   "annotations": [
                     {
                       "type": "skip",
-                      "description": "Blocked by CT005",
+                      "description": "Blocked by CT012",
                       "location": {
                         "file": "/home/colatto/repo/R3/test4s/support/diagnostics.ts",
                         "line": 142,
@@ -419,9 +845,9 @@
                   ],
                   "attachments": [
                     {
-                      "name": "diagnostic-CT011-COLABORADOR-ALOCACAO",
+                      "name": "diagnostic-CT013-APROVACAO-REJEICAO-REQUISICAO",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAxMS1DT0xBQk9SQURPUi1BTE9DQUNBTyIsCiAgInNldmVyaXR5IjogIm1lZGlhIiwKICAiY2FzZUlkIjogIkNUMDExIiwKICAidGl0bGUiOiAiQ29sYWJvcmFkb3IsIGNhcmdvL2ZhaXhhIGUgYWxvY2FjYW8gcXVhbmRvIGEgVUkgcGVybWl0aXIiLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vZGFzaGJvYXJkIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwMzEyMDAwMCIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxMVwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJDb2xhYm9yYWRvciwgY2FyZ28vZmFpeGEgZSBhbG9jYWNhbyBkZXZlbSBzZXIgY2FkYXN0cmFkb3MgcXVhbmRvIGEgVUkgZGlzcG9uaWJpbGl6YXIgbyBmbHV4by4iLAogICJhY3R1YWwiOiAiQ2FzbyBibG9xdWVhZG8gcG9yIGRlcGVuZGVuY2lhIENUMDA1IHJlZ2lzdHJhZGEgY29tbyBibG9xdWVhZG8uIiwKICAiaW1wYWN0IjogIk1hbyBkZSBvYnJhIGF1c2VudGUgZGlzdG9yY2UgY3VzdG8gcmVhbCBlIGRhc2hib2FyZCBmaW5hbmNlaXJvLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIk1hbyBkZSBvYnJhIGF1c2VudGUgZGlzdG9yY2UgY3VzdG8gcmVhbCBlIGRhc2hib2FyZCBmaW5hbmNlaXJvLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIHByaW1laXJvIG8gY2FzbyByYWl6IENUMDA1IGUgcmVleGVjdXRhciBlc3RlIGZsdXhvLiIsCiAgInN0YXR1cyI6ICJibG9xdWVhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTAzVDIxOjE0OjU3LjQ5NVoiCn0="
+                      "body": "ewogICJpZCI6ICJDVDAxMy1BUFJPVkFDQU8tUkVKRUlDQU8tUkVRVUlTSUNBTyIsCiAgInNldmVyaXR5IjogImFsdGEiLAogICJjYXNlSWQiOiAiQ1QwMTMiLAogICJ0aXRsZSI6ICJBcHJvdmFjYW8gZSByZWplaWNhbyBkZSByZXF1aXNpY2FvIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2Rhc2hib2FyZCIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MDYxMTQwNDIiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMTNcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiQXByb3ZhY2FvIGRldmUgbGliZXJhciByZXF1aXNpY2FvIHBhcmEgY290YWNhbyBlIHJlamVpY2FvIGRldmUgZW5jZXJyYXIgZmx1eG8gY29tIGRlY2lzYW8gYXVkaXRhdmVsLiIsCiAgImFjdHVhbCI6ICJDYXNvIGJsb3F1ZWFkbyBwb3IgZGVwZW5kZW5jaWEgQ1QwMTIgcmVnaXN0cmFkYSBjb21vIHJlcHJvdmFkby4iLAogICJpbXBhY3QiOiAiV29ya2Zsb3cgcXVlYnJhZG8gcGVybWl0ZSBhdmFuY29zIGluZGV2aWRvcyBvdSBibG9xdWVpYSBjb21wcmFzIHZhbGlkYXMuIiwKICAiYnVzaW5lc3NJbXBhY3QiOiAiV29ya2Zsb3cgcXVlYnJhZG8gcGVybWl0ZSBhdmFuY29zIGluZGV2aWRvcyBvdSBibG9xdWVpYSBjb21wcmFzIHZhbGlkYXMuIiwKICAicmVjb21tZW5kYXRpb24iOiAiQ29ycmlnaXIgcHJpbWVpcm8gbyBjYXNvIHJhaXogQ1QwMTIgZSByZWV4ZWN1dGFyIGVzdGUgZmx1eG8uIiwKICAic3RhdHVzIjogImJsb3F1ZWFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMTQ6NDg6MTQuNTYzWiIKfQ=="
                     }
                   ]
                 }
@@ -429,9 +855,524 @@
               "status": "skipped"
             }
           ],
-          "id": "d59d1b04a1b8372da34c-5675d20f8c2880005abf",
-          "file": "02-master-data.spec.ts",
-          "line": 67,
+          "id": "a94c55c2290a00239667-035a86069e17fb422a96",
+          "file": "04-procurement-finance-e2e.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "CT014 - cotacao com 3 fornecedores, comparativo e vencedor",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Blocked by CT013",
+                  "location": {
+                    "file": "/home/colatto/repo/R3/test4s/support/diagnostics.ts",
+                    "line": 142,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 25937,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-06T14:48:14.601Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Blocked by CT013",
+                      "location": {
+                        "file": "/home/colatto/repo/R3/test4s/support/diagnostics.ts",
+                        "line": 142,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT014-COTACAO",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAxNC1DT1RBQ0FPIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAxNCIsCiAgInRpdGxlIjogIkNvdGFjYW8gY29tIDMgZm9ybmVjZWRvcmVzLCBjb21wYXJhdGl2byBlIHZlbmNlZG9yIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2Rhc2hib2FyZCIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MDYxMTQwNDIiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMTRcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiQ290YWNhbyBkZXZlIGNvbXBhcmFyIGZvcm5lY2Vkb3JlcywgcmVnaXN0cmFyIHZlbmNlZG9yIGUgcGVyc2lzdGlyLiIsCiAgImFjdHVhbCI6ICJDYXNvIGJsb3F1ZWFkbyBwb3IgZGVwZW5kZW5jaWEgQ1QwMTMgcmVnaXN0cmFkYSBjb21vIGJsb3F1ZWFkby4iLAogICJpbXBhY3QiOiAiQ29tcGFyYXRpdm8gaW5jb3JyZXRvIGFmZXRhIGRlY2lzYW8gZGUgY29tcHJhIGUgcmFzdHJlYWJpbGlkYWRlLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIkNvbXBhcmF0aXZvIGluY29ycmV0byBhZmV0YSBkZWNpc2FvIGRlIGNvbXByYSBlIHJhc3RyZWFiaWxpZGFkZS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJDb3JyaWdpciBwcmltZWlybyBvIGNhc28gcmFpeiBDVDAxMyBlIHJlZXhlY3V0YXIgZXN0ZSBmbHV4by4iLAogICJzdGF0dXMiOiAiYmxvcXVlYWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0wNlQxNDo0ODo0MC41MTFaIgp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "a94c55c2290a00239667-a75b3268f14ef7ed31f2",
+          "file": "04-procurement-finance-e2e.spec.ts",
+          "line": 46,
+          "column": 5
+        },
+        {
+          "title": "CT015 - ordem de compra a partir da cotacao e comprometimento do orcamento",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Blocked by CT014",
+                  "location": {
+                    "file": "/home/colatto/repo/R3/test4s/support/diagnostics.ts",
+                    "line": 142,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 27264,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-06T14:48:40.545Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Blocked by CT014",
+                      "location": {
+                        "file": "/home/colatto/repo/R3/test4s/support/diagnostics.ts",
+                        "line": 142,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT015-ORDEM-COMPRA",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAxNS1PUkRFTS1DT01QUkEiLAogICJzZXZlcml0eSI6ICJjcml0aWNhIiwKICAiY2FzZUlkIjogIkNUMDE1IiwKICAidGl0bGUiOiAiT3JkZW0gZGUgY29tcHJhIGUgY29tcHJvbWV0aW1lbnRvIGRvIG9yY2FtZW50byIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9kYXNoYm9hcmQiLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzA2MTE0MDQyIiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDE1XCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIk9DIGRldmUgbmFzY2VyIGRhIGNvdGFjYW8sIGNvbXByb21ldGVyIG9yY2FtZW50byBlIGdlcmFyIGNvbnRhIGEgcGFnYXIgbm8gcG9udG8gcHJldmlzdG8uIiwKICAiYWN0dWFsIjogIkNhc28gYmxvcXVlYWRvIHBvciBkZXBlbmRlbmNpYSBDVDAxNCByZWdpc3RyYWRhIGNvbW8gYmxvcXVlYWRvLiIsCiAgImltcGFjdCI6ICJTZW0gY29tcHJvbWV0aW1lbnRvIGRvIG9yY2FtZW50byBuYW8gaGEgY29udHJvbGUgcmVhbCBkZSBjb21wcmFzLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIlNlbSBjb21wcm9tZXRpbWVudG8gZG8gb3JjYW1lbnRvIG5hbyBoYSBjb250cm9sZSByZWFsIGRlIGNvbXByYXMuIiwKICAicmVjb21tZW5kYXRpb24iOiAiQ29ycmlnaXIgcHJpbWVpcm8gbyBjYXNvIHJhaXogQ1QwMTQgZSByZWV4ZWN1dGFyIGVzdGUgZmx1eG8uIiwKICAic3RhdHVzIjogImJsb3F1ZWFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMTQ6NDk6MDcuNzgwWiIKfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "a94c55c2290a00239667-0592245917d3942cf229",
+          "file": "04-procurement-finance-e2e.spec.ts",
+          "line": 60,
+          "column": 5
+        },
+        {
+          "title": "CT016 - edicao/exclusao de requisicao, cotacao e OC quando permitido",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Blocked by CT012",
+                  "location": {
+                    "file": "/home/colatto/repo/R3/test4s/support/diagnostics.ts",
+                    "line": 142,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 28125,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-06T14:49:07.820Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Blocked by CT012",
+                      "location": {
+                        "file": "/home/colatto/repo/R3/test4s/support/diagnostics.ts",
+                        "line": 142,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT016-EDICAO-CANCELAMENTO-DOCUMENTOS",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAxNi1FRElDQU8tQ0FOQ0VMQU1FTlRPLURPQ1VNRU5UT1MiLAogICJzZXZlcml0eSI6ICJtZWRpYSIsCiAgImNhc2VJZCI6ICJDVDAxNiIsCiAgInRpdGxlIjogIkVkaWNhby9leGNsdXNhby9jYW5jZWxhbWVudG8gZGUgcmVxdWlzaWNhbywgY290YWNhbyBlIE9DIHF1YW5kbyBwZXJtaXRpZG8iLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vZGFzaGJvYXJkIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjExNDA0MiIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxNlwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJSZXF1aXNpY2FvLCBjb3RhY2FvIGUgT0MgZGV2ZW0gcGVybWl0aXIgZWRpY2FvL2NhbmNlbGFtZW50byBxdWFuZG8gYSByZWdyYSBwZXJtaXRpciBvdSBleGliaXIgYmxvcXVlaW8gZGUgbmVnb2Npby4iLAogICJhY3R1YWwiOiAiQ2FzbyBibG9xdWVhZG8gcG9yIGRlcGVuZGVuY2lhIENUMDEyIHJlZ2lzdHJhZGEgY29tbyByZXByb3ZhZG8uIiwKICAiaW1wYWN0IjogIlNlbSBhY2FvIGFkbWluaXN0cmF0aXZhIGNsYXJhLCBkb2N1bWVudG9zIGluY29ycmV0b3MgcGVybWFuZWNlbSBubyBmbHV4byBmaW5hbmNlaXJvLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIlNlbSBhY2FvIGFkbWluaXN0cmF0aXZhIGNsYXJhLCBkb2N1bWVudG9zIGluY29ycmV0b3MgcGVybWFuZWNlbSBubyBmbHV4byBmaW5hbmNlaXJvLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIHByaW1laXJvIG8gY2FzbyByYWl6IENUMDEyIGUgcmVleGVjdXRhciBlc3RlIGZsdXhvLiIsCiAgInN0YXR1cyI6ICJibG9xdWVhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTA2VDE0OjQ5OjM1LjkyNFoiCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "a94c55c2290a00239667-d17f03d8575a59e55c3a",
+          "file": "04-procurement-finance-e2e.spec.ts",
+          "line": 74,
+          "column": 5
+        },
+        {
+          "title": "CT017 - contas a pagar, status e filtros",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Blocked by CT015",
+                  "location": {
+                    "file": "/home/colatto/repo/R3/test4s/support/diagnostics.ts",
+                    "line": 142,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 28795,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-06T14:49:35.957Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Blocked by CT015",
+                      "location": {
+                        "file": "/home/colatto/repo/R3/test4s/support/diagnostics.ts",
+                        "line": 142,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT017-CONTAS-PAGAR",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAxNy1DT05UQVMtUEFHQVIiLAogICJzZXZlcml0eSI6ICJjcml0aWNhIiwKICAiY2FzZUlkIjogIkNUMDE3IiwKICAidGl0bGUiOiAiQ29udGFzIGEgcGFnYXIsIHN0YXR1cyBlIGZpbHRyb3MiLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vZGFzaGJvYXJkIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjExNDA0MiIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxN1wiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJDb250YXMgYSBwYWdhciBkZXZlbSBleGliaXIgc3RhdHVzIGUgZmlsdHJvcyBmdW5jaW9uYWlzIGFwb3MgT0MuIiwKICAiYWN0dWFsIjogIkNhc28gYmxvcXVlYWRvIHBvciBkZXBlbmRlbmNpYSBDVDAxNSByZWdpc3RyYWRhIGNvbW8gYmxvcXVlYWRvLiIsCiAgImltcGFjdCI6ICJTZW0gY29udGEgYSBwYWdhciByYXN0cmVhdmVsIG8gZmluYW5jZWlybyBuYW8gY29uc2VndWUgcHJvZ3JhbWFyIG91IHJlY29uY2lsaWFyIHBhZ2FtZW50b3MuIiwKICAiYnVzaW5lc3NJbXBhY3QiOiAiU2VtIGNvbnRhIGEgcGFnYXIgcmFzdHJlYXZlbCBvIGZpbmFuY2Vpcm8gbmFvIGNvbnNlZ3VlIHByb2dyYW1hciBvdSByZWNvbmNpbGlhciBwYWdhbWVudG9zLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIHByaW1laXJvIG8gY2FzbyByYWl6IENUMDE1IGUgcmVleGVjdXRhciBlc3RlIGZsdXhvLiIsCiAgInN0YXR1cyI6ICJibG9xdWVhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTA2VDE0OjUwOjA0LjcyNVoiCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "a94c55c2290a00239667-aa6b220e857985625515",
+          "file": "04-procurement-finance-e2e.spec.ts",
+          "line": 88,
+          "column": 5
+        },
+        {
+          "title": "CT018 - pagamento parcial, final e tentativa acima do saldo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Blocked by CT017",
+                  "location": {
+                    "file": "/home/colatto/repo/R3/test4s/support/diagnostics.ts",
+                    "line": 142,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 29632,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-06T14:50:04.762Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Blocked by CT017",
+                      "location": {
+                        "file": "/home/colatto/repo/R3/test4s/support/diagnostics.ts",
+                        "line": 142,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT018-PAGAMENTOS",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAxOC1QQUdBTUVOVE9TIiwKICAic2V2ZXJpdHkiOiAiY3JpdGljYSIsCiAgImNhc2VJZCI6ICJDVDAxOCIsCiAgInRpdGxlIjogIlBhZ2FtZW50byBwYXJjaWFsLCBmaW5hbCBlIHRlbnRhdGl2YSBhY2ltYSBkbyBzYWxkbyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9kYXNoYm9hcmQiLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzA2MTE0MDQyIiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDE4XCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIlBhZ2FtZW50byBwYXJjaWFsL2ZpbmFsIGRldmUgYXR1YWxpemFyIHNhbGRvIGUgdGVudGF0aXZhIGFjaW1hIGRvIHNhbGRvIGRldmUgc2VyIGJsb3F1ZWFkYS4iLAogICJhY3R1YWwiOiAiQ2FzbyBibG9xdWVhZG8gcG9yIGRlcGVuZGVuY2lhIENUMDE3IHJlZ2lzdHJhZGEgY29tbyBibG9xdWVhZG8uIiwKICAiaW1wYWN0IjogIkVycm8gZW0gcGFnYW1lbnRvIGRpc3RvcmNlIGN1c3RvIHJlYWwsIGRhc2hib2FyZCBlIHRvbWFkYSBkZSBkZWNpc2FvLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIkVycm8gZW0gcGFnYW1lbnRvIGRpc3RvcmNlIGN1c3RvIHJlYWwsIGRhc2hib2FyZCBlIHRvbWFkYSBkZSBkZWNpc2FvLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIHByaW1laXJvIG8gY2FzbyByYWl6IENUMDE3IGUgcmVleGVjdXRhciBlc3RlIGZsdXhvLiIsCiAgInN0YXR1cyI6ICJibG9xdWVhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTA2VDE0OjUwOjM0LjM2OVoiCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "a94c55c2290a00239667-c9066e77f134d59c145a",
+          "file": "04-procurement-finance-e2e.spec.ts",
+          "line": 102,
+          "column": 5
+        },
+        {
+          "title": "CT019 - dashboard financeiro apos compra/pagamento/mao de obra",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Blocked by CT018",
+                  "location": {
+                    "file": "/home/colatto/repo/R3/test4s/support/diagnostics.ts",
+                    "line": 142,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 29529,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-06T14:50:34.406Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Blocked by CT018",
+                      "location": {
+                        "file": "/home/colatto/repo/R3/test4s/support/diagnostics.ts",
+                        "line": 142,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT019-DASHBOARD-FINANCEIRO",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAxOS1EQVNIQk9BUkQtRklOQU5DRUlSTyIsCiAgInNldmVyaXR5IjogImFsdGEiLAogICJjYXNlSWQiOiAiQ1QwMTkiLAogICJ0aXRsZSI6ICJEYXNoYm9hcmQgZmluYW5jZWlybyBhcG9zIGNvbXByYS9wYWdhbWVudG8vbWFvIGRlIG9icmEiLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vZGFzaGJvYXJkIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjExNDA0MiIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxOVwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJEYXNoYm9hcmQgZGV2ZSByZWZsZXRpciBjb21wcmEsIHBhZ2FtZW50b3MsIG1hbyBkZSBvYnJhLCBjdXN0byByZWFsIGUgc2FsZG9zLiIsCiAgImFjdHVhbCI6ICJDYXNvIGJsb3F1ZWFkbyBwb3IgZGVwZW5kZW5jaWEgQ1QwMTggcmVnaXN0cmFkYSBjb21vIGJsb3F1ZWFkby4iLAogICJpbXBhY3QiOiAiSW5kaWNhZG9yZXMgaW5jb25zaXN0ZW50ZXMgcHJlanVkaWNhbSBjb250cm9sZSBmaW5hbmNlaXJvIGUgcmFzdHJlYWJpbGlkYWRlLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIkluZGljYWRvcmVzIGluY29uc2lzdGVudGVzIHByZWp1ZGljYW0gY29udHJvbGUgZmluYW5jZWlybyBlIHJhc3RyZWFiaWxpZGFkZS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJDb3JyaWdpciBwcmltZWlybyBvIGNhc28gcmFpeiBDVDAxOCBlIHJlZXhlY3V0YXIgZXN0ZSBmbHV4by4iLAogICJzdGF0dXMiOiAiYmxvcXVlYWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0wNlQxNDo1MTowMy45MDdaIgp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "a94c55c2290a00239667-f7aebce16ebb63c71729",
+          "file": "04-procurement-finance-e2e.spec.ts",
+          "line": 117,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "05-permissions-audit.spec.ts",
+      "file": "05-permissions-audit.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "CT002 - criacao, edicao, inativacao e tentativa de login com usuario inativo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 58714,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT002-USUARIOS-PERMISSOES",
+                      "duration": 33985
+                    }
+                  ],
+                  "startTime": "2026-07-06T14:51:03.949Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT002-USUARIOS-PERMISSOES",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAwMi1VU1VBUklPUy1QRVJNSVNTT0VTIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAwMiIsCiAgInRpdGxlIjogIkNyaWFjYW8sIGVkaWNhbywgaW5hdGl2YWNhbyBlIGxvZ2luIGJsb3F1ZWFkbyBkZSB1c3VhcmlvIGluYXRpdm8iLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vb3JjYW1lbnRvIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjExNDA0MiIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAwMlwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJVc3VhcmlvIG9wZXJhY2lvbmFsIGRldmUgcG9kZXIgc2VyIGNyaWFkby9lZGl0YWRvOyB1c3VhcmlvIGluYXRpdm8gZGV2ZSBzZXIgaW1wZWRpZG8gZGUgYXV0ZW50aWNhci4iLAogICJhY3R1YWwiOiAiQ29tcG9ydGFtZW50byBvYnNlcnZhZG8gY29uZm9ybWUgZXNwZXJhZG8uIiwKICAiaW1wYWN0IjogIlBlcm1pc3NvZXMgaW5jb3JyZXRhcyBwb2RlbSBleHBvciBmaW5hbmNlaXJvIG91IHdvcmtmbG93IGEgcGVyZmlzIGluZGV2aWRvcy4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJQZXJtaXNzb2VzIGluY29ycmV0YXMgcG9kZW0gZXhwb3IgZmluYW5jZWlybyBvdSB3b3JrZmxvdyBhIHBlcmZpcyBpbmRldmlkb3MuIiwKICAicmVjb21tZW5kYXRpb24iOiAiUmV2aXNhciBtYXRyaXogZGUgcGVyZmlzLCBzdGF0dXMgZGUgdXN1YXJpbyBlIHZhbGlkYWNhbyBkZSBsb2dpbiBubyBiYWNrZW5kLiIsCiAgInN0YXR1cyI6ICJhcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMTQ6NTI6MDIuNjM5WiIKfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a3b366f3b0c505051c2-00674a7c56c40a97c3bc",
+          "file": "05-permissions-audit.spec.ts",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "CT020 - workflow com perfil correto/incorreto, aprovacao e rejeicao",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 59892,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT020-WORKFLOW-PERFIL-INCORRETO",
+                      "duration": 122
+                    },
+                    {
+                      "title": "CT020-WORKFLOW-PERFIL-CORRETO",
+                      "duration": 96
+                    }
+                  ],
+                  "startTime": "2026-07-06T14:52:02.676Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT020-WORKFLOW-PERFIL-INCORRETO",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAyMC1XT1JLRkxPVy1QRVJGSUwtSU5DT1JSRVRPIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAyMCIsCiAgInRpdGxlIjogIldvcmtmbG93IGNvbSBwZXJmaWwgY29ycmV0by9pbmNvcnJldG8sIGFwcm92YWNhbyBlIHJlamVpY2FvIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2Fwcm92YWNvZXMiLAogICJwcm9maWxlIjogIm9wZXJhY2lvbmFsIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNjExNDA0MiIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAyMFwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJQZXJmaWwgaW5jb3JyZXRvIG5hbyBkZXZlIGFwcm92YXIgb3UgcmVqZWl0YXIgcGVuZGVuY2lhcyBzZW0gcGVybWlzc2FvLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiQXByb3ZhY2FvIHBvciBwZXJmaWwgaW5kZXZpZG8gcXVlYnJhIGdvdmVybmFuY2EgZG8gZmx1eG8gZmluYW5jZWlyby4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJBcHJvdmFjYW8gcG9yIHBlcmZpbCBpbmRldmlkbyBxdWVicmEgZ292ZXJuYW5jYSBkbyBmbHV4byBmaW5hbmNlaXJvLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkFwbGljYXIgYXV0b3JpemFjYW8gbm8gYmFja2VuZCBlIGVzY29uZGVyL2Rlc2FiaWxpdGFyIGFjb2VzIG5vIGZyb250ZW5kIHBhcmEgcGVyZmlzIHNlbSBwZXJtaXNzYW8uIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0wNlQxNDo1Mjo0NC42NzRaIgp9"
+                    },
+                    {
+                      "name": "diagnostic-CT020-WORKFLOW-PERFIL-CORRETO",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAyMC1XT1JLRkxPVy1QRVJGSUwtQ09SUkVUTyIsCiAgInNldmVyaXR5IjogImFsdGEiLAogICJjYXNlSWQiOiAiQ1QwMjAiLAogICJ0aXRsZSI6ICJXb3JrZmxvdyBjb20gcGVyZmlsIGNvcnJldG8vaW5jb3JyZXRvLCBhcHJvdmFjYW8gZSByZWplaWNhbyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9hdWRpdG9yaWEiLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzA2MTE0MDQyIiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDIwXCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIkFkbWluaXN0cmFkb3Igb3UgcGVyZmlsIGNvcnJldG8gZGV2ZSBhcHJvdmFyL3JlamVpdGFyIHBlbmRlbmNpYXMgZSBhdHVhbGl6YXIgZW50aWRhZGUgb3JpZ2luYWwuIiwKICAiYWN0dWFsIjogIkNvbXBvcnRhbWVudG8gb2JzZXJ2YWRvIGNvbmZvcm1lIGVzcGVyYWRvLiIsCiAgImltcGFjdCI6ICJXb3JrZmxvdyBzZW0gZGVjaXNhbyByYXN0cmVhdmVsIHF1ZWJyYSBnb3Zlcm5hbmNhIGUgYmxvcXVlaWEgY29udGludWlkYWRlIG9wZXJhY2lvbmFsLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIldvcmtmbG93IHNlbSBkZWNpc2FvIHJhc3RyZWF2ZWwgcXVlYnJhIGdvdmVybmFuY2EgZSBibG9xdWVpYSBjb250aW51aWRhZGUgb3BlcmFjaW9uYWwuIiwKICAicmVjb21tZW5kYXRpb24iOiAiUGVyc2lzdGlyIGFwcm92YWRvciwgcGVyZmlsLCBkYXRhLCBvYnNlcnZhY2FvIGUgc2luY3Jvbml6YXIgc3RhdHVzIGRhIGVudGlkYWRlIG9yaWdpbmFsLiIsCiAgInN0YXR1cyI6ICJhcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDZUMTQ6NTM6MDIuNTMyWiIKfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a3b366f3b0c505051c2-53b5635513a7bf4bbdc2",
+          "file": "05-permissions-audit.spec.ts",
+          "line": 39,
+          "column": 5
+        },
+        {
+          "title": "CT021 - auditoria de criacao, edicao, exclusao/cancelamento e decisoes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 24088,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT021-AUDITORIA",
+                      "duration": 99
+                    }
+                  ],
+                  "startTime": "2026-07-06T14:53:02.578Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT021-AUDITORIA",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAyMS1BVURJVE9SSUEiLAogICJzZXZlcml0eSI6ICJtZWRpYSIsCiAgImNhc2VJZCI6ICJDVDAyMSIsCiAgInRpdGxlIjogIkF1ZGl0b3JpYSBkZSBjcmlhY2FvLCBlZGljYW8sIGV4Y2x1c2FvL2NhbmNlbGFtZW50byBlIGRlY2lzb2VzIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2F1ZGl0b3JpYSIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MDYxMTQwNDIiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMjFcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiQXVkaXRvcmlhIGRldmUgcmVnaXN0cmFyIGNyaWFjYW8sIGVkaWNhbywgZXhjbHVzYW8vY2FuY2VsYW1lbnRvIGUgZGVjaXNvZXMgY29tIHVzdWFyaW8vZGF0YS9ob3JhLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiQXVkaXRvcmlhIGluY29tcGxldGEgcmVkdXogcmFzdHJlYWJpbGlkYWRlIGUgY2FwYWNpZGFkZSBkZSBhcHVyYWNhby4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJBdWRpdG9yaWEgaW5jb21wbGV0YSByZWR1eiByYXN0cmVhYmlsaWRhZGUgZSBjYXBhY2lkYWRlIGRlIGFwdXJhY2FvLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkdhcmFudGlyIGV2ZW50b3MgZGUgYXVkaXRvcmlhIHBhcmEgZW50aWRhZGVzIGZpbmFuY2VpcmFzLCBjYWRhc3Ryb3MgZSB3b3JrZmxvdy4iLAogICJzdGF0dXMiOiAiYXByb3ZhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTA2VDE0OjUzOjI2LjYzNFoiCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a3b366f3b0c505051c2-48a55e4c296a6046775b",
+          "file": "05-permissions-audit.spec.ts",
+          "line": 76,
           "column": 5
         }
       ]
@@ -439,11 +1380,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-03T21:12:31.631Z",
-    "duration": 145943.952,
-    "expected": 1,
-    "skipped": 2,
-    "unexpected": 2,
+    "startTime": "2026-07-06T14:41:01.690Z",
+    "duration": 745029.33,
+    "expected": 12,
+    "skipped": 7,
+    "unexpected": 3,
     "flaky": 0
   }
 }
