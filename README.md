@@ -16,17 +16,6 @@ Resultado final da execução limpa mais recente: 22 testes, 8 aprovados, 3 repr
 
 Resultado da suíte completa (npm test):
 
-Por Spec
-
-Spec-------------------------------| Aprovados | Reprovados | Bloqueados ¬
-- 01-smoke------------------------|-----3-----|------0-----|------0-----|
-- 02-master-data------------------|-----3-----|------2-----|------0-----|
-- 03-budget-labor-----------------|-----0-----|------0-----|------3-----|
-- 04-procurement-finance-e2e--|-----0-----|------0-----|------8------|
-- 05-permissions-audit-----------|-----3-----|------0-----|------0-----|
-
-Pulado CT008-CT019 dependem da cadeia quebrada.
-
 ### CTs Reprovados
 
 - CT007 - Severidade: média | Observação: em Configurações > Categorias Orç., a automação não confirmou todas as categorias da massa AUTO-4S-20260706123151 após 3 tentativas. A tela exibia tabela paginada com 17 categorias e algumas categorias da massa atual visíveis, indicando possível limitação da automação por paginação, mas sem correção/reexecução confirmatória nesta rodada. | Evidências: [screenshot](./test-results/artifacts/02-master-data-CT007---categorias-orcamentarias-chromium-desktop-retry2/test-failed-1.png), [trace](./test-results/artifacts/02-master-data-CT007---categorias-orcamentarias-chromium-desktop-retry2/trace.zip), [contexto](./test-results/artifacts/02-master-data-CT007---categorias-orcamentarias-chromium-desktop-retry2/error-context.md) | Recomendação: validar persistência/listagem das cinco categorias e, se elas estiverem em páginas diferentes, ajustar a automação para buscar/paginar antes de afirmar ausência.
