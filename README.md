@@ -14,19 +14,6 @@ Resultado final da execução limpa mais recente: 22 testes, 14 aprovados, 1 rep
 
 ## Principais achados
 
-Resultado da suíte completa (npm test):
-
-Por Spec
-
-Spec-------------------------------| Aprovados | Reprovados | Bloqueados ¬
-- 01-smoke------------------------|-----3-----|------0-----|------0-----|
-- 02-master-data------------------|-----1-----|------2-----|------2-----|
-- 03-budget-labor-----------------|-----0-----|------0-----|------3-----|
-- 04-procurement-finance-e2e--|-----0-----|------0-----|------8------|
-- 05-permissions-audit-----------|-----3-----|------0-----|------0-----|
-
-Pulado CT005, CT008-CT019 dependem da cadeia quebrada.
-
 ### CTs Reprovados
 
 - CT012 - Severidade: crítica | Tipo: falha legítima provável do produto | Descrição: em Suprimentos > Requisições, a obra e o centro da massa AUTO-4S-20260706114042 foram selecionados, mas o select Item orçado ficou vazio e a UI exibiu "Nenhum item orçado ativo encontrado para a obra selecionada", apesar de CT008 ter criado e persistido o item orçado. | Evidências: [screenshot](./test-results/artifacts/04-procurement-finance-e2e-8e21f-e-requisicao-acima-do-saldo-chromium-desktop/test-failed-1.png), [trace](./test-results/artifacts/04-procurement-finance-e2e-8e21f-e-requisicao-acima-do-saldo-chromium-desktop/trace.zip), [diagnostics](./test-results/diagnostics.jsonl) | Recomendação: revisar vínculo/status do item orçado criado no orçamento e sua exposição no módulo de requisições para a mesma obra/centro.
