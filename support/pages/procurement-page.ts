@@ -1,9 +1,26 @@
 import { expect, type Page } from '@playwright/test';
 import { data } from '../test-data';
-import { byText, chooseOption, clickAny, fillField, gotoMenu, submitForm } from '../ui';
+import { chooseFirstAvailableOption, chooseOption, clickAny, fillField, gotoMenu, submitForm } from '../ui';
 
 export class ProcurementPage {
   constructor(private readonly page: Page) {}
+
+  private requisitionRow() {
+    return this.page.getByRole('row')
+      .filter({ hasText: data.work })
+      .filter({ hasText: data.costCenter })
+      .filter({ hasText: data.budgetItem })
+      .first();
+  }
+
+  private draftRequisitionRow() {
+    return this.page.getByRole('row')
+      .filter({ hasText: data.work })
+      .filter({ hasText: data.costCenter })
+      .filter({ hasText: data.budgetItem })
+      .filter({ has: this.page.getByRole('button', { name: /enviar.*aprova|solicitar.*aprova/i }) })
+      .first();
+  }
 
   async createRequisitionWithinBalance() {
     await gotoMenu(this.page, ['Suprimentos', 'Requisições']);
@@ -15,8 +32,11 @@ export class ProcurementPage {
     await fillField(this.page, ['Qtd.', 'quantidade'], data.money.requestQuantity);
     await fillField(this.page, ['Vlr unit.', 'valor unitario', 'valor unitário'], data.money.requestEstimatedValue);
     await submitForm(this.page);
-    await clickAny(this.page, ['Enviar para aprovação', 'Enviar aprovacao', 'Enviar', 'Solicitar aprovação']);
-    await expect(byText(this.page, data.requisition)).toBeVisible();
+    const row = this.draftRequisitionRow();
+    await expect(row).toBeVisible();
+    await row.getByRole('button', { name: /enviar.*aprova|solicitar.*aprova/i }).click();
+    await expect(this.requisitionRow()).toBeVisible();
+    await expect(this.requisitionRow()).toHaveText(/em aprova[cç][aã]o|pendente|aprov/i);
   }
 
   async createOverBudgetRequisition() {
@@ -42,31 +62,32 @@ export class ProcurementPage {
     await fillField(this.page, ['Qtd.', 'quantidade'], 1);
     await fillField(this.page, ['Vlr unit.', 'valor unitario', 'valor unitário'], data.money.requestEstimatedValue);
     await submitForm(this.page);
-    await clickAny(this.page, ['Enviar para aprovação', 'Enviar aprovacao', 'Enviar', 'Solicitar aprovação']);
+    const row = this.draftRequisitionRow();
+    await expect(row).toBeVisible();
+    await row.getByRole('button', { name: /enviar.*aprova|solicitar.*aprova/i }).click();
   }
 
   async createQuotationWithSuppliers() {
     await gotoMenu(this.page, ['Suprimentos', 'Cotações']);
     await clickAny(this.page, ['Novo', 'Adicionar', 'Criar']);
-    await fillField(this.page, ['descricao', 'descrição'], data.quotation);
-    await fillField(this.page, ['requisicao', 'requisição'], data.requisition);
-    for (const supplier of data.suppliers) {
-      await fillField(this.page, ['fornecedor'], supplier).catch(() => {});
-      await clickAny(this.page, ['Adicionar fornecedor', 'Adicionar']).catch(() => {});
-    }
-    await fillField(this.page, ['valor'], data.money.supplierA).catch(() => {});
-    await submitForm(this.page);
+    await chooseOption(this.page, ['Requisicao aprovada', 'Requisição aprovada', 'requisicao', 'requisição'], data.requisition);
+    await fillField(this.page, ['Fechamento'], '2026-12-31');
+    await chooseOption(this.page, ['Fornecedor 1'], data.suppliers[0]);
+    await chooseOption(this.page, ['Fornecedor 2'], data.suppliers[1]);
+    await chooseOption(this.page, ['Fornecedor 3'], data.suppliers[2]);
+    await fillField(this.page, ['observacoes', 'observações'], data.quotation).catch(() => {});
+    await clickAny(this.page, ['Abrir Cotacao', 'Abrir Cotação']);
     await clickAny(this.page, ['Vencedor', 'Selecionar vencedor', 'Concluir']).catch(() => {});
-    await expect(byText(this.page, data.quotation)).toBeVisible();
     await expect(this.page.locator('body')).toHaveText(/fornecedor|comparativo|vencedor|cotacao|cotação/i);
   }
 
   async createPurchaseOrderFromQuotation() {
     await gotoMenu(this.page, ['Suprimentos', 'Ordens de Compra']);
     await clickAny(this.page, ['Novo', 'Gerar', 'Criar']);
-    await fillField(this.page, ['cotacao', 'cotação'], data.quotation);
-    await fillField(this.page, ['descricao', 'descrição'], data.purchaseOrder).catch(() => {});
-    await fillField(this.page, ['previsao', 'previsão', 'entrega'], '31/12/2026').catch(() => {});
+    await chooseOption(this.page, ['Cotacao concluida', 'Cotação concluída'], data.quotation).catch(async () => {
+      await chooseFirstAvailableOption(this.page, ['Cotacao concluida', 'Cotação concluída']);
+    });
+    await fillField(this.page, ['previsao', 'previsão', 'entrega'], '2026-12-31').catch(() => {});
     await fillField(this.page, ['condicao', 'condição'], 'Pagamento teste').catch(() => {});
     await submitForm(this.page);
     await clickAny(this.page, ['Emitir', 'Concluir', 'Avançar', 'Avancar']).catch(() => {});

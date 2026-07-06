@@ -6,6 +6,7 @@ import {
   chooseOption,
   clickAny,
   fillField,
+  gotoMenu,
   submitForm,
   tryCancelInactivateOrDelete,
   tryCreateSimpleRecord,
@@ -96,11 +97,34 @@ export class RegistrationsPage {
     for (const category of data.categories) {
       await tryCreateSimpleRecord(this.page, ['Configurações', 'Categorias'], category, [
         { labels: ['nome', 'categoria', 'descricao', 'descrição'], value: category }
-      ]);
+      ], { verifyWithSearchAndPagination: true });
     }
   }
 
+  async createLaborRoleAndCostRange() {
+    await gotoMenu(this.page, ['Configurações', 'Colaboradores']);
+    await clickAny(this.page, ['Cargos']);
+    await clickAny(this.page, ['+ Novo Cargo', 'Novo Cargo']);
+    await fillField(this.page, ['nome', 'cargo'], data.role);
+    await fillField(this.page, ['descricao', 'descrição'], `${data.role} QA`).catch(() => {});
+    await chooseOption(this.page, ['vinculo padrao', 'vínculo padrão', 'vinculo', 'vínculo'], 'CLT').catch(() => {});
+    await submitForm(this.page);
+    await expect(byText(this.page, data.role)).toBeVisible();
+
+    await clickAny(this.page, ['Faixas de Custo']);
+    await clickAny(this.page, ['+ Nova Faixa', 'Nova Faixa']);
+    await chooseOption(this.page, ['cargo'], data.role);
+    await fillField(this.page, ['descricao', 'descrição', 'faixa'], data.costRange);
+    await fillField(this.page, ['salario base ref', 'salário base ref', 'salario', 'salário'], data.money.laborMonthlyCost).catch(() => {});
+    await fillField(this.page, ['encargos ref', 'encargos'], 0).catch(() => {});
+    await fillField(this.page, ['beneficios ref', 'benefícios ref', 'beneficios', 'benefícios'], data.money.laborBenefits).catch(() => {});
+    await submitForm(this.page);
+    await expect(byText(this.page, data.costRange)).toBeVisible();
+  }
+
   async createCollaboratorAllocationIfAvailable() {
+    await this.createLaborRoleAndCostRange();
+
     await tryCreateSimpleRecord(this.page, ['Configurações', 'Colaboradores'], data.collaborator, [
       { labels: ['nome completo', 'nome', 'colaborador'], value: data.collaborator },
       { labels: ['cpf', 'documento'], value: data.runDocument },

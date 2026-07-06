@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 async function globalSetup() {
+  process.env.RUN_ID ||= new Date().toISOString().replace(/[-:TZ.]/g, '').slice(0, 14);
+
   const outputDir = path.join(process.cwd(), 'test-results');
   fs.mkdirSync(outputDir, { recursive: true });
   if (/^(1|true|on|yes)$/i.test(process.env.PRESERVE_DIAGNOSTICS || '')) return;

@@ -1,5 +1,7 @@
 import { expect, type Locator, type Page } from '@playwright/test';
 
+type SearchRoot = Page | Locator;
+
 export type FieldSpec = {
   labels: string[];
   value: string | number;
@@ -21,6 +23,15 @@ function normalizeText(text: string) {
   return String(text).replace(/\s+/g, ' ').trim();
 }
 
+function optionMatches(option: { value: string; text: string }, expected: string) {
+  const expectedText = normalizeText(expected).toLowerCase();
+  const optionText = normalizeText(option.text).toLowerCase();
+  const optionValue = normalizeText(option.value).toLowerCase();
+  return optionText === expectedText
+    || optionValue === expectedText
+    || (expectedText.length > 2 && (optionText.includes(expectedText) || optionValue.includes(expectedText)));
+}
+
 function xpathLiteral(text: string) {
   const value = String(text);
   if (!value.includes("'")) return `'${value}'`;
@@ -40,6 +51,26 @@ export async function firstVisible(locators: Locator[]) {
       const first = locator.first();
       if (await first.isVisible().catch(() => false)) return first;
     }
+  }
+  return null;
+}
+
+async function waitForVisible(locator: Locator, timeout = 2_000) {
+  return locator.waitFor({ state: 'visible', timeout }).then(() => true).catch(() => false);
+}
+
+export async function visibleModal(page: Page) {
+  const candidates = page.locator([
+    '[role="dialog"]',
+    '.modal-overlay',
+    '.modal',
+    '[class*="modal"]',
+    '[data-testid*="modal"]'
+  ].join(', '));
+  const count = await candidates.count();
+  for (let index = count - 1; index >= 0; index -= 1) {
+    const candidate = candidates.nth(index);
+    if (await candidate.isVisible().catch(() => false)) return candidate;
   }
   return null;
 }
@@ -119,9 +150,10 @@ export async function chooseOption(page: Page, labels: string[], value: string) 
   const candidates = labels.flatMap((label) => {
     const labelText = xpathStartsWithText(label);
     return [
-      page.getByLabel(new RegExp(label, 'i')),
       page.locator(`select[name*="${label}" i]`),
       page.locator(`xpath=//*[${labelText} and ./select]//select`),
+      page.locator(`xpath=//*[${labelText} and not(.//select)]/following::select[1]`),
+      page.getByLabel(new RegExp(label, 'i')),
       page.locator(`xpath=//*[${labelText}]/ancestor::*[.//select][1]//select`),
       page.locator(`xpath=//*[${labelText}]/ancestor::*[.//*[@role="combobox"]][1]//*[@role="combobox"]`)
     ];
@@ -138,18 +170,15 @@ export async function chooseOption(page: Page, labels: string[], value: string) 
       value: item.value,
       text: (item.textContent || '').replace(/\s+/g, ' ').trim()
     })));
-    const expected = normalizeText(value).toLowerCase();
-    const option = options.find((item) => item.text.toLowerCase() === expected)
-      || (expected.length > 2 ? options.find((item) => item.text.toLowerCase().includes(expected)) : undefined);
+    const option = options.find((item) => optionMatches(item, value));
     if (option) {
       await select.selectOption(option.value);
       const selectedText = await select.evaluate((element) => {
         const selectElement = element as HTMLSelectElement;
         return (selectElement.selectedOptions[0]?.textContent || '').replace(/\s+/g, ' ').trim();
       });
-      const selected = normalizeText(selectedText).toLowerCase();
-      const selectedMatches = expected.length > 2 ? selected.includes(expected) : selected === expected;
-      if (!selectedMatches) {
+      const selectedValue = await select.evaluate((element) => (element as HTMLSelectElement).value);
+      if (!optionMatches({ text: selectedText, value: selectedValue }, value)) {
         throw new Error(`Selected option mismatch for ${labels.join(' | ')}: expected "${value}", got "${selectedText}"`);
       }
       return;
@@ -173,9 +202,10 @@ export async function expectSelectedOption(page: Page, labels: string[], expecte
   const candidates = labels.flatMap((label) => {
     const labelText = xpathStartsWithText(label);
     return [
-      page.getByLabel(new RegExp(label, 'i')),
       page.locator(`select[name*="${label}" i]`),
       page.locator(`xpath=//*[${labelText} and ./select]//select`),
+      page.locator(`xpath=//*[${labelText} and not(.//select)]/following::select[1]`),
+      page.getByLabel(new RegExp(label, 'i')),
       page.locator(`xpath=//*[${labelText}]/ancestor::*[.//select][1]//select`),
       page.locator(`xpath=//*[${labelText}]/ancestor::*[.//*[@role="combobox"]][1]//*[@role="combobox"]`)
     ];
@@ -197,27 +227,49 @@ export async function expectSelectedOption(page: Page, labels: string[], expecte
 }
 
 export async function chooseFirstAvailableOption(page: Page, labels: string[]) {
-  const candidates = labels.flatMap((label) => [
-    page.getByLabel(new RegExp(label, 'i')),
-    page.locator(`xpath=//*[starts-with(normalize-space(.), ${xpathLiteral(label)}) and ./select]//select`)
-  ]);
+  const candidates = labels.flatMap((label) => {
+    const labelText = xpathStartsWithText(label);
+    return [
+      page.locator(`select[name*="${label}" i]`),
+      page.locator(`xpath=//*[${labelText} and ./select]//select`),
+      page.locator(`xpath=//*[${labelText} and not(.//select)]/following::select[1]`),
+      page.getByLabel(new RegExp(label, 'i')),
+      page.locator(`xpath=//*[${labelText}]/ancestor::*[.//select][1]//select`),
+      page.locator(`xpath=//*[${labelText}]/ancestor::*[.//*[@role="combobox"]][1]//*[@role="combobox"]`)
+    ];
+  });
   const target = await firstVisible(candidates);
   if (!target) throw new Error(`Could not find select/control: ${labels.join(' | ')}`);
-  const optionValue = await target.locator('option').evaluateAll((options) => {
+  const tagName = await target.evaluate((element) => element.tagName.toLowerCase()).catch(() => '');
+  const select = tagName === 'select'
+    ? target
+    : await firstVisible([target.locator('select')]);
+  if (!select) throw new Error(`Could not find native select for: ${labels.join(' | ')}`);
+  const optionValue = await select.locator('option').evaluateAll((options) => {
     const option = options.find((item) => item.value && !/selecione|todas/i.test(item.textContent || ''));
     return option ? option.value : '';
   });
   if (!optionValue) throw new Error(`Could not find available option for: ${labels.join(' | ')}`);
-  await target.selectOption(optionValue);
+  await select.selectOption(optionValue);
+}
+
+function submitCandidates(root: SearchRoot) {
+  return [
+    root.getByRole('button', { name: /^(salvar|cadastrar|criar|confirmar|enviar)$/i }),
+    root.locator('button, [role="button"]')
+      .filter({ hasText: /salvar|confirmar|enviar|criar|cadastrar/i })
+      .filter({ hasNotText: /cadastrar mais/i })
+  ];
 }
 
 export async function submitForm(page: Page) {
-  const primarySubmit = await firstVisible([
-    page.getByRole('button', { name: /^(salvar|cadastrar|criar|confirmar|enviar)$/i }),
-    page.locator('button, [role="button"]').filter({ hasText: /salvar|confirmar|enviar|criar|cadastrar/i }).filter({ hasNotText: /cadastrar mais/i })
-  ]);
+  const modal = await visibleModal(page);
+  const searchRoot: SearchRoot = modal ?? page;
+  const primarySubmit = await firstVisible(submitCandidates(searchRoot));
   if (primarySubmit) {
     await primarySubmit.click();
+  } else if (modal) {
+    throw new Error('Could not find submit control inside the active modal');
   } else {
     await clickAny(page, ['Salvar', 'Cadastrar', 'Criar', 'Confirmar', 'Enviar']);
   }
@@ -233,12 +285,74 @@ export async function expectPageReady(page: Page, expectedTexts: string[] = []) 
   }
 }
 
+async function findSearchInput(page: Page) {
+  return firstVisible([
+    page.getByPlaceholder(/buscar|pesquisar|filtro/i),
+    page.getByRole('textbox', { name: /buscar|pesquisar|filtro/i }),
+    page.locator('input[type="search"]'),
+    page.locator('input[placeholder*="buscar" i], input[placeholder*="pesquisar" i], input[placeholder*="filtro" i]')
+  ]);
+}
+
+async function findEnabledNextButton(page: Page) {
+  const candidates = [
+    page.getByRole('button', { name: /^(proxima|próxima|next)$/i }),
+    page.locator('button, [role="button"]').filter({ hasText: /^(proxima|próxima|next)$/i })
+  ];
+
+  for (const candidate of candidates) {
+    const count = await candidate.count();
+    for (let index = 0; index < count; index += 1) {
+      const item = candidate.nth(index);
+      if (!await item.isVisible().catch(() => false)) continue;
+      if (await item.isDisabled().catch(() => false)) continue;
+      const ariaDisabled = await item.getAttribute('aria-disabled').catch(() => null);
+      if (ariaDisabled === 'true') continue;
+      return item;
+    }
+  }
+
+  return null;
+}
+
+async function expectRecordVisibleInSearchOrPagination(page: Page, recordName: string, timeout?: number) {
+  const record = byText(page, recordName);
+  const finalTimeout = timeout ?? 10_000;
+  if (await waitForVisible(record)) return;
+
+  const search = await findSearchInput(page);
+  if (search) {
+    await search.fill(recordName);
+    await page.waitForLoadState('networkidle').catch(() => {});
+    await page.waitForTimeout(500);
+    if (await waitForVisible(record, Math.min(finalTimeout, 5_000))) return;
+    await search.clear().catch(() => {});
+    await page.waitForLoadState('networkidle').catch(() => {});
+    await page.waitForTimeout(500);
+  }
+
+  for (let pageIndex = 0; pageIndex < 20; pageIndex += 1) {
+    if (await waitForVisible(record, 1_000)) return;
+    const next = await findEnabledNextButton(page);
+    if (!next) break;
+    await next.click();
+    await page.waitForLoadState('networkidle').catch(() => {});
+  }
+
+  await expect(record).toBeVisible({ timeout: finalTimeout });
+}
+
 export async function tryCreateSimpleRecord(
   page: Page,
   path: string[],
   recordName: string,
   fields: FieldSpec[] = [],
-  options: { createButtonNames?: string[]; assertionTimeout?: number; listButtonNames?: string[] } = {}
+  options: {
+    createButtonNames?: string[];
+    assertionTimeout?: number;
+    listButtonNames?: string[];
+    verifyWithSearchAndPagination?: boolean;
+  } = {}
 ) {
   await gotoMenu(page, path);
   if (options.listButtonNames) await clickExactControl(page, options.listButtonNames);
@@ -259,7 +373,11 @@ export async function tryCreateSimpleRecord(
   }
   await submitForm(page);
   if (options.listButtonNames) await clickExactControl(page, options.listButtonNames);
-  await expect(byText(page, recordName)).toBeVisible({ timeout: options.assertionTimeout });
+  if (options.verifyWithSearchAndPagination) {
+    await expectRecordVisibleInSearchOrPagination(page, recordName, options.assertionTimeout);
+  } else {
+    await expect(byText(page, recordName)).toBeVisible({ timeout: options.assertionTimeout });
+  }
 }
 
 export async function assertPersistedAfterRefresh(page: Page, text: string, timeout?: number) {

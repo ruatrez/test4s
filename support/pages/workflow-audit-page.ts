@@ -1,14 +1,23 @@
 import { expect, type Page } from '@playwright/test';
 import { data } from '../test-data';
-import { byText, clickAny, fillField, gotoMenu } from '../ui';
+import { clickAny, fillField, gotoMenu } from '../ui';
 
 export class WorkflowAuditPage {
   constructor(private readonly page: Page) {}
 
+  private pendingRequisitionRow() {
+    return this.page.getByRole('row')
+      .filter({ hasText: data.work })
+      .filter({ hasText: /requisi[cç][aã]o/i })
+      .filter({ hasText: /pendente/i })
+      .first();
+  }
+
   async approveRequisition() {
     await gotoMenu(this.page, ['Workflow', 'Aprovações']);
-    await expect(byText(this.page, data.requisition)).toBeVisible();
-    await clickAny(this.page, ['Aprovar']);
+    const row = this.pendingRequisitionRow();
+    await expect(row).toBeVisible();
+    await row.getByRole('button', { name: /aprovar/i }).click();
     await fillField(this.page, ['observacao', 'observação', 'justificativa'], 'Aprovacao automatizada de teste').catch(() => {});
     await clickAny(this.page, ['Confirmar', 'Salvar', 'Aprovar']);
     await gotoMenu(this.page, ['Suprimentos', 'Requisições']);
@@ -17,8 +26,9 @@ export class WorkflowAuditPage {
 
   async rejectRequisition() {
     await gotoMenu(this.page, ['Workflow', 'Aprovações']);
-    await clickAny(this.page, [data.rejectedRequisition]).catch(() => {});
-    await clickAny(this.page, ['Rejeitar']);
+    const row = this.pendingRequisitionRow();
+    await expect(row).toBeVisible();
+    await row.getByRole('button', { name: /rejeitar/i }).click();
     await fillField(this.page, ['observacao', 'observação', 'justificativa'], 'Rejeicao automatizada de teste').catch(() => {});
     await clickAny(this.page, ['Confirmar', 'Salvar', 'Rejeitar']);
     await expect(this.page.locator('body')).toHaveText(/rejeit|recusad|workflow|aprov/i);
