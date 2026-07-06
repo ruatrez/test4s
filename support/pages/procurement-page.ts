@@ -1,6 +1,6 @@
 import { expect, type Page } from '@playwright/test';
 import { data } from '../test-data';
-import { byText, chooseFirstAvailableOption, clickAny, fillField, gotoMenu, submitForm } from '../ui';
+import { byText, chooseOption, clickAny, fillField, gotoMenu, submitForm } from '../ui';
 
 export class ProcurementPage {
   constructor(private readonly page: Page) {}
@@ -8,10 +8,10 @@ export class ProcurementPage {
   async createRequisitionWithinBalance() {
     await gotoMenu(this.page, ['Suprimentos', 'Requisições']);
     await clickAny(this.page, ['Novo', 'Adicionar', 'Criar']);
-    await chooseFirstAvailableOption(this.page, ['Obra']);
-    await chooseFirstAvailableOption(this.page, ['Centro de custo']);
+    await chooseOption(this.page, ['Obra'], data.work);
+    await chooseOption(this.page, ['Centro de custo'], data.costCenter);
     await fillField(this.page, ['Justificativa'], data.requisition);
-    await chooseFirstAvailableOption(this.page, ['Item orcado', 'Item orçado']);
+    await chooseOption(this.page, ['Item orcado', 'Item orçado'], data.budgetItem);
     await fillField(this.page, ['Qtd.', 'quantidade'], data.money.requestQuantity);
     await fillField(this.page, ['Vlr unit.', 'valor unitario', 'valor unitário'], data.money.requestEstimatedValue);
     await submitForm(this.page);
@@ -22,10 +22,10 @@ export class ProcurementPage {
   async createOverBudgetRequisition() {
     await gotoMenu(this.page, ['Suprimentos', 'Requisições']);
     await clickAny(this.page, ['Novo', 'Adicionar', 'Criar']);
-    await chooseFirstAvailableOption(this.page, ['Obra']);
-    await chooseFirstAvailableOption(this.page, ['Centro de custo']);
+    await chooseOption(this.page, ['Obra'], data.work);
+    await chooseOption(this.page, ['Centro de custo'], data.costCenter);
     await fillField(this.page, ['Justificativa'], data.overBudgetRequisition);
-    await chooseFirstAvailableOption(this.page, ['Item orcado', 'Item orçado']);
+    await chooseOption(this.page, ['Item orcado', 'Item orçado'], data.budgetItem);
     await fillField(this.page, ['Qtd.', 'quantidade'], 1);
     await fillField(this.page, ['Vlr unit.', 'valor unitario', 'valor unitário'], data.money.overBudgetEstimatedValue);
     await submitForm(this.page);
@@ -35,10 +35,10 @@ export class ProcurementPage {
   async createRejectedRequisition() {
     await gotoMenu(this.page, ['Suprimentos', 'Requisições']);
     await clickAny(this.page, ['Novo', 'Adicionar', 'Criar']);
-    await chooseFirstAvailableOption(this.page, ['Obra']);
-    await chooseFirstAvailableOption(this.page, ['Centro de custo']);
+    await chooseOption(this.page, ['Obra'], data.work);
+    await chooseOption(this.page, ['Centro de custo'], data.costCenter);
     await fillField(this.page, ['Justificativa'], data.rejectedRequisition);
-    await chooseFirstAvailableOption(this.page, ['Item orcado', 'Item orçado']);
+    await chooseOption(this.page, ['Item orcado', 'Item orçado'], data.budgetItem);
     await fillField(this.page, ['Qtd.', 'quantidade'], 1);
     await fillField(this.page, ['Vlr unit.', 'valor unitario', 'valor unitário'], data.money.requestEstimatedValue);
     await submitForm(this.page);

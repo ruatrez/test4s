@@ -1,6 +1,6 @@
 import { expect, type Page } from '@playwright/test';
 import { data } from '../test-data';
-import { byText, chooseOption, clickAny, fillField, gotoMenu, submitForm } from '../ui';
+import { byText, chooseOption, clickAny, expectSelectedOption, fillField, gotoMenu, submitForm } from '../ui';
 
 export class BudgetPage {
   constructor(private readonly page: Page) {}
@@ -21,7 +21,9 @@ export class BudgetPage {
     await gotoMenu(this.page, ['Orçamento', 'Itens Orçados']);
     await clickAny(this.page, ['Novo', 'Adicionar', 'Cadastrar', 'Criar']);
     await chooseOption(this.page, ['obra'], data.work);
+    await expectSelectedOption(this.page, ['obra'], data.work);
     await chooseOption(this.page, ['centro de custo', 'centro'], data.costCenter);
+    await expectSelectedOption(this.page, ['centro de custo', 'centro'], data.costCenter);
     await chooseOption(this.page, ['categoria'], data.categories[1]);
     await fillField(this.page, ['nome do item', 'item', 'nome'], data.budgetItem);
     await fillField(this.page, ['descricao', 'descrição'], data.budgetItem).catch(() => {});

@@ -1,196 +1,47 @@
 # Relatorio de Diagnostico 4S
 
-Gerado em: 2026-07-06T14:58:16.723Z
+Gerado em: 2026-07-06T15:55:16.392Z
 
 ## Sumario
 
-Casos Playwright: 22. Falhas: 3. Aprovados: 19.
+Resultado Playwright indisponivel. Execute `npm test` antes de gerar o relatorio.
 
-Status CT001-CT022: aprovado 12, reprovado 3, bloqueado 7, nao aplicavel 0.
+Status CT001-CT022: aprovado 1, reprovado 0, bloqueado 21, nao aplicavel 0.
 
-Problemas registrados: 10.
+Problemas registrados: 0.
 
 ## Matriz CT001-CT022
 
 | CT | Status | Severidade | Titulo | Dependencias | Obtido | Evidencia | Recomendacao |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| CT001 | aprovado | critica | Login valido, logout, login invalido e sessao expirada quando observavel |  | Comportamento observado conforme esperado. |  | Confirmar credenciais, invalidacao de sessao e mensagens de erro de autenticacao. |
-| CT002 | aprovado | alta | Criacao, edicao, inativacao e login bloqueado de usuario inativo |  | Comportamento observado conforme esperado. |  | Revisar matriz de perfis, status de usuario e validacao de login no backend. |
-| CT003 | aprovado | media | Atalhos da tela Cadastros |  | Comportamento observado conforme esperado. |  | Corrigir links/rotas dos cards ou botoes da tela Cadastros. |
-| CT004 | aprovado | alta | Cliente e contrato com edicao, persistencia e vinculo |  | Comportamento observado conforme esperado. |  | Corrigir persistencia e relacionamento entre cliente e contrato. |
-| CT005 | aprovado | alta | Unidade, obra e centro de custo | CT004 | Comportamento observado conforme esperado. |  | Revisar obrigatoriedade, vinculos e persistencia de obras/centros. |
-| CT006 | aprovado | media | Fornecedores |  | Comportamento observado conforme esperado. |  | Garantir cadastro e selecao de fornecedores ativos em cotacoes. |
-| CT007 | aprovado | media | Categorias orcamentarias |  | Comportamento observado conforme esperado. |  | Corrigir cadastro, listagem e uso das categorias nos selects de movimento. |
-| CT008 | aprovado | critica | Item orcado com previsto, saldo, comprometido e pago | CT004, CT005, CT007 | Comportamento observado conforme esperado. |  | Corrigir calculo quantidade x valor unitario, persistencia e exposicao do item para requisicoes. |
-| CT009 | reprovado | critica | Alteracao de orcamento protegida por usuario comum | CT002, CT008 | Could not find clickable control: Orçamento | /home/colatto/repo/R3/test4s/test-results/CT009-ORCAMENTO-PROTEGIDO-ALTERACAO.png | Bloquear edicao direta para perfis nao autorizados e encaminhar solicitacao ao Workflow > Aprovacoes. |
-| CT010 | reprovado | critica | Exclusao de item orcado por usuario comum e administrador | CT002, CT008 | Could not find clickable control: Orçamento | /home/colatto/repo/R3/test4s/test-results/CT010-ORCAMENTO-PROTEGIDO-EXCLUSAO-OPERACIONAL.png | Exigir aprovacao administrativa e auditar exclusoes de itens orcados. |
-| CT011 | aprovado | media | Colaborador, cargo/faixa e alocacao quando a UI permitir | CT005 | Comportamento observado conforme esperado. |  | Expor fluxo de cadastro/alocacao de colaboradores ou documentar a regra de indisponibilidade. |
-| CT012 | reprovado | critica | Requisicao dentro do saldo e acima do saldo | CT008 | Could not find available option for: Item orcado \| Item orçado | /home/colatto/repo/R3/test4s/test-results/CT012-REQUISICAO-SALDO.png | Validar saldo no backend antes de avancar status e bloquear cotacao de requisicoes excedentes. |
-| CT013 | bloqueado | alta | Aprovacao e rejeicao de requisicao | CT012 | Caso bloqueado por dependencia CT012 registrada como reprovado. |  | Corrigir primeiro o caso raiz CT012 e reexecutar este fluxo. |
-| CT014 | bloqueado | alta | Cotacao com 3 fornecedores, comparativo e vencedor | CT006, CT013 | Caso bloqueado por dependencia CT013 registrada como bloqueado. |  | Corrigir primeiro o caso raiz CT013 e reexecutar este fluxo. |
-| CT015 | bloqueado | critica | Ordem de compra e comprometimento do orcamento | CT014 | Caso bloqueado por dependencia CT014 registrada como bloqueado. |  | Corrigir primeiro o caso raiz CT014 e reexecutar este fluxo. |
-| CT016 | bloqueado | media | Edicao/exclusao/cancelamento de requisicao, cotacao e OC quando permitido | CT012, CT014, CT015 | Caso bloqueado por dependencia CT012 registrada como reprovado. |  | Corrigir primeiro o caso raiz CT012 e reexecutar este fluxo. |
-| CT017 | bloqueado | critica | Contas a pagar, status e filtros | CT015 | Caso bloqueado por dependencia CT015 registrada como bloqueado. |  | Corrigir primeiro o caso raiz CT015 e reexecutar este fluxo. |
-| CT018 | bloqueado | critica | Pagamento parcial, final e tentativa acima do saldo | CT017 | Caso bloqueado por dependencia CT017 registrada como bloqueado. |  | Corrigir primeiro o caso raiz CT017 e reexecutar este fluxo. |
-| CT019 | bloqueado | alta | Dashboard financeiro apos compra/pagamento/mao de obra | CT011, CT018 | Caso bloqueado por dependencia CT018 registrada como bloqueado. |  | Corrigir primeiro o caso raiz CT018 e reexecutar este fluxo. |
+| CT001 | bloqueado | critica | Login valido, logout, login invalido e sessao expirada quando observavel |  | Caso nao executado ou sem registro no diagnostics.jsonl. |  | Executar a suite completa e confirmar se houve interrupcao antes deste CT. |
+| CT002 | bloqueado | alta | Criacao, edicao, inativacao e login bloqueado de usuario inativo |  | Caso nao executado ou sem registro no diagnostics.jsonl. |  | Executar a suite completa e confirmar se houve interrupcao antes deste CT. |
+| CT003 | bloqueado | media | Atalhos da tela Cadastros |  | Caso nao executado ou sem registro no diagnostics.jsonl. |  | Executar a suite completa e confirmar se houve interrupcao antes deste CT. |
+| CT004 | bloqueado | alta | Cliente e contrato com edicao, persistencia e vinculo |  | Caso nao executado ou sem registro no diagnostics.jsonl. |  | Executar a suite completa e confirmar se houve interrupcao antes deste CT. |
+| CT005 | bloqueado | alta | Unidade, obra e centro de custo | CT004 | Caso nao executado ou sem registro no diagnostics.jsonl. |  | Executar a suite completa e confirmar se houve interrupcao antes deste CT. |
+| CT006 | bloqueado | media | Fornecedores |  | Caso nao executado ou sem registro no diagnostics.jsonl. |  | Executar a suite completa e confirmar se houve interrupcao antes deste CT. |
+| CT007 | bloqueado | media | Categorias orcamentarias |  | Caso nao executado ou sem registro no diagnostics.jsonl. |  | Executar a suite completa e confirmar se houve interrupcao antes deste CT. |
+| CT008 | bloqueado | critica | Item orcado com previsto, saldo, comprometido e pago | CT004, CT005, CT007 | Caso nao executado ou sem registro no diagnostics.jsonl. |  | Executar a suite completa e confirmar se houve interrupcao antes deste CT. |
+| CT009 | bloqueado | critica | Alteracao de orcamento protegida por usuario comum | CT002, CT008 | Caso nao executado ou sem registro no diagnostics.jsonl. |  | Executar a suite completa e confirmar se houve interrupcao antes deste CT. |
+| CT010 | bloqueado | critica | Exclusao de item orcado por usuario comum e administrador | CT002, CT008 | Caso nao executado ou sem registro no diagnostics.jsonl. |  | Executar a suite completa e confirmar se houve interrupcao antes deste CT. |
+| CT011 | bloqueado | media | Colaborador, cargo/faixa e alocacao quando a UI permitir | CT005 | Caso nao executado ou sem registro no diagnostics.jsonl. |  | Executar a suite completa e confirmar se houve interrupcao antes deste CT. |
+| CT012 | bloqueado | critica | Requisicao dentro do saldo e acima do saldo | CT008 | Caso nao executado ou sem registro no diagnostics.jsonl. |  | Executar a suite completa e confirmar se houve interrupcao antes deste CT. |
+| CT013 | bloqueado | alta | Aprovacao e rejeicao de requisicao | CT012 | Caso nao executado ou sem registro no diagnostics.jsonl. |  | Executar a suite completa e confirmar se houve interrupcao antes deste CT. |
+| CT014 | bloqueado | alta | Cotacao com 3 fornecedores, comparativo e vencedor | CT006, CT013 | Caso nao executado ou sem registro no diagnostics.jsonl. |  | Executar a suite completa e confirmar se houve interrupcao antes deste CT. |
+| CT015 | bloqueado | critica | Ordem de compra e comprometimento do orcamento | CT014 | Caso nao executado ou sem registro no diagnostics.jsonl. |  | Executar a suite completa e confirmar se houve interrupcao antes deste CT. |
+| CT016 | bloqueado | media | Edicao/exclusao/cancelamento de requisicao, cotacao e OC quando permitido | CT012, CT014, CT015 | Caso nao executado ou sem registro no diagnostics.jsonl. |  | Executar a suite completa e confirmar se houve interrupcao antes deste CT. |
+| CT017 | bloqueado | critica | Contas a pagar, status e filtros | CT015 | Caso nao executado ou sem registro no diagnostics.jsonl. |  | Executar a suite completa e confirmar se houve interrupcao antes deste CT. |
+| CT018 | bloqueado | critica | Pagamento parcial, final e tentativa acima do saldo | CT017 | Caso nao executado ou sem registro no diagnostics.jsonl. |  | Executar a suite completa e confirmar se houve interrupcao antes deste CT. |
+| CT019 | bloqueado | alta | Dashboard financeiro apos compra/pagamento/mao de obra | CT011, CT018 | Caso nao executado ou sem registro no diagnostics.jsonl. |  | Executar a suite completa e confirmar se houve interrupcao antes deste CT. |
 | CT020 | aprovado | alta | Workflow com perfil correto/incorreto, aprovacao e rejeicao | CT002 | Comportamento observado conforme esperado. |  | Aplicar autorizacao no backend e esconder/desabilitar acoes no frontend para perfis sem permissao. |
-| CT021 | aprovado | media | Auditoria de criacao, edicao, exclusao/cancelamento e decisoes | CT020 | Comportamento observado conforme esperado. |  | Garantir eventos de auditoria para entidades financeiras, cadastros e workflow. |
-| CT022 | aprovado | alta | Rotas principais sem tela em branco, erros JS criticos ou HTTP 5xx |  | Comportamento observado conforme esperado. |  | Corrigir rota, permissao, carregamento de dados ou componente frontend da tela afetada. |
+| CT021 | bloqueado | media | Auditoria de criacao, edicao, exclusao/cancelamento e decisoes | CT020 | Caso nao executado ou sem registro no diagnostics.jsonl. |  | Executar a suite completa e confirmar se houve interrupcao antes deste CT. |
+| CT022 | bloqueado | alta | Rotas principais sem tela em branco, erros JS criticos ou HTTP 5xx |  | Caso nao executado ou sem registro no diagnostics.jsonl. |  | Executar a suite completa e confirmar se houve interrupcao antes deste CT. |
 
 ## Problemas Priorizados
 
 | ID | Severidade | Caso | Caminho | Perfil | Massa | Passos | Esperado | Obtido | Impacto funcional e negocio | Evidencia | Recomendacao | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| CT009-ORCAMENTO-PROTEGIDO-ALTERACAO | critica | CT009 | https://4s.ruatrez.com/ | operacional | AUTO-4S-20260706114042 | Executar o caso automatizado "CT009" e observar o resultado registrado. | Usuario comum nao deve alterar item orcado protegido diretamente; deve gerar aprovacao ou bloqueio. | Could not find clickable control: Orçamento | Alteracao livre de orcamento compromete governanca financeira. | /home/colatto/repo/R3/test4s/test-results/CT009-ORCAMENTO-PROTEGIDO-ALTERACAO.png | Bloquear edicao direta para perfis nao autorizados e encaminhar solicitacao ao Workflow > Aprovacoes. | reprovado |
-| CT010-ORCAMENTO-PROTEGIDO-EXCLUSAO-OPERACIONAL | critica | CT010 | https://4s.ruatrez.com/ | operacional | AUTO-4S-20260706114042 | Executar o caso automatizado "CT010" e observar o resultado registrado. | Exclusao por usuario comum deve gerar aprovacao do administrador. | Could not find clickable control: Orçamento | Exclusao indevida remove base de controle financeiro e afeta saldos. | /home/colatto/repo/R3/test4s/test-results/CT010-ORCAMENTO-PROTEGIDO-EXCLUSAO-OPERACIONAL.png | Exigir aprovacao administrativa e auditar exclusoes de itens orcados. | reprovado |
-| CT012-REQUISICAO-SALDO | critica | CT012 | https://4s.ruatrez.com/requisicoes | administrador | AUTO-4S-20260706114042 | Executar o caso automatizado "CT012" e observar o resultado registrado. | Requisicao dentro do saldo deve seguir para aprovacao; acima do saldo deve ser bloqueada ou sinalizada. | Could not find available option for: Item orcado \| Item orçado | Permitir compra acima do saldo rompe controle financeiro da obra. | /home/colatto/repo/R3/test4s/test-results/CT012-REQUISICAO-SALDO.png | Validar saldo no backend antes de avancar status e bloquear cotacao de requisicoes excedentes. | reprovado |
-| CT015-ORDEM-COMPRA | critica | CT015 | https://4s.ruatrez.com/dashboard | administrador | AUTO-4S-20260706114042 | Executar o caso automatizado "CT015" e observar o resultado registrado. | OC deve nascer da cotacao, comprometer orcamento e gerar conta a pagar no ponto previsto. | Caso bloqueado por dependencia CT014 registrada como bloqueado. | Sem comprometimento do orcamento nao ha controle real de compras. |  | Corrigir primeiro o caso raiz CT014 e reexecutar este fluxo. | bloqueado |
-| CT017-CONTAS-PAGAR | critica | CT017 | https://4s.ruatrez.com/dashboard | administrador | AUTO-4S-20260706114042 | Executar o caso automatizado "CT017" e observar o resultado registrado. | Contas a pagar devem exibir status e filtros funcionais apos OC. | Caso bloqueado por dependencia CT015 registrada como bloqueado. | Sem conta a pagar rastreavel o financeiro nao consegue programar ou reconciliar pagamentos. |  | Corrigir primeiro o caso raiz CT015 e reexecutar este fluxo. | bloqueado |
-| CT018-PAGAMENTOS | critica | CT018 | https://4s.ruatrez.com/dashboard | administrador | AUTO-4S-20260706114042 | Executar o caso automatizado "CT018" e observar o resultado registrado. | Pagamento parcial/final deve atualizar saldo e tentativa acima do saldo deve ser bloqueada. | Caso bloqueado por dependencia CT017 registrada como bloqueado. | Erro em pagamento distorce custo real, dashboard e tomada de decisao. |  | Corrigir primeiro o caso raiz CT017 e reexecutar este fluxo. | bloqueado |
-| CT013-APROVACAO-REJEICAO-REQUISICAO | alta | CT013 | https://4s.ruatrez.com/dashboard | administrador | AUTO-4S-20260706114042 | Executar o caso automatizado "CT013" e observar o resultado registrado. | Aprovacao deve liberar requisicao para cotacao e rejeicao deve encerrar fluxo com decisao auditavel. | Caso bloqueado por dependencia CT012 registrada como reprovado. | Workflow quebrado permite avancos indevidos ou bloqueia compras validas. |  | Corrigir primeiro o caso raiz CT012 e reexecutar este fluxo. | bloqueado |
-| CT014-COTACAO | alta | CT014 | https://4s.ruatrez.com/dashboard | administrador | AUTO-4S-20260706114042 | Executar o caso automatizado "CT014" e observar o resultado registrado. | Cotacao deve comparar fornecedores, registrar vencedor e persistir. | Caso bloqueado por dependencia CT013 registrada como bloqueado. | Comparativo incorreto afeta decisao de compra e rastreabilidade. |  | Corrigir primeiro o caso raiz CT013 e reexecutar este fluxo. | bloqueado |
-| CT019-DASHBOARD-FINANCEIRO | alta | CT019 | https://4s.ruatrez.com/dashboard | administrador | AUTO-4S-20260706114042 | Executar o caso automatizado "CT019" e observar o resultado registrado. | Dashboard deve refletir compra, pagamentos, mao de obra, custo real e saldos. | Caso bloqueado por dependencia CT018 registrada como bloqueado. | Indicadores inconsistentes prejudicam controle financeiro e rastreabilidade. |  | Corrigir primeiro o caso raiz CT018 e reexecutar este fluxo. | bloqueado |
-| CT016-EDICAO-CANCELAMENTO-DOCUMENTOS | media | CT016 | https://4s.ruatrez.com/dashboard | administrador | AUTO-4S-20260706114042 | Executar o caso automatizado "CT016" e observar o resultado registrado. | Requisicao, cotacao e OC devem permitir edicao/cancelamento quando a regra permitir ou exibir bloqueio de negocio. | Caso bloqueado por dependencia CT012 registrada como reprovado. | Sem acao administrativa clara, documentos incorretos permanecem no fluxo financeiro. |  | Corrigir primeiro o caso raiz CT012 e reexecutar este fluxo. | bloqueado |
+| - | - | - | - | - | - | - | - | Nenhum problema registrado pelos hooks de diagnostico. | - | - | - | aprovado |
 
 ## Detalhes Dos Desvios
-
-### CT009-ORCAMENTO-PROTEGIDO-ALTERACAO - critica
-
-- Caso: CT009
-- Localizacao: https://4s.ruatrez.com/
-- Perfil: operacional
-- Massa: AUTO-4S-20260706114042
-- Passos para reproduzir: Executar o caso automatizado "CT009" e observar o resultado registrado.
-- Esperado: Usuario comum nao deve alterar item orcado protegido diretamente; deve gerar aprovacao ou bloqueio.
-- Obtido: Could not find clickable control: Orçamento
-- Impacto funcional e negocio: Alteracao livre de orcamento compromete governanca financeira.
-- Recomendacao: Bloquear edicao direta para perfis nao autorizados e encaminhar solicitacao ao Workflow > Aprovacoes.
-- Status: reprovado
-- Evidencia: /home/colatto/repo/R3/test4s/test-results/CT009-ORCAMENTO-PROTEGIDO-ALTERACAO.png
-
-### CT010-ORCAMENTO-PROTEGIDO-EXCLUSAO-OPERACIONAL - critica
-
-- Caso: CT010
-- Localizacao: https://4s.ruatrez.com/
-- Perfil: operacional
-- Massa: AUTO-4S-20260706114042
-- Passos para reproduzir: Executar o caso automatizado "CT010" e observar o resultado registrado.
-- Esperado: Exclusao por usuario comum deve gerar aprovacao do administrador.
-- Obtido: Could not find clickable control: Orçamento
-- Impacto funcional e negocio: Exclusao indevida remove base de controle financeiro e afeta saldos.
-- Recomendacao: Exigir aprovacao administrativa e auditar exclusoes de itens orcados.
-- Status: reprovado
-- Evidencia: /home/colatto/repo/R3/test4s/test-results/CT010-ORCAMENTO-PROTEGIDO-EXCLUSAO-OPERACIONAL.png
-
-### CT012-REQUISICAO-SALDO - critica
-
-- Caso: CT012
-- Localizacao: https://4s.ruatrez.com/requisicoes
-- Perfil: administrador
-- Massa: AUTO-4S-20260706114042
-- Passos para reproduzir: Executar o caso automatizado "CT012" e observar o resultado registrado.
-- Esperado: Requisicao dentro do saldo deve seguir para aprovacao; acima do saldo deve ser bloqueada ou sinalizada.
-- Obtido: Could not find available option for: Item orcado | Item orçado
-- Impacto funcional e negocio: Permitir compra acima do saldo rompe controle financeiro da obra.
-- Recomendacao: Validar saldo no backend antes de avancar status e bloquear cotacao de requisicoes excedentes.
-- Status: reprovado
-- Evidencia: /home/colatto/repo/R3/test4s/test-results/CT012-REQUISICAO-SALDO.png
-
-### CT015-ORDEM-COMPRA - critica
-
-- Caso: CT015
-- Localizacao: https://4s.ruatrez.com/dashboard
-- Perfil: administrador
-- Massa: AUTO-4S-20260706114042
-- Passos para reproduzir: Executar o caso automatizado "CT015" e observar o resultado registrado.
-- Esperado: OC deve nascer da cotacao, comprometer orcamento e gerar conta a pagar no ponto previsto.
-- Obtido: Caso bloqueado por dependencia CT014 registrada como bloqueado.
-- Impacto funcional e negocio: Sem comprometimento do orcamento nao ha controle real de compras.
-- Recomendacao: Corrigir primeiro o caso raiz CT014 e reexecutar este fluxo.
-- Status: bloqueado
-- Evidencia: Nao capturada
-
-### CT017-CONTAS-PAGAR - critica
-
-- Caso: CT017
-- Localizacao: https://4s.ruatrez.com/dashboard
-- Perfil: administrador
-- Massa: AUTO-4S-20260706114042
-- Passos para reproduzir: Executar o caso automatizado "CT017" e observar o resultado registrado.
-- Esperado: Contas a pagar devem exibir status e filtros funcionais apos OC.
-- Obtido: Caso bloqueado por dependencia CT015 registrada como bloqueado.
-- Impacto funcional e negocio: Sem conta a pagar rastreavel o financeiro nao consegue programar ou reconciliar pagamentos.
-- Recomendacao: Corrigir primeiro o caso raiz CT015 e reexecutar este fluxo.
-- Status: bloqueado
-- Evidencia: Nao capturada
-
-### CT018-PAGAMENTOS - critica
-
-- Caso: CT018
-- Localizacao: https://4s.ruatrez.com/dashboard
-- Perfil: administrador
-- Massa: AUTO-4S-20260706114042
-- Passos para reproduzir: Executar o caso automatizado "CT018" e observar o resultado registrado.
-- Esperado: Pagamento parcial/final deve atualizar saldo e tentativa acima do saldo deve ser bloqueada.
-- Obtido: Caso bloqueado por dependencia CT017 registrada como bloqueado.
-- Impacto funcional e negocio: Erro em pagamento distorce custo real, dashboard e tomada de decisao.
-- Recomendacao: Corrigir primeiro o caso raiz CT017 e reexecutar este fluxo.
-- Status: bloqueado
-- Evidencia: Nao capturada
-
-### CT013-APROVACAO-REJEICAO-REQUISICAO - alta
-
-- Caso: CT013
-- Localizacao: https://4s.ruatrez.com/dashboard
-- Perfil: administrador
-- Massa: AUTO-4S-20260706114042
-- Passos para reproduzir: Executar o caso automatizado "CT013" e observar o resultado registrado.
-- Esperado: Aprovacao deve liberar requisicao para cotacao e rejeicao deve encerrar fluxo com decisao auditavel.
-- Obtido: Caso bloqueado por dependencia CT012 registrada como reprovado.
-- Impacto funcional e negocio: Workflow quebrado permite avancos indevidos ou bloqueia compras validas.
-- Recomendacao: Corrigir primeiro o caso raiz CT012 e reexecutar este fluxo.
-- Status: bloqueado
-- Evidencia: Nao capturada
-
-### CT014-COTACAO - alta
-
-- Caso: CT014
-- Localizacao: https://4s.ruatrez.com/dashboard
-- Perfil: administrador
-- Massa: AUTO-4S-20260706114042
-- Passos para reproduzir: Executar o caso automatizado "CT014" e observar o resultado registrado.
-- Esperado: Cotacao deve comparar fornecedores, registrar vencedor e persistir.
-- Obtido: Caso bloqueado por dependencia CT013 registrada como bloqueado.
-- Impacto funcional e negocio: Comparativo incorreto afeta decisao de compra e rastreabilidade.
-- Recomendacao: Corrigir primeiro o caso raiz CT013 e reexecutar este fluxo.
-- Status: bloqueado
-- Evidencia: Nao capturada
-
-### CT019-DASHBOARD-FINANCEIRO - alta
-
-- Caso: CT019
-- Localizacao: https://4s.ruatrez.com/dashboard
-- Perfil: administrador
-- Massa: AUTO-4S-20260706114042
-- Passos para reproduzir: Executar o caso automatizado "CT019" e observar o resultado registrado.
-- Esperado: Dashboard deve refletir compra, pagamentos, mao de obra, custo real e saldos.
-- Obtido: Caso bloqueado por dependencia CT018 registrada como bloqueado.
-- Impacto funcional e negocio: Indicadores inconsistentes prejudicam controle financeiro e rastreabilidade.
-- Recomendacao: Corrigir primeiro o caso raiz CT018 e reexecutar este fluxo.
-- Status: bloqueado
-- Evidencia: Nao capturada
-
-### CT016-EDICAO-CANCELAMENTO-DOCUMENTOS - media
-
-- Caso: CT016
-- Localizacao: https://4s.ruatrez.com/dashboard
-- Perfil: administrador
-- Massa: AUTO-4S-20260706114042
-- Passos para reproduzir: Executar o caso automatizado "CT016" e observar o resultado registrado.
-- Esperado: Requisicao, cotacao e OC devem permitir edicao/cancelamento quando a regra permitir ou exibir bloqueio de negocio.
-- Obtido: Caso bloqueado por dependencia CT012 registrada como reprovado.
-- Impacto funcional e negocio: Sem acao administrativa clara, documentos incorretos permanecem no fluxo financeiro.
-- Recomendacao: Corrigir primeiro o caso raiz CT012 e reexecutar este fluxo.
-- Status: bloqueado
-- Evidencia: Nao capturada
 

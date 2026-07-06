@@ -17,6 +17,10 @@ export function escapeRegex(text: string) {
   return String(text).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
+function normalizeText(text: string) {
+  return String(text).replace(/\s+/g, ' ').trim();
+}
+
 function xpathLiteral(text: string) {
   const value = String(text);
   if (!value.includes("'")) return `'${value}'`;
@@ -130,9 +134,24 @@ export async function chooseOption(page: Page, labels: string[], value: string) 
     ? target
     : await firstVisible([target.locator('select')]);
   if (select) {
-    const option = select.locator('option').filter({ hasText: new RegExp(escapeRegex(value), 'i') }).first();
-    if (await option.count()) {
-      await select.selectOption({ label: await option.innerText() });
+    const options = await select.locator('option').evaluateAll((items) => items.map((item) => ({
+      value: item.value,
+      text: (item.textContent || '').replace(/\s+/g, ' ').trim()
+    })));
+    const expected = normalizeText(value).toLowerCase();
+    const option = options.find((item) => item.text.toLowerCase() === expected)
+      || (expected.length > 2 ? options.find((item) => item.text.toLowerCase().includes(expected)) : undefined);
+    if (option) {
+      await select.selectOption(option.value);
+      const selectedText = await select.evaluate((element) => {
+        const selectElement = element as HTMLSelectElement;
+        return (selectElement.selectedOptions[0]?.textContent || '').replace(/\s+/g, ' ').trim();
+      });
+      const selected = normalizeText(selectedText).toLowerCase();
+      const selectedMatches = expected.length > 2 ? selected.includes(expected) : selected === expected;
+      if (!selectedMatches) {
+        throw new Error(`Selected option mismatch for ${labels.join(' | ')}: expected "${value}", got "${selectedText}"`);
+      }
       return;
     }
   }
@@ -145,11 +164,36 @@ export async function chooseOption(page: Page, labels: string[], value: string) 
     page.getByText(optionPattern)
   ]);
   if (!optionTarget) {
-    await target.press('ArrowDown').catch(() => {});
-    await target.press('Enter').catch(() => {});
-    return;
+    throw new Error(`Could not find option "${value}" for: ${labels.join(' | ')}`);
   }
   await optionTarget.click();
+}
+
+export async function expectSelectedOption(page: Page, labels: string[], expectedValue: string) {
+  const candidates = labels.flatMap((label) => {
+    const labelText = xpathStartsWithText(label);
+    return [
+      page.getByLabel(new RegExp(label, 'i')),
+      page.locator(`select[name*="${label}" i]`),
+      page.locator(`xpath=//*[${labelText} and ./select]//select`),
+      page.locator(`xpath=//*[${labelText}]/ancestor::*[.//select][1]//select`),
+      page.locator(`xpath=//*[${labelText}]/ancestor::*[.//*[@role="combobox"]][1]//*[@role="combobox"]`)
+    ];
+  });
+  const target = await firstVisible(candidates);
+  if (!target) throw new Error(`Could not find select/control: ${labels.join(' | ')}`);
+
+  const tagName = await target.evaluate((element) => element.tagName.toLowerCase()).catch(() => '');
+  const select = tagName === 'select'
+    ? target
+    : await firstVisible([target.locator('select')]);
+  const selectedText = select
+    ? await select.evaluate((element) => {
+      const selectElement = element as HTMLSelectElement;
+      return (selectElement.selectedOptions[0]?.textContent || '').replace(/\s+/g, ' ').trim();
+    })
+    : await target.innerText().catch(() => '');
+  expect(normalizeText(selectedText).toLowerCase()).toContain(normalizeText(expectedValue).toLowerCase());
 }
 
 export async function chooseFirstAvailableOption(page: Page, labels: string[]) {
