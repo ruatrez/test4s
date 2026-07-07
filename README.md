@@ -16,6 +16,17 @@ Resultado final da execução limpa mais recente: 22 testes, 8 aprovados, 3 repr
 
 Resultado da suíte completa (npm test):
 
+### Atualizacao - RUN_ID 20260707143527
+
+- CT015 - Severidade: critica | Status: reprovado | Observacao: em Suprimentos > Ordens de Compra, a tela de Nova OC abriu, mas o campo "Cotacao concluida" continha apenas "Selecione...", sem cotacao disponivel para gerar ordem de compra. A falha ocorreu no run dependente e foi confirmada em execucao isolada do CT015. | Evidencias: [screenshot](./test-results/preserved-20260707143527-ct015-confirm/artifacts/04-procurement-finance-e2e-21d1f-omprometimento-do-orcamento-chromium-desktop/test-failed-1.png), [trace](./test-results/preserved-20260707143527-ct015-confirm/artifacts/04-procurement-finance-e2e-21d1f-omprometimento-do-orcamento-chromium-desktop/trace.zip), [contexto](./test-results/preserved-20260707143527-ct015-confirm/artifacts/04-procurement-finance-e2e-21d1f-omprometimento-do-orcamento-chromium-desktop/error-context.md), [triagem consolidada](./test-results/qa-triage-20260707143527.md) | Recomendacao: revisar o fechamento/conclusao da cotacao e o filtro de cotacoes disponiveis para OC; garantir que a cotacao aprovada/concluida apareca no select e que a criacao da OC atualize comprometido e conta a pagar.
+
+### CTs bloqueados por dependencia - RUN_ID 20260707143527
+
+- CT016 - Severidade: media | Bloqueado por CT015 reprovado.
+- CT017 - Severidade: critica | Bloqueado por CT015 reprovado.
+- CT018 - Severidade: critica | Bloqueado por CT017 bloqueado.
+- CT019 - Severidade: alta | Bloqueado por CT018 bloqueado.
+
 ### CTs Reprovados
 
 - CT007 - Severidade: média | Observação: em Configurações > Categorias Orç., a automação não confirmou todas as categorias da massa AUTO-4S-20260706123151 após 3 tentativas. A tela exibia tabela paginada com 17 categorias e algumas categorias da massa atual visíveis, indicando possível limitação da automação por paginação, mas sem correção/reexecução confirmatória nesta rodada. | Evidências: [screenshot](./test-results/artifacts/02-master-data-CT007---categorias-orcamentarias-chromium-desktop-retry2/test-failed-1.png), [trace](./test-results/artifacts/02-master-data-CT007---categorias-orcamentarias-chromium-desktop-retry2/trace.zip), [contexto](./test-results/artifacts/02-master-data-CT007---categorias-orcamentarias-chromium-desktop-retry2/error-context.md) | Recomendação: validar persistência/listagem das cinco categorias e, se elas estiverem em páginas diferentes, ajustar a automação para buscar/paginar antes de afirmar ausência.
