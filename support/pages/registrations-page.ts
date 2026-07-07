@@ -26,7 +26,7 @@ export class RegistrationsPage {
       { labels: ['E-mail', 'email'], value: 'cliente.auto@example.test' },
       { labels: ['Contato Principal'], value: 'QA Automatizado' },
       { type: 'select', labels: ['Status'], value: 'Ativo' }
-    ]);
+    ], { verifyWithSearchAndPagination: true });
     await tryEditCurrentRecord(this.page, [
       { labels: ['Contato Principal'], value: 'QA Automatizado Editado' }
     ]).catch(() => {});

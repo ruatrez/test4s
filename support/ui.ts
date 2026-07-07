@@ -47,9 +47,10 @@ function xpathStartsWithText(text: string) {
 
 export async function firstVisible(locators: Locator[]) {
   for (const locator of locators) {
-    if (await locator.count()) {
-      const first = locator.first();
-      if (await first.isVisible().catch(() => false)) return first;
+    const count = await locator.count();
+    for (let index = 0; index < count; index += 1) {
+      const candidate = locator.nth(index);
+      if (await candidate.isVisible().catch(() => false)) return candidate;
     }
   }
   return null;
@@ -59,18 +60,24 @@ async function waitForVisible(locator: Locator, timeout = 2_000) {
   return locator.waitFor({ state: 'visible', timeout }).then(() => true).catch(() => false);
 }
 
+async function isUsableModalContainer(locator: Locator) {
+  if (!await locator.isVisible().catch(() => false)) return false;
+  return await locator.locator('input, textarea, select, button, [role="button"]').count().then((count) => count > 0);
+}
+
 export async function visibleModal(page: Page) {
   const candidates = page.locator([
     '[role="dialog"]',
+    '.modal-overlay > .modal-panel',
+    '.modal-panel',
     '.modal-overlay',
     '.modal',
-    '[class*="modal"]',
     '[data-testid*="modal"]'
   ].join(', '));
   const count = await candidates.count();
   for (let index = count - 1; index >= 0; index -= 1) {
     const candidate = candidates.nth(index);
-    if (await candidate.isVisible().catch(() => false)) return candidate;
+    if (await isUsableModalContainer(candidate)) return candidate;
   }
   return null;
 }
@@ -111,6 +118,11 @@ export async function gotoMenu(page: Page, path: string[]) {
     const segment = path[index];
     const nextSegment = path[index + 1];
     if (segment === 'Dashboard' && await page.getByRole('heading', { name: /dashboard/i }).count()) {
+      continue;
+    }
+    if (/^(orçamento|orcamento)$/i.test(segment)
+      && /itens orçados|itens orcados/i.test(nextSegment || '')
+      && await page.getByRole('heading', { name: /orçamento base|orcamento base/i }).count()) {
       continue;
     }
     if (nextSegment) {
@@ -255,6 +267,7 @@ export async function chooseFirstAvailableOption(page: Page, labels: string[]) {
 
 function submitCandidates(root: SearchRoot) {
   return [
+    root.locator('button[type="submit"], input[type="submit"]'),
     root.getByRole('button', { name: /^(salvar|cadastrar|criar|confirmar|enviar)$/i }),
     root.locator('button, [role="button"]')
       .filter({ hasText: /salvar|confirmar|enviar|criar|cadastrar/i })
@@ -262,11 +275,26 @@ function submitCandidates(root: SearchRoot) {
   ];
 }
 
+async function findSubmitControl(root: SearchRoot) {
+  return firstVisible(submitCandidates(root));
+}
+
+async function scrollToModalEnd(modal: Locator) {
+  await modal.evaluate((element) => {
+    element.scrollTo({ top: element.scrollHeight, behavior: 'instant' });
+  }).catch(() => {});
+}
+
 export async function submitForm(page: Page) {
   const modal = await visibleModal(page);
   const searchRoot: SearchRoot = modal ?? page;
-  const primarySubmit = await firstVisible(submitCandidates(searchRoot));
+  let primarySubmit = await findSubmitControl(searchRoot);
+  if (!primarySubmit && modal) {
+    await scrollToModalEnd(modal);
+    primarySubmit = await findSubmitControl(modal);
+  }
   if (primarySubmit) {
+    await primarySubmit.scrollIntoViewIfNeeded().catch(() => {});
     await primarySubmit.click();
   } else if (modal) {
     throw new Error('Could not find submit control inside the active modal');

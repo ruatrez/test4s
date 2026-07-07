@@ -7,11 +7,12 @@ export class AuthPage {
   constructor(private readonly page: Page) {}
 
   async loginAsAdmin() {
-    await login(this.page);
+    await login(this.page, config.adminEmail, config.adminPassword, 'admin');
   }
 
   async login(email = config.adminEmail, password = config.adminPassword) {
-    await login(this.page, email, password);
+    const profile = email === config.adminEmail ? 'admin' : 'operacional';
+    await login(this.page, email, password, profile);
   }
 
   async logout() {

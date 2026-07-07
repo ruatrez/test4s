@@ -6,6 +6,8 @@ Esta suite implementa a validacao descrita no `RoteirodeTestes4S.pdf` e detalhad
 
 A suite Playwright deve usar o Brave instalado no ambiente. O `playwright.config.ts` define `BROWSER_EXECUTABLE` com padrao `/usr/bin/brave-browser`, usando o projeto `chromium-desktop`.
 
+Qualquer comando que inicialize Playwright/Brave deve rodar fora do sandbox do agente, usando `sandbox_permissions: "require_escalated"` no Codex. Isso vale para smoke, regressao completa, specs isoladas e CTs isolados. O Brave falha antes dos testes dentro do sandbox do agente com `setsockopt: Operation not permitted`; essa falha e ambiental e nao deve consumir uma tentativa de teste.
+
 Instalar dependencias quando necessario:
 
 ```bash
@@ -99,6 +101,8 @@ Para executar um CT especifico pelo titulo:
 ```bash
 npx playwright test -g "CT005"
 ```
+
+Os comandos seletivos com `npx playwright test ...` tambem devem usar execucao fora do sandbox do agente.
 
 ## Cobertura CT001-CT022
 

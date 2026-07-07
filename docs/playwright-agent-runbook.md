@@ -42,6 +42,12 @@ Instalar dependencias se necessario:
 npm install
 ```
 
+### Regra de sandbox do agente
+
+Qualquer comando que inicialize Playwright/Brave deve ser executado fora do sandbox do agente, usando `sandbox_permissions: "require_escalated"` no Codex. Isso vale para `npm test`, `npm run test:smoke`, `npm run test:e2e` e `npx playwright test ...`.
+
+Motivo: o Brave falha antes dos testes quando iniciado no sandbox do agente, com `setsockopt: Operation not permitted`. Essa falha e ambiental; nao deve consumir uma tentativa de teste nem ser triada como bug da aplicacao. O `playwright.config.ts` ja passa `--no-sandbox` para o Chromium/Brave; a exigencia aqui e executar o comando fora do sandbox do agente.
+
 Executar smoke tecnico:
 
 ```bash
@@ -107,6 +113,8 @@ Para rodar um CT especifico pelo titulo:
 ```bash
 npx playwright test -g "CT005"
 ```
+
+Esses runs seletivos tambem devem ser executados fora do sandbox do agente.
 
 ## Matriz CT001-CT022
 

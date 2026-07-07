@@ -13,6 +13,17 @@ Sempre que precisar julgar uma falha, use esses documentos como referência.
 
 ## 1. Antes de começar
 
+0. Qualquer comando que inicialize Playwright/Brave deve rodar fora do sandbox do agente.
+
+   Use `sandbox_permissions: "require_escalated"` ao executar:
+
+   * `npm test`
+   * `npm run test:smoke`
+   * `npm run test:e2e`
+   * `npx playwright test ...`
+
+   Motivo: o Brave falha antes dos testes quando iniciado no sandbox do agente, com erro conhecido `setsockopt: Operation not permitted`. Não gaste uma tentativa primeiro dentro do sandbox; solicite a execução escalada diretamente.
+
 1. Confirme o acesso de rede a:
 
    ```text
@@ -56,7 +67,7 @@ Sempre que precisar julgar uma falha, use esses documentos como referência.
 
 ## 2. Execução
 
-Rode a suíte completa:
+Rode a suíte completa fora do sandbox do agente, usando `sandbox_permissions: "require_escalated"`:
 
 ```bash
 BASE_URL=https://4s.ruatrez.com \
@@ -73,6 +84,8 @@ Se não definir, use apenas nesta execução:
 ```bash
 npm test -- --retries=2
 ```
+
+Esse comando também deve rodar fora do sandbox.
 
 Não altere o arquivo versionado.
 
@@ -96,6 +109,8 @@ Se houver suspeita disso, rode o grupo isolado depois que o grupo anterior tiver
 ```bash
 npx playwright test tests/03-budget-labor.spec.ts
 ```
+
+Runs isolados com `npx playwright test ...` também devem usar `sandbox_permissions: "require_escalated"`.
 
 Se um grupo inicial, como smoke ou cadastros/base, falhar, investigue esse grupo antes de seguir gastando tempo confirmando reprovações em cascata nos grupos seguintes.
 
@@ -260,4 +275,3 @@ No final da execução, entregue um resumo contendo:
    * Rede restrita.
 
 6. Caminho dos relatórios completos gerados.
-
