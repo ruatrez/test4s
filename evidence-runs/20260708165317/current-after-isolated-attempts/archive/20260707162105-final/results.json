@@ -1,0 +1,154 @@
+{
+  "config": {
+    "argv": [
+      "/home/linuxbrew/.linuxbrew/Cellar/node/26.4.0/bin/node",
+      "/home/colatto/repo/R3/test4s/node_modules/.bin/playwright",
+      "test",
+      "-g",
+      "CT019"
+    ],
+    "configFile": "/home/colatto/repo/R3/test4s/playwright.config.ts",
+    "rootDir": "/home/colatto/repo/R3/test4s/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "/home/colatto/repo/R3/test4s/support/global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/colatto/repo/R3/test4s/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-desktop",
+        "name": "chromium-desktop",
+        "testDir": "/home/colatto/repo/R3/test4s/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "04-procurement-finance-e2e.spec.ts",
+      "file": "04-procurement-finance-e2e.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "CT019 - dashboard financeiro apos compra/pagamento/mao de obra",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Blocked by CT018",
+                  "location": {
+                    "file": "/home/colatto/repo/R3/test4s/support/diagnostics.ts",
+                    "line": 142,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 26580,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-07T19:48:01.596Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Blocked by CT018",
+                      "location": {
+                        "file": "/home/colatto/repo/R3/test4s/support/diagnostics.ts",
+                        "line": 142,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT019-DASHBOARD-FINANCEIRO",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAxOS1EQVNIQk9BUkQtRklOQU5DRUlSTyIsCiAgInNldmVyaXR5IjogImFsdGEiLAogICJjYXNlSWQiOiAiQ1QwMTkiLAogICJ0aXRsZSI6ICJEYXNoYm9hcmQgZmluYW5jZWlybyBhcG9zIGNvbXByYS9wYWdhbWVudG8vbWFvIGRlIG9icmEiLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vZGFzaGJvYXJkIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNzE2MjEwNSIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxOVwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJEYXNoYm9hcmQgZGV2ZSByZWZsZXRpciBjb21wcmEsIHBhZ2FtZW50b3MsIG1hbyBkZSBvYnJhLCBjdXN0byByZWFsIGUgc2FsZG9zLiIsCiAgImFjdHVhbCI6ICJDYXNvIGJsb3F1ZWFkbyBwb3IgZGVwZW5kZW5jaWEgQ1QwMTggcmVnaXN0cmFkYSBjb21vIHJlcHJvdmFkby4iLAogICJpbXBhY3QiOiAiSW5kaWNhZG9yZXMgaW5jb25zaXN0ZW50ZXMgcHJlanVkaWNhbSBjb250cm9sZSBmaW5hbmNlaXJvIGUgcmFzdHJlYWJpbGlkYWRlLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIkluZGljYWRvcmVzIGluY29uc2lzdGVudGVzIHByZWp1ZGljYW0gY29udHJvbGUgZmluYW5jZWlybyBlIHJhc3RyZWFiaWxpZGFkZS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJDb3JyaWdpciBwcmltZWlybyBvIGNhc28gcmFpeiBDVDAxOCBlIHJlZXhlY3V0YXIgZXN0ZSBmbHV4by4iLAogICJzdGF0dXMiOiAiYmxvcXVlYWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0wN1QxOTo0ODoyOC4yNDBaIgp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "a94c55c2290a00239667-f7aebce16ebb63c71729",
+          "file": "04-procurement-finance-e2e.spec.ts",
+          "line": 119,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-07T19:48:01.335Z",
+    "duration": 26985.79,
+    "expected": 0,
+    "skipped": 1,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

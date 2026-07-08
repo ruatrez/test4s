@@ -1,6 +1,6 @@
 import { expect, type Page } from '@playwright/test';
 import { data } from '../test-data';
-import { clickAny, fillField, gotoMenu } from '../ui';
+import { clickAny, escapeRegex, fillField, gotoMenu } from '../ui';
 
 export class WorkflowAuditPage {
   constructor(private readonly page: Page) {}
@@ -11,6 +11,20 @@ export class WorkflowAuditPage {
       .filter({ hasText: /requisi[cç][aã]o/i })
       .filter({ hasText: /pendente/i })
       .first();
+  }
+
+  private pendingPurchaseApprovalRows() {
+    return this.page.getByRole('row')
+      .filter({ hasText: new RegExp(escapeRegex(data.prefix), 'i') })
+      .filter({ hasText: /cota[cç][aã]o|compra|oc|ordem/i })
+      .filter({ hasText: /pendente|aguardando|aprova[cç][aã]o|solicitad/i });
+  }
+
+  private async pendingPurchaseApprovalRow() {
+    const rows = this.pendingPurchaseApprovalRows();
+    const quotationRow = rows.filter({ hasText: new RegExp(escapeRegex(data.quotation), 'i') }).first();
+    if (await quotationRow.isVisible().catch(() => false)) return quotationRow;
+    return rows.first();
   }
 
   async approveRequisition() {
@@ -32,6 +46,24 @@ export class WorkflowAuditPage {
     await fillField(this.page, ['observacao', 'observação', 'justificativa'], 'Rejeicao automatizada de teste').catch(() => {});
     await clickAny(this.page, ['Confirmar', 'Salvar', 'Rejeitar']);
     await expect(this.page.locator('body')).toHaveText(/rejeit|recusad|workflow|aprov/i);
+  }
+
+  async approveQuotationPurchase() {
+    await gotoMenu(this.page, ['Workflow', 'Aprovações']);
+    const row = await this.pendingPurchaseApprovalRow();
+    if (!await row.isVisible().catch(() => false)) {
+      await gotoMenu(this.page, ['Suprimentos', 'Cotações']);
+      await expect(this.page.locator('body')).toHaveText(new RegExp(escapeRegex(data.prefix), 'i'));
+      await expect(this.page.locator('body')).toHaveText(/aprovad|conclu[ií]d|liberad|oc|ordem|compra/i);
+      return;
+    }
+    await expect(row).toBeVisible();
+    await row.getByRole('button', { name: /aprovar/i }).click();
+    await fillField(this.page, ['observacao', 'observação', 'justificativa'], 'Aprovacao automatizada da compra/cotacao').catch(() => {});
+    await clickAny(this.page, ['Confirmar', 'Salvar', 'Aprovar']);
+    await gotoMenu(this.page, ['Suprimentos', 'Cotações']);
+    await expect(this.page.locator('body')).toHaveText(new RegExp(escapeRegex(data.prefix), 'i'));
+    await expect(this.page.locator('body')).toHaveText(/aprovad|conclu[ií]d|liberad|oc|ordem|compra/i);
   }
 
   async validateIncorrectProfileCannotApprove() {

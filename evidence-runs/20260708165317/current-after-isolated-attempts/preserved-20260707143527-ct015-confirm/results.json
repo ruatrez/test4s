@@ -1,0 +1,189 @@
+{
+  "config": {
+    "argv": [
+      "/home/linuxbrew/.linuxbrew/Cellar/node/26.4.0/bin/node",
+      "/home/colatto/repo/R3/test4s/node_modules/.bin/playwright",
+      "test",
+      "-g",
+      "CT015"
+    ],
+    "configFile": "/home/colatto/repo/R3/test4s/playwright.config.ts",
+    "rootDir": "/home/colatto/repo/R3/test4s/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "/home/colatto/repo/R3/test4s/support/global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/colatto/repo/R3/test4s/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-desktop",
+        "name": "chromium-desktop",
+        "testDir": "/home/colatto/repo/R3/test4s/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "04-procurement-finance-e2e.spec.ts",
+      "file": "04-procurement-finance-e2e.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "CT015 - ordem de compra a partir da cotacao e comprometimento do orcamento",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 26969,
+                  "error": {
+                    "message": "Error: Could not find available option for: Cotacao concluida | Cotação concluída",
+                    "stack": "Error: Could not find available option for: Cotacao concluida | Cotação concluída\n    at chooseFirstAvailableOption (/home/colatto/repo/R3/test4s/support/ui.ts:264:27)\n    at /home/colatto/repo/R3/test4s/support/pages/procurement-page.ts:88:7\n    at ProcurementPage.createPurchaseOrderFromQuotation (/home/colatto/repo/R3/test4s/support/pages/procurement-page.ts:87:5)\n    at /home/colatto/repo/R3/test4s/tests/04-procurement-finance-e2e.spec.ts:70:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/04-procurement-finance-e2e.spec.ts:62:3",
+                    "location": {
+                      "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
+                      "column": 27,
+                      "line": 264
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m../support/ui.ts:264\n\n  262 |     return option ? option.value : '';\n  263 |   });\n> 264 |   if (!optionValue) throw new Error(`Could not find available option for: ${labels.join(' | ')}`);\n      |                           ^\n  265 |   await select.selectOption(optionValue);\n  266 | }\n  267 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
+                        "column": 27,
+                        "line": 264
+                      },
+                      "message": "Error: Could not find available option for: Cotacao concluida | Cotação concluída\n\n   at ../support/ui.ts:264\n\n  262 |     return option ? option.value : '';\n  263 |   });\n> 264 |   if (!optionValue) throw new Error(`Could not find available option for: ${labels.join(' | ')}`);\n      |                           ^\n  265 |   await select.selectOption(optionValue);\n  266 | }\n  267 |\n    at chooseFirstAvailableOption (/home/colatto/repo/R3/test4s/support/ui.ts:264:27)\n    at /home/colatto/repo/R3/test4s/support/pages/procurement-page.ts:88:7\n    at ProcurementPage.createPurchaseOrderFromQuotation (/home/colatto/repo/R3/test4s/support/pages/procurement-page.ts:87:5)\n    at /home/colatto/repo/R3/test4s/tests/04-procurement-finance-e2e.spec.ts:70:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/04-procurement-finance-e2e.spec.ts:62:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT015-ORDEM-COMPRA",
+                      "duration": 295,
+                      "error": {
+                        "message": "Error: Could not find available option for: Cotacao concluida | Cotação concluída",
+                        "stack": "Error: Could not find available option for: Cotacao concluida | Cotação concluída\n    at chooseFirstAvailableOption (/home/colatto/repo/R3/test4s/support/ui.ts:264:27)\n    at /home/colatto/repo/R3/test4s/support/pages/procurement-page.ts:88:7\n    at ProcurementPage.createPurchaseOrderFromQuotation (/home/colatto/repo/R3/test4s/support/pages/procurement-page.ts:87:5)\n    at /home/colatto/repo/R3/test4s/tests/04-procurement-finance-e2e.spec.ts:70:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/04-procurement-finance-e2e.spec.ts:62:3",
+                        "location": {
+                          "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
+                          "column": 27,
+                          "line": 264
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../support/ui.ts:264\n\n  262 |     return option ? option.value : '';\n  263 |   });\n> 264 |   if (!optionValue) throw new Error(`Could not find available option for: ${labels.join(' | ')}`);\n      |                           ^\n  265 |   await select.selectOption(optionValue);\n  266 | }\n  267 |"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-07-07T17:56:01.908Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT015-ORDEM-COMPRA",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAxNS1PUkRFTS1DT01QUkEiLAogICJzZXZlcml0eSI6ICJjcml0aWNhIiwKICAiY2FzZUlkIjogIkNUMDE1IiwKICAidGl0bGUiOiAiT3JkZW0gZGUgY29tcHJhIGUgY29tcHJvbWV0aW1lbnRvIGRvIG9yY2FtZW50byIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9vcmRlbnMtY29tcHJhIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwNzE0MzUyNyIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxNVwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJPQyBkZXZlIG5hc2NlciBkYSBjb3RhY2FvLCBjb21wcm9tZXRlciBvcmNhbWVudG8gZSBnZXJhciBjb250YSBhIHBhZ2FyIG5vIHBvbnRvIHByZXZpc3RvLiIsCiAgImFjdHVhbCI6ICJDb3VsZCBub3QgZmluZCBhdmFpbGFibGUgb3B0aW9uIGZvcjogQ290YWNhbyBjb25jbHVpZGEgfCBDb3Rhw6fDo28gY29uY2x1w61kYSIsCiAgImltcGFjdCI6ICJTZW0gY29tcHJvbWV0aW1lbnRvIGRvIG9yY2FtZW50byBuYW8gaGEgY29udHJvbGUgcmVhbCBkZSBjb21wcmFzLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIlNlbSBjb21wcm9tZXRpbWVudG8gZG8gb3JjYW1lbnRvIG5hbyBoYSBjb250cm9sZSByZWFsIGRlIGNvbXByYXMuIiwKICAicmVjb21tZW5kYXRpb24iOiAiQ29ycmlnaXIgZ2VyYWNhbyBkYSBPQywgdmluY3Vsb3MgZSBhdHVhbGl6YWNhbyBhdG9taWNhIGRvIHZhbG9yIGNvbXByb21ldGlkby4iLAogICJzdGF0dXMiOiAicmVwcm92YWRvIiwKICAiZXZpZGVuY2UiOiAiL2hvbWUvY29sYXR0by9yZXBvL1IzL3Rlc3Q0cy90ZXN0LXJlc3VsdHMvQ1QwMTUtT1JERU0tQ09NUFJBLnBuZyIsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTA3VDE3OjU2OjI4LjgwOVoiCn0="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/04-procurement-finance-e2e-21d1f-omprometimento-do-orcamento-chromium-desktop/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/04-procurement-finance-e2e-21d1f-omprometimento-do-orcamento-chromium-desktop/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/04-procurement-finance-e2e-21d1f-omprometimento-do-orcamento-chromium-desktop/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/colatto/repo/R3/test4s/support/ui.ts",
+                    "column": 27,
+                    "line": 264
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a94c55c2290a00239667-0592245917d3942cf229",
+          "file": "04-procurement-finance-e2e.spec.ts",
+          "line": 60,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-07T17:56:01.641Z",
+    "duration": 27524.415,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

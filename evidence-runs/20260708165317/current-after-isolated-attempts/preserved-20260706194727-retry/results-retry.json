@@ -1,0 +1,324 @@
+{
+  "config": {
+    "argv": [
+      "/home/linuxbrew/.linuxbrew/Cellar/node/26.4.0/bin/node",
+      "/home/colatto/repo/R3/test4s/node_modules/.bin/playwright",
+      "test",
+      "-g",
+      "CT009|CT010|CT020"
+    ],
+    "configFile": "/home/colatto/repo/R3/test4s/playwright.config.ts",
+    "rootDir": "/home/colatto/repo/R3/test4s/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "/home/colatto/repo/R3/test4s/support/global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/colatto/repo/R3/test4s/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-desktop",
+        "name": "chromium-desktop",
+        "testDir": "/home/colatto/repo/R3/test4s/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "03-budget-labor.spec.ts",
+      "file": "03-budget-labor.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "CT009 - alteracao de orcamento protegida por usuario comum",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 72528,
+                  "error": {
+                    "message": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel(/e-?mail|email|usuario|usuário/i).or(getByPlaceholder(/e-?mail|email|usuario|usuário/i)).or(locator('input[type=\"email\"]')).first() to be visible\u001b[22m\n",
+                    "stack": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel(/e-?mail|email|usuario|usuário/i).or(getByPlaceholder(/e-?mail|email|usuario|usuário/i)).or(locator('input[type=\"email\"]')).first() to be visible\u001b[22m\n\n    at login (/home/colatto/repo/R3/test4s/support/auth.ts:12:20)\n    at AuthPage.loginAsAdmin (/home/colatto/repo/R3/test4s/support/pages/auth-page.ts:10:5)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:15:5\n    at ensureOperationalLogin (/home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:14:3)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:42:3",
+                    "location": {
+                      "file": "/home/colatto/repo/R3/test4s/support/auth.ts",
+                      "column": 20,
+                      "line": 12
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m../support/auth.ts:12\n\n  10 |     .or(page.locator('input[type=\"email\"]'))\n  11 |     .first();\n> 12 |   await emailField.waitFor({ state: 'visible', timeout: 15_000 });\n     |                    ^\n  13 |   await emailField.fill(email);\n  14 |\n  15 |   const passwordField = page.getByLabel(/senha|password/i)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/colatto/repo/R3/test4s/support/auth.ts",
+                        "column": 20,
+                        "line": 12
+                      },
+                      "message": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel(/e-?mail|email|usuario|usuário/i).or(getByPlaceholder(/e-?mail|email|usuario|usuário/i)).or(locator('input[type=\"email\"]')).first() to be visible\u001b[22m\n\n\n   at ../support/auth.ts:12\n\n  10 |     .or(page.locator('input[type=\"email\"]'))\n  11 |     .first();\n> 12 |   await emailField.waitFor({ state: 'visible', timeout: 15_000 });\n     |                    ^\n  13 |   await emailField.fill(email);\n  14 |\n  15 |   const passwordField = page.getByLabel(/senha|password/i)\n    at login (/home/colatto/repo/R3/test4s/support/auth.ts:12:20)\n    at AuthPage.loginAsAdmin (/home/colatto/repo/R3/test4s/support/pages/auth-page.ts:10:5)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:15:5\n    at ensureOperationalLogin (/home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:14:3)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:42:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-06T23:03:34.044Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/03-budget-labor-CT009---al-0737f-protegida-por-usuario-comum-chromium-desktop/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/03-budget-labor-CT009---al-0737f-protegida-por-usuario-comum-chromium-desktop/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/03-budget-labor-CT009---al-0737f-protegida-por-usuario-comum-chromium-desktop/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/colatto/repo/R3/test4s/support/auth.ts",
+                    "column": 20,
+                    "line": 12
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e00ed247767af563f7f0-617531013f4a7858c2f9",
+          "file": "03-budget-labor.spec.ts",
+          "line": 41,
+          "column": 5
+        },
+        {
+          "title": "CT010 - exclusao de item orcado por usuario comum e administrador",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 74784,
+                  "error": {
+                    "message": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel(/e-?mail|email|usuario|usuário/i).or(getByPlaceholder(/e-?mail|email|usuario|usuário/i)).or(locator('input[type=\"email\"]')).first() to be visible\u001b[22m\n",
+                    "stack": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel(/e-?mail|email|usuario|usuário/i).or(getByPlaceholder(/e-?mail|email|usuario|usuário/i)).or(locator('input[type=\"email\"]')).first() to be visible\u001b[22m\n\n    at login (/home/colatto/repo/R3/test4s/support/auth.ts:12:20)\n    at AuthPage.loginAsAdmin (/home/colatto/repo/R3/test4s/support/pages/auth-page.ts:10:5)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:15:5\n    at ensureOperationalLogin (/home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:14:3)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:62:3",
+                    "location": {
+                      "file": "/home/colatto/repo/R3/test4s/support/auth.ts",
+                      "column": 20,
+                      "line": 12
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m../support/auth.ts:12\n\n  10 |     .or(page.locator('input[type=\"email\"]'))\n  11 |     .first();\n> 12 |   await emailField.waitFor({ state: 'visible', timeout: 15_000 });\n     |                    ^\n  13 |   await emailField.fill(email);\n  14 |\n  15 |   const passwordField = page.getByLabel(/senha|password/i)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/colatto/repo/R3/test4s/support/auth.ts",
+                        "column": 20,
+                        "line": 12
+                      },
+                      "message": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel(/e-?mail|email|usuario|usuário/i).or(getByPlaceholder(/e-?mail|email|usuario|usuário/i)).or(locator('input[type=\"email\"]')).first() to be visible\u001b[22m\n\n\n   at ../support/auth.ts:12\n\n  10 |     .or(page.locator('input[type=\"email\"]'))\n  11 |     .first();\n> 12 |   await emailField.waitFor({ state: 'visible', timeout: 15_000 });\n     |                    ^\n  13 |   await emailField.fill(email);\n  14 |\n  15 |   const passwordField = page.getByLabel(/senha|password/i)\n    at login (/home/colatto/repo/R3/test4s/support/auth.ts:12:20)\n    at AuthPage.loginAsAdmin (/home/colatto/repo/R3/test4s/support/pages/auth-page.ts:10:5)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:15:5\n    at ensureOperationalLogin (/home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:14:3)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:62:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-06T23:04:47.137Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/03-budget-labor-CT010---ex-fbb7a-uario-comum-e-administrador-chromium-desktop/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/03-budget-labor-CT010---ex-fbb7a-uario-comum-e-administrador-chromium-desktop/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/03-budget-labor-CT010---ex-fbb7a-uario-comum-e-administrador-chromium-desktop/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/colatto/repo/R3/test4s/support/auth.ts",
+                    "column": 20,
+                    "line": 12
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e00ed247767af563f7f0-686ba873561f1a87697b",
+          "file": "03-budget-labor.spec.ts",
+          "line": 58,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "05-permissions-audit.spec.ts",
+      "file": "05-permissions-audit.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "CT020 - workflow com perfil correto/incorreto, aprovacao e rejeicao",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 71740,
+                  "error": {
+                    "message": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel(/e-?mail|email|usuario|usuário/i).or(getByPlaceholder(/e-?mail|email|usuario|usuário/i)).or(locator('input[type=\"email\"]')).first() to be visible\u001b[22m\n",
+                    "stack": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel(/e-?mail|email|usuario|usuário/i).or(getByPlaceholder(/e-?mail|email|usuario|usuário/i)).or(locator('input[type=\"email\"]')).first() to be visible\u001b[22m\n\n    at login (/home/colatto/repo/R3/test4s/support/auth.ts:12:20)\n    at AuthPage.loginAsAdmin (/home/colatto/repo/R3/test4s/support/pages/auth-page.ts:10:5)\n    at /home/colatto/repo/R3/test4s/tests/05-permissions-audit.spec.ts:44:5\n    at /home/colatto/repo/R3/test4s/tests/05-permissions-audit.spec.ts:43:3",
+                    "location": {
+                      "file": "/home/colatto/repo/R3/test4s/support/auth.ts",
+                      "column": 20,
+                      "line": 12
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m../support/auth.ts:12\n\n  10 |     .or(page.locator('input[type=\"email\"]'))\n  11 |     .first();\n> 12 |   await emailField.waitFor({ state: 'visible', timeout: 15_000 });\n     |                    ^\n  13 |   await emailField.fill(email);\n  14 |\n  15 |   const passwordField = page.getByLabel(/senha|password/i)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/colatto/repo/R3/test4s/support/auth.ts",
+                        "column": 20,
+                        "line": 12
+                      },
+                      "message": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel(/e-?mail|email|usuario|usuário/i).or(getByPlaceholder(/e-?mail|email|usuario|usuário/i)).or(locator('input[type=\"email\"]')).first() to be visible\u001b[22m\n\n\n   at ../support/auth.ts:12\n\n  10 |     .or(page.locator('input[type=\"email\"]'))\n  11 |     .first();\n> 12 |   await emailField.waitFor({ state: 'visible', timeout: 15_000 });\n     |                    ^\n  13 |   await emailField.fill(email);\n  14 |\n  15 |   const passwordField = page.getByLabel(/senha|password/i)\n    at login (/home/colatto/repo/R3/test4s/support/auth.ts:12:20)\n    at AuthPage.loginAsAdmin (/home/colatto/repo/R3/test4s/support/pages/auth-page.ts:10:5)\n    at /home/colatto/repo/R3/test4s/tests/05-permissions-audit.spec.ts:44:5\n    at /home/colatto/repo/R3/test4s/tests/05-permissions-audit.spec.ts:43:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-06T23:06:02.460Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/05-permissions-audit-CT020-eb26f-orreto-aprovacao-e-rejeicao-chromium-desktop/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/05-permissions-audit-CT020-eb26f-orreto-aprovacao-e-rejeicao-chromium-desktop/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/05-permissions-audit-CT020-eb26f-orreto-aprovacao-e-rejeicao-chromium-desktop/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/colatto/repo/R3/test4s/support/auth.ts",
+                    "column": 20,
+                    "line": 12
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7a3b366f3b0c505051c2-53b5635513a7bf4bbdc2",
+          "file": "05-permissions-audit.spec.ts",
+          "line": 39,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-06T23:03:33.782Z",
+    "duration": 220736.225,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}

@@ -45,6 +45,7 @@ test('CT013 - aprovacao e rejeicao de requisicao', async ({ page }) => {
 
 test('CT014 - cotacao com 3 fornecedores, comparativo e vencedor', async ({ page }) => {
   const procurement = new ProcurementPage(page);
+  const workflow = new WorkflowAuditPage(page);
   await stepWithDiagnostic(page, {
     id: 'CT014-COTACAO',
     caseId: 'CT014',
@@ -54,6 +55,7 @@ test('CT014 - cotacao com 3 fornecedores, comparativo e vencedor', async ({ page
     recommendation: 'Corrigir vinculo com requisicao, propostas por fornecedor e persistencia do vencedor.'
   }, async () => {
     await procurement.createQuotationWithSuppliers();
+    await workflow.approveQuotationPurchase();
   });
 });
 

@@ -39,7 +39,7 @@ function xpathLiteral(text: string) {
   return `concat('${value.replace(/'/g, "',\"'\",'")}')`;
 }
 
-function xpathStartsWithText(text: string) {
+export function xpathStartsWithText(text: string) {
   const upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÁÀÂÃÉÊÍÓÔÕÚÇ';
   const lower = 'abcdefghijklmnopqrstuvwxyzáàâãéêíóôõúç';
   return `starts-with(translate(normalize-space(.), ${xpathLiteral(upper)}, ${xpathLiteral(lower)}), ${xpathLiteral(String(text).toLowerCase())})`;
@@ -239,6 +239,16 @@ export async function expectSelectedOption(page: Page, labels: string[], expecte
 }
 
 export async function chooseFirstAvailableOption(page: Page, labels: string[]) {
+  const select = await findNativeSelect(page, labels);
+  const optionValue = await select.locator('option').evaluateAll((options) => {
+    const option = options.find((item) => item.value && !/selecione|todas/i.test(item.textContent || ''));
+    return option ? option.value : '';
+  });
+  if (!optionValue) throw new Error(`Could not find available option for: ${labels.join(' | ')}`);
+  await select.selectOption(optionValue);
+}
+
+export async function findNativeSelect(page: Page, labels: string[]) {
   const candidates = labels.flatMap((label) => {
     const labelText = xpathStartsWithText(label);
     return [
@@ -257,12 +267,19 @@ export async function chooseFirstAvailableOption(page: Page, labels: string[]) {
     ? target
     : await firstVisible([target.locator('select')]);
   if (!select) throw new Error(`Could not find native select for: ${labels.join(' | ')}`);
-  const optionValue = await select.locator('option').evaluateAll((options) => {
-    const option = options.find((item) => item.value && !/selecione|todas/i.test(item.textContent || ''));
-    return option ? option.value : '';
-  });
-  if (!optionValue) throw new Error(`Could not find available option for: ${labels.join(' | ')}`);
-  await select.selectOption(optionValue);
+  return select;
+}
+
+export async function hasAvailableOption(page: Page, labels: string[], expectedText?: string) {
+  const select = await findNativeSelect(page, labels);
+  return select.locator('option').evaluateAll((options, expected) => options.some((item) => {
+    const text = (item.textContent || '').replace(/\s+/g, ' ').trim().toLowerCase();
+    const value = item.value.replace(/\s+/g, ' ').trim().toLowerCase();
+    if (!item.value || /selecione|todas/i.test(item.textContent || '')) return false;
+    if (!expected) return true;
+    const expectedValue = expected.toLowerCase();
+    return text.includes(expectedValue) || value.includes(expectedValue);
+  }), expectedText);
 }
 
 function submitCandidates(root: SearchRoot) {
