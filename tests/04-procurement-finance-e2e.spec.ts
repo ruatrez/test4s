@@ -111,8 +111,10 @@ test('CT018 - pagamento parcial, final e tentativa acima do saldo', async ({ pag
     impact: 'Erro em pagamento distorce custo real, dashboard e tomada de decisao.',
     recommendation: 'Recalcular saldos no backend, bloquear pagamento excedente e propagar valores para orcamento/dashboard.'
   }, async () => {
-    await finance.registerPartialAndFinalPayments();
+    await finance.createOpenPayableAccount();
+    await finance.registerPartialPayment();
     await finance.rejectPaymentAboveBalance();
+    await finance.registerFinalPayment();
   });
 });
 
