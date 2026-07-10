@@ -51,7 +51,7 @@ Nenhum CT permaneceu bloqueado depois das reexecucoes. Os CT008, CT011 e CT014 f
 - ID: `HTTP-502-1783626618673`
 - Severidade: alta
 - Caminho observado: `https://4s.ruatrez.com/orcamento/`
-- Endpoint: `https://api.lumi.new/lm/p442450294435041280/usuarios/documents/listByPage`
+- Endpoint: `https://api.ruatrez.com/lm/p442450294435041280/usuarios/documents/listByPage`
 - Perfil: administrador
 - Esperado: as requisicoes da aplicacao devem responder sem erros HTTP 4xx ou 5xx inesperados e sem erro correspondente no console.
 - Obtido: resposta HTTP 502 no endpoint de usuarios e mensagem `Failed to load resource: the server responded with a status of 502 ()` no console.
