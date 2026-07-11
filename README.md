@@ -142,16 +142,4 @@ Não há falha legítima de negócio confirmada nestes CTs: nas tentativas bem-s
 
 **Suíte E2E completa: 22/22 aprovados.** Sem CTs críticos reprovados ou bloqueados. Três casos instáveis (CT008, CT011, CT014) merecem follow-up de estabilidade da automação/UI, sem rebaixar o placar desta rodada.
 
-### Como reexecutar
-
-```bash
-BASE_URL=https://4s.ruatrez.com \
-ADMIN_EMAIL=hello@ruatrez.com \
-ADMIN_PASSWORD=admin123 \
-RUN_ID=$(date +%Y%m%d%H%M%S) \
-npm test -- --retries=2
-
-npm run report
-```
-
 Instruções operacionais do agente: `docs/promptEXE.md`. Runbook: `docs/playwright-agent-runbook.md`. Planos por CT: `docs/test-plans/`.
