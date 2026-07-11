@@ -1,0 +1,368 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: 02-master-data.spec.ts >> CT011 - colaborador, cargo/faixa e alocacao quando a UI permitir
+- Location: tests/02-master-data.spec.ts:67:5
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: getByText(/AUTO-4S-20260711112653 Faixa/i).first()
+Expected: visible
+Timeout: 10000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 10000ms
+  - waiting for getByText(/AUTO-4S-20260711112653 Faixa/i).first()
+
+```
+
+```yaml
+- complementary:
+  - img "4S Engenharia"
+  - text: Núcleo Financeiro
+  - navigation:
+    - button "◈ Dashboard"
+    - button "⊞ Cadastros"
+    - button "⊙ Configurações ▶"
+    - button "◑ Orçamento ▶"
+    - button "◐ Suprimentos ▶"
+    - button "◧ Financeiro ▶"
+    - button "◫ Workflow ▶"
+  - text: H
+  - paragraph: Hello
+  - paragraph: ADMINISTRADOR
+  - button "⏻"
+- main:
+  - button "⚠ 16 aprovações pendentes"
+  - text: ADMINISTRADOR
+  - heading "Mão de Obra" [level=1]
+  - button "+ Nova Faixa"
+  - button "Colaboradores (0)"
+  - button "Alocacoes (0)"
+  - button "Cargos (14)"
+  - button "Faixas de Custo (11)"
+  - table:
+    - rowgroup:
+      - row "Código Descrição Salário Base Encargos Benefícios Custo Total Ref. Status Ações":
+        - columnheader
+        - columnheader "Código"
+        - columnheader "Descrição"
+        - columnheader "Salário Base"
+        - columnheader "Encargos"
+        - columnheader "Benefícios"
+        - columnheader "Custo Total Ref."
+        - columnheader "Status"
+        - columnheader "Ações"
+    - rowgroup:
+      - row "4S-805288-2026 AUTO-4S-20260709163032 Faixa R$ 6.500,00 R$ 0,00 R$ 900,00 R$ 7.400,00 ATIVA Editar Excluir":
+        - cell:
+          - checkbox
+        - cell "4S-805288-2026"
+        - cell "AUTO-4S-20260709163032 Faixa"
+        - cell "R$ 6.500,00"
+        - cell "R$ 0,00"
+        - cell "R$ 900,00"
+        - cell "R$ 7.400,00"
+        - cell "ATIVA"
+        - cell "Editar Excluir":
+          - button "Editar"
+          - button "Excluir"
+      - row "4S-797360-2026 AUTO-4S-20260709160023 Faixa R$ 6.500,00 R$ 0,00 R$ 900,00 R$ 7.400,00 ATIVA Editar Excluir":
+        - cell:
+          - checkbox
+        - cell "4S-797360-2026"
+        - cell "AUTO-4S-20260709160023 Faixa"
+        - cell "R$ 6.500,00"
+        - cell "R$ 0,00"
+        - cell "R$ 900,00"
+        - cell "R$ 7.400,00"
+        - cell "ATIVA"
+        - cell "Editar Excluir":
+          - button "Editar"
+          - button "Excluir"
+      - row "4S-457619-2026 AUTO-4S-20260708165317 Faixa R$ 6.500,00 R$ 0,00 R$ 900,00 R$ 7.400,00 ATIVA Editar Excluir":
+        - cell:
+          - checkbox
+        - cell "4S-457619-2026"
+        - cell "AUTO-4S-20260708165317 Faixa"
+        - cell "R$ 6.500,00"
+        - cell "R$ 0,00"
+        - cell "R$ 900,00"
+        - cell "R$ 7.400,00"
+        - cell "ATIVA"
+        - cell "Editar Excluir":
+          - button "Editar"
+          - button "Excluir"
+      - row "4S-964758-2026 AUTO-4S-20260708145148 Faixa R$ 6.500,00 R$ 0,00 R$ 900,00 R$ 7.400,00 ATIVA Editar Excluir":
+        - cell:
+          - checkbox
+        - cell "4S-964758-2026"
+        - cell "AUTO-4S-20260708145148 Faixa"
+        - cell "R$ 6.500,00"
+        - cell "R$ 0,00"
+        - cell "R$ 900,00"
+        - cell "R$ 7.400,00"
+        - cell "ATIVA"
+        - cell "Editar Excluir":
+          - button "Editar"
+          - button "Excluir"
+      - row "4S-799569-2026 AUTO-4S-20260707162105 Faixa R$ 6.500,00 R$ 0,00 R$ 900,00 R$ 7.400,00 ATIVA Editar Excluir":
+        - cell:
+          - checkbox
+        - cell "4S-799569-2026"
+        - cell "AUTO-4S-20260707162105 Faixa"
+        - cell "R$ 6.500,00"
+        - cell "R$ 0,00"
+        - cell "R$ 900,00"
+        - cell "R$ 7.400,00"
+        - cell "ATIVA"
+        - cell "Editar Excluir":
+          - button "Editar"
+          - button "Excluir"
+      - row "4S-413541-2026 AUTO-4S-20260707143527 Faixa R$ 6.500,00 R$ 0,00 R$ 900,00 R$ 7.400,00 ATIVA Editar Excluir":
+        - cell:
+          - checkbox
+        - cell "4S-413541-2026"
+        - cell "AUTO-4S-20260707143527 Faixa"
+        - cell "R$ 6.500,00"
+        - cell "R$ 0,00"
+        - cell "R$ 900,00"
+        - cell "R$ 7.400,00"
+        - cell "ATIVA"
+        - cell "Editar Excluir":
+          - button "Editar"
+          - button "Excluir"
+      - row "4S-588957-2026 AUTO-4S-20260706165333 Faixa R$ 6.500,00 R$ 0,00 R$ 900,00 R$ 7.400,00 ATIVA Editar Excluir":
+        - cell:
+          - checkbox
+        - cell "4S-588957-2026"
+        - cell "AUTO-4S-20260706165333 Faixa"
+        - cell "R$ 6.500,00"
+        - cell "R$ 0,00"
+        - cell "R$ 900,00"
+        - cell "R$ 7.400,00"
+        - cell "ATIVA"
+        - cell "Editar Excluir":
+          - button "Editar"
+          - button "Excluir"
+      - row "4S-792141-2026 AUTO-4S-20260706161854 Faixa R$ 6.500,00 R$ 0,00 R$ 900,00 R$ 7.400,00 ATIVA Editar Excluir":
+        - cell:
+          - checkbox
+        - cell "4S-792141-2026"
+        - cell "AUTO-4S-20260706161854 Faixa"
+        - cell "R$ 6.500,00"
+        - cell "R$ 0,00"
+        - cell "R$ 900,00"
+        - cell "R$ 7.400,00"
+        - cell "ATIVA"
+        - cell "Editar Excluir":
+          - button "Editar"
+          - button "Excluir"
+      - row "4S-714070-2026 AUTO-4S-20260706154931 Faixa R$ 6.500,00 R$ 0,00 R$ 900,00 R$ 7.400,00 ATIVA Editar Excluir":
+        - cell:
+          - checkbox
+        - cell "4S-714070-2026"
+        - cell "AUTO-4S-20260706154931 Faixa"
+        - cell "R$ 6.500,00"
+        - cell "R$ 0,00"
+        - cell "R$ 900,00"
+        - cell "R$ 7.400,00"
+        - cell "ATIVA"
+        - cell "Editar Excluir":
+          - button "Editar"
+          - button "Excluir"
+      - row "4S-578511-2026 AUTO-4S-20260706154501 Faixa R$ 6.500,00 R$ 0,00 R$ 900,00 R$ 7.400,00 ATIVA Editar Excluir":
+        - cell:
+          - checkbox
+        - cell "4S-578511-2026"
+        - cell "AUTO-4S-20260706154501 Faixa"
+        - cell "R$ 6.500,00"
+        - cell "R$ 0,00"
+        - cell "R$ 900,00"
+        - cell "R$ 7.400,00"
+        - cell "ATIVA"
+        - cell "Editar Excluir":
+          - button "Editar"
+          - button "Excluir"
+  - text: 1-10 de 11 Itens por pagina
+  - combobox:
+    - option "10 por pagina" [selected]
+    - option "20 por pagina"
+    - option "50 por pagina"
+    - option "100 por pagina"
+  - button "Anterior" [disabled]
+  - text: Pagina 1 de 2
+  - button "Proxima"
+```
+
+# Test source
+
+```ts
+  22  |     await tryCreateSimpleRecord(this.page, ['Configurações', 'Clientes e Contratos'], data.client, [
+  23  |       { labels: ['Razão Social', 'Razao Social'], value: `${data.client} SA` },
+  24  |       { labels: ['Nome Fantasia'], value: data.client },
+  25  |       { labels: ['CNPJ/CPF', 'Documento'], value: data.runDocument },
+  26  |       { labels: ['E-mail', 'email'], value: 'cliente.auto@example.test' },
+  27  |       { labels: ['Contato Principal'], value: 'QA Automatizado' },
+  28  |       { type: 'select', labels: ['Status'], value: 'Ativo' }
+  29  |     ], { verifyWithSearchAndPagination: true });
+  30  |     await tryEditCurrentRecord(this.page, [
+  31  |       { labels: ['Contato Principal'], value: 'QA Automatizado Editado' }
+  32  |     ]).catch(() => {});
+  33  |     await assertPersistedAfterRefresh(this.page, data.client);
+  34  |   }
+  35  | 
+  36  |   async createUnitWorkAndCostCenter() {
+  37  |     await tryCreateSimpleRecord(
+  38  |       this.page,
+  39  |       ['Configurações', 'Obras e Centros'],
+  40  |       data.unit,
+  41  |       [
+  42  |         { labels: ['unidade', 'nome'], value: data.unit }
+  43  |       ],
+  44  |       { createButtonNames: ['+ Unidade', 'Unidade'], listButtonNames: ['Unidades'] }
+  45  |     );
+  46  | 
+  47  |     await tryCreateSimpleRecord(
+  48  |       this.page,
+  49  |       ['Configurações', 'Obras e Centros'],
+  50  |       data.work,
+  51  |       [
+  52  |         { type: 'select', labels: ['contrato'], value: data.contract, fallbackToFirstOption: true },
+  53  |         { labels: ['nome', 'obra'], value: data.work },
+  54  |         { type: 'select', labels: ['unidade'], value: data.unit },
+  55  |         { labels: ['cidade'], value: 'Sao Paulo', optional: true },
+  56  |         { labels: ['uf', 'estado'], value: 'SP', optional: true },
+  57  |         { labels: ['inicio', 'início'], value: '2026-01-01', optional: true }
+  58  |       ],
+  59  |       { createButtonNames: ['+ Obra', 'Obra'], listButtonNames: ['Obras'] }
+  60  |     );
+  61  | 
+  62  |     await tryCreateSimpleRecord(
+  63  |       this.page,
+  64  |       ['Configurações', 'Obras e Centros'],
+  65  |       data.costCenter,
+  66  |       [
+  67  |         { labels: ['nome', 'centro', 'centro de custo'], value: data.costCenter },
+  68  |         { type: 'select', labels: ['obra'], value: data.work, optional: true },
+  69  |         { type: 'select', labels: ['unidade'], value: data.unit, optional: true }
+  70  |       ],
+  71  |       { createButtonNames: ['+ Centro de Custo', 'Centro de Custo', '+ Centro', 'Centro'], listButtonNames: ['Centros'] }
+  72  |     );
+  73  | 
+  74  |     await assertPersistedAfterRefresh(this.page, data.work);
+  75  |   }
+  76  | 
+  77  |   async createSuppliers() {
+  78  |     for (const [index, supplier] of data.suppliers.entries()) {
+  79  |       await tryCreateSimpleRecord(
+  80  |         this.page,
+  81  |         ['Configurações', 'Fornecedores'],
+  82  |         supplier,
+  83  |         [
+  84  |           { labels: ['Razão Social', 'Razao Social'], value: supplier },
+  85  |           { labels: ['Nome Fantasia'], value: supplier },
+  86  |           { labels: ['CNPJ/CPF', 'Documento'], value: `${data.runDocument}${index + 1}` },
+  87  |           { labels: ['email'], value: `${supplier.toLowerCase().replace(/[^a-z0-9]/g, '.')}@example.test` },
+  88  |           { labels: ['Contato Principal'], value: 'QA Automatizado', optional: true },
+  89  |           { type: 'select', labels: ['Status'], value: 'ATIVO', optional: true }
+  90  |         ],
+  91  |         { assertionTimeout: supplierAssertionTimeout }
+  92  |       );
+  93  |     }
+  94  |   }
+  95  | 
+  96  |   async createBudgetCategories() {
+  97  |     for (const category of data.categories) {
+  98  |       await tryCreateSimpleRecord(this.page, ['Configurações', 'Categorias'], category, [
+  99  |         { labels: ['nome', 'categoria', 'descricao', 'descrição'], value: category }
+  100 |       ], { verifyWithSearchAndPagination: true });
+  101 |     }
+  102 |   }
+  103 | 
+  104 |   async createLaborRoleAndCostRange() {
+  105 |     await gotoMenu(this.page, ['Configurações', 'Colaboradores']);
+  106 |     await clickAny(this.page, ['Cargos']);
+  107 |     await clickAny(this.page, ['+ Novo Cargo', 'Novo Cargo']);
+  108 |     await fillField(this.page, ['nome', 'cargo'], data.role);
+  109 |     await fillField(this.page, ['descricao', 'descrição'], `${data.role} QA`).catch(() => {});
+  110 |     await chooseOption(this.page, ['vinculo padrao', 'vínculo padrão', 'vinculo', 'vínculo'], 'CLT').catch(() => {});
+  111 |     await submitForm(this.page);
+  112 |     await expect(byText(this.page, data.role)).toBeVisible();
+  113 | 
+  114 |     await clickAny(this.page, ['Faixas de Custo']);
+  115 |     await clickAny(this.page, ['+ Nova Faixa', 'Nova Faixa']);
+  116 |     await chooseOption(this.page, ['cargo'], data.role);
+  117 |     await fillField(this.page, ['descricao', 'descrição', 'faixa'], data.costRange);
+  118 |     await fillField(this.page, ['salario base ref', 'salário base ref', 'salario', 'salário'], data.money.laborMonthlyCost).catch(() => {});
+  119 |     await fillField(this.page, ['encargos ref', 'encargos'], 0).catch(() => {});
+  120 |     await fillField(this.page, ['beneficios ref', 'benefícios ref', 'beneficios', 'benefícios'], data.money.laborBenefits).catch(() => {});
+  121 |     await submitForm(this.page);
+> 122 |     await expect(byText(this.page, data.costRange)).toBeVisible();
+      |                                                     ^ Error: expect(locator).toBeVisible() failed
+  123 |   }
+  124 | 
+  125 |   async createCollaboratorAllocationIfAvailable() {
+  126 |     await this.createLaborRoleAndCostRange();
+  127 | 
+  128 |     await tryCreateSimpleRecord(this.page, ['Configurações', 'Colaboradores'], data.collaborator, [
+  129 |       { labels: ['nome completo', 'nome', 'colaborador'], value: data.collaborator },
+  130 |       { labels: ['cpf', 'documento'], value: data.runDocument },
+  131 |       { type: 'select', labels: ['vinculo', 'vínculo'], value: 'CLT', optional: true },
+  132 |       { type: 'select', labels: ['cargo'], value: data.role, fallbackToFirstOption: true },
+  133 |       { labels: ['data admissao', 'data admissão', 'admissao', 'admissão'], value: '2026-01-01' },
+  134 |       { labels: ['salario base', 'salário base', 'custo', 'salario', 'salário'], value: data.money.laborMonthlyCost },
+  135 |       { labels: ['encargos'], value: 0, optional: true },
+  136 |       { labels: ['beneficios mensais', 'benefícios mensais', 'beneficios', 'benefícios'], value: data.money.laborBenefits, optional: true }
+  137 |     ]);
+  138 |     await expect(byText(this.page, data.collaborator)).toBeVisible();
+  139 |   }
+  140 | 
+  141 |   async createOperationalUser(password: string) {
+  142 |     await tryCreateSimpleRecord(this.page, ['Configurações', 'Usuários'], data.operationalUserName, [
+  143 |       { labels: ['nome'], value: data.operationalUserName },
+  144 |       { labels: ['email'], value: data.operationalUserEmail },
+  145 |       { labels: ['senha'], value: password },
+  146 |       { type: 'select', labels: ['perfil'], value: 'ENGENHARIA' },
+  147 |       { labels: ['Confirmar senha'], value: password }
+  148 |     ]);
+  149 |   }
+  150 | 
+  151 |   async createInactiveValidationUser(password: string) {
+  152 |     await tryCreateSimpleRecord(this.page, ['Configurações', 'Usuários'], data.inactiveUserName, [
+  153 |       { labels: ['nome'], value: data.inactiveUserName },
+  154 |       { labels: ['email'], value: data.inactiveUserEmail },
+  155 |       { labels: ['senha'], value: password },
+  156 |       { type: 'select', labels: ['perfil'], value: 'ENGENHARIA' },
+  157 |       { labels: ['Confirmar senha'], value: password }
+  158 |     ]);
+  159 |   }
+  160 | 
+  161 |   async inactivateCurrentUser() {
+  162 |     await chooseOption(this.page, ['Status'], 'Inativo').catch(async () => {
+  163 |       await clickAny(this.page, ['Inativar']);
+  164 |     });
+  165 |     await submitForm(this.page).catch(() => {});
+  166 |   }
+  167 | 
+  168 |   async searchOrOpenRecord(name: string) {
+  169 |     await fillField(this.page, ['buscar', 'pesquisar', 'filtro'], name).catch(() => {});
+  170 |     await clickAny(this.page, ['Buscar', 'Pesquisar', name]).catch(() => {});
+  171 |     await expect(byText(this.page, name)).toBeVisible();
+  172 |   }
+  173 | 
+  174 |   async cancelInactivateOrDeleteVisibleRecord() {
+  175 |     await tryCancelInactivateOrDelete(this.page);
+  176 |   }
+  177 | }
+  178 | 
+```

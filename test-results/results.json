@@ -4,9 +4,7 @@
       "/home/linuxbrew/.linuxbrew/Cellar/node/26.5.0/bin/node",
       "/home/colatto/repo/R3/test4s/node_modules/.bin/playwright",
       "test",
-      "tests/04-procurement-finance-e2e.spec.ts",
-      "-g",
-      "CT015|CT016|CT017|CT018|CT019"
+      "--retries=2"
     ],
     "configFile": "/home/colatto/repo/R3/test4s/playwright.config.ts",
     "rootDir": "/home/colatto/repo/R3/test4s/tests",
@@ -27,7 +25,7 @@
       {
         "outputDir": "/home/colatto/repo/R3/test4s/test-results/artifacts",
         "repeatEach": 1,
-        "retries": 0,
+        "retries": 2,
         "metadata": {
           "actualWorkers": 1
         },
@@ -75,13 +73,13 @@
   },
   "suites": [
     {
-      "title": "04-procurement-finance-e2e.spec.ts",
-      "file": "04-procurement-finance-e2e.spec.ts",
+      "title": "01-smoke.spec.ts",
+      "file": "01-smoke.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "CT015 - ordem de compra a partir da cotacao e comprometimento do orcamento",
+          "title": "CT001 - login valido, logout, login invalido e sessao expirada quando observavel",
           "ok": true,
           "tags": [],
           "tests": [
@@ -96,7 +94,980 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 28135,
+                  "duration": 42160,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT001-AUTH",
+                      "duration": 41809
+                    }
+                  ],
+                  "startTime": "2026-07-11T14:26:54.793Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT001-AUTH",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAwMS1BVVRIIiwKICAic2V2ZXJpdHkiOiAiY3JpdGljYSIsCiAgImNhc2VJZCI6ICJDVDAwMSIsCiAgInRpdGxlIjogIkxvZ2luIHZhbGlkbywgbG9nb3V0LCBsb2dpbiBpbnZhbGlkbyBlIHNlc3NhbyBleHBpcmFkYSBxdWFuZG8gb2JzZXJ2YXZlbCIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS8iLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzExMTEyNjUzIiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDAxXCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIkxvZ2luIHZhbGlkbyBkZXZlIGFicmlyIGEgYXBsaWNhY2FvLCBsb2dvdXQgZGV2ZSBlbmNlcnJhciBzZXNzYW8gZSBsb2dpbiBpbnZhbGlkbyBkZXZlIGJsb3F1ZWFyIGFjZXNzby4iLAogICJhY3R1YWwiOiAiQ29tcG9ydGFtZW50byBvYnNlcnZhZG8gY29uZm9ybWUgZXNwZXJhZG8uIiwKICAiaW1wYWN0IjogIlNlbSBhdXRlbnRpY2FjYW8gY29uZmlhdmVsIG5hbyBoYSB2YWxpZGFjYW8gc2VndXJhIGRvcyBmbHV4b3MgZGEgRmFzZSAxLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIlNlbSBhdXRlbnRpY2FjYW8gY29uZmlhdmVsIG5hbyBoYSB2YWxpZGFjYW8gc2VndXJhIGRvcyBmbHV4b3MgZGEgRmFzZSAxLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvbmZpcm1hciBjcmVkZW5jaWFpcywgaW52YWxpZGFjYW8gZGUgc2Vzc2FvIGUgbWVuc2FnZW5zIGRlIGVycm8gZGUgYXV0ZW50aWNhY2FvLiIsCiAgInN0YXR1cyI6ICJhcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMTFUMTQ6Mjc6MzYuODEwWiIKfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f4ef03261b0851aba39f-d62e0f460686c4340758",
+          "file": "01-smoke.spec.ts",
+          "line": 11,
+          "column": 5
+        },
+        {
+          "title": "CT003 - atalhos da tela Cadastros abrem os dominios principais",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 28444,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT003-CADASTROS-ATALHOS",
+                      "duration": 1318
+                    }
+                  ],
+                  "startTime": "2026-07-11T14:27:37.069Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT003-CADASTROS-ATALHOS",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAwMy1DQURBU1RST1MtQVRBTEhPUyIsCiAgInNldmVyaXR5IjogIm1lZGlhIiwKICAiY2FzZUlkIjogIkNUMDAzIiwKICAidGl0bGUiOiAiQXRhbGhvcyBkYSB0ZWxhIENhZGFzdHJvcyIsCiAgInBhdGgiOiAiQ2FkYXN0cm9zIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcxMTExMjY1MyIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAwM1wiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJBdGFsaG9zIGRlIENhZGFzdHJvcyBkZXZlbSBhYnJpciBvcyBjYWRhc3Ryb3MgbWVzdHJlcyBleGliaWRvcyBuYSB0ZWxhLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiQXRhbGhvcyBxdWVicmFkb3MgcmVkdXplbSBwcm9kdXRpdmlkYWRlIGUgcG9kZW0gb2N1bHRhciBtb2R1bG9zIGFkbWluaXN0cmF0aXZvcy4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJBdGFsaG9zIHF1ZWJyYWRvcyByZWR1emVtIHByb2R1dGl2aWRhZGUgZSBwb2RlbSBvY3VsdGFyIG1vZHVsb3MgYWRtaW5pc3RyYXRpdm9zLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIGxpbmtzL3JvdGFzIGRvcyBjYXJkcyBvdSBib3RvZXMgZGEgdGVsYSBDYWRhc3Ryb3MuIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0xMVQxNDoyODowNS40ODFaIgp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f4ef03261b0851aba39f-2a353c88f15a2adde799",
+          "file": "01-smoke.spec.ts",
+          "line": 30,
+          "column": 5
+        },
+        {
+          "title": "CT022 - rotas principais sem tela em branco, erros JS criticos ou HTTP 5xx",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 29616,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT022-ROTAS-PRINCIPAIS",
+                      "duration": 1463
+                    }
+                  ],
+                  "startTime": "2026-07-11T14:28:05.523Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT022-ROTAS-PRINCIPAIS",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAyMi1ST1RBUy1QUklOQ0lQQUlTIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAyMiIsCiAgInRpdGxlIjogIlJvdGFzIHByaW5jaXBhaXMgc2VtIHRlbGEgZW0gYnJhbmNvLCBlcnJvcyBKUyBjcml0aWNvcyBvdSBIVFRQIDV4eCIsCiAgInBhdGgiOiAiTWVudSBwcmluY2lwYWwiLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzExMTEyNjUzIiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDIyXCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIlRvZGFzIGFzIHJvdGFzIHByaW5jaXBhaXMgZGV2ZW0gY2FycmVnYXIgY29udGV1ZG8gdmlzaXZlbCBzZW0gdGVsYSBlbSBicmFuY28sIGVycm8gSlMgY3JpdGljbyBvdSBIVFRQIDV4eC4iLAogICJhY3R1YWwiOiAiQ29tcG9ydGFtZW50byBvYnNlcnZhZG8gY29uZm9ybWUgZXNwZXJhZG8uIiwKICAiaW1wYWN0IjogIlRlbGEgcXVlYnJhZGEgYmxvcXVlaWEgdmFsaWRhY2FvIGZ1bmNpb25hbCBlIG9wZXJhY2FvIGRvIG1vZHVsby4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJUZWxhIHF1ZWJyYWRhIGJsb3F1ZWlhIHZhbGlkYWNhbyBmdW5jaW9uYWwgZSBvcGVyYWNhbyBkbyBtb2R1bG8uIiwKICAicmVjb21tZW5kYXRpb24iOiAiQ29ycmlnaXIgcm90YSwgcGVybWlzc2FvLCBjYXJyZWdhbWVudG8gZGUgZGFkb3Mgb3UgY29tcG9uZW50ZSBmcm9udGVuZCBkYSB0ZWxhIGFmZXRhZGEuIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0xMVQxNDoyODozNS4wOTJaIgp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f4ef03261b0851aba39f-c1e3778bc8632781820a",
+          "file": "01-smoke.spec.ts",
+          "line": 50,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "02-master-data.spec.ts",
+      "file": "02-master-data.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "CT004 - cliente e contrato com edicao, persistencia e vinculo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 48468,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT004-CLIENTE-CONTRATO",
+                      "duration": 22873
+                    }
+                  ],
+                  "startTime": "2026-07-11T14:28:35.153Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT004-CLIENTE-CONTRATO",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAwNC1DTElFTlRFLUNPTlRSQVRPIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAwNCIsCiAgInRpdGxlIjogIkNsaWVudGUgZSBjb250cmF0byBjb20gZWRpY2FvLCBwZXJzaXN0ZW5jaWEgZSB2aW5jdWxvIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2NsaWVudGVzLyIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MTExMTI2NTMiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMDRcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiQ2xpZW50ZSBlIGNvbnRyYXRvIGRldmVtIHNlciBjcmlhZG9zLCBlZGl0YWRvcywgdmluY3VsYWRvcyBlIHBlcnNpc3RpZG9zIGFwb3MgcmVmcmVzaC4iLAogICJhY3R1YWwiOiAiQ29tcG9ydGFtZW50byBvYnNlcnZhZG8gY29uZm9ybWUgZXNwZXJhZG8uIiwKICAiaW1wYWN0IjogIlNlbSBjb250cmF0by9jbGllbnRlIG5hbyBlIHBvc3NpdmVsIGluaWNpYXIgYSBjYWRlaWEgZmluYW5jZWlyYSBkYSBvYnJhLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIlNlbSBjb250cmF0by9jbGllbnRlIG5hbyBlIHBvc3NpdmVsIGluaWNpYXIgYSBjYWRlaWEgZmluYW5jZWlyYSBkYSBvYnJhLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIHBlcnNpc3RlbmNpYSBlIHJlbGFjaW9uYW1lbnRvIGVudHJlIGNsaWVudGUgZSBjb250cmF0by4iLAogICJzdGF0dXMiOiAiYXByb3ZhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTExVDE0OjI5OjIzLjU3MVoiCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d59d1b04a1b8372da34c-3dfc33f1f73fa9efada9",
+          "file": "02-master-data.spec.ts",
+          "line": 11,
+          "column": 5
+        },
+        {
+          "title": "CT005 - unidade, obra e centro de custo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 48756,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT005-OBRA-CENTRO",
+                      "duration": 19760
+                    }
+                  ],
+                  "startTime": "2026-07-11T14:29:23.630Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT005-OBRA-CENTRO",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAwNS1PQlJBLUNFTlRSTyIsCiAgInNldmVyaXR5IjogImFsdGEiLAogICJjYXNlSWQiOiAiQ1QwMDUiLAogICJ0aXRsZSI6ICJVbmlkYWRlLCBvYnJhIGUgY2VudHJvIGRlIGN1c3RvIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL29icmFzLyIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MTExMTI2NTMiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMDVcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiVW5pZGFkZSwgb2JyYSBlIGNlbnRybyBkZSBjdXN0byBkZXZlbSBmaWNhciBkaXNwb25pdmVpcyBwYXJhIG9zIG1vZHVsb3Mgc2VndWludGVzLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiRmFsaGEgbmVzc2UgY2FkYXN0cm8gaW1wZWRlIG9yY2FtZW50bywgcmVxdWlzaWNhbyBlIGZpbmFuY2Vpcm8uIiwKICAiYnVzaW5lc3NJbXBhY3QiOiAiRmFsaGEgbmVzc2UgY2FkYXN0cm8gaW1wZWRlIG9yY2FtZW50bywgcmVxdWlzaWNhbyBlIGZpbmFuY2Vpcm8uIiwKICAicmVjb21tZW5kYXRpb24iOiAiUmV2aXNhciBvYnJpZ2F0b3JpZWRhZGUsIHZpbmN1bG9zIGUgcGVyc2lzdGVuY2lhIGRlIG9icmFzL2NlbnRyb3MuIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0xMVQxNDozMDoxMi4zNDVaIgp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d59d1b04a1b8372da34c-035add7100b207ce9ad0",
+          "file": "02-master-data.spec.ts",
+          "line": 25,
+          "column": 5
+        },
+        {
+          "title": "CT006 - fornecedores",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 30303,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT006-FORNECEDORES",
+                      "duration": 2470
+                    }
+                  ],
+                  "startTime": "2026-07-11T14:30:12.394Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT006-FORNECEDORES",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAwNi1GT1JORUNFRE9SRVMiLAogICJzZXZlcml0eSI6ICJtZWRpYSIsCiAgImNhc2VJZCI6ICJDVDAwNiIsCiAgInRpdGxlIjogIkZvcm5lY2Vkb3JlcyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9mb3JuZWNlZG9yZXMiLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzExMTEyNjUzIiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDA2XCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIlRyZXMgZm9ybmVjZWRvcmVzIGF0aXZvcyBkZXZlbSBwb2RlciBzZXIgdXNhZG9zIGVtIGNvdGFjb2VzLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiU2VtIGZvcm5lY2Vkb3JlcyBzdWZpY2llbnRlcyBvIGNvbXBhcmF0aXZvIGRlIGNvdGFjYW8gZmljYSBpbmNvbXBsZXRvLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIlNlbSBmb3JuZWNlZG9yZXMgc3VmaWNpZW50ZXMgbyBjb21wYXJhdGl2byBkZSBjb3RhY2FvIGZpY2EgaW5jb21wbGV0by4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJHYXJhbnRpciBjYWRhc3RybyBlIHNlbGVjYW8gZGUgZm9ybmVjZWRvcmVzIGF0aXZvcyBlbSBjb3RhY29lcy4iLAogICJzdGF0dXMiOiAiYXByb3ZhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTExVDE0OjMwOjQyLjY1MloiCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d59d1b04a1b8372da34c-190fb816afc9cc9664d9",
+          "file": "02-master-data.spec.ts",
+          "line": 39,
+          "column": 5
+        },
+        {
+          "title": "CT007 - categorias orcamentarias",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 43366,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT007-CATEGORIAS",
+                      "duration": 15712
+                    }
+                  ],
+                  "startTime": "2026-07-11T14:30:42.707Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT007-CATEGORIAS",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAwNy1DQVRFR09SSUFTIiwKICAic2V2ZXJpdHkiOiAibWVkaWEiLAogICJjYXNlSWQiOiAiQ1QwMDciLAogICJ0aXRsZSI6ICJDYXRlZ29yaWFzIG9yY2FtZW50YXJpYXMiLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vY2F0ZWdvcmlhcyIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MTExMTI2NTMiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMDdcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiQ2F0ZWdvcmlhcyBvcmNhbWVudGFyaWFzIGRldmVtIGZpY2FyIGRpc3Bvbml2ZWlzIHBhcmEgaXRlbnMgZSBtb3ZpbWVudG9zLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiQ2xhc3NpZmljYWNhbyBmaW5hbmNlaXJhIGluY29ycmV0YSBwcmVqdWRpY2EgZGFzaGJvYXJkIGUgc2FsZG8gcG9yIGNhdGVnb3JpYS4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJDbGFzc2lmaWNhY2FvIGZpbmFuY2VpcmEgaW5jb3JyZXRhIHByZWp1ZGljYSBkYXNoYm9hcmQgZSBzYWxkbyBwb3IgY2F0ZWdvcmlhLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIGNhZGFzdHJvLCBsaXN0YWdlbSBlIHVzbyBkYXMgY2F0ZWdvcmlhcyBub3Mgc2VsZWN0cyBkZSBtb3ZpbWVudG8uIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0xMVQxNDozMToyNi4wMzZaIgp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d59d1b04a1b8372da34c-1c66f8280569adb931b3",
+          "file": "02-master-data.spec.ts",
+          "line": 53,
+          "column": 5
+        },
+        {
+          "title": "CT011 - colaborador, cargo/faixa e alocacao quando a UI permitir",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 47115,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260711112653 Cargo/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260711112653 Cargo/i).first()\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260711112653 Cargo/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260711112653 Cargo/i).first()\u001b[22m\n\n    at RegistrationsPage.createLaborRoleAndCostRange (/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts:112:48)\n    at RegistrationsPage.createCollaboratorAllocationIfAvailable (/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts:126:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:77:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:69:3",
+                    "location": {
+                      "file": "/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts",
+                      "column": 48,
+                      "line": 112
+                    },
+                    "snippet": "   at ../support/pages/registrations-page.ts:112\n\n  110 |     await chooseOption(this.page, ['vinculo padrao', 'vínculo padrão', 'vinculo', 'vínculo'], 'CLT').catch(() => {});\n  111 |     await submitForm(this.page);\n> 112 |     await expect(byText(this.page, data.role)).toBeVisible();\n      |                                                ^\n  113 |\n  114 |     await clickAny(this.page, ['Faixas de Custo']);\n  115 |     await clickAny(this.page, ['+ Nova Faixa', 'Nova Faixa']);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts",
+                        "column": 48,
+                        "line": 112
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260711112653 Cargo/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260711112653 Cargo/i).first()\u001b[22m\n\n\n   at ../support/pages/registrations-page.ts:112\n\n  110 |     await chooseOption(this.page, ['vinculo padrao', 'vínculo padrão', 'vinculo', 'vínculo'], 'CLT').catch(() => {});\n  111 |     await submitForm(this.page);\n> 112 |     await expect(byText(this.page, data.role)).toBeVisible();\n      |                                                ^\n  113 |\n  114 |     await clickAny(this.page, ['Faixas de Custo']);\n  115 |     await clickAny(this.page, ['+ Nova Faixa', 'Nova Faixa']);\n    at RegistrationsPage.createLaborRoleAndCostRange (/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts:112:48)\n    at RegistrationsPage.createCollaboratorAllocationIfAvailable (/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts:126:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:77:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:69:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT011-COLABORADOR-ALOCACAO",
+                      "duration": 11556,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260711112653 Cargo/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260711112653 Cargo/i).first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260711112653 Cargo/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260711112653 Cargo/i).first()\u001b[22m\n\n    at RegistrationsPage.createLaborRoleAndCostRange (/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts:112:48)\n    at RegistrationsPage.createCollaboratorAllocationIfAvailable (/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts:126:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:77:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:69:3",
+                        "location": {
+                          "file": "/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts",
+                          "column": 48,
+                          "line": 112
+                        },
+                        "snippet": "   at ../support/pages/registrations-page.ts:112\n\n  110 |     await chooseOption(this.page, ['vinculo padrao', 'vínculo padrão', 'vinculo', 'vínculo'], 'CLT').catch(() => {});\n  111 |     await submitForm(this.page);\n> 112 |     await expect(byText(this.page, data.role)).toBeVisible();\n      |                                                ^\n  113 |\n  114 |     await clickAny(this.page, ['Faixas de Custo']);\n  115 |     await clickAny(this.page, ['+ Nova Faixa', 'Nova Faixa']);"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-07-11T14:31:26.084Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT011-COLABORADOR-ALOCACAO",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAxMS1DT0xBQk9SQURPUi1BTE9DQUNBTyIsCiAgInNldmVyaXR5IjogIm1lZGlhIiwKICAiY2FzZUlkIjogIkNUMDExIiwKICAidGl0bGUiOiAiQ29sYWJvcmFkb3IsIGNhcmdvL2ZhaXhhIGUgYWxvY2FjYW8gcXVhbmRvIGEgVUkgcGVybWl0aXIiLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vY29sYWJvcmFkb3JlcyIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MTExMTI2NTMiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMTFcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiQ29sYWJvcmFkb3IsIGNhcmdvL2ZhaXhhIGUgYWxvY2FjYW8gZGV2ZW0gc2VyIGNhZGFzdHJhZG9zIHF1YW5kbyBhIFVJIGRpc3BvbmliaWxpemFyIG8gZmx1eG8uIiwKICAiYWN0dWFsIjogIlx1MDAxYlsybWV4cGVjdChcdTAwMWJbMjJtXHUwMDFiWzMxbWxvY2F0b3JcdTAwMWJbMzltXHUwMDFiWzJtKS5cdTAwMWJbMjJtdG9CZVZpc2libGVcdTAwMWJbMm0oXHUwMDFiWzIybVx1MDAxYlsybSlcdTAwMWJbMjJtIGZhaWxlZFxuXG5Mb2NhdG9yOiBnZXRCeVRleHQoL0FVVE8tNFMtMjAyNjA3MTExMTI2NTMgQ2FyZ28vaSkuZmlyc3QoKVxuRXhwZWN0ZWQ6IHZpc2libGVcblRpbWVvdXQ6IDEwMDAwbXNcbkVycm9yOiBlbGVtZW50KHMpIG5vdCBmb3VuZFxuXG5DYWxsIGxvZzpcblx1MDAxYlsybSAgLSBFeHBlY3QgXCJ0b0JlVmlzaWJsZVwiIHdpdGggdGltZW91dCAxMDAwMG1zXHUwMDFiWzIybVxuXHUwMDFiWzJtICAtIHdhaXRpbmcgZm9yIGdldEJ5VGV4dCgvQVVUTy00Uy0yMDI2MDcxMTExMjY1MyBDYXJnby9pKS5maXJzdCgpXHUwMDFiWzIybVxuIiwKICAiaW1wYWN0IjogIk1hbyBkZSBvYnJhIGF1c2VudGUgZGlzdG9yY2UgY3VzdG8gcmVhbCBlIGRhc2hib2FyZCBmaW5hbmNlaXJvLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIk1hbyBkZSBvYnJhIGF1c2VudGUgZGlzdG9yY2UgY3VzdG8gcmVhbCBlIGRhc2hib2FyZCBmaW5hbmNlaXJvLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkV4cG9yIGZsdXhvIGRlIGNhZGFzdHJvL2Fsb2NhY2FvIGRlIGNvbGFib3JhZG9yZXMgb3UgZG9jdW1lbnRhciBhIHJlZ3JhIGRlIGluZGlzcG9uaWJpbGlkYWRlLiIsCiAgInN0YXR1cyI6ICJyZXByb3ZhZG8iLAogICJldmlkZW5jZSI6ICIvaG9tZS9jb2xhdHRvL3JlcG8vUjMvdGVzdDRzL3Rlc3QtcmVzdWx0cy9DVDAxMS1DT0xBQk9SQURPUi1BTE9DQUNBTy5wbmciLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0xMVQxNDozMjoxMy4wMTFaIgp9"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/02-master-data-CT011---col-f430f-ocacao-quando-a-UI-permitir-chromium-desktop/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/02-master-data-CT011---col-f430f-ocacao-quando-a-UI-permitir-chromium-desktop/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/02-master-data-CT011---col-f430f-ocacao-quando-a-UI-permitir-chromium-desktop/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts",
+                    "column": 48,
+                    "line": 112
+                  }
+                },
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 39339,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260711112653 Faixa/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260711112653 Faixa/i).first()\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260711112653 Faixa/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260711112653 Faixa/i).first()\u001b[22m\n\n    at RegistrationsPage.createLaborRoleAndCostRange (/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts:122:53)\n    at RegistrationsPage.createCollaboratorAllocationIfAvailable (/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts:126:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:77:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:69:3",
+                    "location": {
+                      "file": "/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts",
+                      "column": 53,
+                      "line": 122
+                    },
+                    "snippet": "   at ../support/pages/registrations-page.ts:122\n\n  120 |     await fillField(this.page, ['beneficios ref', 'benefícios ref', 'beneficios', 'benefícios'], data.money.laborBenefits).catch(() => {});\n  121 |     await submitForm(this.page);\n> 122 |     await expect(byText(this.page, data.costRange)).toBeVisible();\n      |                                                     ^\n  123 |   }\n  124 |\n  125 |   async createCollaboratorAllocationIfAvailable() {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts",
+                        "column": 53,
+                        "line": 122
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260711112653 Faixa/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260711112653 Faixa/i).first()\u001b[22m\n\n\n   at ../support/pages/registrations-page.ts:122\n\n  120 |     await fillField(this.page, ['beneficios ref', 'benefícios ref', 'beneficios', 'benefícios'], data.money.laborBenefits).catch(() => {});\n  121 |     await submitForm(this.page);\n> 122 |     await expect(byText(this.page, data.costRange)).toBeVisible();\n      |                                                     ^\n  123 |   }\n  124 |\n  125 |   async createCollaboratorAllocationIfAvailable() {\n    at RegistrationsPage.createLaborRoleAndCostRange (/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts:122:53)\n    at RegistrationsPage.createCollaboratorAllocationIfAvailable (/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts:126:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:77:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:69:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "steps": [
+                    {
+                      "title": "CT011-COLABORADOR-ALOCACAO",
+                      "duration": 10840,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260711112653 Faixa/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260711112653 Faixa/i).first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260711112653 Faixa/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260711112653 Faixa/i).first()\u001b[22m\n\n    at RegistrationsPage.createLaborRoleAndCostRange (/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts:122:53)\n    at RegistrationsPage.createCollaboratorAllocationIfAvailable (/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts:126:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:77:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/02-master-data.spec.ts:69:3",
+                        "location": {
+                          "file": "/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts",
+                          "column": 53,
+                          "line": 122
+                        },
+                        "snippet": "   at ../support/pages/registrations-page.ts:122\n\n  120 |     await fillField(this.page, ['beneficios ref', 'benefícios ref', 'beneficios', 'benefícios'], data.money.laborBenefits).catch(() => {});\n  121 |     await submitForm(this.page);\n> 122 |     await expect(byText(this.page, data.costRange)).toBeVisible();\n      |                                                     ^\n  123 |   }\n  124 |\n  125 |   async createCollaboratorAllocationIfAvailable() {"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-07-11T14:32:13.702Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT011-COLABORADOR-ALOCACAO",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAxMS1DT0xBQk9SQURPUi1BTE9DQUNBTyIsCiAgInNldmVyaXR5IjogIm1lZGlhIiwKICAiY2FzZUlkIjogIkNUMDExIiwKICAidGl0bGUiOiAiQ29sYWJvcmFkb3IsIGNhcmdvL2ZhaXhhIGUgYWxvY2FjYW8gcXVhbmRvIGEgVUkgcGVybWl0aXIiLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vY29sYWJvcmFkb3JlcyIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MTExMTI2NTMiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMTFcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiQ29sYWJvcmFkb3IsIGNhcmdvL2ZhaXhhIGUgYWxvY2FjYW8gZGV2ZW0gc2VyIGNhZGFzdHJhZG9zIHF1YW5kbyBhIFVJIGRpc3BvbmliaWxpemFyIG8gZmx1eG8uIiwKICAiYWN0dWFsIjogIlx1MDAxYlsybWV4cGVjdChcdTAwMWJbMjJtXHUwMDFiWzMxbWxvY2F0b3JcdTAwMWJbMzltXHUwMDFiWzJtKS5cdTAwMWJbMjJtdG9CZVZpc2libGVcdTAwMWJbMm0oXHUwMDFiWzIybVx1MDAxYlsybSlcdTAwMWJbMjJtIGZhaWxlZFxuXG5Mb2NhdG9yOiBnZXRCeVRleHQoL0FVVE8tNFMtMjAyNjA3MTExMTI2NTMgRmFpeGEvaSkuZmlyc3QoKVxuRXhwZWN0ZWQ6IHZpc2libGVcblRpbWVvdXQ6IDEwMDAwbXNcbkVycm9yOiBlbGVtZW50KHMpIG5vdCBmb3VuZFxuXG5DYWxsIGxvZzpcblx1MDAxYlsybSAgLSBFeHBlY3QgXCJ0b0JlVmlzaWJsZVwiIHdpdGggdGltZW91dCAxMDAwMG1zXHUwMDFiWzIybVxuXHUwMDFiWzJtICAtIHdhaXRpbmcgZm9yIGdldEJ5VGV4dCgvQVVUTy00Uy0yMDI2MDcxMTExMjY1MyBGYWl4YS9pKS5maXJzdCgpXHUwMDFiWzIybVxuIiwKICAiaW1wYWN0IjogIk1hbyBkZSBvYnJhIGF1c2VudGUgZGlzdG9yY2UgY3VzdG8gcmVhbCBlIGRhc2hib2FyZCBmaW5hbmNlaXJvLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIk1hbyBkZSBvYnJhIGF1c2VudGUgZGlzdG9yY2UgY3VzdG8gcmVhbCBlIGRhc2hib2FyZCBmaW5hbmNlaXJvLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkV4cG9yIGZsdXhvIGRlIGNhZGFzdHJvL2Fsb2NhY2FvIGRlIGNvbGFib3JhZG9yZXMgb3UgZG9jdW1lbnRhciBhIHJlZ3JhIGRlIGluZGlzcG9uaWJpbGlkYWRlLiIsCiAgInN0YXR1cyI6ICJyZXByb3ZhZG8iLAogICJldmlkZW5jZSI6ICIvaG9tZS9jb2xhdHRvL3JlcG8vUjMvdGVzdDRzL3Rlc3QtcmVzdWx0cy9DVDAxMS1DT0xBQk9SQURPUi1BTE9DQUNBTy5wbmciLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0xMVQxNDozMjo1Mi45NTJaIgp9"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/02-master-data-CT011---col-f430f-ocacao-quando-a-UI-permitir-chromium-desktop-retry1/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/02-master-data-CT011---col-f430f-ocacao-quando-a-UI-permitir-chromium-desktop-retry1/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/02-master-data-CT011---col-f430f-ocacao-quando-a-UI-permitir-chromium-desktop-retry1/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/colatto/repo/R3/test4s/support/pages/registrations-page.ts",
+                    "column": 53,
+                    "line": 122
+                  }
+                },
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 29185,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "steps": [
+                    {
+                      "title": "CT011-COLABORADOR-ALOCACAO",
+                      "duration": 1321
+                    }
+                  ],
+                  "startTime": "2026-07-11T14:32:53.627Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT011-COLABORADOR-ALOCACAO",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAxMS1DT0xBQk9SQURPUi1BTE9DQUNBTyIsCiAgInNldmVyaXR5IjogIm1lZGlhIiwKICAiY2FzZUlkIjogIkNUMDExIiwKICAidGl0bGUiOiAiQ29sYWJvcmFkb3IsIGNhcmdvL2ZhaXhhIGUgYWxvY2FjYW8gcXVhbmRvIGEgVUkgcGVybWl0aXIiLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vY29sYWJvcmFkb3JlcyIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MTExMTI2NTMiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMTFcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiQ29sYWJvcmFkb3IsIGNhcmdvL2ZhaXhhIGUgYWxvY2FjYW8gZGV2ZW0gc2VyIGNhZGFzdHJhZG9zIHF1YW5kbyBhIFVJIGRpc3BvbmliaWxpemFyIG8gZmx1eG8uIiwKICAiYWN0dWFsIjogIkNvbXBvcnRhbWVudG8gb2JzZXJ2YWRvIGNvbmZvcm1lIGVzcGVyYWRvLiIsCiAgImltcGFjdCI6ICJNYW8gZGUgb2JyYSBhdXNlbnRlIGRpc3RvcmNlIGN1c3RvIHJlYWwgZSBkYXNoYm9hcmQgZmluYW5jZWlyby4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJNYW8gZGUgb2JyYSBhdXNlbnRlIGRpc3RvcmNlIGN1c3RvIHJlYWwgZSBkYXNoYm9hcmQgZmluYW5jZWlyby4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJFeHBvciBmbHV4byBkZSBjYWRhc3Ryby9hbG9jYWNhbyBkZSBjb2xhYm9yYWRvcmVzIG91IGRvY3VtZW50YXIgYSByZWdyYSBkZSBpbmRpc3BvbmliaWxpZGFkZS4iLAogICJzdGF0dXMiOiAiYXByb3ZhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTExVDE0OjMzOjIyLjg5MFoiCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "flaky"
+            }
+          ],
+          "id": "d59d1b04a1b8372da34c-5675d20f8c2880005abf",
+          "file": "02-master-data.spec.ts",
+          "line": 67,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "03-budget-labor.spec.ts",
+      "file": "03-budget-labor.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "CT008 - item orcado com previsto, saldo, comprometido e pago",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 36866,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260711112653 Item orcado material/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260711112653 Item orcado material/i).first()\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260711112653 Item orcado material/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260711112653 Item orcado material/i).first()\u001b[22m\n\n    at BudgetPage.createBaseBudgetItem (/home/colatto/repo/R3/test4s/support/pages/budget-page.ts:34:54)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:37:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:29:3",
+                    "location": {
+                      "file": "/home/colatto/repo/R3/test4s/support/pages/budget-page.ts",
+                      "column": 54,
+                      "line": 34
+                    },
+                    "snippet": "   at ../support/pages/budget-page.ts:34\n\n  32 |     await fillField(this.page, ['valor unitario', 'valor unitário', 'valor'], data.money.budgetUnitValue);\n  33 |     await submitForm(this.page);\n> 34 |     await expect(byText(this.page, data.budgetItem)).toBeVisible();\n     |                                                      ^\n  35 |     await this.page.reload({ waitUntil: 'networkidle' });\n  36 |     await expect(byText(this.page, data.budgetItem)).toBeVisible();\n  37 |     await expect(this.page.locator('body')).toHaveText(/saldo|comprometido|pago|previsto|orçado|orcado/i);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/colatto/repo/R3/test4s/support/pages/budget-page.ts",
+                        "column": 54,
+                        "line": 34
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260711112653 Item orcado material/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260711112653 Item orcado material/i).first()\u001b[22m\n\n\n   at ../support/pages/budget-page.ts:34\n\n  32 |     await fillField(this.page, ['valor unitario', 'valor unitário', 'valor'], data.money.budgetUnitValue);\n  33 |     await submitForm(this.page);\n> 34 |     await expect(byText(this.page, data.budgetItem)).toBeVisible();\n     |                                                      ^\n  35 |     await this.page.reload({ waitUntil: 'networkidle' });\n  36 |     await expect(byText(this.page, data.budgetItem)).toBeVisible();\n  37 |     await expect(this.page.locator('body')).toHaveText(/saldo|comprometido|pago|previsto|orçado|orcado/i);\n    at BudgetPage.createBaseBudgetItem (/home/colatto/repo/R3/test4s/support/pages/budget-page.ts:34:54)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:37:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:29:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT008-ORCAMENTO-BASE",
+                      "duration": 11776,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260711112653 Item orcado material/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260711112653 Item orcado material/i).first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/AUTO-4S-20260711112653 Item orcado material/i).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/AUTO-4S-20260711112653 Item orcado material/i).first()\u001b[22m\n\n    at BudgetPage.createBaseBudgetItem (/home/colatto/repo/R3/test4s/support/pages/budget-page.ts:34:54)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:37:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/03-budget-labor.spec.ts:29:3",
+                        "location": {
+                          "file": "/home/colatto/repo/R3/test4s/support/pages/budget-page.ts",
+                          "column": 54,
+                          "line": 34
+                        },
+                        "snippet": "   at ../support/pages/budget-page.ts:34\n\n  32 |     await fillField(this.page, ['valor unitario', 'valor unitário', 'valor'], data.money.budgetUnitValue);\n  33 |     await submitForm(this.page);\n> 34 |     await expect(byText(this.page, data.budgetItem)).toBeVisible();\n     |                                                      ^\n  35 |     await this.page.reload({ waitUntil: 'networkidle' });\n  36 |     await expect(byText(this.page, data.budgetItem)).toBeVisible();\n  37 |     await expect(this.page.locator('body')).toHaveText(/saldo|comprometido|pago|previsto|orçado|orcado/i);"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-07-11T14:33:22.936Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT008-ORCAMENTO-BASE",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAwOC1PUkNBTUVOVE8tQkFTRSIsCiAgInNldmVyaXR5IjogImNyaXRpY2EiLAogICJjYXNlSWQiOiAiQ1QwMDgiLAogICJ0aXRsZSI6ICJJdGVtIG9yY2FkbyBjb20gcHJldmlzdG8sIHNhbGRvLCBjb21wcm9tZXRpZG8gZSBwYWdvIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL29yY2FtZW50byIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MTExMTI2NTMiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMDhcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiSXRlbSBvcmNhZG8gZGV2ZSBjYWxjdWxhciB2YWxvciBwcmV2aXN0bywgc2FsZG8sIGNvbXByb21ldGlkbyBlIHBhZ28uIiwKICAiYWN0dWFsIjogIlx1MDAxYlsybWV4cGVjdChcdTAwMWJbMjJtXHUwMDFiWzMxbWxvY2F0b3JcdTAwMWJbMzltXHUwMDFiWzJtKS5cdTAwMWJbMjJtdG9CZVZpc2libGVcdTAwMWJbMm0oXHUwMDFiWzIybVx1MDAxYlsybSlcdTAwMWJbMjJtIGZhaWxlZFxuXG5Mb2NhdG9yOiBnZXRCeVRleHQoL0FVVE8tNFMtMjAyNjA3MTExMTI2NTMgSXRlbSBvcmNhZG8gbWF0ZXJpYWwvaSkuZmlyc3QoKVxuRXhwZWN0ZWQ6IHZpc2libGVcblRpbWVvdXQ6IDEwMDAwbXNcbkVycm9yOiBlbGVtZW50KHMpIG5vdCBmb3VuZFxuXG5DYWxsIGxvZzpcblx1MDAxYlsybSAgLSBFeHBlY3QgXCJ0b0JlVmlzaWJsZVwiIHdpdGggdGltZW91dCAxMDAwMG1zXHUwMDFiWzIybVxuXHUwMDFiWzJtICAtIHdhaXRpbmcgZm9yIGdldEJ5VGV4dCgvQVVUTy00Uy0yMDI2MDcxMTExMjY1MyBJdGVtIG9yY2FkbyBtYXRlcmlhbC9pKS5maXJzdCgpXHUwMDFiWzIybVxuIiwKICAiaW1wYWN0IjogIkVycm8gbm8gb3JjYW1lbnRvIGJhc2UgY29tcHJvbWV0ZSBjb250cm9sZSBkZSBzYWxkbywgT0MgZSBwYWdhbWVudG8uIiwKICAiYnVzaW5lc3NJbXBhY3QiOiAiRXJybyBubyBvcmNhbWVudG8gYmFzZSBjb21wcm9tZXRlIGNvbnRyb2xlIGRlIHNhbGRvLCBPQyBlIHBhZ2FtZW50by4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJDb3JyaWdpciBjYWxjdWxvIHF1YW50aWRhZGUgeCB2YWxvciB1bml0YXJpbywgcGVyc2lzdGVuY2lhIGUgZXhwb3NpY2FvIGRvIGl0ZW0gcGFyYSByZXF1aXNpY29lcy4iLAogICJzdGF0dXMiOiAicmVwcm92YWRvIiwKICAiZXZpZGVuY2UiOiAiL2hvbWUvY29sYXR0by9yZXBvL1IzL3Rlc3Q0cy90ZXN0LXJlc3VsdHMvQ1QwMDgtT1JDQU1FTlRPLUJBU0UucG5nIiwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMTFUMTQ6MzM6NTkuNTk2WiIKfQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/03-budget-labor-CT008---it-174d0-o-saldo-comprometido-e-pago-chromium-desktop/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/03-budget-labor-CT008---it-174d0-o-saldo-comprometido-e-pago-chromium-desktop/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/03-budget-labor-CT008---it-174d0-o-saldo-comprometido-e-pago-chromium-desktop/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/colatto/repo/R3/test4s/support/pages/budget-page.ts",
+                    "column": 54,
+                    "line": 34
+                  }
+                },
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 44637,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "steps": [
+                    {
+                      "title": "CT008-ORCAMENTO-BASE",
+                      "duration": 18493
+                    }
+                  ],
+                  "startTime": "2026-07-11T14:34:00.296Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT008-ORCAMENTO-BASE",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAwOC1PUkNBTUVOVE8tQkFTRSIsCiAgInNldmVyaXR5IjogImNyaXRpY2EiLAogICJjYXNlSWQiOiAiQ1QwMDgiLAogICJ0aXRsZSI6ICJJdGVtIG9yY2FkbyBjb20gcHJldmlzdG8sIHNhbGRvLCBjb21wcm9tZXRpZG8gZSBwYWdvIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL29yY2FtZW50by8iLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzExMTEyNjUzIiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDA4XCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIkl0ZW0gb3JjYWRvIGRldmUgY2FsY3VsYXIgdmFsb3IgcHJldmlzdG8sIHNhbGRvLCBjb21wcm9tZXRpZG8gZSBwYWdvLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiRXJybyBubyBvcmNhbWVudG8gYmFzZSBjb21wcm9tZXRlIGNvbnRyb2xlIGRlIHNhbGRvLCBPQyBlIHBhZ2FtZW50by4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJFcnJvIG5vIG9yY2FtZW50byBiYXNlIGNvbXByb21ldGUgY29udHJvbGUgZGUgc2FsZG8sIE9DIGUgcGFnYW1lbnRvLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIGNhbGN1bG8gcXVhbnRpZGFkZSB4IHZhbG9yIHVuaXRhcmlvLCBwZXJzaXN0ZW5jaWEgZSBleHBvc2ljYW8gZG8gaXRlbSBwYXJhIHJlcXVpc2ljb2VzLiIsCiAgInN0YXR1cyI6ICJhcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMTFUMTQ6MzQ6NDUuMDA1WiIKfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "flaky"
+            }
+          ],
+          "id": "e00ed247767af563f7f0-dc9c19f9612153342d72",
+          "file": "03-budget-labor.spec.ts",
+          "line": 26,
+          "column": 5
+        },
+        {
+          "title": "CT009 - alteracao de orcamento protegida por usuario comum",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 65382,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT009-ORCAMENTO-PROTEGIDO-ALTERACAO",
+                      "duration": 1349
+                    }
+                  ],
+                  "startTime": "2026-07-11T14:34:45.052Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT009-ORCAMENTO-PROTEGIDO-ALTERACAO",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAwOS1PUkNBTUVOVE8tUFJPVEVHSURPLUFMVEVSQUNBTyIsCiAgInNldmVyaXR5IjogImNyaXRpY2EiLAogICJjYXNlSWQiOiAiQ1QwMDkiLAogICJ0aXRsZSI6ICJBbHRlcmFjYW8gZGUgb3JjYW1lbnRvIHByb3RlZ2lkYSBwb3IgdXN1YXJpbyBjb211bSIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9vcmNhbWVudG8iLAogICJwcm9maWxlIjogIm9wZXJhY2lvbmFsIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcxMTExMjY1MyIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAwOVwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJVc3VhcmlvIGNvbXVtIG5hbyBkZXZlIGFsdGVyYXIgaXRlbSBvcmNhZG8gcHJvdGVnaWRvIGRpcmV0YW1lbnRlOyBkZXZlIGdlcmFyIGFwcm92YWNhbyBvdSBibG9xdWVpby4iLAogICJhY3R1YWwiOiAiQ29tcG9ydGFtZW50byBvYnNlcnZhZG8gY29uZm9ybWUgZXNwZXJhZG8uIiwKICAiaW1wYWN0IjogIkFsdGVyYWNhbyBsaXZyZSBkZSBvcmNhbWVudG8gY29tcHJvbWV0ZSBnb3Zlcm5hbmNhIGZpbmFuY2VpcmEuIiwKICAiYnVzaW5lc3NJbXBhY3QiOiAiQWx0ZXJhY2FvIGxpdnJlIGRlIG9yY2FtZW50byBjb21wcm9tZXRlIGdvdmVybmFuY2EgZmluYW5jZWlyYS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJCbG9xdWVhciBlZGljYW8gZGlyZXRhIHBhcmEgcGVyZmlzIG5hbyBhdXRvcml6YWRvcyBlIGVuY2FtaW5oYXIgc29saWNpdGFjYW8gYW8gV29ya2Zsb3cgPiBBcHJvdmFjb2VzLiIsCiAgInN0YXR1cyI6ICJhcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMTFUMTQ6MzU6NTAuNDAzWiIKfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e00ed247767af563f7f0-617531013f4a7858c2f9",
+          "file": "03-budget-labor.spec.ts",
+          "line": 41,
+          "column": 5
+        },
+        {
+          "title": "CT010 - exclusao de item orcado por usuario comum e administrador",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 44091,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT010-ORCAMENTO-PROTEGIDO-EXCLUSAO-OPERACIONAL",
+                      "duration": 276
+                    },
+                    {
+                      "title": "CT010-ORCAMENTO-PROTEGIDO-EXCLUSAO-ADMIN",
+                      "duration": 421
+                    }
+                  ],
+                  "startTime": "2026-07-11T14:35:50.442Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT010-ORCAMENTO-PROTEGIDO-EXCLUSAO-OPERACIONAL",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAxMC1PUkNBTUVOVE8tUFJPVEVHSURPLUVYQ0xVU0FPLU9QRVJBQ0lPTkFMIiwKICAic2V2ZXJpdHkiOiAiY3JpdGljYSIsCiAgImNhc2VJZCI6ICJDVDAxMCIsCiAgInRpdGxlIjogIkV4Y2x1c2FvIGRlIGl0ZW0gb3JjYWRvIHBvciB1c3VhcmlvIGNvbXVtIGUgYWRtaW5pc3RyYWRvciIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9vcmNhbWVudG8iLAogICJwcm9maWxlIjogIm9wZXJhY2lvbmFsIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcxMTExMjY1MyIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxMFwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJFeGNsdXNhbyBwb3IgdXN1YXJpbyBjb211bSBkZXZlIGdlcmFyIGFwcm92YWNhbyBkbyBhZG1pbmlzdHJhZG9yLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiRXhjbHVzYW8gaW5kZXZpZGEgcmVtb3ZlIGJhc2UgZGUgY29udHJvbGUgZmluYW5jZWlybyBlIGFmZXRhIHNhbGRvcy4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJFeGNsdXNhbyBpbmRldmlkYSByZW1vdmUgYmFzZSBkZSBjb250cm9sZSBmaW5hbmNlaXJvIGUgYWZldGEgc2FsZG9zLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkV4aWdpciBhcHJvdmFjYW8gYWRtaW5pc3RyYXRpdmEgZSBhdWRpdGFyIGV4Y2x1c29lcyBkZSBpdGVucyBvcmNhZG9zLiIsCiAgInN0YXR1cyI6ICJhcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMTFUMTQ6MzY6MTYuODc1WiIKfQ=="
+                    },
+                    {
+                      "name": "diagnostic-CT010-ORCAMENTO-PROTEGIDO-EXCLUSAO-ADMIN",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAxMC1PUkNBTUVOVE8tUFJPVEVHSURPLUVYQ0xVU0FPLUFETUlOIiwKICAic2V2ZXJpdHkiOiAiY3JpdGljYSIsCiAgImNhc2VJZCI6ICJDVDAxMCIsCiAgInRpdGxlIjogIkV4Y2x1c2FvIGRlIGl0ZW0gb3JjYWRvIHBvciB1c3VhcmlvIGNvbXVtIGUgYWRtaW5pc3RyYWRvciIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9vcmNhbWVudG8iLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzExMTEyNjUzIiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDEwXCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIkFkbWluaXN0cmFkb3IgZGV2ZSBjb25zZWd1aXIgZXhjbHVpciwgY2FuY2VsYXIsIGluYXRpdmFyIG91IG9ic2VydmFyIGJsb3F1ZWlvIGRlIG5lZ29jaW8gZG9jdW1lbnRhZG8uIiwKICAiYWN0dWFsIjogIkNvbXBvcnRhbWVudG8gb2JzZXJ2YWRvIGNvbmZvcm1lIGVzcGVyYWRvLiIsCiAgImltcGFjdCI6ICJBdXNlbmNpYSBkZSBhY2FvIGFkbWluaXN0cmF0aXZhIGNsYXJhIGRpZmljdWx0YSBnb3Zlcm5hbmNhIGUgc2FuZWFtZW50byBkZSBtYXNzYS4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJBdXNlbmNpYSBkZSBhY2FvIGFkbWluaXN0cmF0aXZhIGNsYXJhIGRpZmljdWx0YSBnb3Zlcm5hbmNhIGUgc2FuZWFtZW50byBkZSBtYXNzYS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJFeHBvciBhY2FvIHBlcm1pdGlkYSBwYXJhIGFkbWluaXN0cmFkb3Igb3UgbWVuc2FnZW0gZGUgYmxvcXVlaW8gZGUgcmVncmEgZGUgbmVnb2Npby4iLAogICJzdGF0dXMiOiAiYXByb3ZhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTExVDE0OjM2OjM0LjQ3MVoiCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e00ed247767af563f7f0-686ba873561f1a87697b",
+          "file": "03-budget-labor.spec.ts",
+          "line": 58,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "04-procurement-finance-e2e.spec.ts",
+      "file": "04-procurement-finance-e2e.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "CT012 - requisicao dentro do saldo e requisicao acima do saldo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 29848,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT012-REQUISICAO-SALDO",
+                      "duration": 4920
+                    }
+                  ],
+                  "startTime": "2026-07-11T14:36:34.551Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT012-REQUISICAO-SALDO",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAxMi1SRVFVSVNJQ0FPLVNBTERPIiwKICAic2V2ZXJpdHkiOiAiY3JpdGljYSIsCiAgImNhc2VJZCI6ICJDVDAxMiIsCiAgInRpdGxlIjogIlJlcXVpc2ljYW8gZGVudHJvIGRvIHNhbGRvIGUgYWNpbWEgZG8gc2FsZG8iLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vcmVxdWlzaWNvZXMiLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzExMTEyNjUzIiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDEyXCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIlJlcXVpc2ljYW8gZGVudHJvIGRvIHNhbGRvIGRldmUgc2VndWlyIHBhcmEgYXByb3ZhY2FvOyBhY2ltYSBkbyBzYWxkbyBkZXZlIHNlciBibG9xdWVhZGEgb3Ugc2luYWxpemFkYS4iLAogICJhY3R1YWwiOiAiQ29tcG9ydGFtZW50byBvYnNlcnZhZG8gY29uZm9ybWUgZXNwZXJhZG8uIiwKICAiaW1wYWN0IjogIlBlcm1pdGlyIGNvbXByYSBhY2ltYSBkbyBzYWxkbyByb21wZSBjb250cm9sZSBmaW5hbmNlaXJvIGRhIG9icmEuIiwKICAiYnVzaW5lc3NJbXBhY3QiOiAiUGVybWl0aXIgY29tcHJhIGFjaW1hIGRvIHNhbGRvIHJvbXBlIGNvbnRyb2xlIGZpbmFuY2Vpcm8gZGEgb2JyYS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJWYWxpZGFyIHNhbGRvIG5vIGJhY2tlbmQgYW50ZXMgZGUgYXZhbmNhciBzdGF0dXMgZSBibG9xdWVhciBjb3RhY2FvIGRlIHJlcXVpc2ljb2VzIGV4Y2VkZW50ZXMuIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0xMVQxNDozNzowNC4zNjRaIgp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a94c55c2290a00239667-de8770632486ad4612bb",
+          "file": "04-procurement-finance-e2e.spec.ts",
+          "line": 14,
+          "column": 5
+        },
+        {
+          "title": "CT013 - aprovacao e rejeicao de requisicao",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 32013,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT013-APROVACAO-REJEICAO-REQUISICAO",
+                      "duration": 5015
+                    }
+                  ],
+                  "startTime": "2026-07-11T14:37:04.406Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT013-APROVACAO-REJEICAO-REQUISICAO",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAxMy1BUFJPVkFDQU8tUkVKRUlDQU8tUkVRVUlTSUNBTyIsCiAgInNldmVyaXR5IjogImFsdGEiLAogICJjYXNlSWQiOiAiQ1QwMTMiLAogICJ0aXRsZSI6ICJBcHJvdmFjYW8gZSByZWplaWNhbyBkZSByZXF1aXNpY2FvIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2Fwcm92YWNvZXMiLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzExMTEyNjUzIiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDEzXCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIkFwcm92YWNhbyBkZXZlIGxpYmVyYXIgcmVxdWlzaWNhbyBwYXJhIGNvdGFjYW8gZSByZWplaWNhbyBkZXZlIGVuY2VycmFyIGZsdXhvIGNvbSBkZWNpc2FvIGF1ZGl0YXZlbC4iLAogICJhY3R1YWwiOiAiQ29tcG9ydGFtZW50byBvYnNlcnZhZG8gY29uZm9ybWUgZXNwZXJhZG8uIiwKICAiaW1wYWN0IjogIldvcmtmbG93IHF1ZWJyYWRvIHBlcm1pdGUgYXZhbmNvcyBpbmRldmlkb3Mgb3UgYmxvcXVlaWEgY29tcHJhcyB2YWxpZGFzLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIldvcmtmbG93IHF1ZWJyYWRvIHBlcm1pdGUgYXZhbmNvcyBpbmRldmlkb3Mgb3UgYmxvcXVlaWEgY29tcHJhcyB2YWxpZGFzLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIlNpbmNyb25pemFyIHN0YXR1cyBkYSBhcHJvdmFjYW8gY29tIGEgZW50aWRhZGUgZGUgb3JpZ2VtIGUgcmVnaXN0cmFyIGF1ZGl0b3JpYS4iLAogICJzdGF0dXMiOiAiYXByb3ZhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTExVDE0OjM3OjM2LjM1NVoiCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a94c55c2290a00239667-035a86069e17fb422a96",
+          "file": "04-procurement-finance-e2e.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "CT014 - cotacao com 3 fornecedores, comparativo e vencedor",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 55950,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('body')\nTimeout: 10000ms\nExpected pattern: \u001b[32m/AUTO-4S-20260711112653/i\u001b[39m\nReceived string:  \u001b[31m\"\u001b[39m\n\u001b[31m    Núcleo Financeiro◈Dashboard⊞Cadastros⊙Configurações▶◑Orçamento▶◐Suprimentos▶RequisiçõesCotaçõesOrdens de Compra◧Financeiro▶◫Workflow▶HHelloADMINISTRADOR⏻⚠ 17 aprovações pendentesADMINISTRADORCotacoes17 cotacoes+ Nova CotacaoNumeroRequisicaoFornecedoresVencedorMenor valorStatusAcoes4S-805001-20264S-474830-20263 fornecedor(es)AUTO-4S-20260709163032 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-808990-20264S-474830-20263 fornecedor(es)AUTO-4S-20260709163032 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-598771-20264S-623022-20263 fornecedor(es)AUTO-4S-20260709160023 Fornecedor AR$ 2.350,00EM ANALISEVerificar aprovacaoExcluir4S-936516-20264S-623022-20263 fornecedor(es)AUTO-4S-20260709160023 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-730720-20264S-675991-20263 fornecedor(es)AUTO-4S-20260708165317 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-427961-20264S-675991-20263 fornecedor(es)AUTO-4S-20260708165317 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-587617-20264S-718458-20263 fornecedor(es)AUTO-4S-20260708145148 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-493593-20264S-718458-20263 fornecedor(es)AUTO-4S-20260708145148 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-995535-20264S-808728-20263 fornecedor(es)AUTO-4S-20260707162105 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-279280-20264S-808728-20263 fornecedor(es)AUTO-4S-20260707162105 Fornecedor AR$ 1.175,00CONCLUIDAExcluir1-10 de 17Itens por pagina10 por pagina20 por pagina50 por pagina100 por paginaAnteriorPagina 1 de 2ProximaComparativo de propostasCotacaoItemFornecedorQtd.Vlr. unit.TotalPrazoVencedor4S-805001-2026-AUTO-4S-20260709163032 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-4S-805001-2026-AUTO-4S-20260709163032 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-805001-2026-AUTO-4S-20260709163032 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-808990-2026-AUTO-4S-20260709163032 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-808990-2026-AUTO-4S-20260709163032 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-808990-2026-AUTO-4S-20260709163032 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-4S-598771-2026-AUTO-4S-20260709160023 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-598771-2026-AUTO-4S-20260709160023 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-598771-2026-AUTO-4S-20260709160023 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-598771-2026-AUTO-4S-20260709160023 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-1-10 de 54Itens por pagina10 por pagina20 por pagina50 por pagina100 por paginaAnteriorPagina 1 de 6Proxima····\u001b[39m\n\u001b[31m\"\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('body')\u001b[22m\n\u001b[2m    24 × locator resolved to <body>…</body>\u001b[22m\n\u001b[2m       - unexpected value \"\u001b[22m\n\u001b[2m    Núcleo Financeiro◈Dashboard⊞Cadastros⊙Configurações▶◑Orçamento▶◐Suprimentos▶RequisiçõesCotaçõesOrdens de Compra◧Financeiro▶◫Workflow▶HHelloADMINISTRADOR⏻⚠ 17 aprovações pendentesADMINISTRADORCotacoes17 cotacoes+ Nova CotacaoNumeroRequisicaoFornecedoresVencedorMenor valorStatusAcoes4S-805001-20264S-474830-20263 fornecedor(es)AUTO-4S-20260709163032 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-808990-20264S-474830-20263 fornecedor(es)AUTO-4S-20260709163032 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-598771-20264S-623022-20263 fornecedor(es)AUTO-4S-20260709160023 Fornecedor AR$ 2.350,00EM ANALISEVerificar aprovacaoExcluir4S-936516-20264S-623022-20263 fornecedor(es)AUTO-4S-20260709160023 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-730720-20264S-675991-20263 fornecedor(es)AUTO-4S-20260708165317 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-427961-20264S-675991-20263 fornecedor(es)AUTO-4S-20260708165317 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-587617-20264S-718458-20263 fornecedor(es)AUTO-4S-20260708145148 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-493593-20264S-718458-20263 fornecedor(es)AUTO-4S-20260708145148 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-995535-20264S-808728-20263 fornecedor(es)AUTO-4S-20260707162105 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-279280-20264S-808728-20263 fornecedor(es)AUTO-4S-20260707162105 Fornecedor AR$ 1.175,00CONCLUIDAExcluir1-10 de 17Itens por pagina10 por pagina20 por pagina50 por pagina100 por paginaAnteriorPagina 1 de 2ProximaComparativo de propostasCotacaoItemFornecedorQtd.Vlr. unit.TotalPrazoVencedor4S-805001-2026-AUTO-4S-20260709163032 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-4S-805001-2026-AUTO-4S-20260709163032 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-805001-2026-AUTO-4S-20260709163032 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-808990-2026-AUTO-4S-20260709163032 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-808990-2026-AUTO-4S-20260709163032 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-808990-2026-AUTO-4S-20260709163032 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-4S-598771-2026-AUTO-4S-20260709160023 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-598771-2026-AUTO-4S-20260709160023 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-598771-2026-AUTO-4S-20260709160023 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-598771-2026-AUTO-4S-20260709160023 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-1-10 de 54Itens por pagina10 por pagina20 por pagina50 por pagina100 por paginaAnteriorPagina 1 de 6Proxima\u001b[22m\n\u001b[2m  \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('body')\nTimeout: 10000ms\nExpected pattern: \u001b[32m/AUTO-4S-20260711112653/i\u001b[39m\nReceived string:  \u001b[31m\"\u001b[39m\n\u001b[31m    Núcleo Financeiro◈Dashboard⊞Cadastros⊙Configurações▶◑Orçamento▶◐Suprimentos▶RequisiçõesCotaçõesOrdens de Compra◧Financeiro▶◫Workflow▶HHelloADMINISTRADOR⏻⚠ 17 aprovações pendentesADMINISTRADORCotacoes17 cotacoes+ Nova CotacaoNumeroRequisicaoFornecedoresVencedorMenor valorStatusAcoes4S-805001-20264S-474830-20263 fornecedor(es)AUTO-4S-20260709163032 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-808990-20264S-474830-20263 fornecedor(es)AUTO-4S-20260709163032 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-598771-20264S-623022-20263 fornecedor(es)AUTO-4S-20260709160023 Fornecedor AR$ 2.350,00EM ANALISEVerificar aprovacaoExcluir4S-936516-20264S-623022-20263 fornecedor(es)AUTO-4S-20260709160023 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-730720-20264S-675991-20263 fornecedor(es)AUTO-4S-20260708165317 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-427961-20264S-675991-20263 fornecedor(es)AUTO-4S-20260708165317 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-587617-20264S-718458-20263 fornecedor(es)AUTO-4S-20260708145148 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-493593-20264S-718458-20263 fornecedor(es)AUTO-4S-20260708145148 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-995535-20264S-808728-20263 fornecedor(es)AUTO-4S-20260707162105 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-279280-20264S-808728-20263 fornecedor(es)AUTO-4S-20260707162105 Fornecedor AR$ 1.175,00CONCLUIDAExcluir1-10 de 17Itens por pagina10 por pagina20 por pagina50 por pagina100 por paginaAnteriorPagina 1 de 2ProximaComparativo de propostasCotacaoItemFornecedorQtd.Vlr. unit.TotalPrazoVencedor4S-805001-2026-AUTO-4S-20260709163032 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-4S-805001-2026-AUTO-4S-20260709163032 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-805001-2026-AUTO-4S-20260709163032 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-808990-2026-AUTO-4S-20260709163032 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-808990-2026-AUTO-4S-20260709163032 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-808990-2026-AUTO-4S-20260709163032 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-4S-598771-2026-AUTO-4S-20260709160023 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-598771-2026-AUTO-4S-20260709160023 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-598771-2026-AUTO-4S-20260709160023 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-598771-2026-AUTO-4S-20260709160023 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-1-10 de 54Itens por pagina10 por pagina20 por pagina50 por pagina100 por paginaAnteriorPagina 1 de 6Proxima····\u001b[39m\n\u001b[31m\"\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('body')\u001b[22m\n\u001b[2m    24 × locator resolved to <body>…</body>\u001b[22m\n\u001b[2m       - unexpected value \"\u001b[22m\n\u001b[2m    Núcleo Financeiro◈Dashboard⊞Cadastros⊙Configurações▶◑Orçamento▶◐Suprimentos▶RequisiçõesCotaçõesOrdens de Compra◧Financeiro▶◫Workflow▶HHelloADMINISTRADOR⏻⚠ 17 aprovações pendentesADMINISTRADORCotacoes17 cotacoes+ Nova CotacaoNumeroRequisicaoFornecedoresVencedorMenor valorStatusAcoes4S-805001-20264S-474830-20263 fornecedor(es)AUTO-4S-20260709163032 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-808990-20264S-474830-20263 fornecedor(es)AUTO-4S-20260709163032 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-598771-20264S-623022-20263 fornecedor(es)AUTO-4S-20260709160023 Fornecedor AR$ 2.350,00EM ANALISEVerificar aprovacaoExcluir4S-936516-20264S-623022-20263 fornecedor(es)AUTO-4S-20260709160023 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-730720-20264S-675991-20263 fornecedor(es)AUTO-4S-20260708165317 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-427961-20264S-675991-20263 fornecedor(es)AUTO-4S-20260708165317 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-587617-20264S-718458-20263 fornecedor(es)AUTO-4S-20260708145148 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-493593-20264S-718458-20263 fornecedor(es)AUTO-4S-20260708145148 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-995535-20264S-808728-20263 fornecedor(es)AUTO-4S-20260707162105 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-279280-20264S-808728-20263 fornecedor(es)AUTO-4S-20260707162105 Fornecedor AR$ 1.175,00CONCLUIDAExcluir1-10 de 17Itens por pagina10 por pagina20 por pagina50 por pagina100 por paginaAnteriorPagina 1 de 2ProximaComparativo de propostasCotacaoItemFornecedorQtd.Vlr. unit.TotalPrazoVencedor4S-805001-2026-AUTO-4S-20260709163032 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-4S-805001-2026-AUTO-4S-20260709163032 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-805001-2026-AUTO-4S-20260709163032 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-808990-2026-AUTO-4S-20260709163032 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-808990-2026-AUTO-4S-20260709163032 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-808990-2026-AUTO-4S-20260709163032 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-4S-598771-2026-AUTO-4S-20260709160023 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-598771-2026-AUTO-4S-20260709160023 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-598771-2026-AUTO-4S-20260709160023 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-598771-2026-AUTO-4S-20260709160023 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-1-10 de 54Itens por pagina10 por pagina20 por pagina50 por pagina100 por paginaAnteriorPagina 1 de 6Proxima\u001b[22m\n\u001b[2m  \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m\"\u001b[22m\n\n    at WorkflowAuditPage.approveQuotationPurchase (/home/colatto/repo/R3/test4s/support/pages/workflow-audit-page.ts:56:47)\n    at /home/colatto/repo/R3/test4s/tests/04-procurement-finance-e2e.spec.ts:58:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/04-procurement-finance-e2e.spec.ts:49:3",
+                    "location": {
+                      "file": "/home/colatto/repo/R3/test4s/support/pages/workflow-audit-page.ts",
+                      "column": 47,
+                      "line": 56
+                    },
+                    "snippet": "   at ../support/pages/workflow-audit-page.ts:56\n\n  54 |     if (!await row.isVisible().catch(() => false)) {\n  55 |       await gotoMenu(this.page, ['Suprimentos', 'Cotações']);\n> 56 |       await expect(this.page.locator('body')).toHaveText(new RegExp(escapeRegex(data.prefix), 'i'));\n     |                                               ^\n  57 |       await expect(this.page.locator('body')).toHaveText(/aprovad|conclu[ií]d|liberad|oc|ordem|compra/i);\n  58 |       return;\n  59 |     }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/colatto/repo/R3/test4s/support/pages/workflow-audit-page.ts",
+                        "column": 47,
+                        "line": 56
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('body')\nTimeout: 10000ms\nExpected pattern: \u001b[32m/AUTO-4S-20260711112653/i\u001b[39m\nReceived string:  \u001b[31m\"\u001b[39m\n\u001b[31m    Núcleo Financeiro◈Dashboard⊞Cadastros⊙Configurações▶◑Orçamento▶◐Suprimentos▶RequisiçõesCotaçõesOrdens de Compra◧Financeiro▶◫Workflow▶HHelloADMINISTRADOR⏻⚠ 17 aprovações pendentesADMINISTRADORCotacoes17 cotacoes+ Nova CotacaoNumeroRequisicaoFornecedoresVencedorMenor valorStatusAcoes4S-805001-20264S-474830-20263 fornecedor(es)AUTO-4S-20260709163032 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-808990-20264S-474830-20263 fornecedor(es)AUTO-4S-20260709163032 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-598771-20264S-623022-20263 fornecedor(es)AUTO-4S-20260709160023 Fornecedor AR$ 2.350,00EM ANALISEVerificar aprovacaoExcluir4S-936516-20264S-623022-20263 fornecedor(es)AUTO-4S-20260709160023 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-730720-20264S-675991-20263 fornecedor(es)AUTO-4S-20260708165317 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-427961-20264S-675991-20263 fornecedor(es)AUTO-4S-20260708165317 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-587617-20264S-718458-20263 fornecedor(es)AUTO-4S-20260708145148 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-493593-20264S-718458-20263 fornecedor(es)AUTO-4S-20260708145148 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-995535-20264S-808728-20263 fornecedor(es)AUTO-4S-20260707162105 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-279280-20264S-808728-20263 fornecedor(es)AUTO-4S-20260707162105 Fornecedor AR$ 1.175,00CONCLUIDAExcluir1-10 de 17Itens por pagina10 por pagina20 por pagina50 por pagina100 por paginaAnteriorPagina 1 de 2ProximaComparativo de propostasCotacaoItemFornecedorQtd.Vlr. unit.TotalPrazoVencedor4S-805001-2026-AUTO-4S-20260709163032 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-4S-805001-2026-AUTO-4S-20260709163032 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-805001-2026-AUTO-4S-20260709163032 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-808990-2026-AUTO-4S-20260709163032 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-808990-2026-AUTO-4S-20260709163032 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-808990-2026-AUTO-4S-20260709163032 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-4S-598771-2026-AUTO-4S-20260709160023 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-598771-2026-AUTO-4S-20260709160023 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-598771-2026-AUTO-4S-20260709160023 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-598771-2026-AUTO-4S-20260709160023 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-1-10 de 54Itens por pagina10 por pagina20 por pagina50 por pagina100 por paginaAnteriorPagina 1 de 6Proxima····\u001b[39m\n\u001b[31m\"\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('body')\u001b[22m\n\u001b[2m    24 × locator resolved to <body>…</body>\u001b[22m\n\u001b[2m       - unexpected value \"\u001b[22m\n\u001b[2m    Núcleo Financeiro◈Dashboard⊞Cadastros⊙Configurações▶◑Orçamento▶◐Suprimentos▶RequisiçõesCotaçõesOrdens de Compra◧Financeiro▶◫Workflow▶HHelloADMINISTRADOR⏻⚠ 17 aprovações pendentesADMINISTRADORCotacoes17 cotacoes+ Nova CotacaoNumeroRequisicaoFornecedoresVencedorMenor valorStatusAcoes4S-805001-20264S-474830-20263 fornecedor(es)AUTO-4S-20260709163032 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-808990-20264S-474830-20263 fornecedor(es)AUTO-4S-20260709163032 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-598771-20264S-623022-20263 fornecedor(es)AUTO-4S-20260709160023 Fornecedor AR$ 2.350,00EM ANALISEVerificar aprovacaoExcluir4S-936516-20264S-623022-20263 fornecedor(es)AUTO-4S-20260709160023 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-730720-20264S-675991-20263 fornecedor(es)AUTO-4S-20260708165317 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-427961-20264S-675991-20263 fornecedor(es)AUTO-4S-20260708165317 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-587617-20264S-718458-20263 fornecedor(es)AUTO-4S-20260708145148 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-493593-20264S-718458-20263 fornecedor(es)AUTO-4S-20260708145148 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-995535-20264S-808728-20263 fornecedor(es)AUTO-4S-20260707162105 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-279280-20264S-808728-20263 fornecedor(es)AUTO-4S-20260707162105 Fornecedor AR$ 1.175,00CONCLUIDAExcluir1-10 de 17Itens por pagina10 por pagina20 por pagina50 por pagina100 por paginaAnteriorPagina 1 de 2ProximaComparativo de propostasCotacaoItemFornecedorQtd.Vlr. unit.TotalPrazoVencedor4S-805001-2026-AUTO-4S-20260709163032 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-4S-805001-2026-AUTO-4S-20260709163032 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-805001-2026-AUTO-4S-20260709163032 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-808990-2026-AUTO-4S-20260709163032 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-808990-2026-AUTO-4S-20260709163032 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-808990-2026-AUTO-4S-20260709163032 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-4S-598771-2026-AUTO-4S-20260709160023 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-598771-2026-AUTO-4S-20260709160023 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-598771-2026-AUTO-4S-20260709160023 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-598771-2026-AUTO-4S-20260709160023 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-1-10 de 54Itens por pagina10 por pagina20 por pagina50 por pagina100 por paginaAnteriorPagina 1 de 6Proxima\u001b[22m\n\u001b[2m  \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m\"\u001b[22m\n\n\n   at ../support/pages/workflow-audit-page.ts:56\n\n  54 |     if (!await row.isVisible().catch(() => false)) {\n  55 |       await gotoMenu(this.page, ['Suprimentos', 'Cotações']);\n> 56 |       await expect(this.page.locator('body')).toHaveText(new RegExp(escapeRegex(data.prefix), 'i'));\n     |                                               ^\n  57 |       await expect(this.page.locator('body')).toHaveText(/aprovad|conclu[ií]d|liberad|oc|ordem|compra/i);\n  58 |       return;\n  59 |     }\n    at WorkflowAuditPage.approveQuotationPurchase (/home/colatto/repo/R3/test4s/support/pages/workflow-audit-page.ts:56:47)\n    at /home/colatto/repo/R3/test4s/tests/04-procurement-finance-e2e.spec.ts:58:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/04-procurement-finance-e2e.spec.ts:49:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT014-COTACAO",
+                      "duration": 28604,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('body')\nTimeout: 10000ms\nExpected pattern: \u001b[32m/AUTO-4S-20260711112653/i\u001b[39m\nReceived string:  \u001b[31m\"\u001b[39m\n\u001b[31m    Núcleo Financeiro◈Dashboard⊞Cadastros⊙Configurações▶◑Orçamento▶◐Suprimentos▶RequisiçõesCotaçõesOrdens de Compra◧Financeiro▶◫Workflow▶HHelloADMINISTRADOR⏻⚠ 17 aprovações pendentesADMINISTRADORCotacoes17 cotacoes+ Nova CotacaoNumeroRequisicaoFornecedoresVencedorMenor valorStatusAcoes4S-805001-20264S-474830-20263 fornecedor(es)AUTO-4S-20260709163032 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-808990-20264S-474830-20263 fornecedor(es)AUTO-4S-20260709163032 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-598771-20264S-623022-20263 fornecedor(es)AUTO-4S-20260709160023 Fornecedor AR$ 2.350,00EM ANALISEVerificar aprovacaoExcluir4S-936516-20264S-623022-20263 fornecedor(es)AUTO-4S-20260709160023 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-730720-20264S-675991-20263 fornecedor(es)AUTO-4S-20260708165317 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-427961-20264S-675991-20263 fornecedor(es)AUTO-4S-20260708165317 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-587617-20264S-718458-20263 fornecedor(es)AUTO-4S-20260708145148 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-493593-20264S-718458-20263 fornecedor(es)AUTO-4S-20260708145148 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-995535-20264S-808728-20263 fornecedor(es)AUTO-4S-20260707162105 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-279280-20264S-808728-20263 fornecedor(es)AUTO-4S-20260707162105 Fornecedor AR$ 1.175,00CONCLUIDAExcluir1-10 de 17Itens por pagina10 por pagina20 por pagina50 por pagina100 por paginaAnteriorPagina 1 de 2ProximaComparativo de propostasCotacaoItemFornecedorQtd.Vlr. unit.TotalPrazoVencedor4S-805001-2026-AUTO-4S-20260709163032 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-4S-805001-2026-AUTO-4S-20260709163032 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-805001-2026-AUTO-4S-20260709163032 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-808990-2026-AUTO-4S-20260709163032 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-808990-2026-AUTO-4S-20260709163032 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-808990-2026-AUTO-4S-20260709163032 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-4S-598771-2026-AUTO-4S-20260709160023 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-598771-2026-AUTO-4S-20260709160023 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-598771-2026-AUTO-4S-20260709160023 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-598771-2026-AUTO-4S-20260709160023 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-1-10 de 54Itens por pagina10 por pagina20 por pagina50 por pagina100 por paginaAnteriorPagina 1 de 6Proxima····\u001b[39m\n\u001b[31m\"\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('body')\u001b[22m\n\u001b[2m    24 × locator resolved to <body>…</body>\u001b[22m\n\u001b[2m       - unexpected value \"\u001b[22m\n\u001b[2m    Núcleo Financeiro◈Dashboard⊞Cadastros⊙Configurações▶◑Orçamento▶◐Suprimentos▶RequisiçõesCotaçõesOrdens de Compra◧Financeiro▶◫Workflow▶HHelloADMINISTRADOR⏻⚠ 17 aprovações pendentesADMINISTRADORCotacoes17 cotacoes+ Nova CotacaoNumeroRequisicaoFornecedoresVencedorMenor valorStatusAcoes4S-805001-20264S-474830-20263 fornecedor(es)AUTO-4S-20260709163032 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-808990-20264S-474830-20263 fornecedor(es)AUTO-4S-20260709163032 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-598771-20264S-623022-20263 fornecedor(es)AUTO-4S-20260709160023 Fornecedor AR$ 2.350,00EM ANALISEVerificar aprovacaoExcluir4S-936516-20264S-623022-20263 fornecedor(es)AUTO-4S-20260709160023 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-730720-20264S-675991-20263 fornecedor(es)AUTO-4S-20260708165317 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-427961-20264S-675991-20263 fornecedor(es)AUTO-4S-20260708165317 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-587617-20264S-718458-20263 fornecedor(es)AUTO-4S-20260708145148 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-493593-20264S-718458-20263 fornecedor(es)AUTO-4S-20260708145148 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-995535-20264S-808728-20263 fornecedor(es)AUTO-4S-20260707162105 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-279280-20264S-808728-20263 fornecedor(es)AUTO-4S-20260707162105 Fornecedor AR$ 1.175,00CONCLUIDAExcluir1-10 de 17Itens por pagina10 por pagina20 por pagina50 por pagina100 por paginaAnteriorPagina 1 de 2ProximaComparativo de propostasCotacaoItemFornecedorQtd.Vlr. unit.TotalPrazoVencedor4S-805001-2026-AUTO-4S-20260709163032 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-4S-805001-2026-AUTO-4S-20260709163032 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-805001-2026-AUTO-4S-20260709163032 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-808990-2026-AUTO-4S-20260709163032 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-808990-2026-AUTO-4S-20260709163032 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-808990-2026-AUTO-4S-20260709163032 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-4S-598771-2026-AUTO-4S-20260709160023 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-598771-2026-AUTO-4S-20260709160023 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-598771-2026-AUTO-4S-20260709160023 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-598771-2026-AUTO-4S-20260709160023 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-1-10 de 54Itens por pagina10 por pagina20 por pagina50 por pagina100 por paginaAnteriorPagina 1 de 6Proxima\u001b[22m\n\u001b[2m  \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('body')\nTimeout: 10000ms\nExpected pattern: \u001b[32m/AUTO-4S-20260711112653/i\u001b[39m\nReceived string:  \u001b[31m\"\u001b[39m\n\u001b[31m    Núcleo Financeiro◈Dashboard⊞Cadastros⊙Configurações▶◑Orçamento▶◐Suprimentos▶RequisiçõesCotaçõesOrdens de Compra◧Financeiro▶◫Workflow▶HHelloADMINISTRADOR⏻⚠ 17 aprovações pendentesADMINISTRADORCotacoes17 cotacoes+ Nova CotacaoNumeroRequisicaoFornecedoresVencedorMenor valorStatusAcoes4S-805001-20264S-474830-20263 fornecedor(es)AUTO-4S-20260709163032 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-808990-20264S-474830-20263 fornecedor(es)AUTO-4S-20260709163032 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-598771-20264S-623022-20263 fornecedor(es)AUTO-4S-20260709160023 Fornecedor AR$ 2.350,00EM ANALISEVerificar aprovacaoExcluir4S-936516-20264S-623022-20263 fornecedor(es)AUTO-4S-20260709160023 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-730720-20264S-675991-20263 fornecedor(es)AUTO-4S-20260708165317 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-427961-20264S-675991-20263 fornecedor(es)AUTO-4S-20260708165317 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-587617-20264S-718458-20263 fornecedor(es)AUTO-4S-20260708145148 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-493593-20264S-718458-20263 fornecedor(es)AUTO-4S-20260708145148 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-995535-20264S-808728-20263 fornecedor(es)AUTO-4S-20260707162105 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-279280-20264S-808728-20263 fornecedor(es)AUTO-4S-20260707162105 Fornecedor AR$ 1.175,00CONCLUIDAExcluir1-10 de 17Itens por pagina10 por pagina20 por pagina50 por pagina100 por paginaAnteriorPagina 1 de 2ProximaComparativo de propostasCotacaoItemFornecedorQtd.Vlr. unit.TotalPrazoVencedor4S-805001-2026-AUTO-4S-20260709163032 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-4S-805001-2026-AUTO-4S-20260709163032 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-805001-2026-AUTO-4S-20260709163032 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-808990-2026-AUTO-4S-20260709163032 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-808990-2026-AUTO-4S-20260709163032 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-808990-2026-AUTO-4S-20260709163032 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-4S-598771-2026-AUTO-4S-20260709160023 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-598771-2026-AUTO-4S-20260709160023 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-598771-2026-AUTO-4S-20260709160023 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-598771-2026-AUTO-4S-20260709160023 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-1-10 de 54Itens por pagina10 por pagina20 por pagina50 por pagina100 por paginaAnteriorPagina 1 de 6Proxima····\u001b[39m\n\u001b[31m\"\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('body')\u001b[22m\n\u001b[2m    24 × locator resolved to <body>…</body>\u001b[22m\n\u001b[2m       - unexpected value \"\u001b[22m\n\u001b[2m    Núcleo Financeiro◈Dashboard⊞Cadastros⊙Configurações▶◑Orçamento▶◐Suprimentos▶RequisiçõesCotaçõesOrdens de Compra◧Financeiro▶◫Workflow▶HHelloADMINISTRADOR⏻⚠ 17 aprovações pendentesADMINISTRADORCotacoes17 cotacoes+ Nova CotacaoNumeroRequisicaoFornecedoresVencedorMenor valorStatusAcoes4S-805001-20264S-474830-20263 fornecedor(es)AUTO-4S-20260709163032 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-808990-20264S-474830-20263 fornecedor(es)AUTO-4S-20260709163032 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-598771-20264S-623022-20263 fornecedor(es)AUTO-4S-20260709160023 Fornecedor AR$ 2.350,00EM ANALISEVerificar aprovacaoExcluir4S-936516-20264S-623022-20263 fornecedor(es)AUTO-4S-20260709160023 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-730720-20264S-675991-20263 fornecedor(es)AUTO-4S-20260708165317 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-427961-20264S-675991-20263 fornecedor(es)AUTO-4S-20260708165317 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-587617-20264S-718458-20263 fornecedor(es)AUTO-4S-20260708145148 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-493593-20264S-718458-20263 fornecedor(es)AUTO-4S-20260708145148 Fornecedor AR$ 1.175,00CONCLUIDAExcluir4S-995535-20264S-808728-20263 fornecedor(es)AUTO-4S-20260707162105 Fornecedor AR$ 1.175,00EM ANALISEVerificar aprovacaoExcluir4S-279280-20264S-808728-20263 fornecedor(es)AUTO-4S-20260707162105 Fornecedor AR$ 1.175,00CONCLUIDAExcluir1-10 de 17Itens por pagina10 por pagina20 por pagina50 por pagina100 por paginaAnteriorPagina 1 de 2ProximaComparativo de propostasCotacaoItemFornecedorQtd.Vlr. unit.TotalPrazoVencedor4S-805001-2026-AUTO-4S-20260709163032 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-4S-805001-2026-AUTO-4S-20260709163032 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-805001-2026-AUTO-4S-20260709163032 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-808990-2026-AUTO-4S-20260709163032 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-808990-2026-AUTO-4S-20260709163032 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-808990-2026-AUTO-4S-20260709163032 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-4S-598771-2026-AUTO-4S-20260709160023 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-598771-2026-AUTO-4S-20260709160023 Fornecedor A1R$ 1.175,00R$ 1.175,0010 diassim4S-598771-2026-AUTO-4S-20260709160023 Fornecedor C1R$ 1.210,00R$ 1.210,0010 dias-4S-598771-2026-AUTO-4S-20260709160023 Fornecedor B1R$ 1.190,00R$ 1.190,0010 dias-1-10 de 54Itens por pagina10 por pagina20 por pagina50 por pagina100 por paginaAnteriorPagina 1 de 6Proxima\u001b[22m\n\u001b[2m  \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m\"\u001b[22m\n\n    at WorkflowAuditPage.approveQuotationPurchase (/home/colatto/repo/R3/test4s/support/pages/workflow-audit-page.ts:56:47)\n    at /home/colatto/repo/R3/test4s/tests/04-procurement-finance-e2e.spec.ts:58:5\n    at stepWithDiagnostic (/home/colatto/repo/R3/test4s/support/diagnostics.ts:146:5)\n    at /home/colatto/repo/R3/test4s/tests/04-procurement-finance-e2e.spec.ts:49:3",
+                        "location": {
+                          "file": "/home/colatto/repo/R3/test4s/support/pages/workflow-audit-page.ts",
+                          "column": 47,
+                          "line": 56
+                        },
+                        "snippet": "   at ../support/pages/workflow-audit-page.ts:56\n\n  54 |     if (!await row.isVisible().catch(() => false)) {\n  55 |       await gotoMenu(this.page, ['Suprimentos', 'Cotações']);\n> 56 |       await expect(this.page.locator('body')).toHaveText(new RegExp(escapeRegex(data.prefix), 'i'));\n     |                                               ^\n  57 |       await expect(this.page.locator('body')).toHaveText(/aprovad|conclu[ií]d|liberad|oc|ordem|compra/i);\n  58 |       return;\n  59 |     }"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-07-11T14:37:36.427Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT014-COTACAO",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAxNC1DT1RBQ0FPIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAxNCIsCiAgInRpdGxlIjogIkNvdGFjYW8gY29tIDMgZm9ybmVjZWRvcmVzLCBjb21wYXJhdGl2byBlIHZlbmNlZG9yIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2NvdGFjb2VzIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcxMTExMjY1MyIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxNFwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJDb3RhY2FvIGRldmUgY29tcGFyYXIgZm9ybmVjZWRvcmVzLCByZWdpc3RyYXIgdmVuY2Vkb3IgZSBwZXJzaXN0aXIuIiwKICAiYWN0dWFsIjogIlx1MDAxYlsybWV4cGVjdChcdTAwMWJbMjJtXHUwMDFiWzMxbWxvY2F0b3JcdTAwMWJbMzltXHUwMDFiWzJtKS5cdTAwMWJbMjJtdG9IYXZlVGV4dFx1MDAxYlsybShcdTAwMWJbMjJtXHUwMDFiWzMybWV4cGVjdGVkXHUwMDFiWzM5bVx1MDAxYlsybSlcdTAwMWJbMjJtIGZhaWxlZFxuXG5Mb2NhdG9yOiBsb2NhdG9yKCdib2R5JylcblRpbWVvdXQ6IDEwMDAwbXNcbkV4cGVjdGVkIHBhdHRlcm46IFx1MDAxYlszMm0vQVVUTy00Uy0yMDI2MDcxMTExMjY1My9pXHUwMDFiWzM5bVxuUmVjZWl2ZWQgc3RyaW5nOiAgXHUwMDFiWzMxbVwiXHUwMDFiWzM5bVxuXHUwMDFiWzMxbSAgICBOw7pjbGVvIEZpbmFuY2Vpcm/il4hEYXNoYm9hcmTiip5DYWRhc3Ryb3PiiplDb25maWd1cmHDp8O1ZXPilrbil5FPcsOnYW1lbnRv4pa24peQU3VwcmltZW50b3PilrZSZXF1aXNpw6fDtWVzQ290YcOnw7Vlc09yZGVucyBkZSBDb21wcmHil6dGaW5hbmNlaXJv4pa24perV29ya2Zsb3filrZISGVsbG9BRE1JTklTVFJBRE9S4o+74pqgIDE3IGFwcm92YcOnw7VlcyBwZW5kZW50ZXNBRE1JTklTVFJBRE9SQ290YWNvZXMxNyBjb3RhY29lcysgTm92YSBDb3RhY2FvTnVtZXJvUmVxdWlzaWNhb0Zvcm5lY2Vkb3Jlc1ZlbmNlZG9yTWVub3IgdmFsb3JTdGF0dXNBY29lczRTLTgwNTAwMS0yMDI2NFMtNDc0ODMwLTIwMjYzIGZvcm5lY2Vkb3IoZXMpQVVUTy00Uy0yMDI2MDcwOTE2MzAzMiBGb3JuZWNlZG9yIEFSJMKgMS4xNzUsMDBFTSBBTkFMSVNFVmVyaWZpY2FyIGFwcm92YWNhb0V4Y2x1aXI0Uy04MDg5OTAtMjAyNjRTLTQ3NDgzMC0yMDI2MyBmb3JuZWNlZG9yKGVzKUFVVE8tNFMtMjAyNjA3MDkxNjMwMzIgRm9ybmVjZWRvciBBUiTCoDEuMTc1LDAwQ09OQ0xVSURBRXhjbHVpcjRTLTU5ODc3MS0yMDI2NFMtNjIzMDIyLTIwMjYzIGZvcm5lY2Vkb3IoZXMpQVVUTy00Uy0yMDI2MDcwOTE2MDAyMyBGb3JuZWNlZG9yIEFSJMKgMi4zNTAsMDBFTSBBTkFMSVNFVmVyaWZpY2FyIGFwcm92YWNhb0V4Y2x1aXI0Uy05MzY1MTYtMjAyNjRTLTYyMzAyMi0yMDI2MyBmb3JuZWNlZG9yKGVzKUFVVE8tNFMtMjAyNjA3MDkxNjAwMjMgRm9ybmVjZWRvciBBUiTCoDEuMTc1LDAwQ09OQ0xVSURBRXhjbHVpcjRTLTczMDcyMC0yMDI2NFMtNjc1OTkxLTIwMjYzIGZvcm5lY2Vkb3IoZXMpQVVUTy00Uy0yMDI2MDcwODE2NTMxNyBGb3JuZWNlZG9yIEFSJMKgMS4xNzUsMDBFTSBBTkFMSVNFVmVyaWZpY2FyIGFwcm92YWNhb0V4Y2x1aXI0Uy00Mjc5NjEtMjAyNjRTLTY3NTk5MS0yMDI2MyBmb3JuZWNlZG9yKGVzKUFVVE8tNFMtMjAyNjA3MDgxNjUzMTcgRm9ybmVjZWRvciBBUiTCoDEuMTc1LDAwQ09OQ0xVSURBRXhjbHVpcjRTLTU4NzYxNy0yMDI2NFMtNzE4NDU4LTIwMjYzIGZvcm5lY2Vkb3IoZXMpQVVUTy00Uy0yMDI2MDcwODE0NTE0OCBGb3JuZWNlZG9yIEFSJMKgMS4xNzUsMDBFTSBBTkFMSVNFVmVyaWZpY2FyIGFwcm92YWNhb0V4Y2x1aXI0Uy00OTM1OTMtMjAyNjRTLTcxODQ1OC0yMDI2MyBmb3JuZWNlZG9yKGVzKUFVVE8tNFMtMjAyNjA3MDgxNDUxNDggRm9ybmVjZWRvciBBUiTCoDEuMTc1LDAwQ09OQ0xVSURBRXhjbHVpcjRTLTk5NTUzNS0yMDI2NFMtODA4NzI4LTIwMjYzIGZvcm5lY2Vkb3IoZXMpQVVUTy00Uy0yMDI2MDcwNzE2MjEwNSBGb3JuZWNlZG9yIEFSJMKgMS4xNzUsMDBFTSBBTkFMSVNFVmVyaWZpY2FyIGFwcm92YWNhb0V4Y2x1aXI0Uy0yNzkyODAtMjAyNjRTLTgwODcyOC0yMDI2MyBmb3JuZWNlZG9yKGVzKUFVVE8tNFMtMjAyNjA3MDcxNjIxMDUgRm9ybmVjZWRvciBBUiTCoDEuMTc1LDAwQ09OQ0xVSURBRXhjbHVpcjEtMTAgZGUgMTdJdGVucyBwb3IgcGFnaW5hMTAgcG9yIHBhZ2luYTIwIHBvciBwYWdpbmE1MCBwb3IgcGFnaW5hMTAwIHBvciBwYWdpbmFBbnRlcmlvclBhZ2luYSAxIGRlIDJQcm94aW1hQ29tcGFyYXRpdm8gZGUgcHJvcG9zdGFzQ290YWNhb0l0ZW1Gb3JuZWNlZG9yUXRkLlZsci4gdW5pdC5Ub3RhbFByYXpvVmVuY2Vkb3I0Uy04MDUwMDEtMjAyNi1BVVRPLTRTLTIwMjYwNzA5MTYzMDMyIEZvcm5lY2Vkb3IgQjFSJMKgMS4xOTAsMDBSJMKgMS4xOTAsMDAxMCBkaWFzLTRTLTgwNTAwMS0yMDI2LUFVVE8tNFMtMjAyNjA3MDkxNjMwMzIgRm9ybmVjZWRvciBDMVIkwqAxLjIxMCwwMFIkwqAxLjIxMCwwMDEwIGRpYXMtNFMtODA1MDAxLTIwMjYtQVVUTy00Uy0yMDI2MDcwOTE2MzAzMiBGb3JuZWNlZG9yIEExUiTCoDEuMTc1LDAwUiTCoDEuMTc1LDAwMTAgZGlhc3NpbTRTLTgwODk5MC0yMDI2LUFVVE8tNFMtMjAyNjA3MDkxNjMwMzIgRm9ybmVjZWRvciBBMVIkwqAxLjE3NSwwMFIkwqAxLjE3NSwwMDEwIGRpYXNzaW00Uy04MDg5OTAtMjAyNi1BVVRPLTRTLTIwMjYwNzA5MTYzMDMyIEZvcm5lY2Vkb3IgQzFSJMKgMS4yMTAsMDBSJMKgMS4yMTAsMDAxMCBkaWFzLTRTLTgwODk5MC0yMDI2LUFVVE8tNFMtMjAyNjA3MDkxNjMwMzIgRm9ybmVjZWRvciBCMVIkwqAxLjE5MCwwMFIkwqAxLjE5MCwwMDEwIGRpYXMtNFMtNTk4NzcxLTIwMjYtQVVUTy00Uy0yMDI2MDcwOTE2MDAyMyBGb3JuZWNlZG9yIEExUiTCoDEuMTc1LDAwUiTCoDEuMTc1LDAwMTAgZGlhc3NpbTRTLTU5ODc3MS0yMDI2LUFVVE8tNFMtMjAyNjA3MDkxNjAwMjMgRm9ybmVjZWRvciBBMVIkwqAxLjE3NSwwMFIkwqAxLjE3NSwwMDEwIGRpYXNzaW00Uy01OTg3NzEtMjAyNi1BVVRPLTRTLTIwMjYwNzA5MTYwMDIzIEZvcm5lY2Vkb3IgQzFSJMKgMS4yMTAsMDBSJMKgMS4yMTAsMDAxMCBkaWFzLTRTLTU5ODc3MS0yMDI2LUFVVE8tNFMtMjAyNjA3MDkxNjAwMjMgRm9ybmVjZWRvciBCMVIkwqAxLjE5MCwwMFIkwqAxLjE5MCwwMDEwIGRpYXMtMS0xMCBkZSA1NEl0ZW5zIHBvciBwYWdpbmExMCBwb3IgcGFnaW5hMjAgcG9yIHBhZ2luYTUwIHBvciBwYWdpbmExMDAgcG9yIHBhZ2luYUFudGVyaW9yUGFnaW5hIDEgZGUgNlByb3hpbWHCt8K3wrfCt1x1MDAxYlszOW1cblx1MDAxYlszMW1cIlx1MDAxYlszOW1cblxuQ2FsbCBsb2c6XG5cdTAwMWJbMm0gIC0gRXhwZWN0IFwidG9IYXZlVGV4dFwiIHdpdGggdGltZW91dCAxMDAwMG1zXHUwMDFiWzIybVxuXHUwMDFiWzJtICAtIHdhaXRpbmcgZm9yIGxvY2F0b3IoJ2JvZHknKVx1MDAxYlsyMm1cblx1MDAxYlsybSAgICAyNCDDlyBsb2NhdG9yIHJlc29sdmVkIHRvIDxib2R5PuKApjwvYm9keT5cdTAwMWJbMjJtXG5cdTAwMWJbMm0gICAgICAgLSB1bmV4cGVjdGVkIHZhbHVlIFwiXHUwMDFiWzIybVxuXHUwMDFiWzJtICAgIE7DumNsZW8gRmluYW5jZWlyb+KXiERhc2hib2FyZOKKnkNhZGFzdHJvc+KKmUNvbmZpZ3VyYcOnw7Vlc+KWtuKXkU9yw6dhbWVudG/ilrbil5BTdXByaW1lbnRvc+KWtlJlcXVpc2nDp8O1ZXNDb3Rhw6fDtWVzT3JkZW5zIGRlIENvbXByYeKXp0ZpbmFuY2Vpcm/ilrbil6tXb3JrZmxvd+KWtkhIZWxsb0FETUlOSVNUUkFET1Lij7vimqAgMTcgYXByb3Zhw6fDtWVzIHBlbmRlbnRlc0FETUlOSVNUUkFET1JDb3RhY29lczE3IGNvdGFjb2VzKyBOb3ZhIENvdGFjYW9OdW1lcm9SZXF1aXNpY2FvRm9ybmVjZWRvcmVzVmVuY2Vkb3JNZW5vciB2YWxvclN0YXR1c0Fjb2VzNFMtODA1MDAxLTIwMjY0Uy00NzQ4MzAtMjAyNjMgZm9ybmVjZWRvcihlcylBVVRPLTRTLTIwMjYwNzA5MTYzMDMyIEZvcm5lY2Vkb3IgQVIkwqAxLjE3NSwwMEVNIEFOQUxJU0VWZXJpZmljYXIgYXByb3ZhY2FvRXhjbHVpcjRTLTgwODk5MC0yMDI2NFMtNDc0ODMwLTIwMjYzIGZvcm5lY2Vkb3IoZXMpQVVUTy00Uy0yMDI2MDcwOTE2MzAzMiBGb3JuZWNlZG9yIEFSJMKgMS4xNzUsMDBDT05DTFVJREFFeGNsdWlyNFMtNTk4NzcxLTIwMjY0Uy02MjMwMjItMjAyNjMgZm9ybmVjZWRvcihlcylBVVRPLTRTLTIwMjYwNzA5MTYwMDIzIEZvcm5lY2Vkb3IgQVIkwqAyLjM1MCwwMEVNIEFOQUxJU0VWZXJpZmljYXIgYXByb3ZhY2FvRXhjbHVpcjRTLTkzNjUxNi0yMDI2NFMtNjIzMDIyLTIwMjYzIGZvcm5lY2Vkb3IoZXMpQVVUTy00Uy0yMDI2MDcwOTE2MDAyMyBGb3JuZWNlZG9yIEFSJMKgMS4xNzUsMDBDT05DTFVJREFFeGNsdWlyNFMtNzMwNzIwLTIwMjY0Uy02NzU5OTEtMjAyNjMgZm9ybmVjZWRvcihlcylBVVRPLTRTLTIwMjYwNzA4MTY1MzE3IEZvcm5lY2Vkb3IgQVIkwqAxLjE3NSwwMEVNIEFOQUxJU0VWZXJpZmljYXIgYXByb3ZhY2FvRXhjbHVpcjRTLTQyNzk2MS0yMDI2NFMtNjc1OTkxLTIwMjYzIGZvcm5lY2Vkb3IoZXMpQVVUTy00Uy0yMDI2MDcwODE2NTMxNyBGb3JuZWNlZG9yIEFSJMKgMS4xNzUsMDBDT05DTFVJREFFeGNsdWlyNFMtNTg3NjE3LTIwMjY0Uy03MTg0NTgtMjAyNjMgZm9ybmVjZWRvcihlcylBVVRPLTRTLTIwMjYwNzA4MTQ1MTQ4IEZvcm5lY2Vkb3IgQVIkwqAxLjE3NSwwMEVNIEFOQUxJU0VWZXJpZmljYXIgYXByb3ZhY2FvRXhjbHVpcjRTLTQ5MzU5My0yMDI2NFMtNzE4NDU4LTIwMjYzIGZvcm5lY2Vkb3IoZXMpQVVUTy00Uy0yMDI2MDcwODE0NTE0OCBGb3JuZWNlZG9yIEFSJMKgMS4xNzUsMDBDT05DTFVJREFFeGNsdWlyNFMtOTk1NTM1LTIwMjY0Uy04MDg3MjgtMjAyNjMgZm9ybmVjZWRvcihlcylBVVRPLTRTLTIwMjYwNzA3MTYyMTA1IEZvcm5lY2Vkb3IgQVIkwqAxLjE3NSwwMEVNIEFOQUxJU0VWZXJpZmljYXIgYXByb3ZhY2FvRXhjbHVpcjRTLTI3OTI4MC0yMDI2NFMtODA4NzI4LTIwMjYzIGZvcm5lY2Vkb3IoZXMpQVVUTy00Uy0yMDI2MDcwNzE2MjEwNSBGb3JuZWNlZG9yIEFSJMKgMS4xNzUsMDBDT05DTFVJREFFeGNsdWlyMS0xMCBkZSAxN0l0ZW5zIHBvciBwYWdpbmExMCBwb3IgcGFnaW5hMjAgcG9yIHBhZ2luYTUwIHBvciBwYWdpbmExMDAgcG9yIHBhZ2luYUFudGVyaW9yUGFnaW5hIDEgZGUgMlByb3hpbWFDb21wYXJhdGl2byBkZSBwcm9wb3N0YXNDb3RhY2FvSXRlbUZvcm5lY2Vkb3JRdGQuVmxyLiB1bml0LlRvdGFsUHJhem9WZW5jZWRvcjRTLTgwNTAwMS0yMDI2LUFVVE8tNFMtMjAyNjA3MDkxNjMwMzIgRm9ybmVjZWRvciBCMVIkwqAxLjE5MCwwMFIkwqAxLjE5MCwwMDEwIGRpYXMtNFMtODA1MDAxLTIwMjYtQVVUTy00Uy0yMDI2MDcwOTE2MzAzMiBGb3JuZWNlZG9yIEMxUiTCoDEuMjEwLDAwUiTCoDEuMjEwLDAwMTAgZGlhcy00Uy04MDUwMDEtMjAyNi1BVVRPLTRTLTIwMjYwNzA5MTYzMDMyIEZvcm5lY2Vkb3IgQTFSJMKgMS4xNzUsMDBSJMKgMS4xNzUsMDAxMCBkaWFzc2ltNFMtODA4OTkwLTIwMjYtQVVUTy00Uy0yMDI2MDcwOTE2MzAzMiBGb3JuZWNlZG9yIEExUiTCoDEuMTc1LDAwUiTCoDEuMTc1LDAwMTAgZGlhc3NpbTRTLTgwODk5MC0yMDI2LUFVVE8tNFMtMjAyNjA3MDkxNjMwMzIgRm9ybmVjZWRvciBDMVIkwqAxLjIxMCwwMFIkwqAxLjIxMCwwMDEwIGRpYXMtNFMtODA4OTkwLTIwMjYtQVVUTy00Uy0yMDI2MDcwOTE2MzAzMiBGb3JuZWNlZG9yIEIxUiTCoDEuMTkwLDAwUiTCoDEuMTkwLDAwMTAgZGlhcy00Uy01OTg3NzEtMjAyNi1BVVRPLTRTLTIwMjYwNzA5MTYwMDIzIEZvcm5lY2Vkb3IgQTFSJMKgMS4xNzUsMDBSJMKgMS4xNzUsMDAxMCBkaWFzc2ltNFMtNTk4NzcxLTIwMjYtQVVUTy00Uy0yMDI2MDcwOTE2MDAyMyBGb3JuZWNlZG9yIEExUiTCoDEuMTc1LDAwUiTCoDEuMTc1LDAwMTAgZGlhc3NpbTRTLTU5ODc3MS0yMDI2LUFVVE8tNFMtMjAyNjA3MDkxNjAwMjMgRm9ybmVjZWRvciBDMVIkwqAxLjIxMCwwMFIkwqAxLjIxMCwwMDEwIGRpYXMtNFMtNTk4NzcxLTIwMjYtQVVUTy00Uy0yMDI2MDcwOTE2MDAyMyBGb3JuZWNlZG9yIEIxUiTCoDEuMTkwLDAwUiTCoDEuMTkwLDAwMTAgZGlhcy0xLTEwIGRlIDU0SXRlbnMgcG9yIHBhZ2luYTEwIHBvciBwYWdpbmEyMCBwb3IgcGFnaW5hNTAgcG9yIHBhZ2luYTEwMCBwb3IgcGFnaW5hQW50ZXJpb3JQYWdpbmEgMSBkZSA2UHJveGltYVx1MDAxYlsyMm1cblx1MDAxYlsybSAgXHUwMDFiWzIybVxuXHUwMDFiWzJtXHUwMDFiWzIybVxuXHUwMDFiWzJtXCJcdTAwMWJbMjJtXG4iLAogICJpbXBhY3QiOiAiQ29tcGFyYXRpdm8gaW5jb3JyZXRvIGFmZXRhIGRlY2lzYW8gZGUgY29tcHJhIGUgcmFzdHJlYWJpbGlkYWRlLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIkNvbXBhcmF0aXZvIGluY29ycmV0byBhZmV0YSBkZWNpc2FvIGRlIGNvbXByYSBlIHJhc3RyZWFiaWxpZGFkZS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJDb3JyaWdpciB2aW5jdWxvIGNvbSByZXF1aXNpY2FvLCBwcm9wb3N0YXMgcG9yIGZvcm5lY2Vkb3IgZSBwZXJzaXN0ZW5jaWEgZG8gdmVuY2Vkb3IuIiwKICAic3RhdHVzIjogInJlcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogIi9ob21lL2NvbGF0dG8vcmVwby9SMy90ZXN0NHMvdGVzdC1yZXN1bHRzL0NUMDE0LUNPVEFDQU8ucG5nIiwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMTFUMTQ6Mzg6MzIuMTIyWiIKfQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/04-procurement-finance-e2e-c826a-ores-comparativo-e-vencedor-chromium-desktop/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/04-procurement-finance-e2e-c826a-ores-comparativo-e-vencedor-chromium-desktop/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/colatto/repo/R3/test4s/test-results/artifacts/04-procurement-finance-e2e-c826a-ores-comparativo-e-vencedor-chromium-desktop/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/colatto/repo/R3/test4s/support/pages/workflow-audit-page.ts",
+                    "column": 47,
+                    "line": 56
+                  }
+                },
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 49296,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "steps": [
+                    {
+                      "title": "CT014-COTACAO",
+                      "duration": 18980
+                    }
+                  ],
+                  "startTime": "2026-07-11T14:38:32.908Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT014-COTACAO",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAxNC1DT1RBQ0FPIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAxNCIsCiAgInRpdGxlIjogIkNvdGFjYW8gY29tIDMgZm9ybmVjZWRvcmVzLCBjb21wYXJhdGl2byBlIHZlbmNlZG9yIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2NvdGFjb2VzIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcxMTExMjY1MyIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxNFwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJDb3RhY2FvIGRldmUgY29tcGFyYXIgZm9ybmVjZWRvcmVzLCByZWdpc3RyYXIgdmVuY2Vkb3IgZSBwZXJzaXN0aXIuIiwKICAiYWN0dWFsIjogIkNvbXBvcnRhbWVudG8gb2JzZXJ2YWRvIGNvbmZvcm1lIGVzcGVyYWRvLiIsCiAgImltcGFjdCI6ICJDb21wYXJhdGl2byBpbmNvcnJldG8gYWZldGEgZGVjaXNhbyBkZSBjb21wcmEgZSByYXN0cmVhYmlsaWRhZGUuIiwKICAiYnVzaW5lc3NJbXBhY3QiOiAiQ29tcGFyYXRpdm8gaW5jb3JyZXRvIGFmZXRhIGRlY2lzYW8gZGUgY29tcHJhIGUgcmFzdHJlYWJpbGlkYWRlLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIHZpbmN1bG8gY29tIHJlcXVpc2ljYW8sIHByb3Bvc3RhcyBwb3IgZm9ybmVjZWRvciBlIHBlcnNpc3RlbmNpYSBkbyB2ZW5jZWRvci4iLAogICJzdGF0dXMiOiAiYXByb3ZhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTExVDE0OjM5OjIyLjI2NVoiCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "flaky"
+            }
+          ],
+          "id": "a94c55c2290a00239667-a75b3268f14ef7ed31f2",
+          "file": "04-procurement-finance-e2e.spec.ts",
+          "line": 46,
+          "column": 5
+        },
+        {
+          "title": "CT015 - ordem de compra a partir da cotacao e comprometimento do orcamento",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 30534,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -104,16 +1075,16 @@
                   "steps": [
                     {
                       "title": "CT015-ORDEM-COMPRA",
-                      "duration": 1867
+                      "duration": 1819
                     }
                   ],
-                  "startTime": "2026-07-09T19:58:29.751Z",
+                  "startTime": "2026-07-11T14:39:22.329Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "diagnostic-CT015-ORDEM-COMPRA",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAxNS1PUkRFTS1DT01QUkEiLAogICJzZXZlcml0eSI6ICJjcml0aWNhIiwKICAiY2FzZUlkIjogIkNUMDE1IiwKICAidGl0bGUiOiAiT3JkZW0gZGUgY29tcHJhIGUgY29tcHJvbWV0aW1lbnRvIGRvIG9yY2FtZW50byIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9vcmRlbnMtY29tcHJhIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwOTE2MzAzMiIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxNVwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJPQyBkZXZlIG5hc2NlciBkYSBjb3RhY2FvLCBjb21wcm9tZXRlciBvcmNhbWVudG8gZSBnZXJhciBjb250YSBhIHBhZ2FyIG5vIHBvbnRvIHByZXZpc3RvLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiU2VtIGNvbXByb21ldGltZW50byBkbyBvcmNhbWVudG8gbmFvIGhhIGNvbnRyb2xlIHJlYWwgZGUgY29tcHJhcy4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJTZW0gY29tcHJvbWV0aW1lbnRvIGRvIG9yY2FtZW50byBuYW8gaGEgY29udHJvbGUgcmVhbCBkZSBjb21wcmFzLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIGdlcmFjYW8gZGEgT0MsIHZpbmN1bG9zIGUgYXR1YWxpemFjYW8gYXRvbWljYSBkbyB2YWxvciBjb21wcm9tZXRpZG8uIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0wOVQxOTo1ODo1Ny45MzVaIgp9"
+                      "body": "ewogICJpZCI6ICJDVDAxNS1PUkRFTS1DT01QUkEiLAogICJzZXZlcml0eSI6ICJjcml0aWNhIiwKICAiY2FzZUlkIjogIkNUMDE1IiwKICAidGl0bGUiOiAiT3JkZW0gZGUgY29tcHJhIGUgY29tcHJvbWV0aW1lbnRvIGRvIG9yY2FtZW50byIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9vcmRlbnMtY29tcHJhIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcxMTExMjY1MyIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxNVwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJPQyBkZXZlIG5hc2NlciBkYSBjb3RhY2FvLCBjb21wcm9tZXRlciBvcmNhbWVudG8gZSBnZXJhciBjb250YSBhIHBhZ2FyIG5vIHBvbnRvIHByZXZpc3RvLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiU2VtIGNvbXByb21ldGltZW50byBkbyBvcmNhbWVudG8gbmFvIGhhIGNvbnRyb2xlIHJlYWwgZGUgY29tcHJhcy4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJTZW0gY29tcHJvbWV0aW1lbnRvIGRvIG9yY2FtZW50byBuYW8gaGEgY29udHJvbGUgcmVhbCBkZSBjb21wcmFzLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIGdlcmFjYW8gZGEgT0MsIHZpbmN1bG9zIGUgYXR1YWxpemFjYW8gYXRvbWljYSBkbyB2YWxvciBjb21wcm9tZXRpZG8uIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0xMVQxNDozOTo1Mi44MjdaIgp9"
                     }
                   ]
                 }
@@ -139,10 +1110,10 @@
               "projectName": "chromium-desktop",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 56555,
+                  "duration": 58890,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -150,16 +1121,16 @@
                   "steps": [
                     {
                       "title": "CT016-EDICAO-CANCELAMENTO-DOCUMENTOS",
-                      "duration": 31202
+                      "duration": 31194
                     }
                   ],
-                  "startTime": "2026-07-09T19:58:57.995Z",
+                  "startTime": "2026-07-11T14:39:52.871Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "diagnostic-CT016-EDICAO-CANCELAMENTO-DOCUMENTOS",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAxNi1FRElDQU8tQ0FOQ0VMQU1FTlRPLURPQ1VNRU5UT1MiLAogICJzZXZlcml0eSI6ICJtZWRpYSIsCiAgImNhc2VJZCI6ICJDVDAxNiIsCiAgInRpdGxlIjogIkVkaWNhby9leGNsdXNhby9jYW5jZWxhbWVudG8gZGUgcmVxdWlzaWNhbywgY290YWNhbyBlIE9DIHF1YW5kbyBwZXJtaXRpZG8iLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vb3JkZW5zLWNvbXByYSIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MDkxNjMwMzIiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMTZcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiUmVxdWlzaWNhbywgY290YWNhbyBlIE9DIGRldmVtIHBlcm1pdGlyIGVkaWNhby9jYW5jZWxhbWVudG8gcXVhbmRvIGEgcmVncmEgcGVybWl0aXIgb3UgZXhpYmlyIGJsb3F1ZWlvIGRlIG5lZ29jaW8uIiwKICAiYWN0dWFsIjogIkNvbXBvcnRhbWVudG8gb2JzZXJ2YWRvIGNvbmZvcm1lIGVzcGVyYWRvLiIsCiAgImltcGFjdCI6ICJTZW0gYWNhbyBhZG1pbmlzdHJhdGl2YSBjbGFyYSwgZG9jdW1lbnRvcyBpbmNvcnJldG9zIHBlcm1hbmVjZW0gbm8gZmx1eG8gZmluYW5jZWlyby4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJTZW0gYWNhbyBhZG1pbmlzdHJhdGl2YSBjbGFyYSwgZG9jdW1lbnRvcyBpbmNvcnJldG9zIHBlcm1hbmVjZW0gbm8gZmx1eG8gZmluYW5jZWlyby4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJFeHBvciBlZGl0YXIvY2FuY2VsYXIvaW5hdGl2YXIgY29tIGNvbmZpcm1hY2FvIG91IG1lbnNhZ2VtIG9iamV0aXZhIGRlIGJsb3F1ZWlvLiIsCiAgInN0YXR1cyI6ICJhcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMDlUMTk6NTk6NTQuNTEyWiIKfQ=="
+                      "body": "ewogICJpZCI6ICJDVDAxNi1FRElDQU8tQ0FOQ0VMQU1FTlRPLURPQ1VNRU5UT1MiLAogICJzZXZlcml0eSI6ICJtZWRpYSIsCiAgImNhc2VJZCI6ICJDVDAxNiIsCiAgInRpdGxlIjogIkVkaWNhby9leGNsdXNhby9jYW5jZWxhbWVudG8gZGUgcmVxdWlzaWNhbywgY290YWNhbyBlIE9DIHF1YW5kbyBwZXJtaXRpZG8iLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vb3JkZW5zLWNvbXByYSIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MTExMTI2NTMiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMTZcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiUmVxdWlzaWNhbywgY290YWNhbyBlIE9DIGRldmVtIHBlcm1pdGlyIGVkaWNhby9jYW5jZWxhbWVudG8gcXVhbmRvIGEgcmVncmEgcGVybWl0aXIgb3UgZXhpYmlyIGJsb3F1ZWlvIGRlIG5lZ29jaW8uIiwKICAiYWN0dWFsIjogIkNvbXBvcnRhbWVudG8gb2JzZXJ2YWRvIGNvbmZvcm1lIGVzcGVyYWRvLiIsCiAgImltcGFjdCI6ICJTZW0gYWNhbyBhZG1pbmlzdHJhdGl2YSBjbGFyYSwgZG9jdW1lbnRvcyBpbmNvcnJldG9zIHBlcm1hbmVjZW0gbm8gZmx1eG8gZmluYW5jZWlyby4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJTZW0gYWNhbyBhZG1pbmlzdHJhdGl2YSBjbGFyYSwgZG9jdW1lbnRvcyBpbmNvcnJldG9zIHBlcm1hbmVjZW0gbm8gZmx1eG8gZmluYW5jZWlyby4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJFeHBvciBlZGl0YXIvY2FuY2VsYXIvaW5hdGl2YXIgY29tIGNvbmZpcm1hY2FvIG91IG1lbnNhZ2VtIG9iamV0aXZhIGRlIGJsb3F1ZWlvLiIsCiAgInN0YXR1cyI6ICJhcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMTFUMTQ6NDA6NTEuNzIxWiIKfQ=="
                     }
                   ]
                 }
@@ -185,10 +1156,10 @@
               "projectName": "chromium-desktop",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 31298,
+                  "duration": 28392,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -196,16 +1167,16 @@
                   "steps": [
                     {
                       "title": "CT017-CONTAS-PAGAR",
-                      "duration": 669
+                      "duration": 665
                     }
                   ],
-                  "startTime": "2026-07-09T19:59:54.558Z",
+                  "startTime": "2026-07-11T14:40:51.773Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "diagnostic-CT017-CONTAS-PAGAR",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAxNy1DT05UQVMtUEFHQVIiLAogICJzZXZlcml0eSI6ICJjcml0aWNhIiwKICAiY2FzZUlkIjogIkNUMDE3IiwKICAidGl0bGUiOiAiQ29udGFzIGEgcGFnYXIsIHN0YXR1cyBlIGZpbHRyb3MiLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vY29udGFzLXBhZ2FyIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwOTE2MzAzMiIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxN1wiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJDb250YXMgYSBwYWdhciBkZXZlbSBleGliaXIgc3RhdHVzIGUgZmlsdHJvcyBmdW5jaW9uYWlzIGFwb3MgT0MuIiwKICAiYWN0dWFsIjogIkNvbXBvcnRhbWVudG8gb2JzZXJ2YWRvIGNvbmZvcm1lIGVzcGVyYWRvLiIsCiAgImltcGFjdCI6ICJTZW0gY29udGEgYSBwYWdhciByYXN0cmVhdmVsIG8gZmluYW5jZWlybyBuYW8gY29uc2VndWUgcHJvZ3JhbWFyIG91IHJlY29uY2lsaWFyIHBhZ2FtZW50b3MuIiwKICAiYnVzaW5lc3NJbXBhY3QiOiAiU2VtIGNvbnRhIGEgcGFnYXIgcmFzdHJlYXZlbCBvIGZpbmFuY2Vpcm8gbmFvIGNvbnNlZ3VlIHByb2dyYW1hciBvdSByZWNvbmNpbGlhciBwYWdhbWVudG9zLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIGdlcmFjYW8vbGlzdGFnZW0gZGUgY29udGFzIGEgcGFnYXIgZSB2YWxpZGFjYW8gZG9zIGZpbHRyb3MuIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0wOVQyMDowMDoyNS44MjZaIgp9"
+                      "body": "ewogICJpZCI6ICJDVDAxNy1DT05UQVMtUEFHQVIiLAogICJzZXZlcml0eSI6ICJjcml0aWNhIiwKICAiY2FzZUlkIjogIkNUMDE3IiwKICAidGl0bGUiOiAiQ29udGFzIGEgcGFnYXIsIHN0YXR1cyBlIGZpbHRyb3MiLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vY29udGFzLXBhZ2FyIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcxMTExMjY1MyIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxN1wiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJDb250YXMgYSBwYWdhciBkZXZlbSBleGliaXIgc3RhdHVzIGUgZmlsdHJvcyBmdW5jaW9uYWlzIGFwb3MgT0MuIiwKICAiYWN0dWFsIjogIkNvbXBvcnRhbWVudG8gb2JzZXJ2YWRvIGNvbmZvcm1lIGVzcGVyYWRvLiIsCiAgImltcGFjdCI6ICJTZW0gY29udGEgYSBwYWdhciByYXN0cmVhdmVsIG8gZmluYW5jZWlybyBuYW8gY29uc2VndWUgcHJvZ3JhbWFyIG91IHJlY29uY2lsaWFyIHBhZ2FtZW50b3MuIiwKICAiYnVzaW5lc3NJbXBhY3QiOiAiU2VtIGNvbnRhIGEgcGFnYXIgcmFzdHJlYXZlbCBvIGZpbmFuY2Vpcm8gbmFvIGNvbnNlZ3VlIHByb2dyYW1hciBvdSByZWNvbmNpbGlhciBwYWdhbWVudG9zLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkNvcnJpZ2lyIGdlcmFjYW8vbGlzdGFnZW0gZGUgY29udGFzIGEgcGFnYXIgZSB2YWxpZGFjYW8gZG9zIGZpbHRyb3MuIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0xMVQxNDo0MToyMC4xNDBaIgp9"
                     }
                   ]
                 }
@@ -231,10 +1202,10 @@
               "projectName": "chromium-desktop",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 31249,
+                  "duration": 34422,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -242,16 +1213,16 @@
                   "steps": [
                     {
                       "title": "CT018-PAGAMENTOS",
-                      "duration": 5290
+                      "duration": 5406
                     }
                   ],
-                  "startTime": "2026-07-09T20:00:25.863Z",
+                  "startTime": "2026-07-11T14:41:20.175Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "diagnostic-CT018-PAGAMENTOS",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAxOC1QQUdBTUVOVE9TIiwKICAic2V2ZXJpdHkiOiAiY3JpdGljYSIsCiAgImNhc2VJZCI6ICJDVDAxOCIsCiAgInRpdGxlIjogIlBhZ2FtZW50byBwYXJjaWFsLCBmaW5hbCBlIHRlbnRhdGl2YSBhY2ltYSBkbyBzYWxkbyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9wYWdhbWVudG9zIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwOTE2MzAzMiIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxOFwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJQYWdhbWVudG8gcGFyY2lhbC9maW5hbCBkZXZlIGF0dWFsaXphciBzYWxkbyBlIHRlbnRhdGl2YSBhY2ltYSBkbyBzYWxkbyBkZXZlIHNlciBibG9xdWVhZGEuIiwKICAiYWN0dWFsIjogIkNvbXBvcnRhbWVudG8gb2JzZXJ2YWRvIGNvbmZvcm1lIGVzcGVyYWRvLiIsCiAgImltcGFjdCI6ICJFcnJvIGVtIHBhZ2FtZW50byBkaXN0b3JjZSBjdXN0byByZWFsLCBkYXNoYm9hcmQgZSB0b21hZGEgZGUgZGVjaXNhby4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJFcnJvIGVtIHBhZ2FtZW50byBkaXN0b3JjZSBjdXN0byByZWFsLCBkYXNoYm9hcmQgZSB0b21hZGEgZGUgZGVjaXNhby4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJSZWNhbGN1bGFyIHNhbGRvcyBubyBiYWNrZW5kLCBibG9xdWVhciBwYWdhbWVudG8gZXhjZWRlbnRlIGUgcHJvcGFnYXIgdmFsb3JlcyBwYXJhIG9yY2FtZW50by9kYXNoYm9hcmQuIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0wOVQyMDowMDo1Ny4wNzdaIgp9"
+                      "body": "ewogICJpZCI6ICJDVDAxOC1QQUdBTUVOVE9TIiwKICAic2V2ZXJpdHkiOiAiY3JpdGljYSIsCiAgImNhc2VJZCI6ICJDVDAxOCIsCiAgInRpdGxlIjogIlBhZ2FtZW50byBwYXJjaWFsLCBmaW5hbCBlIHRlbnRhdGl2YSBhY2ltYSBkbyBzYWxkbyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9wYWdhbWVudG9zIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcxMTExMjY1MyIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxOFwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJQYWdhbWVudG8gcGFyY2lhbC9maW5hbCBkZXZlIGF0dWFsaXphciBzYWxkbyBlIHRlbnRhdGl2YSBhY2ltYSBkbyBzYWxkbyBkZXZlIHNlciBibG9xdWVhZGEuIiwKICAiYWN0dWFsIjogIkNvbXBvcnRhbWVudG8gb2JzZXJ2YWRvIGNvbmZvcm1lIGVzcGVyYWRvLiIsCiAgImltcGFjdCI6ICJFcnJvIGVtIHBhZ2FtZW50byBkaXN0b3JjZSBjdXN0byByZWFsLCBkYXNoYm9hcmQgZSB0b21hZGEgZGUgZGVjaXNhby4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJFcnJvIGVtIHBhZ2FtZW50byBkaXN0b3JjZSBjdXN0byByZWFsLCBkYXNoYm9hcmQgZSB0b21hZGEgZGUgZGVjaXNhby4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJSZWNhbGN1bGFyIHNhbGRvcyBubyBiYWNrZW5kLCBibG9xdWVhciBwYWdhbWVudG8gZXhjZWRlbnRlIGUgcHJvcGFnYXIgdmFsb3JlcyBwYXJhIG9yY2FtZW50by9kYXNoYm9hcmQuIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0xMVQxNDo0MTo1NC41NjdaIgp9"
                     }
                   ]
                 }
@@ -277,10 +1248,10 @@
               "projectName": "chromium-desktop",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 28742,
+                  "duration": 27717,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -288,16 +1259,16 @@
                   "steps": [
                     {
                       "title": "CT019-DASHBOARD-FINANCEIRO",
-                      "duration": 122
+                      "duration": 128
                     }
                   ],
-                  "startTime": "2026-07-09T20:00:57.119Z",
+                  "startTime": "2026-07-11T14:41:54.605Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "diagnostic-CT019-DASHBOARD-FINANCEIRO",
                       "contentType": "application/json",
-                      "body": "ewogICJpZCI6ICJDVDAxOS1EQVNIQk9BUkQtRklOQU5DRUlSTyIsCiAgInNldmVyaXR5IjogImFsdGEiLAogICJjYXNlSWQiOiAiQ1QwMTkiLAogICJ0aXRsZSI6ICJEYXNoYm9hcmQgZmluYW5jZWlybyBhcG9zIGNvbXByYS9wYWdhbWVudG8vbWFvIGRlIG9icmEiLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vYXVkaXRvcmlhIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcwOTE2MzAzMiIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxOVwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJEYXNoYm9hcmQgZGV2ZSByZWZsZXRpciBjb21wcmEsIHBhZ2FtZW50b3MsIG1hbyBkZSBvYnJhLCBjdXN0byByZWFsIGUgc2FsZG9zLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiSW5kaWNhZG9yZXMgaW5jb25zaXN0ZW50ZXMgcHJlanVkaWNhbSBjb250cm9sZSBmaW5hbmNlaXJvIGUgcmFzdHJlYWJpbGlkYWRlLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIkluZGljYWRvcmVzIGluY29uc2lzdGVudGVzIHByZWp1ZGljYW0gY29udHJvbGUgZmluYW5jZWlybyBlIHJhc3RyZWFiaWxpZGFkZS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJDb3JyaWdpciBhZ3JlZ2Fjb2VzIGRvIGRhc2hib2FyZCBlIGdhcmFudGlyIGV2ZW50b3MgZGUgYXVkaXRvcmlhIHBhcmEgY3JpYWNhbywgZWRpY2FvLCBhcHJvdmFjYW8gZSBwYWdhbWVudG8uIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0wOVQyMDowMToyNS44MjdaIgp9"
+                      "body": "ewogICJpZCI6ICJDVDAxOS1EQVNIQk9BUkQtRklOQU5DRUlSTyIsCiAgInNldmVyaXR5IjogImFsdGEiLAogICJjYXNlSWQiOiAiQ1QwMTkiLAogICJ0aXRsZSI6ICJEYXNoYm9hcmQgZmluYW5jZWlybyBhcG9zIGNvbXByYS9wYWdhbWVudG8vbWFvIGRlIG9icmEiLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vYXVkaXRvcmlhIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcxMTExMjY1MyIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAxOVwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJEYXNoYm9hcmQgZGV2ZSByZWZsZXRpciBjb21wcmEsIHBhZ2FtZW50b3MsIG1hbyBkZSBvYnJhLCBjdXN0byByZWFsIGUgc2FsZG9zLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiSW5kaWNhZG9yZXMgaW5jb25zaXN0ZW50ZXMgcHJlanVkaWNhbSBjb250cm9sZSBmaW5hbmNlaXJvIGUgcmFzdHJlYWJpbGlkYWRlLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIkluZGljYWRvcmVzIGluY29uc2lzdGVudGVzIHByZWp1ZGljYW0gY29udHJvbGUgZmluYW5jZWlybyBlIHJhc3RyZWFiaWxpZGFkZS4iLAogICJyZWNvbW1lbmRhdGlvbiI6ICJDb3JyaWdpciBhZ3JlZ2Fjb2VzIGRvIGRhc2hib2FyZCBlIGdhcmFudGlyIGV2ZW50b3MgZGUgYXVkaXRvcmlhIHBhcmEgY3JpYWNhbywgZWRpY2FvLCBhcHJvdmFjYW8gZSBwYWdhbWVudG8uIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0xMVQxNDo0MjoyMi4yNzVaIgp9"
                     }
                   ]
                 }
@@ -311,15 +1282,170 @@
           "column": 5
         }
       ]
+    },
+    {
+      "title": "05-permissions-audit.spec.ts",
+      "file": "05-permissions-audit.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "CT002 - criacao, edicao, inativacao e tentativa de login com usuario inativo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 45104,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT002-USUARIOS-PERMISSOES",
+                      "duration": 20136
+                    }
+                  ],
+                  "startTime": "2026-07-11T14:42:22.333Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT002-USUARIOS-PERMISSOES",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAwMi1VU1VBUklPUy1QRVJNSVNTT0VTIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAwMiIsCiAgInRpdGxlIjogIkNyaWFjYW8sIGVkaWNhbywgaW5hdGl2YWNhbyBlIGxvZ2luIGJsb3F1ZWFkbyBkZSB1c3VhcmlvIGluYXRpdm8iLAogICJwYXRoIjogImh0dHBzOi8vNHMucnVhdHJlei5jb20vb3JjYW1lbnRvIiwKICAicHJvZmlsZSI6ICJhZG1pbmlzdHJhZG9yIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcxMTExMjY1MyIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAwMlwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJVc3VhcmlvIG9wZXJhY2lvbmFsIGRldmUgcG9kZXIgc2VyIGNyaWFkby9lZGl0YWRvOyB1c3VhcmlvIGluYXRpdm8gZGV2ZSBzZXIgaW1wZWRpZG8gZGUgYXV0ZW50aWNhci4iLAogICJhY3R1YWwiOiAiQ29tcG9ydGFtZW50byBvYnNlcnZhZG8gY29uZm9ybWUgZXNwZXJhZG8uIiwKICAiaW1wYWN0IjogIlBlcm1pc3NvZXMgaW5jb3JyZXRhcyBwb2RlbSBleHBvciBmaW5hbmNlaXJvIG91IHdvcmtmbG93IGEgcGVyZmlzIGluZGV2aWRvcy4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJQZXJtaXNzb2VzIGluY29ycmV0YXMgcG9kZW0gZXhwb3IgZmluYW5jZWlybyBvdSB3b3JrZmxvdyBhIHBlcmZpcyBpbmRldmlkb3MuIiwKICAicmVjb21tZW5kYXRpb24iOiAiUmV2aXNhciBtYXRyaXogZGUgcGVyZmlzLCBzdGF0dXMgZGUgdXN1YXJpbyBlIHZhbGlkYWNhbyBkZSBsb2dpbiBubyBiYWNrZW5kLiIsCiAgInN0YXR1cyI6ICJhcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMTFUMTQ6NDM6MDcuNDA0WiIKfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a3b366f3b0c505051c2-00674a7c56c40a97c3bc",
+          "file": "05-permissions-audit.spec.ts",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "CT020 - workflow com perfil correto/incorreto, aprovacao e rejeicao",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 46067,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT020-WORKFLOW-PERFIL-INCORRETO",
+                      "duration": 131
+                    },
+                    {
+                      "title": "CT020-WORKFLOW-PERFIL-CORRETO",
+                      "duration": 95
+                    }
+                  ],
+                  "startTime": "2026-07-11T14:43:07.447Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT020-WORKFLOW-PERFIL-INCORRETO",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAyMC1XT1JLRkxPVy1QRVJGSUwtSU5DT1JSRVRPIiwKICAic2V2ZXJpdHkiOiAiYWx0YSIsCiAgImNhc2VJZCI6ICJDVDAyMCIsCiAgInRpdGxlIjogIldvcmtmbG93IGNvbSBwZXJmaWwgY29ycmV0by9pbmNvcnJldG8sIGFwcm92YWNhbyBlIHJlamVpY2FvIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2Fwcm92YWNvZXMiLAogICJwcm9maWxlIjogIm9wZXJhY2lvbmFsIiwKICAidGVzdERhdGFQcmVmaXgiOiAiQVVUTy00Uy0yMDI2MDcxMTExMjY1MyIsCiAgInN0ZXBzIjogIkV4ZWN1dGFyIG8gY2FzbyBhdXRvbWF0aXphZG8gXCJDVDAyMFwiIGUgb2JzZXJ2YXIgbyByZXN1bHRhZG8gcmVnaXN0cmFkby4iLAogICJleHBlY3RlZCI6ICJQZXJmaWwgaW5jb3JyZXRvIG5hbyBkZXZlIGFwcm92YXIgb3UgcmVqZWl0YXIgcGVuZGVuY2lhcyBzZW0gcGVybWlzc2FvLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiQXByb3ZhY2FvIHBvciBwZXJmaWwgaW5kZXZpZG8gcXVlYnJhIGdvdmVybmFuY2EgZG8gZmx1eG8gZmluYW5jZWlyby4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJBcHJvdmFjYW8gcG9yIHBlcmZpbCBpbmRldmlkbyBxdWVicmEgZ292ZXJuYW5jYSBkbyBmbHV4byBmaW5hbmNlaXJvLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkFwbGljYXIgYXV0b3JpemFjYW8gbm8gYmFja2VuZCBlIGVzY29uZGVyL2Rlc2FiaWxpdGFyIGFjb2VzIG5vIGZyb250ZW5kIHBhcmEgcGVyZmlzIHNlbSBwZXJtaXNzYW8uIiwKICAic3RhdHVzIjogImFwcm92YWRvIiwKICAiZXZpZGVuY2UiOiBudWxsLAogICJ0aW1lc3RhbXAiOiAiMjAyNi0wNy0xMVQxNDo0MzozNS44MDlaIgp9"
+                    },
+                    {
+                      "name": "diagnostic-CT020-WORKFLOW-PERFIL-CORRETO",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAyMC1XT1JLRkxPVy1QRVJGSUwtQ09SUkVUTyIsCiAgInNldmVyaXR5IjogImFsdGEiLAogICJjYXNlSWQiOiAiQ1QwMjAiLAogICJ0aXRsZSI6ICJXb3JrZmxvdyBjb20gcGVyZmlsIGNvcnJldG8vaW5jb3JyZXRvLCBhcHJvdmFjYW8gZSByZWplaWNhbyIsCiAgInBhdGgiOiAiaHR0cHM6Ly80cy5ydWF0cmV6LmNvbS9hdWRpdG9yaWEiLAogICJwcm9maWxlIjogImFkbWluaXN0cmFkb3IiLAogICJ0ZXN0RGF0YVByZWZpeCI6ICJBVVRPLTRTLTIwMjYwNzExMTEyNjUzIiwKICAic3RlcHMiOiAiRXhlY3V0YXIgbyBjYXNvIGF1dG9tYXRpemFkbyBcIkNUMDIwXCIgZSBvYnNlcnZhciBvIHJlc3VsdGFkbyByZWdpc3RyYWRvLiIsCiAgImV4cGVjdGVkIjogIkFkbWluaXN0cmFkb3Igb3UgcGVyZmlsIGNvcnJldG8gZGV2ZSBhcHJvdmFyL3JlamVpdGFyIHBlbmRlbmNpYXMgZSBhdHVhbGl6YXIgZW50aWRhZGUgb3JpZ2luYWwuIiwKICAiYWN0dWFsIjogIkNvbXBvcnRhbWVudG8gb2JzZXJ2YWRvIGNvbmZvcm1lIGVzcGVyYWRvLiIsCiAgImltcGFjdCI6ICJXb3JrZmxvdyBzZW0gZGVjaXNhbyByYXN0cmVhdmVsIHF1ZWJyYSBnb3Zlcm5hbmNhIGUgYmxvcXVlaWEgY29udGludWlkYWRlIG9wZXJhY2lvbmFsLiIsCiAgImJ1c2luZXNzSW1wYWN0IjogIldvcmtmbG93IHNlbSBkZWNpc2FvIHJhc3RyZWF2ZWwgcXVlYnJhIGdvdmVybmFuY2EgZSBibG9xdWVpYSBjb250aW51aWRhZGUgb3BlcmFjaW9uYWwuIiwKICAicmVjb21tZW5kYXRpb24iOiAiUGVyc2lzdGlyIGFwcm92YWRvciwgcGVyZmlsLCBkYXRhLCBvYnNlcnZhY2FvIGUgc2luY3Jvbml6YXIgc3RhdHVzIGRhIGVudGlkYWRlIG9yaWdpbmFsLiIsCiAgInN0YXR1cyI6ICJhcHJvdmFkbyIsCiAgImV2aWRlbmNlIjogbnVsbCwKICAidGltZXN0YW1wIjogIjIwMjYtMDctMTFUMTQ6NDM6NTMuNDc5WiIKfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a3b366f3b0c505051c2-53b5635513a7bf4bbdc2",
+          "file": "05-permissions-audit.spec.ts",
+          "line": 39,
+          "column": 5
+        },
+        {
+          "title": "CT021 - auditoria de criacao, edicao, exclusao/cancelamento e decisoes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 28772,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "CT021-AUDITORIA",
+                      "duration": 97
+                    }
+                  ],
+                  "startTime": "2026-07-11T14:43:53.525Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "diagnostic-CT021-AUDITORIA",
+                      "contentType": "application/json",
+                      "body": "ewogICJpZCI6ICJDVDAyMS1BVURJVE9SSUEiLAogICJzZXZlcml0eSI6ICJtZWRpYSIsCiAgImNhc2VJZCI6ICJDVDAyMSIsCiAgInRpdGxlIjogIkF1ZGl0b3JpYSBkZSBjcmlhY2FvLCBlZGljYW8sIGV4Y2x1c2FvL2NhbmNlbGFtZW50byBlIGRlY2lzb2VzIiwKICAicGF0aCI6ICJodHRwczovLzRzLnJ1YXRyZXouY29tL2F1ZGl0b3JpYSIsCiAgInByb2ZpbGUiOiAiYWRtaW5pc3RyYWRvciIsCiAgInRlc3REYXRhUHJlZml4IjogIkFVVE8tNFMtMjAyNjA3MTExMTI2NTMiLAogICJzdGVwcyI6ICJFeGVjdXRhciBvIGNhc28gYXV0b21hdGl6YWRvIFwiQ1QwMjFcIiBlIG9ic2VydmFyIG8gcmVzdWx0YWRvIHJlZ2lzdHJhZG8uIiwKICAiZXhwZWN0ZWQiOiAiQXVkaXRvcmlhIGRldmUgcmVnaXN0cmFyIGNyaWFjYW8sIGVkaWNhbywgZXhjbHVzYW8vY2FuY2VsYW1lbnRvIGUgZGVjaXNvZXMgY29tIHVzdWFyaW8vZGF0YS9ob3JhLiIsCiAgImFjdHVhbCI6ICJDb21wb3J0YW1lbnRvIG9ic2VydmFkbyBjb25mb3JtZSBlc3BlcmFkby4iLAogICJpbXBhY3QiOiAiQXVkaXRvcmlhIGluY29tcGxldGEgcmVkdXogcmFzdHJlYWJpbGlkYWRlIGUgY2FwYWNpZGFkZSBkZSBhcHVyYWNhby4iLAogICJidXNpbmVzc0ltcGFjdCI6ICJBdWRpdG9yaWEgaW5jb21wbGV0YSByZWR1eiByYXN0cmVhYmlsaWRhZGUgZSBjYXBhY2lkYWRlIGRlIGFwdXJhY2FvLiIsCiAgInJlY29tbWVuZGF0aW9uIjogIkdhcmFudGlyIGV2ZW50b3MgZGUgYXVkaXRvcmlhIHBhcmEgZW50aWRhZGVzIGZpbmFuY2VpcmFzLCBjYWRhc3Ryb3MgZSB3b3JrZmxvdy4iLAogICJzdGF0dXMiOiAiYXByb3ZhZG8iLAogICJldmlkZW5jZSI6IG51bGwsCiAgInRpbWVzdGFtcCI6ICIyMDI2LTA3LTExVDE0OjQ0OjIyLjI2NFoiCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a3b366f3b0c505051c2-48a55e4c296a6046775b",
+          "file": "05-permissions-audit.spec.ts",
+          "line": 76,
+          "column": 5
+        }
+      ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-09T19:58:29.499Z",
-    "duration": 176413.668,
-    "expected": 5,
+    "startTime": "2026-07-11T14:26:54.309Z",
+    "duration": 1048048.7200000001,
+    "expected": 19,
     "skipped": 0,
     "unexpected": 0,
-    "flaky": 0
+    "flaky": 3
   }
 }
